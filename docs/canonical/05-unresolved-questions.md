@@ -81,3 +81,10 @@ Q004 remains GATE 1B REVISION REVIEW PENDING. Q022 remains OPEN: compensation an
 
 **Q-024 — Can a deterministic continuous-holder adjustment be both measurable and collectible without hidden transfer options? OPEN.** Missing originals, lot rules, custody, negative collection, normalization H, funding and prior-claim coexistence need explicit acceptance if B is pursued. The comparison does not settle any WP1C liability architecture. Q021 user fit, Q013 authentication and every unrelated question retain their prior status.
 
+
+## Gate 1B approval and WP1C review disposition
+Q004: accepted development elements are bounded by SRC018; production configuration and later dependencies remain OPEN. Q005/Q006: WP1C definitions researched, GATE 1C REVIEW PENDING; legal ranking, fixed/indexed acceptance terms, pricing time, cancellation and physical token/discharge mechanics remain OPEN. Q008 accounting-versus-capital distinction described, capital architecture unresolved.
+Q021 OPEN; Q022 OPEN; **Q023 OPEN — production-activation blocker**; Q024 OPEN. Institutional-dependence and Treasury contingency conflict remain OPEN. No unrelated unresolved question closed.
+
+**Q-025 — What proves a single effective claim replacement and final partial/full discharge? OPEN.** Required facts include scoped ownership/obligor perimeter, predecessor invalidation/replacement, accepted terms, authenticated pricing/effective times, unpaid refunds/other claims and reversal treatment. The model assumes these facts; WP1F, Phase 3/4 and any intervening authorized package must establish them. No work in those packages is authorized here.
+

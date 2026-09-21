@@ -123,3 +123,8 @@ R023 remains HIGH / OPEN: a label, deadline or escalation cannot bound loss unde
 
 **R-026 — Precommitted backup continues values while abandoning the approved concept. HIGH / OPEN, qualitative.** Correlated source failure, immutable bad definitions, false trigger facts, first-vintage revisions and basis drift can defeat fallback. Mitigation evidence needed: prior scope approval, identifiable benchmark, authenticated trigger and joint-failure/fit analysis; not supplied by precommitment alone. Routes Q023/Q011/R021. No fallback selected.
 
+
+## WP1C liability risk amendment
+**R-027 — Monetary-claim partition differs from enforceable entitlements. HIGH / OPEN, qualitative.** Accepted queue claims can coexist with still-valid bearer claims; token supply can omit refunds or unpaid debt; payment/burn signals can falsely indicate discharge. A correct equation then misstates obligations. Required future evidence: effective replacement, complete scoped inventory, authenticated discharge, partial residual reconciliation and legal mapping. WP1C defines and tests invariants, not their real-world truth. Routes Q005/Q006/Q013/Q025 and later expressly authorized transaction/legal/technical work.
+R021 Treasury contingency, R022 institutional measurement and R023 structural impairment remain OPEN. R025 true-up collection and R026 fallback mismatch remain OPEN; no mechanism adopted. Q023 is a production-activation blocker. No reserve/capital or recovery assumption is validated by accounting tests.
+

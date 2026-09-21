@@ -1,7 +1,7 @@
 # Work Package Register
 Revision 0.3 • Recorded 2026-09-19 America/Chicago
 
-**Current status:** Phase 0 and WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS under SRC010/D010. WP1A COMPLETE; Gate 1A APPROVED WITH CONDITIONS under SRC016/D012 (earlier SRC013 historical). WP1B COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1C and later packages NOT AUTHORIZED. Dated WP0A narrative below is retained as history and superseded by this status and the WP1A entry.
+**Historical pre-SRC018 status:** Phase 0 and WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS under SRC010/D010. WP1A COMPLETE; Gate 1A APPROVED WITH CONDITIONS under SRC016/D012 (earlier SRC013 historical). WP1B COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1C and later packages NOT AUTHORIZED. Dated WP0A narrative below is retained as history and superseded by this status and the WP1A entry.
 
 Governing source: [Development Roadmap v0.1](../roadmap/07-development-roadmap.md). Register entries describe future work; listing a package never authorizes it.
 
@@ -74,3 +74,7 @@ Current authority:SRC016; earlier local authority SRC013 is historical; package 
 ## Current WP1B revision disposition
 SRC017: Gate 1B REVISION REQUIRED. Narrow Benchmark Impairment Policy revision completed for resubmission; three alternatives, ten comparison dimensions, explicit state and 220 total passing checks. Revised submission AWAITING PRIMARY REVIEW / NOT APPROVED. WP1C and all later packages NOT AUTHORIZED; no liability-model package started.
 
+
+## Current WP1C handoff — SRC018
+
+WP1B revision 0.3 ACCEPTED FOR CONTINUED DEVELOPMENT; Gate 1B APPROVED WITH CONDITIONS. WP1C Liability Model COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1D and later NOT AUTHORIZED. Six roadmap topics covered: monetary liability, accepted unsettled redemption, seniority assumptions, inflation, deflation and supply changes. No reserve/capital/transaction/governance/legal or structural-remedy choice silently made.

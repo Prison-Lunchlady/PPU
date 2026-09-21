@@ -3,7 +3,7 @@ Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Start with [Protocol State](canonical/01-protocol-state.md). This Git repository is the version-controlled execution record for the PPU project; this guide was imported from the Gate 1A baseline. No separate cloud Work task or automatic sync to ChatGPT project sources has been created or claimed.
 
-**Phase 0 / WP0A COMPLETE. Gate 0 and Gate 1A APPROVED WITH CONDITIONS. WP1A COMPLETE. WP1B COMPLETE FOR REVIEW; Gate 1B REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED. Next authorized package NONE; WP1C and later packages NOT AUTHORIZED.**
+**Historical pre-SRC018 status: Phase 0 / WP0A COMPLETE. Gate 0 and Gate 1A APPROVED WITH CONDITIONS. WP1A COMPLETE. WP1B COMPLETE FOR REVIEW; Gate 1B REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED. Next authorized package NONE; WP1C and later packages NOT AUTHORIZED.**
 
 Current handoff: [WP1A completion report](../reviews/gate1a/WP1A-completion-report.md), [proposed standard](../research/wp1a/06-recommended-standard.md), [Gate 1A submission](../reviews/gate1a/Gate-1A-submission.md). [User approval](../evidence/gate0-approval-wp1a-authorization.md) preserves SRC003 provenance, architectural tensions and package boundaries. Earlier dated WP0A reports are historical; current Protocol State controls.
 
@@ -54,3 +54,7 @@ Current authority is SRC017 for the narrow revision, SRC016 for Gate 1A conditio
 ## Current Gate 1B revision
 
 Primary disposition: REVISION REQUIRED. [Benchmark Impairment Policy revision](../research/wp1b/18-benchmark-impairment-policy.md) is complete for renewed primary review. No automatic true-up or fallback is adopted; structural economic remedy remains an activation-blocking unresolved issue. WP1C is not authorized.
+
+## Current control
+
+SRC018 accepts Gate 1B WITH CONDITIONS and authorized WP1C only. WP1C is COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED. WP1D NOT AUTHORIZED. Latest Protocol State and Gate Register control over earlier dated handoffs. Q023 stays OPEN as a production-activation blocker.

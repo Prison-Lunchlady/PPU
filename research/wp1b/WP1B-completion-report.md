@@ -1,5 +1,7 @@
 # WP1B Benchmark Impairment Policy — Revised Completion Report
 
+> **Current disposition:** Gate 1B revision 0.3 APPROVED WITH CONDITIONS for continued development under [SRC018](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md). Earlier pending/revision-required statements below are historical. Q023 remains an OPEN production-activation blocker; no true-up or fallback adopted. Approval is not production certification.
+
 Revision 0.3 • 2026-09-21. **Narrow revision COMPLETE FOR RESUBMISSION. Primary disposition REVISION REQUIRED; Gate 1B AWAITING RENEWED PRIMARY REVIEW / NOT APPROVED. WP1C NOT AUTHORIZED.**
 
 The [policy revision](18-benchmark-impairment-policy.md) compares all three alternatives across all ten dimensions, with signed examples and attempts to falsify each. A deterministic continuous-holder adjustment requires a separate compensation metric, collectible negative claims and observations that may never exist. A precommitted fallback can fail alongside CPI-U or change its monetary concept. Indefinite freezing itself cannot preserve ongoing purchasing power.

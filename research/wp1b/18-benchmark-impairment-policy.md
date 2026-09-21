@@ -1,5 +1,7 @@
 # Benchmark Impairment Policy — Gate 1B revision
 
+> **Current disposition:** Gate 1B revision 0.3 APPROVED WITH CONDITIONS for continued development under [SRC018](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md). Earlier pending/revision-required statements below are historical. Q023 remains an OPEN production-activation blocker; no true-up or fallback adopted. Approval is not production certification.
+
 Revision 0.3, 2026-09-21. **PROPOSAL ONLY. Primary disposition: REVISION REQUIRED; revised submission awaiting primary review.** This document supersedes the impairment-policy recommendation in 01/07/09/17 and earlier completion reports. Other arithmetic and fixed-vintage conventions remain unchanged. It does not approve WP1C or implement holder entitlements.
 
 ## Decision and limits

@@ -134,3 +134,23 @@ D012 current authority is reaffirmed and bounded by SRC016 on 2026-09-21; the ea
 
 Recommend temporary carry plus explicit impairment classification, incident-specific restoration and review clearance. Do not endorse permanent freeze as preserving purchasing power; structural economic remedy is unresolved and blocks activation. No automatic B/C adoption. Reasons: B adds unresolved eligibility, signed collection and missing-observation problems; C can fail with the source or depart from Gate 1A's concept; A itself fails ongoing coverage. Reconsider on credible remedy/entitlement/fallback evidence or a different primary priority ranking. Choosing the least-assumption interim calculation does not prove it best for users. No Gate 1A change, liability-ledger selection, reserve decision or WP1C authorization.
 
+
+## Controlling Gate 1B approval — SRC018
+
+Gate 1B revision 0.3: **APPROVED WITH CONDITIONS**, accepted for continued PPU development. [Brad's direct approval](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md) controls over earlier pending/revision-required dispositions.
+
+Accepted development elements: normal-path adapted daily CPI-U calculation, fixed first-release vintages, exact arithmetic, UTC timing, 18-place binding calculation, no nominal floor, symmetric deflation, historical finality of committed plans, temporary endpoint carry, prospective same-benchmark recovery and BENCHMARK_IMPAIRED state concept. Daily interpolation is the accepted v0.1 development path, not universal economic superiority, and remains subject to falsification by later authorized liability, reserve, transaction and Phase 2 research.
+
+Indefinite freeze is not established to preserve purchasing power. BENCHMARK_IMPAIRED is a fail-closed/disclosure state, not an economic remedy. **Q-023 — structural benchmark failure remedy: OPEN; production-activation blocker.** Q021 user/scope fit, Q022 lag/freeze acceptability, Q024 true-up feasibility, institutional dependence and all later-package dependencies remain OPEN.
+
+No holder true-up, C-CPI-U, PCE, Treasury substitution methodology or other fallback is adopted. The Treasury contingency-methodology conflict remains OPEN. Gate 1A's exact benchmark wording is unchanged. The accepted WP1B evidence is **220 passing model/policy checks**, not production certification or independent economic validation. Original draft provisions not explicitly approved remain unratified.
+
+Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1D or later-package authorization.
+
+
+## PPU-D015 — Gate 1B conditional approval and bounded WP1C authorization
+2026-09-21. ACCEPTED user process decision, SRC018. D013/D014 are accepted for continued development only as enumerated and bounded above. Earlier recommendation/revision-required language describes history. No true-up or fallback adopted, no structural remedy closed. No alternative operator disposition overrides Brad's direct authorization.
+
+## PPU-D016 — Disjoint monetary-claim liability framework
+2026-09-21. RECOMMENDATION / PENDING GATE 1C. [WP1C model](../../research/wp1c/01-liability-model.md) replaces ambiguous supply-plus-queue shorthand with an economic partition and dimensional measurements. Alternatives rejected: physical totalSupply as complete liability, counting predecessor and accepted replacement twice, extinguishing claims on burn/payment initiation, and silently choosing fixed versus indexed redemption terms. Recommendation: explicit typed states, gross reference exposure and unresolved perimeter/ranking/discharge requirements. Tradeoff: model depends on unproven effective replacement and completeness facts; it cannot implement or validate those facts. Reconsider on later transaction/legal findings. Q005/Q006 are review-pending, not a complete legal/transaction resolution.
+

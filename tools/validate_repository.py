@@ -18,7 +18,7 @@ for item in provenance['files']:
     check(p.is_file(), 'Missing: '+item['repository_path'])
     if p.is_file() and item['repository_path'] not in amended:
         check(digest(p.read_bytes()) == item['repository_sha256'], 'Unchanged import hash: '+item['repository_path'])
-current=json.loads((ROOT/'reviews/gate1b/submission-manifest.json').read_text(encoding='utf-8'))
+current=json.loads((ROOT/'reviews/gate1c/submission-manifest.json').read_text(encoding='utf-8'))
 for item in current['files']:
     p=ROOT/item['path']
     check(p.is_file() and digest(p.read_bytes())==item['sha256'], 'Current submission hash: '+item['path'])
@@ -44,9 +44,10 @@ state=(ROOT/'docs/canonical/01-protocol-state.md').read_text(encoding='utf-8-sig
 gates=(ROOT/'docs/canonical/10-review-gate-register.md').read_text(encoding='utf-8-sig')
 check('**Review Gate 0:** APPROVED WITH CONDITIONS' in state, 'Gate 0 state')
 check('**Review Gate 1A:** APPROVED WITH CONDITIONS' in state, 'Gate 1A state')
-check('WP1B — Target Calculation' in state and 'COMPLETE FOR REVIEW' in state, 'WP1B state')
-check('Status: **REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED**' in gates and '## Gate1B' in gates, 'Gate 1B revision disposition')
-check('WP1C NOT AUTHORIZED' in gates, 'Successor authorization')
+check('**Current package:** WP1C — Liability Model' in state and 'COMPLETE FOR REVIEW' in state, 'WP1C state')
+check('Status: **APPROVED WITH CONDITIONS** under SRC018' in gates and '## Gate1B' in gates, 'Gate 1B approved with conditions')
+check('Status: **AWAITING REVIEW / NOT APPROVED**. WP1C' in gates and '## Gate1C' in gates, 'Gate 1C review pending')
+check('WP1D NOT AUTHORIZED' in state, 'Successor authorization')
 standard='PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).'
 for path in ['README.md','docs/canonical/01-protocol-state.md','docs/canonical/02-decision-register.md','docs/canonical/10-review-gate-register.md','evidence/gate1a-approval-2026-09-21.txt']:
     check(standard in (ROOT/path).read_text(encoding='utf-8'), 'Exact approved wording: '+path)
@@ -65,7 +66,10 @@ for dimension in ['Inflation and deflation','Transacting holders','Liability unc
     check('| '+dimension+' |' in policy,'Three-alternative matrix: '+dimension)
 check('BENCHMARK_IMPAIRED' in policy and 'PERSISTENT_UNRESOLVED' in policy and 'STRUCTURAL_CONFIRMED' in policy,'Explicit separate impairment causes')
 check('activation blocker' in policy,'Structural remedy remains activation blocker')
-check('SRC017' in state,'Current revision authority')
+check('SRC018' in state,'Current approval and WP1C authority')
+liability=json.loads((ROOT/'research/wp1c/liability-validation.json').read_text(encoding='utf-8'))
+check(liability['passed']==58 and not liability['failed'],'58 WP1C accounting checks')
+check('production-activation blocker' in state and 'Q-023' in state,'Structural remedy remains open activation blocker')
 check('not a formal platform export' in state, 'SRC003 provenance')
 check(not list(ROOT.glob('LICENSE*')), 'No license added')
 patterns={
@@ -97,7 +101,7 @@ for p in ROOT.rglob('*'):
         with zipfile.ZipFile(p) as z:
             for n in z.namelist():scan(name+'!'+n,z.read(n))
     else:scan(name,p.read_bytes())
-report={'scope':'WP1B impairment revision 0.3; no Gate 1B approval or production certification','checks':checks,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'REVISION COMPLETE FOR RESUBMISSION','gate1b':'REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED','wp1c':'NOT AUTHORIZED','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
+report={'scope':'Gate 1B conditional approval and WP1C research submission; no production certification or independent economic validation','checks':checks,'wp1b_model_policy_checks':220,'wp1c_accounting_checks':58,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'REVISION 0.3 ACCEPTED FOR CONTINUED DEVELOPMENT','gate1b':'APPROVED WITH CONDITIONS','wp1c':'COMPLETE FOR REVIEW','gate1c':'AWAITING REVIEW / NOT APPROVED','wp1d':'NOT AUTHORIZED','Q023':'OPEN; PRODUCTION-ACTIVATION BLOCKER','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
 (ROOT/'reviews/repository-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))
 sys.exit(bool(errors))

@@ -1,5 +1,7 @@
 # Gate 1B — Benchmark Impairment Policy resubmission
 
+> **Current disposition:** Gate 1B revision 0.3 APPROVED WITH CONDITIONS for continued development under [SRC018](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md). Earlier pending/revision-required statements below are historical. Q023 remains an OPEN production-activation blocker; no true-up or fallback adopted. Approval is not production certification.
+
 Revision 0.3 • 2026-09-21. **Primary disposition remains REVISION REQUIRED. Revised submission AWAITING PRIMARY REVIEW / NOT APPROVED.** WP1C and later packages NOT AUTHORIZED.
 
 Authority: [SRC017](../../evidence/gate1b-revision-required-2026-09-21.md). This is the narrow response to primary review, not a wholesale monetary redesign. Gate 1A's exact benchmark wording and conditions remain unchanged.

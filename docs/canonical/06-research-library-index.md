@@ -65,3 +65,11 @@ SRC015 completed: Claude Opus5High reviewed initial frozen packet;20operator dis
 **SRC-017:** [Brad's Gate 1B REVISION REQUIRED instruction](../../evidence/gate1b-revision-required-2026-09-21.md). Authorizes only Benchmark Impairment Policy revision and validation; explicitly withholds WP1C.
 W1B-S17–S20 add primary BEA/BLS evidence for fallback scope and shared dependencies; see [WP1B sources](../../research/wp1b/sources.md). [Revision policy](../../research/wp1b/18-benchmark-impairment-policy.md) separates facts, modeling assumptions, unresolved issues and recommendation. No fresh external adversarial-review endorsement is claimed.
 
+
+## WP1C authority and evidence
+**SRC-018:** [Gate 1B conditional approval and WP1C-only authorization](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md), current direct user instruction. Prior SRC017 disposition is superseded only by this bounded approval.
+**W1C-S01:** Adopted roadmap WP1C and draft Article V; source bytes unchanged; draft not broadly ratified.
+**W1C-S02:** [IFRS Conceptual Framework](https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/conceptual-framework-for-financial-reporting.pdf), obligation-based conceptual reference inspected September 21. Not a selected reporting regime or a PPU legal classification.
+**W1C-S03:** [IFRS 9 overview](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/), contractual recognition reference. No specific electronic-payment derecognition exception applied. Actual recognition, discharge and legal ranking remain later professional/architecture dependencies.
+[WP1C model](../../research/wp1c/01-liability-model.md) and [operator adversarial review](../../research/wp1c/02-worked-examples-and-adversarial-review.md) separate assumptions, examples, recommendations and unresolved evidence. No external independent endorsement claimed.
+

@@ -67,3 +67,7 @@ H001 is bounded by the exact approved standard in Protocol State (SRC016); it is
 ## Impairment revision — 2026-09-21
 H001 remains bounded by the exact Gate 1A standard; unchanged. H002 retains conditional normal-path daily-interpolation support, but automatic acceptance of indefinite freezing is explicitly unsupported. Hypothesis under D014: temporary carry with explicit impairment status is a usable interim calculation; it does not establish an adequate permanent-failure monetary remedy. Contingent true-up and fully precommitted fallback remain live policy alternatives with documented counterexamples, not validated solutions. No collateral, capital or user-demand hypothesis is newly supported.
 
+
+## WP1C hypothesis disposition
+H002's daily development path and impairment state concept are accepted within SRC018 conditions; structural economic remedy remains unvalidated. H008 senior-claim hypothesis remains a proposed economic ordering over surplus, not demonstrated legal priority. WP1C shows how liabilities can be represented without double counting, but does not validate effective replacement, proof of discharge or solvency. H003–H007 and user-fit assumptions are not newly confirmed. No holder true-up or fallback adopted.
+

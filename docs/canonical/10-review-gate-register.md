@@ -39,7 +39,7 @@ Gate/package; submitted version and manifest digest; approving user; exact quote
 [Verbatim user approval](../../evidence/gate1a-approval-wp1b-authorization.txt), SRC013,2026-09-19. Conditions: exact bounded U.S. consumer-price reference promise; U.S. scope a v0.1 choice only; benchmark-only approval excluding every target mechanic; WP1B may recommend reopening1A; CPI measurement externally administered; Q021 OPEN; no universal-best-index claim. See Protocol State for exact approved promise. All seven persist into subsequent packages, alongside Gate0 conditions.
 Approved package binding: unchanged PPU-WP1A-Gate1A-package.zip SHA256 43D2808341AF631CC63CA402CB88D4EBFA9C7351E1305CFA8BDA59F5657ECB93. User approval follows that submission but did not quote its digest; do not invent a hash-signed approval. Snapshot in evidence/gate1a-approved/.
 ## Gate1B — package checkpoint
-Status: **REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED**. WP1B impairment revision COMPLETE FOR REVIEW. [Submission](../../research/wp1b/Gate-1B-submission.md). Review must assess exact target and fallback promise, lag/correction/finality, proposed parameters, case coverage and unresolved authority dependencies. No target mechanics accepted and no WP1C authorization. Brad and primary PPU review control disposition; Claude is advisory. Phase Gate1 remains NOT REACHED.
+Status: **APPROVED WITH CONDITIONS** under SRC018. WP1B revision 0.3 accepted for continued development. Earlier submission and revision history follow. [Submission](../../research/wp1b/Gate-1B-submission.md). Review must assess exact target and fallback promise, lag/correction/finality, proposed parameters, case coverage and unresolved authority dependencies. No target mechanics accepted and no WP1C authorization. Brad and primary PPU review control disposition; Claude is advisory. Phase Gate1 remains NOT REACHED.
 
 
 Historical revision 0.2 completion update (superseded by SRC017):159offline checks and documentary validation accompany the submission. All target mechanics remain proposed. Primary must explicitly assess the recommended Gate1A promise-wording reopening; no such disposition is inferred. Next authorized package NONE; WP1C NOT AUTHORIZED. All Gate0/Gate1A standing conditions remain binding.
@@ -64,3 +64,20 @@ The prior Draft Monetary Constitution / Hypothesis Set remains unratified except
 ## Gate 1B disposition history and resubmission
 
 Brad's [SRC017 disposition](../../evidence/gate1b-revision-required-2026-09-21.md) returned the initial submission as **REVISION REQUIRED**. The response is [revision 0.3](../../research/wp1b/18-benchmark-impairment-policy.md). Primary must assess its comparative defense, proposed state/recovery rules and unresolved structural-remedy activation blocker. Operator completion does not close the disposition or approve D014. Current submission is awaiting renewed primary review. Gate 1A and Gate 0 conditions unchanged; WP1C NOT AUTHORIZED.
+
+## Controlling Gate 1B approval — SRC018
+
+Gate 1B revision 0.3: **APPROVED WITH CONDITIONS**, accepted for continued PPU development. [Brad's direct approval](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md) controls over earlier pending/revision-required dispositions.
+
+Accepted development elements: normal-path adapted daily CPI-U calculation, fixed first-release vintages, exact arithmetic, UTC timing, 18-place binding calculation, no nominal floor, symmetric deflation, historical finality of committed plans, temporary endpoint carry, prospective same-benchmark recovery and BENCHMARK_IMPAIRED state concept. Daily interpolation is the accepted v0.1 development path, not universal economic superiority, and remains subject to falsification by later authorized liability, reserve, transaction and Phase 2 research.
+
+Indefinite freeze is not established to preserve purchasing power. BENCHMARK_IMPAIRED is a fail-closed/disclosure state, not an economic remedy. **Q-023 — structural benchmark failure remedy: OPEN; production-activation blocker.** Q021 user/scope fit, Q022 lag/freeze acceptability, Q024 true-up feasibility, institutional dependence and all later-package dependencies remain OPEN.
+
+No holder true-up, C-CPI-U, PCE, Treasury substitution methodology or other fallback is adopted. The Treasury contingency-methodology conflict remains OPEN. Gate 1A's exact benchmark wording is unchanged. The accepted WP1B evidence is **220 passing model/policy checks**, not production certification or independent economic validation. Original draft provisions not explicitly approved remain unratified.
+
+Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1D or later-package authorization.
+
+
+## Gate1C — Liability Model checkpoint
+
+Status: **AWAITING REVIEW / NOT APPROVED**. WP1C COMPLETE FOR REVIEW. [Submission](../../reviews/gate1c/Gate-1C-submission.md) and [model](../../research/wp1c/01-liability-model.md). Primary must assess economic-state completeness, queue denomination alternatives, no-double-count/discharge invariants, priority versus legal enforceability, and all retained dependencies. No WP1D authorization. Q023 remains an OPEN production-activation blocker. Approval of Gate 1C must not be inferred from model tests or this report.

@@ -10,11 +10,13 @@ PPU is a gated research project investigating a programmable monetary unit tied 
 | Phase 0 / WP0A | COMPLETE |
 | WP1A — Purchasing-Power Standard | COMPLETE |
 | Gate 1A | APPROVED WITH CONDITIONS |
-| WP1B — Target Calculation | COMPLETE FOR REVIEW |
-| Gate 1B | REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED |
-| WP1C and later packages | NOT AUTHORIZED |
+| WP1B — Target Calculation | COMPLETE; revision 0.3 accepted for development |
+| Gate 1B | APPROVED WITH CONDITIONS |
+| WP1C — Liability Model | COMPLETE FOR REVIEW |
+| Gate 1C | AWAITING REVIEW / NOT APPROVED |
+| WP1D and later packages | NOT AUTHORIZED |
 
-The initial commit preserved the Gate 1A review baseline. Brad subsequently approved Gate 1A with conditions and authorized WP1B only; see [current approval](evidence/gate1a-approval-2026-09-21.txt). Completion of research or repository setup does not approve a gate. No production token, contracts, capital commitments, or technical architecture are authorized here.
+The initial commit preserved the Gate 1A review baseline. Brad subsequently approved Gate 1A and Gate 1B with conditions and authorized WP1C only; see [current approval](evidence/gate1b-approval-wp1c-authorization-2026-09-21.md). Completion of research or repository setup does not approve a gate. No production token, contracts, capital commitments, or technical architecture are authorized here.
 
 ## Start here
 
@@ -49,7 +51,7 @@ Before work, check the Gate and Work Package registers. Preserve stable IDs and 
 
 Gate 0's permanent conditions remain: SRC003 is authoritative user-confirmed recovery, **not a formal platform export**; architectural tensions remain unresolved; authorization is limited to a single work package. The constitution remains draft/hypothesis except for explicitly accepted records. No open-source license has been selected or added.
 
-## Approved standard and current Gate 1B handoff
+## Approved standard and historical Gate 1B handoff
 
 > PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).
 
@@ -57,6 +59,12 @@ No individual cost-of-living or universal global guarantee is implied. C-CPI-U a
 
 [Gate 1B submission](research/wp1b/Gate-1B-submission.md) · [Completion report](research/wp1b/WP1B-completion-report.md) · [Current reconciliation](reviews/gate1b/current-reconciliation.md). The daily-path candidate, outage rules and all other target mechanics are proposals only. Treasury contingency conflict stays open. Stop at Gate 1B; WP1C is not authorized.
 
-## Current Gate 1B revision
+## Historical Gate 1B revision
 
 Primary disposition: REVISION REQUIRED. [Benchmark Impairment Policy revision](research/wp1b/18-benchmark-impairment-policy.md) is complete for renewed primary review. No automatic true-up or fallback is adopted; structural economic remedy remains an activation-blocking unresolved issue. WP1C is not authorized.
+
+## Current Gate 1C review
+
+[Gate 1B approval and conditions](evidence/gate1b-approval-wp1c-authorization-2026-09-21.md) accept the v0.1 daily development path and impairment state concept. This is not proof indefinite freezing preserves purchasing power. Q023 remains OPEN and a production-activation blocker. No true-up or fallback adopted; Treasury conflict and Q021/Q022/Q024 remain OPEN.
+
+[Liability model](research/wp1c/01-liability-model.md) · [completion report](research/wp1c/WP1C-completion-report.md) · [Gate 1C submission](reviews/gate1c/Gate-1C-submission.md). 220 WP1B model/policy checks plus 58 separate WP1C accounting checks; neither production certification nor independent economic validation. WP1D NOT AUTHORIZED. Current SRC018/Protocol State supersedes dated prior handoff text.

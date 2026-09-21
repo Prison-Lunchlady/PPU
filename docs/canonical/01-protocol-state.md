@@ -1,19 +1,21 @@
 # PPU Protocol State
-Record revision 0.6 • 2026-09-21 America/Chicago • Primary project state
+Record revision 0.7 • 2026-09-21 America/Chicago • Primary project state
 
 **Phase:** 1 — Monetary Architecture; Phase 0 COMPLETE  
-**Current package:** WP1B — Target Calculation  
-**Package status:** WP1B impairment revision COMPLETE FOR REVIEW; Gate 1B REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED  
+**Current package:** WP1C — Liability Model  
+**Package status:** WP1C COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED  
 **WP0A:** COMPLETE  
 **Review Gate 0:** APPROVED WITH CONDITIONS  
-**Review Gate 1A:** APPROVED WITH CONDITIONS; WP1A COMPLETE  
-**Authorized scope completed:** WP1B only; next authorized package NONE  
-**Next planned package after WP1B:** WP1C — Liability Model; NOT AUTHORIZED
+**Review Gate 1A:** APPROVED WITH CONDITIONS; WP1A COMPLETE
+**Review Gate 1B:** APPROVED WITH CONDITIONS; WP1B revision 0.3 accepted for development
+**Review Gate 1C:** AWAITING REVIEW / NOT APPROVED  
+**Authorized scope completed:** WP1C only; next authorized package NONE  
+**Next planned package after WP1C:** WP1D — Reserve Architecture; NOT AUTHORIZED
 
 Brad's [approval and conditions](../../evidence/gate0-approval-wp1a-authorization.md) close Q019. Permanent conditions: SRC003 is authoritative user-confirmed recovery, not a formal platform export; unresolved architectural tensions remain unresolved; WP1A authorization does not extend to later packages. The approved Gate 0 record is retained in evidence/gate0-approved/ and the prior archive.
 
 ## Current architecture and status
-PPU is a research hypothesis for a programmable, redeemable monetary unit tied to standardized purchasing power. Working target T_t = B × I_t / I_0, B = USD 1 on a defined base date. Wallet balances preferably do not rebase with inflation. Gate 1A approves the narrowly defined U.S. benchmark promise and CPI-U NSA all-items U.S. City Average underlying benchmark only. Target mechanics are authorized for WP1B research, not accepted. The current adapted daily interpolation candidate remains pending Gate 1B. See [proposed standard](../../research/wp1a/06-recommended-standard.md).
+PPU is a research hypothesis for a programmable, redeemable monetary unit tied to standardized purchasing power. Working target T_t = B × I_t / I_0, B = USD 1 on a defined base date. Wallet balances preferably do not rebase with inflation. Gate 1A approves the narrowly defined U.S. benchmark promise and CPI-U NSA all-items U.S. City Average underlying benchmark only. The enumerated WP1B revision 0.3 elements are accepted for continued development under SRC018. This does not certify production or resolve structural impairment. See [proposed standard](../../research/wp1a/06-recommended-standard.md).
 
 Candidate reserves: cash, bills, qualifying Treasury repo and short-duration TIPS, supported by distinct first-loss capital. Senior redemption claims, settled collateralized minting and redemption/burning are intended to constrain supply. AP arbitrage is an unvalidated market-price anchor. Alternative assets remain research candidates; no chain is chosen. Global token settlement does not establish global basket coverage or 24/7 off-chain redemption.
 
@@ -89,8 +91,24 @@ The 2025 CPI data gap is a mandatory WP1B design input. The Treasury contingency
 
 The prior Draft Monetary Constitution / Hypothesis Set remains unratified except for decisions explicitly approved through the roadmap. Gate 0's provenance, unresolved-tension and package-boundary conditions remain binding. Only WP1B was authorized by this instruction; stop at Gate 1B, with no WP1C or later authorization.
 
-## Current impairment-policy revision — SRC017
+## Historical impairment-policy revision — SRC017
 
 Brad returned Gate 1B as REVISION REQUIRED. The narrowly authorized revision is complete for resubmission, not approval. [Policy comparison and state specification](../../research/wp1b/18-benchmark-impairment-policy.md) evaluates indefinite freeze, contingent continuous-holding true-up and fully precommitted structural fallback across all ten requested dimensions. Temporary carry is recommended conditionally; permanent freeze is not defended as fulfilled purchasing-power preservation. Structural economic remedy remains an activation-blocking unresolved requirement.
 
 `BENCHMARK_IMPAIRED` distinguishes authenticated structural notices from persistent symptoms, latches disclosure and necessary data ineligibility, and never automatically substitutes a benchmark or creates compensation. Original arithmetic, fixed vintages, symmetry, UTC timing and finality remain unchanged. 159 prior checks, 12 prior independent checks and 49 new impairment/counterexample checks pass (220 total). Treasury contingency conflict remains OPEN; C-CPI-U/PCE remain live comparators. Gate 1A wording is unchanged. Stop at Gate 1B; WP1C NOT AUTHORIZED.
+
+## Controlling Gate 1B approval — SRC018
+
+Gate 1B revision 0.3: **APPROVED WITH CONDITIONS**, accepted for continued PPU development. [Brad's direct approval](../../evidence/gate1b-approval-wp1c-authorization-2026-09-21.md) controls over earlier pending/revision-required dispositions.
+
+Accepted development elements: normal-path adapted daily CPI-U calculation, fixed first-release vintages, exact arithmetic, UTC timing, 18-place binding calculation, no nominal floor, symmetric deflation, historical finality of committed plans, temporary endpoint carry, prospective same-benchmark recovery and BENCHMARK_IMPAIRED state concept. Daily interpolation is the accepted v0.1 development path, not universal economic superiority, and remains subject to falsification by later authorized liability, reserve, transaction and Phase 2 research.
+
+Indefinite freeze is not established to preserve purchasing power. BENCHMARK_IMPAIRED is a fail-closed/disclosure state, not an economic remedy. **Q-023 — structural benchmark failure remedy: OPEN; production-activation blocker.** Q021 user/scope fit, Q022 lag/freeze acceptability, Q024 true-up feasibility, institutional dependence and all later-package dependencies remain OPEN.
+
+No holder true-up, C-CPI-U, PCE, Treasury substitution methodology or other fallback is adopted. The Treasury contingency-methodology conflict remains OPEN. Gate 1A's exact benchmark wording is unchanged. The accepted WP1B evidence is **220 passing model/policy checks**, not production certification or independent economic validation. Original draft provisions not explicitly approved remain unratified.
+
+Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1D or later-package authorization.
+
+## Current Gate 1C handoff
+
+[Liability model](../../research/wp1c/01-liability-model.md) defines disjoint LIVE/REQUESTED/ACCEPTED_INDEXED/ACCEPTED_FIXED/DISCHARGED economic states. L=(N+Qidx)×T+Qfix; no double-counted predecessor or automatic offset for reserves. Fixed-versus-indexed queue terms remain alternatives, not selected architecture. Gross face, legal priority, recovery and market value are separate. 58 synthetic accounting checks pass; they supplement, not relabel, the 220 WP1B checks. [Submission](../../reviews/gate1c/Gate-1C-submission.md). Q023 remains an OPEN production-activation blocker; WP1D NOT AUTHORIZED.
