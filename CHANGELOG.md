@@ -25,3 +25,7 @@ Imported the preserved Gate 1A revision 1.1 baseline into the PPU repository und
 ## 2026-09-21 — Gate 1A approval and WP1B reconciliation
 
 Recorded Brad's direct approval as SRC016 and the exact purchasing-power standard. Preserved all conditions, live comparators, open contingency conflict and unratified draft status. Reused existing local WP1B research with explicit provenance and renewed checks; no later work package activated. D011/D012 updated within their original IDs; D013 remains pending Gate 1B. Gate 1B AWAITING REVIEW; WP1C NOT AUTHORIZED.
+
+## 2026-09-21 — Gate 1B primary revision response
+Recorded SRC017 REVISION REQUIRED without approving Gate 1B. Added three-policy/ten-dimension adversarial impairment comparison, explicit proposed BENCHMARK_IMPAIRED overlay and 49 state/counterexample checks. Existing 171 checks rerun; core target arithmetic unchanged. D014 proposed; R025/R026 and Q023/Q024 added with open status; affected existing records updated. Structural economic remedy explicitly remains an activation blocker; no implicit indefinite-freeze promise acceptance. Gate 1A wording and Treasury conflict preserved; WP1C unauthorized.
+

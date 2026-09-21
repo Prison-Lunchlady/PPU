@@ -39,10 +39,10 @@ Gate/package; submitted version and manifest digest; approving user; exact quote
 [Verbatim user approval](../../evidence/gate1a-approval-wp1b-authorization.txt), SRC013,2026-09-19. Conditions: exact bounded U.S. consumer-price reference promise; U.S. scope a v0.1 choice only; benchmark-only approval excluding every target mechanic; WP1B may recommend reopening1A; CPI measurement externally administered; Q021 OPEN; no universal-best-index claim. See Protocol State for exact approved promise. All seven persist into subsequent packages, alongside Gate0 conditions.
 Approved package binding: unchanged PPU-WP1A-Gate1A-package.zip SHA256 43D2808341AF631CC63CA402CB88D4EBFA9C7351E1305CFA8BDA59F5657ECB93. User approval follows that submission but did not quote its digest; do not invent a hash-signed approval. Snapshot in evidence/gate1a-approved/.
 ## Gate1B — package checkpoint
-Status: **AWAITING REVIEW / NOT APPROVED**. WP1B COMPLETE FOR REVIEW. [Submission](../../research/wp1b/Gate-1B-submission.md). Review must assess exact target and fallback promise, lag/correction/finality, proposed parameters, case coverage and unresolved authority dependencies. No target mechanics accepted and no WP1C authorization. Brad and primary PPU review control disposition; Claude is advisory. Phase Gate1 remains NOT REACHED.
+Status: **REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED**. WP1B impairment revision COMPLETE FOR REVIEW. [Submission](../../research/wp1b/Gate-1B-submission.md). Review must assess exact target and fallback promise, lag/correction/finality, proposed parameters, case coverage and unresolved authority dependencies. No target mechanics accepted and no WP1C authorization. Brad and primary PPU review control disposition; Claude is advisory. Phase Gate1 remains NOT REACHED.
 
 
-Gate1B completion update:159offline checks and documentary validation accompany the submission. All target mechanics remain proposed. Primary must explicitly assess the recommended Gate1A promise-wording reopening; no such disposition is inferred. Next authorized package NONE; WP1C NOT AUTHORIZED. All Gate0/Gate1A standing conditions remain binding.
+Historical revision 0.2 completion update (superseded by SRC017):159offline checks and documentary validation accompany the submission. All target mechanics remain proposed. Primary must explicitly assess the recommended Gate1A promise-wording reopening; no such disposition is inferred. Next authorized package NONE; WP1C NOT AUTHORIZED. All Gate0/Gate1A standing conditions remain binding.
 
 
 ## Controlling Gate 1A disposition — 2026-09-21
@@ -60,3 +60,7 @@ No target-calculation mechanics are approved: base date, base index value, TIPS 
 The 2025 CPI data gap is a mandatory WP1B design input. The Treasury contingency-methodology conflict stays OPEN; possible future TIPS holdings cannot automatically determine PPU fallback. CPI-U institutional dependence and public reconstruction limitations persist. C-CPI-U and PCE are live research comparators, not rejected or failed alternatives. Historical draft rejection language does not control their current research status.
 
 The prior Draft Monetary Constitution / Hypothesis Set remains unratified except for decisions explicitly approved through the roadmap. Gate 0's provenance, unresolved-tension and package-boundary conditions remain binding. Only WP1B was authorized by this instruction; stop at Gate 1B, with no WP1C or later authorization.
+
+## Gate 1B disposition history and resubmission
+
+Brad's [SRC017 disposition](../../evidence/gate1b-revision-required-2026-09-21.md) returned the initial submission as **REVISION REQUIRED**. The response is [revision 0.3](../../research/wp1b/18-benchmark-impairment-policy.md). Primary must assess its comparative defense, proposed state/recovery rules and unresolved structural-remedy activation blocker. Operator completion does not close the disposition or approve D014. Current submission is awaiting renewed primary review. Gate 1A and Gate 0 conditions unchanged; WP1C NOT AUTHORIZED.

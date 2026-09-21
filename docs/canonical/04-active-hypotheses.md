@@ -63,3 +63,7 @@ H002 is not selected by finding TIPS relevant. H003 is not validated by same-ind
 ## Current approval reconciliation — 2026-09-21
 
 H001 is bounded by the exact approved standard in Protocol State (SRC016); it is not a universal purchasing-power claim or demonstrated user demand. H002 is only a conditional target-calculation research recommendation awaiting Gate 1B. C-CPI-U and PCE remain live research comparators. H003–H008 are not newly validated.
+
+## Impairment revision — 2026-09-21
+H001 remains bounded by the exact Gate 1A standard; unchanged. H002 retains conditional normal-path daily-interpolation support, but automatic acceptance of indefinite freezing is explicitly unsupported. Hypothesis under D014: temporary carry with explicit impairment status is a usable interim calculation; it does not establish an adequate permanent-failure monetary remedy. Contingent true-up and fully precommitted fallback remain live policy alternatives with documented counterexamples, not validated solutions. No collateral, capital or user-demand hypothesis is newly supported.
+

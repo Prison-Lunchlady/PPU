@@ -128,3 +128,9 @@ The prior Draft Monetary Constitution / Hypothesis Set remains unratified except
 ## Current approval reconciliation — 2026-09-21
 
 D012 current authority is reaffirmed and bounded by SRC016 on 2026-09-21; the earlier date/evidence are historical. D011 now uses the exact SRC016 wording above. No other target or architectural decision is accepted. D013 remains a recommendation pending Gate 1B. D006 persistence is superseded operationally by the GitHub repository, selected through the infrastructure initialization; the initial commit preserves the prior records.
+
+## PPU-D014 — Benchmark Impairment Policy revision
+2026-09-21. Status: RECOMMENDATION / PENDING GATE 1B. Authority: SRC017, Brad's primary-review disposition REVISION REQUIRED. D013 is not withdrawn wholesale; D014 supersedes only its assumption that indefinite freeze/no compensation is a sufficiently defended fallback. [Analysis](../../research/wp1b/18-benchmark-impairment-policy.md) compares A freeze, B signed contingent true-up and C precommitted structural substitution.
+
+Recommend temporary carry plus explicit impairment classification, incident-specific restoration and review clearance. Do not endorse permanent freeze as preserving purchasing power; structural economic remedy is unresolved and blocks activation. No automatic B/C adoption. Reasons: B adds unresolved eligibility, signed collection and missing-observation problems; C can fail with the source or depart from Gate 1A's concept; A itself fails ongoing coverage. Reconsider on credible remedy/entitlement/fallback evidence or a different primary priority ranking. Choosing the least-assumption interim calculation does not prove it best for users. No Gate 1A change, liability-ledger selection, reserve decision or WP1C authorization.
+

@@ -1,4 +1,20 @@
-# WP1B Completion Report
+# WP1B Benchmark Impairment Policy — Revised Completion Report
+
+Revision 0.3 • 2026-09-21. **Narrow revision COMPLETE FOR RESUBMISSION. Primary disposition REVISION REQUIRED; Gate 1B AWAITING RENEWED PRIMARY REVIEW / NOT APPROVED. WP1C NOT AUTHORIZED.**
+
+The [policy revision](18-benchmark-impairment-policy.md) compares all three alternatives across all ten dimensions, with signed examples and attempts to falsify each. A deterministic continuous-holder adjustment requires a separate compensation metric, collectible negative claims and observations that may never exist. A precommitted fallback can fail alongside CPI-U or change its monetary concept. Indefinite freezing itself cannot preserve ongoing purchasing power.
+
+Recommendation: temporary carry with explicit impairment status; **do not endorse permanent freeze as a satisfactory structural remedy**. Such a remedy remains an activation-blocking unresolved requirement. The state layer adds confirmed-structural versus persistent-unresolved classification and incident-specific restoration/clearance; no automatic compensation or substitution. It can remain impaired indefinitely: it discloses and constrains the unresolved failure rather than claiming to cure it.
+
+Validation: 159 original + 12 prior independent + 49 new checks = **220 passing checks**. Core arithmetic unchanged; the proposed overlay is [impairment_policy.py](impairment_policy.py). [New results](impairment-validation.json) cover notices, temporary/chronic failure, rolling impairment, prospective holds, recovery, clearance, simultaneous events, stale monitors, history, symmetry and policy counterexamples. Tests assume validated inputs; no live oracle or claims system is implemented.
+
+Records updated: D014 proposed; R025/R026 and Q023/Q024 OPEN; H002 impairment recommendation narrowed. Existing R021/R022/R023 and Q021/Q022 remain OPEN. SRC017 records current authority. No Gate 1A wording change, original-draft ratification or WP1C start. [Reconciliation](../../reviews/gate1b/current-reconciliation.md), [submission](Gate-1B-submission.md), [manifest](../../reviews/gate1b/submission-manifest.json).
+
+Primary must assess whether this explicitly incomplete structural remedy is an acceptable research outcome or needs another bounded revision before Gate 1B approval. Prior text below is historical; policy 18 and this revision control conflicts. No new Claude review or endorsement is claimed.
+
+---
+
+# Earlier WP1B Completion Report — historical revision 0.2
 
 Revision0.2 •2026-09-19 • **COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED.** Phase1 remains IN PROGRESS. WP1C and every later package are NOT AUTHORIZED.
 

@@ -73,3 +73,11 @@ Gate1B submission explicitly recommends primary review of Gate1A promise wording
 ## Current approval reconciliation — 2026-09-21
 
 Q003 closes only the bounded underlying benchmark selection. Q004 target mechanics are researched but awaiting Gate 1B; Q004/Q011 Treasury contingency conflict remains explicitly OPEN; Q013 retains its distinct verification and institutional-dependence question. Q021 user demand/fit and Q022 lag/freeze acceptability remain OPEN. No unrelated unresolved question is closed by SRC016.
+
+## Benchmark impairment revision — 2026-09-21
+Q004 remains GATE 1B REVISION REVIEW PENDING. Q022 remains OPEN: compensation and permanent-failure acceptability have not been resolved by relabeling a freeze. Q004/Q011 Treasury contingency conflict remains OPEN.
+
+**Q-023 — What pre-agreed economic remedy makes structural benchmark failure acceptable? OPEN; activation blocker.** Compare the policy ranking and scope implications in D014. A threshold is not a remedy. Accepting the narrow research revision does not select settlement, migration, guarantee or liability treatment. Gate 1B primary disposition first; later packages only after explicit authorization.
+
+**Q-024 — Can a deterministic continuous-holder adjustment be both measurable and collectible without hidden transfer options? OPEN.** Missing originals, lot rules, custody, negative collection, normalization H, funding and prior-claim coexistence need explicit acceptance if B is pursued. The comparison does not settle any WP1C liability architecture. Q021 user fit, Q013 authentication and every unrelated question retain their prior status.
+

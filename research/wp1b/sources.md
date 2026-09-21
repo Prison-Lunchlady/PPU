@@ -29,3 +29,11 @@ W1B-S16: [BLS2016 article on2018 geographic sample revision](https://www.bls.gov
 ## 2026-09-21 verification update
 
 W1B-S01/S03/S05/S06/S11/S15 were reopened during current reconciliation. See [claim-specific findings](../../reviews/gate1b/current-reconciliation.md). Other source entries retain their stated September 19 retrieval provenance; no blanket fresh-source claim is made.
+
+## Impairment-policy primary sources — 2026-09-21
+W1B-S17: [BEA CPI/PCE differences](https://www.bea.gov/help/faq/555). Formula/weights/scope differ; inference of fallback basis risk is operator analysis.
+W1B-S18: [BEA source data](https://www.bea.gov/help/faq/1486). Many PCE price components use CPI; a different publisher is not an independent source of every input.
+W1B-S19: [BLS 2025 shutdown CE/CPI impacts](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi.htm). Missing expenditure data affect final chained-CPI estimates; correlated failure implication is an inference.
+W1B-S20: [BLS series formats](https://www.bls.gov/help/hlpforma.htm). Identifies SUUR0000SA0 for the concrete hypothetical C1 comparator. No fallback selection for PPU.
+W1B-S05/S06 continue to support the actual October 2025 gap and Treasury contractual substitute. H=365 compensation normalization, continuous-unit depletion, C1 trigger and linkage, and impairment restoration criteria are proposed comparison/model rules; no publisher prescribes them for PPU.
+

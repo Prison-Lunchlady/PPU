@@ -16,3 +16,8 @@ All values here are proposed, not empirically calibrated or approved. Changing t
 Assumptions A-W1B01–06: an enforceable canonical event log can exist; original BLS editions can be authenticated and archived; path identities are genuinely distinct; monitors report incidents honestly; semantic changes can be classified and reviewed without opportunistic index choice; users/later architecture can tolerate disclosed lag and outages. None is established by the arithmetic/replay checks. Q013/Q014/Q011/Q021/Q022 own the corresponding future evidence.
 
 Explicitly rejected shortcuts: choose lowest feed, accept API-null as0, interpolate across missing data by invented CPI, relabel Treasury substitute as BLS measurement, retroactively insert a late timestamp, silently reset base, cap authenticated inflation, ignore all same-ID methodological changes, treat Claude review as approval, or infer WP1C authority from a completed report.
+
+## Revision 0.3 additional parameters
+Two started consecutive NORMAL plans committed after an impairment incident plus exact-incident review clearance and current clean/fresh evidence are proposed recovery criteria. One plan restores faster with greater flapping risk; three/six prolongs ineligibility. No empirical optimum claimed. Three/six entry thresholds remain prior research assumptions, not proof of structural failure.
+True-up H=365, outgoing-first eligibility depletion and C1's sole prechosen SUUR0000SA0 backup are concrete comparison assumptions only, NOT selected PPU parameters. No auto compensation, alternative benchmark, mint/redemption rule or general governance authority is created.
+

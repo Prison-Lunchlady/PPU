@@ -115,3 +115,11 @@ WP1B review refinement: R023 includes alternating impaired/recovery months, unbo
 ## Current approval reconciliation — 2026-09-21
 
 R021 contingency basis and R022 institutional measurement/reconstruction risk remain OPEN. The actual 2025 gap is mandatory input, not evidence that Treasury estimation is suitable for PPU. R023/R024 and all previously open architectural tensions remain open; research completion does not mitigate them automatically.
+
+## Impairment revision — 2026-09-21
+R023 remains HIGH / OPEN: a label, deadline or escalation cannot bound loss under permanent source failure. R021 Treasury contingency basis and R022 measurement dependence remain OPEN. Prior temporary-data controls do not discharge structural-remedy risk.
+
+**R-025 — Contingent holder compensation is unquantifiable or uncollectible. HIGH / OPEN, qualitative.** Missing original observations can prevent settlement forever; continuous-holder eligibility is not proved by wallets; negative adjustments create exit options and positive adjustments require separate resources. Analysis only, not adoption. Routes Q024 and later expressly authorized liability/capital/transaction research; no WP1C execution.
+
+**R-026 — Precommitted backup continues values while abandoning the approved concept. HIGH / OPEN, qualitative.** Correlated source failure, immutable bad definitions, false trigger facts, first-vintage revisions and basis drift can defeat fallback. Mitigation evidence needed: prior scope approval, identifiable benchmark, authenticated trigger and joint-failure/fit analysis; not supplied by precommitment alone. Routes Q023/Q011/R021. No fallback selected.
+

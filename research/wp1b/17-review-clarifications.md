@@ -1,5 +1,8 @@
 # Controlling WP1B v0.2 Clarifications
 
+> **Revision 0.3 controls impairment policy.** Primary disposition: REVISION REQUIRED. Revised submission awaits primary review; no Gate 1B approval. [Benchmark Impairment Policy](18-benchmark-impairment-policy.md) supersedes earlier indefinite-freeze recommendations and impairment-clearance shorthand. The public interface for this proposal is `replay_with_impairment` in [impairment_policy.py](impairment_policy.py), wrapping the unchanged arithmetic model. Other mechanics remain conditional proposals; WP1C is unauthorized.
+
+
 These amendments are part of the **unapproved** specification. They reconcile independent critique and supersede any inconsistent shorthand in earlier candidate paragraphs. The frozen review input remains unchanged.
 
 ## Complete target interface and evidence boundary

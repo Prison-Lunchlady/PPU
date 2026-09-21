@@ -60,3 +60,8 @@ SRC015 completed: Claude Opus5High reviewed initial frozen packet;20operator dis
 ## Current approval reconciliation — 2026-09-21
 
 **SRC-016:** [Current Gate 1A approval and WP1B authorization](../../evidence/gate1a-approval-2026-09-21.txt), direct user instruction dated 2026-09-21. Controls the exact standard, conditions and current execution scope. SRC013 is retained as historical prior local authority; it is not the authority for silently importing a different approved standard. [Current reconciliation](../../reviews/gate1b/current-reconciliation.md) records reuse and renewed validation.
+
+## Current narrow revision authority and research
+**SRC-017:** [Brad's Gate 1B REVISION REQUIRED instruction](../../evidence/gate1b-revision-required-2026-09-21.md). Authorizes only Benchmark Impairment Policy revision and validation; explicitly withholds WP1C.
+W1B-S17–S20 add primary BEA/BLS evidence for fallback scope and shared dependencies; see [WP1B sources](../../research/wp1b/sources.md). [Revision policy](../../research/wp1b/18-benchmark-impairment-policy.md) separates facts, modeling assumptions, unresolved issues and recommendation. No fresh external adversarial-review endorsement is claimed.
+

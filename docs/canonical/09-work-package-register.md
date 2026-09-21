@@ -70,3 +70,7 @@ Current authority:SRC016; earlier local authority SRC013 is historical; package 
 ## Current approval reconciliation — 2026-09-21
 
 2026-09-21: SRC016 explicitly authorizes WP1B only. Existing local WP1B research is reconciled and revalidated for this repository; completion is a Gate 1B submission, never approval. WP1C and later packages remain NOT AUTHORIZED.
+
+## Current WP1B revision disposition
+SRC017: Gate 1B REVISION REQUIRED. Narrow Benchmark Impairment Policy revision completed for resubmission; three alternatives, ten comparison dimensions, explicit state and 220 total passing checks. Revised submission AWAITING PRIMARY REVIEW / NOT APPROVED. WP1C and all later packages NOT AUTHORIZED; no liability-model package started.
+

@@ -45,7 +45,7 @@ gates=(ROOT/'docs/canonical/10-review-gate-register.md').read_text(encoding='utf
 check('**Review Gate 0:** APPROVED WITH CONDITIONS' in state, 'Gate 0 state')
 check('**Review Gate 1A:** APPROVED WITH CONDITIONS' in state, 'Gate 1A state')
 check('WP1B — Target Calculation' in state and 'COMPLETE FOR REVIEW' in state, 'WP1B state')
-check('Status: **AWAITING REVIEW / NOT APPROVED**' in gates and '## Gate1B' in gates, 'Gate 1B register')
+check('Status: **REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED**' in gates and '## Gate1B' in gates, 'Gate 1B revision disposition')
 check('WP1C NOT AUTHORIZED' in gates, 'Successor authorization')
 standard='PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).'
 for path in ['README.md','docs/canonical/01-protocol-state.md','docs/canonical/02-decision-register.md','docs/canonical/10-review-gate-register.md','evidence/gate1a-approval-2026-09-21.txt']:
@@ -58,6 +58,14 @@ model=json.loads((ROOT/'research/wp1b/model-validation.json').read_text(encoding
 check(model['pass'] and len(model['checks'])==159 and not model['failed'],'159 model checks')
 fresh=json.loads((ROOT/'research/wp1b/revalidation.json').read_text(encoding='utf-8'))
 check(fresh['passed']==12 and not fresh['failed'],'12 new invariant checks')
+impairment=json.loads((ROOT/'research/wp1b/impairment-validation.json').read_text(encoding='utf-8'))
+check(impairment['passed']==49 and not impairment['failed'],'49 impairment and comparative counterexample checks')
+policy=(ROOT/'research/wp1b/18-benchmark-impairment-policy.md').read_text(encoding='utf-8')
+for dimension in ['Inflation and deflation','Transacting holders','Liability uncertainty','Reserve consequences','Manipulation / governance','Gate 1A compatibility','Historical finality','Oracle / authentication','Potential arbitrage','Principal failure modes']:
+    check('| '+dimension+' |' in policy,'Three-alternative matrix: '+dimension)
+check('BENCHMARK_IMPAIRED' in policy and 'PERSISTENT_UNRESOLVED' in policy and 'STRUCTURAL_CONFIRMED' in policy,'Explicit separate impairment causes')
+check('activation blocker' in policy,'Structural remedy remains activation blocker')
+check('SRC017' in state,'Current revision authority')
 check('not a formal platform export' in state, 'SRC003 provenance')
 check(not list(ROOT.glob('LICENSE*')), 'No license added')
 patterns={
@@ -89,7 +97,7 @@ for p in ROOT.rglob('*'):
         with zipfile.ZipFile(p) as z:
             for n in z.namelist():scan(name+'!'+n,z.read(n))
     else:scan(name,p.read_bytes())
-report={'scope':'Current Gate 1A approval and WP1B submission; no Gate 1B approval or production certification','checks':checks,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'COMPLETE FOR REVIEW','gate1b':'AWAITING REVIEW / NOT APPROVED','wp1c':'NOT AUTHORIZED','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
+report={'scope':'WP1B impairment revision 0.3; no Gate 1B approval or production certification','checks':checks,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'REVISION COMPLETE FOR RESUBMISSION','gate1b':'REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED','wp1c':'NOT AUTHORIZED','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
 (ROOT/'reviews/repository-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))
 sys.exit(bool(errors))

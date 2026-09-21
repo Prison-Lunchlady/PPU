@@ -1,5 +1,8 @@
 # Formal PPU Target Calculation Specification
 
+> **Revision 0.3 controls impairment policy.** Primary disposition: REVISION REQUIRED. Revised submission awaits primary review; no Gate 1B approval. [Benchmark Impairment Policy](18-benchmark-impairment-policy.md) supersedes earlier indefinite-freeze recommendations and impairment-clearance shorthand. The public interface for this proposal is `replay_with_impairment` in [impairment_policy.py](impairment_policy.py), wrapping the unchanged arithmetic model. Other mechanics remain conditional proposals; WP1C is unauthorized.
+
+
 WP1B candidate v0.2, 2026-09-19. **RECOMMENDATION — NOT APPROVED.** Gate 1A approved only the underlying benchmark. This specification defines a reference value, not market price, an unconditional redemption guarantee, or a reserve design. [Review clarifications](17-review-clarifications.md) form part of this specification and control any earlier ambiguity.
 
 **Proposed prominent promise qualification requiring explicit primary acceptance:** PPU uses a delayed, first-release-vintage CPI-U reference. Its contractual reference may stop tracking CPI indefinitely when data or delivery are unavailable or contested, or an index review hold remains unresolved, even while BLS publishes normally. Prior values and elapsed coverage gaps receive no retroactive makeup. Narrow human judgments concerning corrections, material changes and successor compatibility can delay resumption. Nominal values can fall below $1. This qualification is not already approved by Gate1A. Recommend reopening Gate1A's promise wording for this explicit qualification if Gate1B accepts these mechanics; no silent amendment to the accepted benchmark concept.

@@ -1,9 +1,9 @@
 # PPU Protocol State
-Record revision 0.5 • 2026-09-21 America/Chicago • Primary project state
+Record revision 0.6 • 2026-09-21 America/Chicago • Primary project state
 
 **Phase:** 1 — Monetary Architecture; Phase 0 COMPLETE  
 **Current package:** WP1B — Target Calculation  
-**Package status:** COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED  
+**Package status:** WP1B impairment revision COMPLETE FOR REVIEW; Gate 1B REVISION REQUIRED; REVISED SUBMISSION AWAITING PRIMARY REVIEW / NOT APPROVED  
 **WP0A:** COMPLETE  
 **Review Gate 0:** APPROVED WITH CONDITIONS  
 **Review Gate 1A:** APPROVED WITH CONDITIONS; WP1A COMPLETE  
@@ -68,7 +68,7 @@ Gate1A's historical submission and all canonical records before this update are 
 WP1B handoff proposes exact target, base, timing, finality, contingencies, symmetric deflation, oracle requirements and test cases only. Capital, reserve composition, thresholds, APs, liability design, general governance, legal entities, production and WP1C are outside this authorization. Existing insolvency/protected-claims, emergency/redemption, successor/migration and no-forecast/hedge-continuity tensions remain unresolved.
 
 
-## Current Gate1B handoff
+## Prior Gate1B handoff — superseded by SRC017
 WP1B COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED. [Completion report](../../research/wp1b/WP1B-completion-report.md), [submission](../../research/wp1b/Gate-1B-submission.md), [target candidate](../../research/wp1b/01-target-specification.md), [review reconciliation](../../research/wp1b/reviewer-reconciliation.md).159offline arithmetic/replay checks and31published Treasury daily values passed; integrity checks in wp1b/validation.json. No production/security/solvency certification.
 Recommendation: adapt daily indexing with fixed vintages and explicit fallback. **Recommend primary reopening of Gate1A promise wording** for indefinite tracking suspension, no makeup and narrowly scoped human holds if this candidate is accepted. Benchmark selection remains approved with its existing conditions; no operator amendment has occurred. Q021 and Q022 remain OPEN. WP1C NOT AUTHORIZED; Phase1 IN PROGRESS; Phase Gate1 NOT REACHED.
 
@@ -88,3 +88,9 @@ No target-calculation mechanics are approved: base date, base index value, TIPS 
 The 2025 CPI data gap is a mandatory WP1B design input. The Treasury contingency-methodology conflict stays OPEN; possible future TIPS holdings cannot automatically determine PPU fallback. CPI-U institutional dependence and public reconstruction limitations persist. C-CPI-U and PCE are live research comparators, not rejected or failed alternatives. Historical draft rejection language does not control their current research status.
 
 The prior Draft Monetary Constitution / Hypothesis Set remains unratified except for decisions explicitly approved through the roadmap. Gate 0's provenance, unresolved-tension and package-boundary conditions remain binding. Only WP1B was authorized by this instruction; stop at Gate 1B, with no WP1C or later authorization.
+
+## Current impairment-policy revision — SRC017
+
+Brad returned Gate 1B as REVISION REQUIRED. The narrowly authorized revision is complete for resubmission, not approval. [Policy comparison and state specification](../../research/wp1b/18-benchmark-impairment-policy.md) evaluates indefinite freeze, contingent continuous-holding true-up and fully precommitted structural fallback across all ten requested dimensions. Temporary carry is recommended conditionally; permanent freeze is not defended as fulfilled purchasing-power preservation. Structural economic remedy remains an activation-blocking unresolved requirement.
+
+`BENCHMARK_IMPAIRED` distinguishes authenticated structural notices from persistent symptoms, latches disclosure and necessary data ineligibility, and never automatically substitutes a benchmark or creates compensation. Original arithmetic, fixed vintages, symmetry, UTC timing and finality remain unchanged. 159 prior checks, 12 prior independent checks and 49 new impairment/counterexample checks pass (220 total). Treasury contingency conflict remains OPEN; C-CPI-U/PCE remain live comparators. Gate 1A wording is unchanged. Stop at Gate 1B; WP1C NOT AUTHORIZED.

@@ -1,5 +1,8 @@
 # Missing-Observation and Source-Outage Policy
 
+> **Revision 0.3 controls impairment policy.** Primary disposition: REVISION REQUIRED. Revised submission awaits primary review; no Gate 1B approval. [Benchmark Impairment Policy](18-benchmark-impairment-policy.md) supersedes earlier indefinite-freeze recommendations and impairment-clearance shorthand. The public interface for this proposal is `replay_with_impairment` in [impairment_policy.py](impairment_policy.py), wrapping the unchanged arithmetic model. Other mechanics remain conditional proposals; WP1C is unauthorized.
+
+
 Normal plan cutoff is month start minus 24 hours, strict `<`. Missing required M−2 observation means E=S. A late observation cannot change that month even if it arrives one second after cutoff. Its archive may explain the gap; the next month seeks its own required observation, not an arbitrary stale “latest available” value. A missing expected next observation causes another freeze. Resumption is prospective toward the next eligible observed level, with CATCH_UP and issuanceDataOK=false; one further normal consecutive-observation plan is required to remove the recovery-mode block.
 
 October 2025 is a real absence, not a value of zero. BLS did not issue the October CPI news release and marks missing observations with dashes. The protocol must not use seasonal-adjustment approximations as published NSA CPI. [BLS shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm).
