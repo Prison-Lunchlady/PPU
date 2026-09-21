@@ -21,3 +21,7 @@ Accepted user-supplied full SRC003 without altering evidence bytes; prefix norma
 ## 2026-09-21 — GitHub infrastructure initialization
 
 Imported the preserved Gate 1A revision 1.1 baseline into the PPU repository under the latest direct infrastructure-only instruction. Added repository navigation, privacy redactions, import provenance and repository validation; relocated records without changing stable IDs or monetary content. Preserved revision snapshots and original-source hashes. Gate 0 remains APPROVED WITH CONDITIONS; WP1A COMPLETE FOR REVIEW; Gate 1A AWAITING REVIEW / NOT APPROVED; WP1B NOT AUTHORIZED. No license added and no later work package activated. See [import record](archive/README.md).
+
+## 2026-09-21 — Gate 1A approval and WP1B reconciliation
+
+Recorded Brad's direct approval as SRC016 and the exact purchasing-power standard. Preserved all conditions, live comparators, open contingency conflict and unratified draft status. Reused existing local WP1B research with explicit provenance and renewed checks; no later work package activated. D011/D012 updated within their original IDs; D013 remains pending Gate 1B. Gate 1B AWAITING REVIEW; WP1C NOT AUTHORIZED.

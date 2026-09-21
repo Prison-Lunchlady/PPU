@@ -1,13 +1,15 @@
 {
-  "scope": "Repository import only; no monetary approval or model validation",
-  "checks": 1387,
-  "local_markdown_links_checked": 272,
-  "files_and_archive_entries_scanned": 185,
+  "scope": "Current Gate 1A approval and WP1B submission; no Gate 1B approval or production certification",
+  "checks": 1777,
+  "local_markdown_links_checked": 350,
+  "files_and_archive_entries_scanned": 221,
   "status": "PASS",
   "errors": [],
   "gate0": "APPROVED WITH CONDITIONS",
-  "wp1a": "COMPLETE FOR REVIEW",
-  "gate1a": "AWAITING REVIEW / NOT APPROVED",
-  "wp1b": "NOT AUTHORIZED",
-  "privacy_scan_limit": "Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; import provenance applies to relocated public copies."
+  "wp1a": "COMPLETE",
+  "gate1a": "APPROVED WITH CONDITIONS",
+  "wp1b": "COMPLETE FOR REVIEW",
+  "gate1b": "AWAITING REVIEW / NOT APPROVED",
+  "wp1c": "NOT AUTHORIZED",
+  "privacy_scan_limit": "Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files."
 }

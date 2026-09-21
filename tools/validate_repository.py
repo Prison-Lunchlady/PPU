@@ -12,10 +12,16 @@ def check(ok, label):
     if not ok: errors.append(label)
 def digest(b): return hashlib.sha256(b).hexdigest().upper()
 provenance = json.loads((ROOT/'archive/import-provenance.json').read_text())
+amended = {'README.md','CHANGELOG.md','docs/workspace-guide.md'} | {x['repository_path'] for x in provenance['files'] if x['repository_path'].startswith('docs/canonical/')}
 for item in provenance['files']:
     p = ROOT/item['repository_path']
     check(p.is_file(), 'Missing: '+item['repository_path'])
-    if p.is_file(): check(digest(p.read_bytes()) == item['repository_sha256'], 'Import hash: '+item['repository_path'])
+    if p.is_file() and item['repository_path'] not in amended:
+        check(digest(p.read_bytes()) == item['repository_sha256'], 'Unchanged import hash: '+item['repository_path'])
+current=json.loads((ROOT/'reviews/gate1b/submission-manifest.json').read_text(encoding='utf-8'))
+for item in current['files']:
+    p=ROOT/item['path']
+    check(p.is_file() and digest(p.read_bytes())==item['sha256'], 'Current submission hash: '+item['path'])
 for name in ['07-development-roadmap.md', 'evidence/PPU_full_recovered_source.txt']:
     item = next(x for x in provenance['files'] if x['source_path']==name)
     check(item['original_sha256']==digest((ROOT/item['repository_path']).read_bytes()), 'Verbatim source: '+name)
@@ -37,10 +43,21 @@ for p in ROOT.rglob('*.md'):
 state=(ROOT/'docs/canonical/01-protocol-state.md').read_text(encoding='utf-8-sig')
 gates=(ROOT/'docs/canonical/10-review-gate-register.md').read_text(encoding='utf-8-sig')
 check('**Review Gate 0:** APPROVED WITH CONDITIONS' in state, 'Gate 0 state')
-check('**Review Gate 1A:** AWAITING REVIEW / NOT APPROVED' in state, 'Gate 1A state')
-check('WP1B — Target Calculation; NOT AUTHORIZED' in state, 'WP1B state')
-check('Status: **AWAITING REVIEW / NOT APPROVED**' in gates, 'Gate 1A register')
-check('WP1B and all later packages NOT AUTHORIZED' in gates, 'Successor authorization')
+check('**Review Gate 1A:** APPROVED WITH CONDITIONS' in state, 'Gate 1A state')
+check('WP1B — Target Calculation' in state and 'COMPLETE FOR REVIEW' in state, 'WP1B state')
+check('Status: **AWAITING REVIEW / NOT APPROVED**' in gates and '## Gate1B' in gates, 'Gate 1B register')
+check('WP1C NOT AUTHORIZED' in gates, 'Successor authorization')
+standard='PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).'
+for path in ['README.md','docs/canonical/01-protocol-state.md','docs/canonical/02-decision-register.md','docs/canonical/10-review-gate-register.md','evidence/gate1a-approval-2026-09-21.txt']:
+    check(standard in (ROOT/path).read_text(encoding='utf-8'), 'Exact approved wording: '+path)
+check('C-CPI-U and PCE are live research comparators' in state,'Live comparators')
+check('Treasury contingency-methodology conflict stays OPEN' in state,'Open Treasury conflict')
+check('does not establish demonstrated user demand' in state,'Demand remains unproven')
+check('2025 CPI data gap is a mandatory WP1B design input' in state,'Mandatory 2025 gap')
+model=json.loads((ROOT/'research/wp1b/model-validation.json').read_text(encoding='utf-8'))
+check(model['pass'] and len(model['checks'])==159 and not model['failed'],'159 model checks')
+fresh=json.loads((ROOT/'research/wp1b/revalidation.json').read_text(encoding='utf-8'))
+check(fresh['passed']==12 and not fresh['failed'],'12 new invariant checks')
 check('not a formal platform export' in state, 'SRC003 provenance')
 check(not list(ROOT.glob('LICENSE*')), 'No license added')
 patterns={
@@ -72,7 +89,7 @@ for p in ROOT.rglob('*'):
         with zipfile.ZipFile(p) as z:
             for n in z.namelist():scan(name+'!'+n,z.read(n))
     else:scan(name,p.read_bytes())
-report={'scope':'Repository import only; no monetary approval or model validation','checks':checks,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE FOR REVIEW','gate1a':'AWAITING REVIEW / NOT APPROVED','wp1b':'NOT AUTHORIZED','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; import provenance applies to relocated public copies.'}
+report={'scope':'Current Gate 1A approval and WP1B submission; no Gate 1B approval or production certification','checks':checks,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'COMPLETE FOR REVIEW','gate1b':'AWAITING REVIEW / NOT APPROVED','wp1c':'NOT AUTHORIZED','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
 (ROOT/'reviews/repository-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))
 sys.exit(bool(errors))

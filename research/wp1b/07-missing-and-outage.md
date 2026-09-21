@@ -1,0 +1,13 @@
+# Missing-Observation and Source-Outage Policy
+
+Normal plan cutoff is month start minus 24 hours, strict `<`. Missing required M−2 observation means E=S. A late observation cannot change that month even if it arrives one second after cutoff. Its archive may explain the gap; the next month seeks its own required observation, not an arbitrary stale “latest available” value. A missing expected next observation causes another freeze. Resumption is prospective toward the next eligible observed level, with CATCH_UP and issuanceDataOK=false; one further normal consecutive-observation plan is required to remove the recovery-mode block.
+
+October 2025 is a real absence, not a value of zero. BLS did not issue the October CPI news release and marks missing observations with dashes. The protocol must not use seasonal-adjustment approximations as published NSA CPI. [BLS shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm).
+
+Illustrative December plan: S=September324.800, October absent ⇒ E=324.800. January: S=324.800, November324.122 admitted ⇒ interpolate downward in recovery mode. February: if December eligible and source health clean, consecutive expected endpoints permit NORMAL. No assertion about unobserved October purchasing power is made.
+
+Source page outage with original evidence already authenticated does not invalidate the plan. Missing delivery evidence before cutoff freezes even if BLS did publish: liveness is traded for verifiability. Loss of heartbeat blocks new issuance after at most 24 hours since the last required fresh monitoring attestation; detection is not instantaneous, and false clean attestations remain possible. Blockchain downtime cannot rewrite cutoffs. Already committed targets are calculable off-chain; actual transfer availability and order execution are not guaranteed.
+
+After three consecutive frozen plans, publish BENCHMARK_REASSESSMENT_REQUIRED and request primary review. Absent observations, no automatic resumption or substitute exists. Review cannot conjure past missing data. Return of eligible original-series data permits mechanical resumption, while the reassessment disclosure remains outstanding until disposition. A non-temporary benchmark change requires 09's hold/clearance rules instead.
+
+Freeze is a final monetary reference, not a statement of preserved purchasing power. It can understate inflation or overstate deflation and redistribute economic exposure; conservative issuance blocking is not necessarily conservative for every holder or reserve provider. Redemptions and accrued claims during freezes are unresolved WP1C/1F matters. No new fee, haircut, redemption pause or collateral ratio is selected here.

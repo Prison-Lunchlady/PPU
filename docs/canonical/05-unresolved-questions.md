@@ -1,13 +1,13 @@
 # Unresolved Questions
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
-Entries OPEN except Q001/Q019 CLOSED and Q020 NO LONGER APPLICABLE, as documented below. Q003 has a research answer pending Gate 1A. Stable IDs do not imply approval. Brad controls authorization; future package owners are unassigned.
+Entries OPEN except Q001/Q019 CLOSED and Q020 NO LONGER APPLICABLE, as documented below. Q003 is CLOSED for the narrow v0.1 benchmark selection by Gate1A; Q021 remains OPEN and target mechanics remain pending Gate1B. Stable IDs do not imply approval. Brad controls authorization; future package owners are unassigned.
 
 | ID | Question / uncertainty | Provenance | Resolution evidence and route |
 |---|---|---|---|
 | Q-001 | Full remainder of SRC003 recovered? | User-supplied full response, normalized prefix match and 24-article/post-analysis coverage | CLOSED. See reviews/source-recovery-reconciliation.md. Does not approve Gate 0 or ratify draft. |
 | Q-002 | Who owns, funds and is compensated for the first-loss layer; can it scale? | D005; Phase 0 central unresolved question | Capital Structure Specification, WP1E; stress validation Phase 2 |
-| Q-003 | What standardized purchasing power does PPU promise and which benchmark is defensible? | D003, H001; WP1A report | RESEARCH ANSWER COMPLETE / REVIEW PENDING. Proposed CPI-U U.S. urban consumer-price standard, D011; not closed or ratified until review disposition |
+| Q-003 | What standardized purchasing power does PPU promise and which benchmark is defensible? | D003, H001; WP1A report | CLOSED for bounded v0.1 benchmark selection, D011/D012 and SRC013. No closure of target mechanics, intended-user fit Q021, universal-optimality or future-scope questions |
 | Q-004 | What are base date, index, daily interpolation, rounding, stale/discontinued-index and deflation rules? | Draft I–IV; roadmap 1B | Formal Target Calculation Specification, WP1B |
 | Q-005 | What exactly is the liability and what claims have seniority? | Draft V, XV; H008 | WP1C plus Phase 3 legal evidence |
 | Q-006 | When queued redemptions enter Q, do their tokens leave S, and at what target/time is the obligation fixed? | Article V equation plus prose; L = S × T + Q is operator shorthand, not a source quotation | Explicit mutually exclusive accounting states in WP1C/1F; no double-count assumption |
@@ -57,3 +57,19 @@ Q019 closure rests on the later express approval, not the earlier source-confirm
 Q004/Q011: actual 2025 Treasury contingency exposes observed-data/no-forecast versus same-hedge-convention conflict. Binding vintage, corrections, lag tolerance, missing-data behavior and successor treatment remain WP1B/1G decisions; no automatic Treasury inheritance.
 Q013: public published-value verification is distinct from full independent CPI reconstruction; delivery mirrors do not create measurement independence. Later oracle requirements must preserve this boundary; R022.
 Q007: no direct hedge for alternatives was established in this research; existence/cost of custom derivatives and matched-portfolio performance remain untested, WP1D/Phase 2. All capital, insolvency, emergency, version-continuity and legal questions remain OPEN.
+
+## WP1B research disposition
+**Q-004:** RESEARCH ANSWER COMPLETE / GATE1B REVIEW PENDING. Candidate formula/base/timing/rounding/deflation/outage/revision/successor policy in wp1b/01–15. No target mechanism approved. Actual future genesis date is an activation parameter, not chosen here.
+**Q-021 remains OPEN.** Research has not established intended user demand or tolerance for delayed coverage, freezes and prospective recovery. Gate1A explicitly preserves this question.
+Q011 remains OPEN: constrained index hold/clearance requirements proposed; substantive successor and voluntary migration versus protected terms not resolved. General governance/emergency/insolvency topics remain for later packages.
+Q013/Q014 remain OPEN: authenticated first-publication capture, path independence, truthful monitoring, canonical timestamps/finality and chain outage execution must be proven later. Exact offline arithmetic is not this evidence.
+**Q-022 — Lag and prolonged-freeze acceptability. OPEN.** Can intended users and later architecture tolerate the proposed ~2.5-month stylized age, arbitrary outage length, first-vintage error and catch-up exposure? Gate1B assesses the proposed qualification; later WP1D/1F/Phase2 quantify matching/liquidity/transaction implications. If unacceptable, reopen target or Gate1A. Distinct from Q021 population fit, and from mechanical Q004.
+All other unrelated questions remain at inherited dispositions. No capital, reserves, liability accounting, APs, emergency redemption, legal classification or software-selection answer is implied.
+
+
+Gate1B submission explicitly recommends primary review of Gate1A promise wording; Q003's earlier narrow benchmark-selection closure is not reversed by operator opinion. Q004 remains GATE1B REVIEW PENDING and Q021/Q022 remain OPEN. No unrelated question is closed.
+
+
+## Current approval reconciliation — 2026-09-21
+
+Q003 closes only the bounded underlying benchmark selection. Q004 target mechanics are researched but awaiting Gate 1B; Q004/Q011 Treasury contingency conflict remains explicitly OPEN; Q013 retains its distinct verification and institutional-dependence question. Q021 user demand/fit and Q022 lag/freeze acceptability remain OPEN. No unrelated unresolved question is closed by SRC016.

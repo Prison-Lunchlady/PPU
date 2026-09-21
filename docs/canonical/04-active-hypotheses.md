@@ -54,3 +54,12 @@ H008: governance protection of claims does not establish enforceability, resolut
 **H-001: CONDITIONALLY SUPPORTED / NOT RATIFIED.** [WP1A comparison](../../research/wp1a/02-comparative-benchmark-matrix.md) favors CPI-U only for a qualified U.S. urban consumer-price promise. Stronger claims of universal purchasing-power preservation, fully public statistical reconstruction and exact TIPS hedging were rejected. C-CPI-U remains a meaningful challenge if cost-of-living approximation dominates. Evidence S01–S21 and D011; Q003 awaits Gate 1A. Future falsification: wrong target population, unacceptable lag/vintage mismatch, impractical matching or better-supported alternative.
 
 H002 is not selected by finding TIPS relevant. H003 is not validated by same-index principal cash flows. H004–H008 were not investigated beyond recording dependencies. No new duplicate hypothesis IDs are needed.
+
+## Gate1A / WP1B status amendment
+**H-001:** Underlying benchmark selected WITH CONDITIONS by Brad, SRC013; conditional economic suitability remains falsifiable. This supersedes pending benchmark approval only. No proof of universal superiority, user demand or hedge solvency. Q021 remains OPEN.
+**H-002:** CONDITIONALLY SUPPORTED RECOMMENDATION / PENDING GATE1B for adapted normal daily interpolation, not wholesale TIPS mechanics. Exact arithmetic and adversarial-input tests support internal consistency; lag, indefinite freeze, institutional classification and evidence finality limit suitability. Reject/reopen if those costs are unacceptable. CasesA–L and comparison in wp1b/. H003–H008 remain OPEN / UNVALIDATED and outside this research.
+
+
+## Current approval reconciliation — 2026-09-21
+
+H001 is bounded by the exact approved standard in Protocol State (SRC016); it is not a universal purchasing-power claim or demonstrated user demand. H002 is only a conditional target-calculation research recommendation awaiting Gate 1B. C-CPI-U and PCE remain live research comparators. H003–H008 are not newly validated.

@@ -1,0 +1,664 @@
+{
+  "package": "PPU WP1B Gate 1B repository submission",
+  "revision": "2026-09-21 reconciliation",
+  "gate": "1B AWAITING REVIEW / NOT APPROVED",
+  "next_authorized": "NONE",
+  "scope": "Repository files excluding this manifest and the separately generated repository-validation report; excludes .git and bytecode caches",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 81,
+      "sha256": "C45A96734A86A137E12EA93564931ABC8272F7C0EB3EE2A4E7802A20A36F0178"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 247,
+      "sha256": "AC10B2798022FC51E2BBA6A29D82839F131D90DF0C34BE52D3C8E025D6ABC83B"
+    },
+    {
+      "path": "archive/history/gate0-approved/01-protocol-state.md",
+      "bytes": 6258,
+      "sha256": "12227946D6A84A1EA2A6AA3326DA8C856487ED41B4AB7089DD059FBA11CE50CD"
+    },
+    {
+      "path": "archive/history/gate0-approved/02-decision-register.md",
+      "bytes": 6829,
+      "sha256": "59A13A65EDD89AC7952B2CA796AC53798AEF48B8651C8F963E598B6E58548260"
+    },
+    {
+      "path": "archive/history/gate0-approved/03-risk-register.md",
+      "bytes": 6812,
+      "sha256": "AD847597AB3F1C9C22DA0DD7045C85A2CCAE96BCF51DF4AC40AFECD366E68983"
+    },
+    {
+      "path": "archive/history/gate0-approved/04-active-hypotheses.md",
+      "bytes": 4007,
+      "sha256": "FFB093006B0AD896BADFB3103DF606ADEB374A136B41A11B33CC727F639186B3"
+    },
+    {
+      "path": "archive/history/gate0-approved/05-unresolved-questions.md",
+      "bytes": 7479,
+      "sha256": "1AFA39D5EEB6DABD0D025FFF907EDAD90091BBD0E476C718DFD6CF005F07049B"
+    },
+    {
+      "path": "archive/history/gate0-approved/06-research-library-index.md",
+      "bytes": 3961,
+      "sha256": "1E1EEBA737C3E89B438350B8B69BB28BA52EEF68611F6CC9B4E3B36F32173A3F"
+    },
+    {
+      "path": "archive/history/gate0-approved/07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "archive/history/gate0-approved/08-draft-constitution.md",
+      "bytes": 23749,
+      "sha256": "4311A6422B3C49448A26742CE990E04F72F161E3017F4373FFB20EF889C595FC"
+    },
+    {
+      "path": "archive/history/gate0-approved/09-work-package-register.md",
+      "bytes": 5430,
+      "sha256": "AF2C9E0E29E1265D46EC80CCE5D7D161E1D8436C40F20819CEA2F4A934CCC1E0"
+    },
+    {
+      "path": "archive/history/gate0-approved/10-review-gate-register.md",
+      "bytes": 2854,
+      "sha256": "A0AF4D8116BA62768CD8B7E077DA03267E2CBA815E7208C20DAB1074579B2A52"
+    },
+    {
+      "path": "archive/history/gate0-approved/CHANGELOG.md",
+      "bytes": 1751,
+      "sha256": "838EDC7799CBEE1CE1C49254BA466703973A24127100574AF3393801C3ECF93E"
+    },
+    {
+      "path": "archive/history/gate0-approved/README.md",
+      "bytes": 5183,
+      "sha256": "ED54AF54F4997E0EE71176C1EDDC478228928474457DA8C7D72566B883986AF1"
+    },
+    {
+      "path": "archive/history/gate0-approved/submission-manifest.json",
+      "bytes": 10508,
+      "sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989"
+    },
+    {
+      "path": "archive/history/gate0-approved/WP0A-report.md",
+      "bytes": 3100,
+      "sha256": "BCA259E5CA5257A52CC4118AF5A28D01DB41E31433B1F146219ACBF0A3AC7394"
+    },
+    {
+      "path": "archive/history/pre-claude-review/01-protocol-state.md",
+      "bytes": 4942,
+      "sha256": "B3A8CA1FE44F9C85EF4766D0962987FC9C9B2A54BFFD9B6300DCF7E48B415CE1"
+    },
+    {
+      "path": "archive/history/pre-claude-review/02-decision-register.md",
+      "bytes": 5508,
+      "sha256": "2C303895A3ABDE54983B5377731213AC5A275DCAD14E2DDE8C7332E76E4973C3"
+    },
+    {
+      "path": "archive/history/pre-claude-review/03-risk-register.md",
+      "bytes": 4587,
+      "sha256": "EF67B0DE4E2DA767A76926FD036B50E1E9D4C2FD0660D10B7AAC5ECC807FDA9F"
+    },
+    {
+      "path": "archive/history/pre-claude-review/04-active-hypotheses.md",
+      "bytes": 2752,
+      "sha256": "AE6B7B84C0A5B334389FD5143585D33254C9BE0ADAFCF7131DC7D94D8D3019F5"
+    },
+    {
+      "path": "archive/history/pre-claude-review/05-unresolved-questions.md",
+      "bytes": 5289,
+      "sha256": "AC8A3928540D0E6ED2D5DCDD362B18926986CE81F117FE3FD313DC8FFA57F4AF"
+    },
+    {
+      "path": "archive/history/pre-claude-review/06-research-library-index.md",
+      "bytes": 4038,
+      "sha256": "1D5A89BDA41E6CCAE60E0F6A753FC1118E242D9F40BEA71227CFB2CB0440E9F3"
+    },
+    {
+      "path": "archive/history/pre-claude-review/07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "archive/history/pre-claude-review/08-draft-constitution.md",
+      "bytes": 18991,
+      "sha256": "9CD7F3C2BEF735DC2D9EB8B2C86EE58885E11D409B9A1E076B2AC7F7A42DFDF7"
+    },
+    {
+      "path": "archive/history/pre-claude-review/09-work-package-register.md",
+      "bytes": 4391,
+      "sha256": "2732D83F5C372E09385FEF82428CD18C13F9426FCD62B595FF8CA1BAB7A71DBE"
+    },
+    {
+      "path": "archive/history/pre-claude-review/10-review-gate-register.md",
+      "bytes": 3082,
+      "sha256": "2F71506AA618FA99092ADED04E8D8712327A4C7038721940F55B0842AD172C48"
+    },
+    {
+      "path": "archive/history/pre-claude-review/CHANGELOG.md",
+      "bytes": 556,
+      "sha256": "23AE933231D3DC8E22F122016E6AFEF3C340A7889E2CF3086AAC379F45BE35D6"
+    },
+    {
+      "path": "archive/history/pre-claude-review/README.md",
+      "bytes": 3137,
+      "sha256": "FD54DAC5C312A6604362DB3929011C73E99D75B88B2A771FB23D391E30DD4023"
+    },
+    {
+      "path": "archive/history/pre-claude-review/validation.json",
+      "bytes": 553,
+      "sha256": "CE74DC38FF825D473181C2DF958B38D411DD8DDB60EA624C433AA03D66E20AAF"
+    },
+    {
+      "path": "archive/history/pre-claude-review/WP0A-report.md",
+      "bytes": 3225,
+      "sha256": "86D2CB602913D240440596D420B1EBEB7563BA9D86E1005ACBC3014C365F8581"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/01-protocol-state.md",
+      "bytes": 6833,
+      "sha256": "8852FC7B3758B1642A0F12039DD51FC2D2798B29379B8F9CE3C1B77F7E925709"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/02-decision-register.md",
+      "bytes": 5667,
+      "sha256": "E3C02F7D3E813EF229D89EBE16DA8E313BCC7CA77ABD5BC3F69DBC516F17FF81"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/03-risk-register.md",
+      "bytes": 6105,
+      "sha256": "64642898CD724EC5D9B78501750DAC1A859BDACF6B1F9D2719D9D965580608ED"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/04-active-hypotheses.md",
+      "bytes": 2752,
+      "sha256": "AE6B7B84C0A5B334389FD5143585D33254C9BE0ADAFCF7131DC7D94D8D3019F5"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/05-unresolved-questions.md",
+      "bytes": 6256,
+      "sha256": "03B97C007FDBA35A120CAA902CCA6597E78F4CDCE636A4DF18ACD7B3D0B7E650"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/06-research-library-index.md",
+      "bytes": 6039,
+      "sha256": "9139560E70110B05852E78219DCB7758DA0462034C2F33592ABAC73862F9492D"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/08-draft-constitution.md",
+      "bytes": 19040,
+      "sha256": "5D8AD5ACA4A524DA851BFD46F944CFDDF89CFF5330BAF5717959F353DD5FDC83"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/09-work-package-register.md",
+      "bytes": 4898,
+      "sha256": "8882E874F5DD198533E4A1F19ED55357CA40A73F65BCE4C391E9475DE3E9C3A8"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/10-review-gate-register.md",
+      "bytes": 4109,
+      "sha256": "860A1961AC639E95B8B2C95F010D7D13D18E73DA93A4F6001092A21E1C62BB1D"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/CHANGELOG.md",
+      "bytes": 1086,
+      "sha256": "3D5CC8CE6AEDEB38674EFD1C7B8099165C6FF427101AEAE0314D85DF5D3EC195"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/handoff-coverage.md",
+      "bytes": 3187,
+      "sha256": "09DC84F6D71E20465DC945E60D95A61AC5E3BFDBE59A291A3F095EACC7803B77"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/README.md",
+      "bytes": 4839,
+      "sha256": "33898C805AEE1B1D789E971BD3FECB3D891192D9BBB03A0EEB901C21E3F1AE13"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/submission-manifest.json",
+      "bytes": 7043,
+      "sha256": "98BBC37F165D81BDEB5437E03F85A2B421EE33BB27DB4E4C5E3546B810C73247"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/validation.json",
+      "bytes": 553,
+      "sha256": "F74EE65542D577DB45D6D93A945A09CC13E2E3D654EEBA63499935087EF31936"
+    },
+    {
+      "path": "archive/history/pre-source-recovery/WP0A-report.md",
+      "bytes": 4104,
+      "sha256": "E64AA7CBE29BBE7775C715D5818FE5292F27BE8D317AEAC701587333AA68753E"
+    },
+    {
+      "path": "archive/import-provenance.json",
+      "bytes": 34366,
+      "sha256": "88D6C25090C70AFCB7888788B386745D38931B526806FAF759517058F7A70AAB"
+    },
+    {
+      "path": "archive/PPU-WP1A-Gate1A-package-public-copy.zip",
+      "bytes": 1165817,
+      "sha256": "200832CC1FAADCF0C70A7F514526D04E9919D307162A3404E0607C6D20A99730"
+    },
+    {
+      "path": "archive/README.md",
+      "bytes": 2538,
+      "sha256": "E22F3B211C151AC3097761572145A075F20C357A32E3C06CD97347D7DFDA03D8"
+    },
+    {
+      "path": "archive/wp1b-prior/reuse-provenance.json",
+      "bytes": 9074,
+      "sha256": "8D40C3A4C98F56A08DD18E16F7CABD0FB87AC650BE711D4487391532E294F4F7"
+    },
+    {
+      "path": "archive/wp1b-prior/submission-manifest.json",
+      "bytes": 24441,
+      "sha256": "ADD1DCB02A7B369FC3C5D173EC2A86FF666A216A041CADF8A29704EACFE6C696"
+    },
+    {
+      "path": "archive/wp1b-prior/validation.json",
+      "bytes": 1074,
+      "sha256": "A463B1A7C62E76C0A75603D7658B9990674A57DC648F02649B5A047A7B7A7DB9"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 4584,
+      "sha256": "0B9A0EA08EFDB823D781ED5A7545B6F29899ED5234F998B2D70BD4B6B5143EB3"
+    },
+    {
+      "path": "docs/canonical/01-protocol-state.md",
+      "bytes": 12607,
+      "sha256": "38E4761372D97ACEC6B8C4FE5883D9560660454DE4797505F65D054CF7B41D97"
+    },
+    {
+      "path": "docs/canonical/02-decision-register.md",
+      "bytes": 14014,
+      "sha256": "8EC8269EC31F480F5C6A207D23D92410995493DB2EA6421DD46C76B371BA4265"
+    },
+    {
+      "path": "docs/canonical/03-risk-register.md",
+      "bytes": 11265,
+      "sha256": "BC50D11849FA6E41C024755E7D8FFE47BC76CEEBF6C67539303A770D421384CA"
+    },
+    {
+      "path": "docs/canonical/04-active-hypotheses.md",
+      "bytes": 6155,
+      "sha256": "96EE14B65E79A9DB3659AE80F2904E2E233F1E185A0BC16D1B003D1468B71F0A"
+    },
+    {
+      "path": "docs/canonical/05-unresolved-questions.md",
+      "bytes": 11227,
+      "sha256": "0644C10EAC57FC2F1195DF43D67BED53D637D777868174282011290BF75E6491"
+    },
+    {
+      "path": "docs/canonical/06-research-library-index.md",
+      "bytes": 6949,
+      "sha256": "FA15A18DE7B28979660CA08CD2A45E9ECF8299718AD566FD4E991CA2425EB8DE"
+    },
+    {
+      "path": "docs/canonical/09-work-package-register.md",
+      "bytes": 8233,
+      "sha256": "0236B89D6397836A3170D576FB2D9FB36378D010327FD1DC82798FB6D2579326"
+    },
+    {
+      "path": "docs/canonical/10-review-gate-register.md",
+      "bytes": 7769,
+      "sha256": "44403158CBF0B0DC68C7D53ADB035D91E6BBCBB90CF2B13C7E0BCF4ED875756A"
+    },
+    {
+      "path": "docs/constitution/08-draft-constitution.md",
+      "bytes": 24527,
+      "sha256": "A2AA0E0504FE87310236AB3CB692451D64F11F43196BF7CBE66552E0D156002F"
+    },
+    {
+      "path": "docs/roadmap/07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "docs/workspace-guide.md",
+      "bytes": 6327,
+      "sha256": "16E05E45DB5F98191F17DD5F297355D8A75154A54468EC14A42FAC2037E68F0A"
+    },
+    {
+      "path": "evidence/architecture-response-PARTIAL.md",
+      "bytes": 20401,
+      "sha256": "CCE3D49CBF4299800A773B6F1E43525388F00DA69D8C41A664AD831335E36250"
+    },
+    {
+      "path": "evidence/claude-review-input.txt",
+      "bytes": 80640,
+      "sha256": "E58D9FF8D0B242E7ABB9E0B7A2B6C12332168D683112B09BFD25BB28DE87B06D"
+    },
+    {
+      "path": "evidence/conversation-recovered.json",
+      "bytes": 52958,
+      "sha256": "A8ED2ED505DF97F3CCC4FC0C9EBC517D06920B824E3F18C4244C291BCC21D0F5"
+    },
+    {
+      "path": "evidence/gate0-approval-wp1a-authorization.md",
+      "bytes": 2429,
+      "sha256": "DE3208F34786327C571D2453CA2B9E7145ACF13C2446AB53A7E587311D58537F"
+    },
+    {
+      "path": "evidence/gate1a-approval-2026-09-21.txt",
+      "bytes": 1608,
+      "sha256": "818EA0A732C2EAA1A58475B99172BB328F393205E8DEB68540597AC9A4886808"
+    },
+    {
+      "path": "evidence/gate1a-approval-wp1b-authorization.txt",
+      "bytes": 10355,
+      "sha256": "E158E8A9BFA356349458DDF94A66C78C2CF2EB583A9B5BFF77AC97B03A5E0D2A"
+    },
+    {
+      "path": "evidence/initial-proposal.md",
+      "bytes": 8633,
+      "sha256": "77412968E4575BD728BB055F525AA43DBBEF3BDAAA76529EA1266753B52D6A5A"
+    },
+    {
+      "path": "evidence/phase0-source.md",
+      "bytes": 10694,
+      "sha256": "704D9722DDB7182038C036DA4B8F21F1B898E480671FF1258D6B5CFE9B1E1459"
+    },
+    {
+      "path": "evidence/PPU_full_recovered_source.txt",
+      "bytes": 29283,
+      "sha256": "237A8EEA4F2D64B6B83C597DFA11C7AC02E9BD9A10DE1536083A8D37BA48953E"
+    },
+    {
+      "path": "evidence/roadmap-v0.1-original.txt",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "evidence/wp0a-authorization.md",
+      "bytes": 1307,
+      "sha256": "04773BBECDB32EA3DD85747C7DCD24C01AF3332136639135989D96051008FA3E"
+    },
+    {
+      "path": "evidence/wp1a-claude-review-input.txt",
+      "bytes": 43693,
+      "sha256": "3C2242E8A7FCA9551C717425FBFF1DE9B707B89BEF4E619E8913634ACE95970A"
+    },
+    {
+      "path": "evidence/wp1a-claude-review-request.md",
+      "bytes": 1664,
+      "sha256": "2353D4D7BA40EDD1DE6387E6357838C340B6534436CA02855AE9A9E8184D43F1"
+    },
+    {
+      "path": "evidence/wp1a-trucpi-us-methodology-v1.4.pdf",
+      "bytes": 1024701,
+      "sha256": "AA7E491342387F15F24CDD1F1AFB45E1003FD8D22BF8148F1A77F5A1AC4B8567"
+    },
+    {
+      "path": "evidence/wp1b-claude-review-input.txt",
+      "bytes": 71436,
+      "sha256": "07F3A1B094597D87A85F9EDD5FD7D7AADB3BB5494C1BF2E76DAC392CD3FA4A02"
+    },
+    {
+      "path": "evidence/wp1b-claude-review-request.md",
+      "bytes": 1434,
+      "sha256": "D38AED317AAC1B0C17736DC0B21CEB36CA998EE06462D7EA5D122BB85720F0B3"
+    },
+    {
+      "path": "evidence/wp1b-treasury-may2026.pdf",
+      "bytes": 74720,
+      "sha256": "CB01AC8DB618CDCBAFFEE8398FE5AD36382AB308B257E112B4275DF680BFFFF2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4940,
+      "sha256": "593A9E7B69BB91A6229241504753D0D09A0CBB3544E07A4200BAB38433D8B728"
+    },
+    {
+      "path": "research/wp1a/01-purchasing-power-standard-research-report.md",
+      "bytes": 11918,
+      "sha256": "18110E839FA1306B358B0F4816D41237D338A349216CDC580A00779FB4AD6F5B"
+    },
+    {
+      "path": "research/wp1a/02-comparative-benchmark-matrix.md",
+      "bytes": 5934,
+      "sha256": "9FD9B48B77B8A966CABE4B949D11D432067691360E3156520D83AAAAF7233827"
+    },
+    {
+      "path": "research/wp1a/03-methodology-and-revisions.md",
+      "bytes": 8446,
+      "sha256": "F7AA5A7223260ACA59EF3AAAE104D60FC8687268162B017596C71FB11DC9739F"
+    },
+    {
+      "path": "research/wp1a/04-benchmark-institutional-risk.md",
+      "bytes": 4578,
+      "sha256": "2BC33F2DD2898A540DAB5BAB0037B19902A7B1F65824E25823CF2DBB40C2F6D3"
+    },
+    {
+      "path": "research/wp1a/05-hedgeability-and-matching.md",
+      "bytes": 5534,
+      "sha256": "F90BEAD13922B164DABE5B99DE75D5EF888AE12FD21EA9E3CEB068975BDCBC50"
+    },
+    {
+      "path": "research/wp1a/06-recommended-standard.md",
+      "bytes": 5719,
+      "sha256": "9B7D7B1E66614C4612AF5DD40E8129E11662E3FA00DCF487A544DC7BEE237A4F"
+    },
+    {
+      "path": "research/wp1a/sources.md",
+      "bytes": 8742,
+      "sha256": "8B294F5C35422E2B7BB93B825621740DEAF5255F090D4DF049712EE60DE43828"
+    },
+    {
+      "path": "research/wp1b/01-target-specification.md",
+      "bytes": 14665,
+      "sha256": "F76B06D08058FAF90531AB7AF8025F3B86F326388B18A6FBF17522D5A955921A"
+    },
+    {
+      "path": "research/wp1b/02-base-and-reference.md",
+      "bytes": 1598,
+      "sha256": "E4689FF33672F5A8DAC4879284A8248FAF429FDF3AFA0A8CE91E27D7FCC6765C"
+    },
+    {
+      "path": "research/wp1b/03-method-comparison.md",
+      "bytes": 5504,
+      "sha256": "B89E8EB2F9F7CD56A109369AA4F25D7FA22A59BC1FA3AD16B34E8DF929E0CEA6"
+    },
+    {
+      "path": "research/wp1b/04-tips-compatibility.md",
+      "bytes": 3492,
+      "sha256": "DE354859587A5B26C2890A08957232E1723B8B66877A64934E90C925442195DD"
+    },
+    {
+      "path": "research/wp1b/05-publication-lag.md",
+      "bytes": 2487,
+      "sha256": "7BBACDDF66D55C8B7D44717EDB21F08A3DC73D2A63C0A786150ECECF72BC35A7"
+    },
+    {
+      "path": "research/wp1b/06-revisions-and-finality.md",
+      "bytes": 2327,
+      "sha256": "0BD44AD82F3CE8341BFEB139D2C609C11393E50DD88E56AAA6054FDD012BD93F"
+    },
+    {
+      "path": "research/wp1b/07-missing-and-outage.md",
+      "bytes": 2749,
+      "sha256": "4518D8CA3BB3185010DD967923C371072D35F0D32B28FB50E6736BCE200CEF41"
+    },
+    {
+      "path": "research/wp1b/08-deflation.md",
+      "bytes": 1280,
+      "sha256": "766E24272497A8CD78268DF69314CEC1D91DEA880B7A13AB93BDF17DFE10D7C7"
+    },
+    {
+      "path": "research/wp1b/09-contingency-hierarchy.md",
+      "bytes": 3343,
+      "sha256": "A4B3D1913895C2CB12C51966695854F8A958F82B8509A86120C0950C386F0665"
+    },
+    {
+      "path": "research/wp1b/10-oracle-timing.md",
+      "bytes": 3316,
+      "sha256": "DA443860504AB591843F47DD60FEEF97321179F8BEE839ED29850E6D8D236BF9"
+    },
+    {
+      "path": "research/wp1b/11-adversarial-scenarios.md",
+      "bytes": 4196,
+      "sha256": "459A3600D89B53352BFD0FC3676FFF3BAA16F487E5CCFA5B48F9340557B5F65F"
+    },
+    {
+      "path": "research/wp1b/12-worked-examples.md",
+      "bytes": 3346,
+      "sha256": "146F2A533F619D33B1B649D7887F44697D217B6BB77E90AB8D43D0AF3D35BA03"
+    },
+    {
+      "path": "research/wp1b/14-proposed-constitution-updates.md",
+      "bytes": 2989,
+      "sha256": "D926040E7E68A59B36AFE8769800274CF1F04796AE224CBF3C4F852DBCDC6442"
+    },
+    {
+      "path": "research/wp1b/15-required-question-answers.md",
+      "bytes": 4568,
+      "sha256": "8988E4C7E4E34E1ACF4E7E2C37241D79376D80E53D5097810FB22D680813D090"
+    },
+    {
+      "path": "research/wp1b/16-parameter-and-assumption-register.md",
+      "bytes": 3391,
+      "sha256": "50C543AFAEC7643D31B84810D07724F8BD536B30BF85858845BBBF1C5197C41A"
+    },
+    {
+      "path": "research/wp1b/17-review-clarifications.md",
+      "bytes": 9953,
+      "sha256": "0FA1E5BF2430542D50E1F3D6C1CA78584A90768C6DB6D6C445043614B3F30284"
+    },
+    {
+      "path": "research/wp1b/Gate-1B-submission.md",
+      "bytes": 2809,
+      "sha256": "E785B020F871AB26C3DD5B3859E6C2F1B2BBA6E78506E68A4D2A149118365C65"
+    },
+    {
+      "path": "research/wp1b/model-validation.json",
+      "bytes": 33456,
+      "sha256": "30490B18E259CF142258992F73DB1A23EC7BB6D71688570817CB7C02C92A7801"
+    },
+    {
+      "path": "research/wp1b/reference_model.py",
+      "bytes": 13047,
+      "sha256": "719AF0236FF8D18C330E2F9E4F2E7FABB8A79382368F2421A230448FB21240A2"
+    },
+    {
+      "path": "research/wp1b/revalidation.json",
+      "bytes": 712,
+      "sha256": "6BBF8B452F2F844706079B60A974B258D2F6A602A205101DAA834372BB6D19CC"
+    },
+    {
+      "path": "research/wp1b/reviewer-reconciliation.md",
+      "bytes": 7849,
+      "sha256": "F9173AE3F0B3CB63CD62899023EE93F58C5D8B5C5884C92079E263CC4F429C5F"
+    },
+    {
+      "path": "research/wp1b/sources.md",
+      "bytes": 5571,
+      "sha256": "196752A4F101A5CC17086C8F54C6B5DB79F537898137A395430889376BE92884"
+    },
+    {
+      "path": "research/wp1b/test_reference_model.py",
+      "bytes": 17999,
+      "sha256": "7B4677634E3C3E8183F8F46B5F1F0B01B02D7158C6DD6591F1F34828F4064941"
+    },
+    {
+      "path": "research/wp1b/test_revalidation.py",
+      "bytes": 2017,
+      "sha256": "086DF47C7E2330878076BA028231FB3C8F1591A38346A066D7A9B58ACED249D4"
+    },
+    {
+      "path": "research/wp1b/treasury-may2026-fixture.json",
+      "bytes": 2268,
+      "sha256": "71469D8759EB83316A05D77D06FB737E038039C8E2CE0ECDE4288EE2BB0EE847"
+    },
+    {
+      "path": "research/wp1b/WP1B-completion-report.md",
+      "bytes": 7004,
+      "sha256": "F9C1F3D9A33BBE3426D4C5CD907E6AC5A37AA1F715A2D4109E26FC085CB26FE3"
+    },
+    {
+      "path": "reviews/gate1a/Gate-1A-submission.md",
+      "bytes": 2956,
+      "sha256": "3B64BAF004EA926139B35FCF5A1AF43C7BCE8C1CE5AFC1F7CCC18723EBC7A878"
+    },
+    {
+      "path": "reviews/gate1a/reviewer-reconciliation.md",
+      "bytes": 5206,
+      "sha256": "66CBFCFCB3E9CD407800C384E21013AFB5F3395E9F71CDA633725F51C544DF4D"
+    },
+    {
+      "path": "reviews/gate1a/submission-manifest.json",
+      "bytes": 16057,
+      "sha256": "DF53C0B48E3FB097633A414123BCB29679E48CB1B3C1473783FF2725FA88DBBA"
+    },
+    {
+      "path": "reviews/gate1a/validation.json",
+      "bytes": 1276,
+      "sha256": "AE7E0E39835DBDC01522CC1973CF419FBB8A3EB89ACFEB7C15E35B99EE8D0669"
+    },
+    {
+      "path": "reviews/gate1a/WP1A-completion-report.md",
+      "bytes": 5134,
+      "sha256": "E03CA16876D3C2D2E5792C10A398D716AA749340D185EE23311FDBA7C0BC7218"
+    },
+    {
+      "path": "reviews/gate1b/current-reconciliation.md",
+      "bytes": 6012,
+      "sha256": "E1EE81274D6223F1E336450030D539ABBE130930DC66387E9B3E634646FCC86C"
+    },
+    {
+      "path": "reviews/wp0a/claude-opus-reconciliation.md",
+      "bytes": 4940,
+      "sha256": "704C27015FA7DDAAC0BE9D4A60D79B12E8146A99A002E31F56A18CBACB51F8C9"
+    },
+    {
+      "path": "reviews/wp0a/handoff-coverage.md",
+      "bytes": 3527,
+      "sha256": "61753C0F4CCBA914D03503DC8D529C3902319D70DBC000351ECB961C57F319F8"
+    },
+    {
+      "path": "reviews/wp0a/source-recovery-reconciliation.md",
+      "bytes": 6665,
+      "sha256": "572529A1693B8E690F9D5D5835245DAD77D6CA0EDE8552CC5BE1B53BADCF7428"
+    },
+    {
+      "path": "reviews/wp0a/submission-manifest.json",
+      "bytes": 10508,
+      "sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989"
+    },
+    {
+      "path": "reviews/wp0a/validate-wp1a.ps1",
+      "bytes": 9182,
+      "sha256": "B6805470AE45EA9F57B0E930FD3F9B3BE55054703D6471B9DA767570141BF855"
+    },
+    {
+      "path": "reviews/wp0a/validate.ps1",
+      "bytes": 5235,
+      "sha256": "EB37BD52497FF39688B7D8CBDDFDAFAB62915A15E922833B5BE54D9DF0DD4DA5"
+    },
+    {
+      "path": "reviews/wp0a/validation.json",
+      "bytes": 874,
+      "sha256": "BB5E431BC715F961CA4DAE457E49F22DEBF8CACCAB3CD6F80B22208D75E83E76"
+    },
+    {
+      "path": "reviews/wp0a/WP0A-report.md",
+      "bytes": 3074,
+      "sha256": "AF6B9478C79EABAA37EE2AFB176AD6C152F97C11BD10A1EA58074357F1C92CB6"
+    },
+    {
+      "path": "reviews/wp0a/wp0a-structural-review.md",
+      "bytes": 4414,
+      "sha256": "426A8DF5D92F38CFE260FBD15A42F91BF2B730C9996DE94FECE195168E2CAD58"
+    },
+    {
+      "path": "tools/validate_repository.py",
+      "bytes": 6728,
+      "sha256": "FFFD07A40439F2AF2C2E752425B982614938D84D8D701C0B91BBF01913F11741"
+    }
+  ]
+}

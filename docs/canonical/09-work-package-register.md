@@ -1,7 +1,7 @@
 # Work Package Register
 Revision 0.3 • Recorded 2026-09-19 America/Chicago
 
-**Current status:** Phase 0 and WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS under SRC010/D010. WP1A COMPLETE FOR REVIEW; Gate 1A AWAITING REVIEW / NOT APPROVED. Next authorized package NONE; WP1B and later packages NOT AUTHORIZED. Dated WP0A narrative below is retained as history and superseded by this status and the WP1A entry.
+**Current status:** Phase 0 and WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS under SRC010/D010. WP1A COMPLETE; Gate 1A APPROVED WITH CONDITIONS under SRC016/D012 (earlier SRC013 historical). WP1B COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1C and later packages NOT AUTHORIZED. Dated WP0A narrative below is retained as history and superseded by this status and the WP1A entry.
 
 Governing source: [Development Roadmap v0.1](../roadmap/07-development-roadmap.md). Register entries describe future work; listing a package never authorizes it.
 
@@ -18,8 +18,8 @@ Source recovery exit completed in revision 0.2; subsequent direct user approval 
 ## Roadmap packages
 | Package | Title | Required output | Status |
 |---|---|---|---|
-| 1A | Purchasing-Power Standard | Purchasing-Power Standard Specification and expanded user-required deliverables | COMPLETE FOR REVIEW; Gate 1A awaiting review |
-| 1B | Target Calculation | Formal Target Calculation Specification with worked examples | NOT AUTHORIZED |
+| 1A | Purchasing-Power Standard | Purchasing-Power Standard Specification and expanded user-required deliverables | COMPLETE; Gate1A APPROVED WITH CONDITIONS |
+| 1B | Target Calculation | Formal Target Calculation Specification with expanded SRC013 deliverables | COMPLETE FOR REVIEW; Gate1B awaiting primary disposition |
 | 1C | Liability Model | PPU Liability Model | NOT AUTHORIZED |
 | 1D | Reserve Architecture | Reserve Architecture Specification | NOT AUTHORIZED |
 | 1E | Capital Structure | PPU Capital Structure Specification | NOT AUTHORIZED |
@@ -62,3 +62,11 @@ Authority: SRC010, explicit user objective, twelve questions and deliverables. O
 Outputs: [completion report](../../reviews/gate1a/WP1A-completion-report.md), six research documents, source registry, canonical updates, nine-finding reviewer reconciliation, validation, manifest and [Gate 1A submission](../../reviews/gate1a/Gate-1A-submission.md).
 Acceptance work: all twelve questions answered; facts/interpretation/uncertainty/recommendations separated; CPI-U challenged; assumptions and rejected alternatives recorded; later implications routed without design selection; source and gate conditions checked. Research supports D011 conditionally, not monetary ratification.
 Boundary: no WP1B, reserve/capital/collateral/AP/mint-redemption, chain/software/governance/legal entity or production work. Phase 1 remains incomplete. Gate 1A is the user-requested package checkpoint, distinct from phase Gate 1. Next package NONE authorized.
+
+## WP1B — Target Calculation
+Current authority:SRC016; earlier local authority SRC013 is historical; package COMPLETE FOR REVIEW, Gate1B AWAITING REVIEW / NOT APPROVED. Historical WP1A narrative above is retained; its pending status is superseded by D012/Gate1A approval, not by operator inference. WP1B outputs map to all17deliverable groups and30questions; casesA–L, comparisons, source-backed facts, proposed choices, unknowns and later dependencies must remain distinguishable. Stop at Gate1B; WP1C NOT AUTHORIZED.
+
+
+## Current approval reconciliation — 2026-09-21
+
+2026-09-21: SRC016 explicitly authorizes WP1B only. Existing local WP1B research is reconciled and revalidated for this repository; completion is a Gate 1B submission, never approval. WP1C and later packages remain NOT AUTHORIZED.

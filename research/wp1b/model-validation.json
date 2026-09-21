@@ -1,0 +1,984 @@
+{
+  "scope": "offline reference arithmetic and validated-input scenarios; not oracle/security/solvency certification",
+  "checks": {
+    "A_midmonth_independent_1_005": true,
+    "A_first_1": true,
+    "A_month_boundary_1_01": true,
+    "A_boundary_one_daily_increment": true,
+    "B_halfway_1_05": true,
+    "B_extended_2026-05": true,
+    "B_extended_2026-06": true,
+    "B_extended_2026-07": true,
+    "C_no_floor": true,
+    "D_absence_not_zero": true,
+    "D_recovery_can_decline": true,
+    "E_equal_cutoff_is_late": true,
+    "E_before_cutoff_eligible": true,
+    "F_corrected_vintage_not_selected": true,
+    "F_past_target_unchanged": true,
+    "F_future_hold": true,
+    "G_three_frozen_triggers_reassessment": true,
+    "H_hold_no_automatic_successor": true,
+    "I_hold_no_automatic_successor": true,
+    "J_authenticated_conflict_blocks_even_two_agree": true,
+    "K_late_delivery_same_as_missing": true,
+    "K_downtime_does_not_rewrite_precommit": true,
+    "L_unauthenticated_abnormal_quarantined": true,
+    "L_authentic_extreme_not_price_capped": true,
+    "health_normal_fresh": true,
+    "health_age_equality_stale": true,
+    "health_adverse_blocks": true,
+    "health_frozen_cannot_restore_by_monitor": true,
+    "health_catchup_cannot_restore_by_monitor": true,
+    "health_no_future_attestations": true,
+    "round_tie_even_down": true,
+    "round_tie_even_up": true,
+    "round_18_tie": true,
+    "round_18_odd_tie": true,
+    "leap_29_days": true,
+    "UTC_equivalent_instants": true,
+    "UTC_standard_offset": true,
+    "Treasury_external_vector_15463333": true,
+    "exact_rebase_invariance": true,
+    "unverified_rebase_blocked": true,
+    "invalid_-": true,
+    "invalid_0": true,
+    "invalid_-1": true,
+    "invalid_NaN": true,
+    "round_to_zero_explicit": true,
+    "genesis_requires_both": true,
+    "month_shift_year": true,
+    "convex_monotonic_2024_2_300_303": true,
+    "convex_monotonic_2024_2_303_300": true,
+    "convex_monotonic_2024_2_300_300": true,
+    "convex_monotonic_2025_2_300_303": true,
+    "convex_monotonic_2025_2_303_300": true,
+    "convex_monotonic_2025_2_300_300": true,
+    "convex_monotonic_2026_4_300_303": true,
+    "convex_monotonic_2026_4_303_300": true,
+    "convex_monotonic_2026_4_300_300": true,
+    "convex_monotonic_2026_5_300_303": true,
+    "convex_monotonic_2026_5_303_300": true,
+    "convex_monotonic_2026_5_300_300": true,
+    "replay_valid_genesis": true,
+    "replay_correction_cannot_change_history": true,
+    "replay_midmonth_clear_cannot_unfreeze_plan": true,
+    "replay_prospective_recovery_after_clear": true,
+    "replay_hold_at_cutoff_does_not_rewrite_committed_plan": true,
+    "replay_hold_at_cutoff_blocks_health": true,
+    "replay_pre_genesis_not_active": true,
+    "replay_three_missing_with_valid_genesis": true,
+    "replay_reassessment_ack_does_not_unfreeze": true,
+    "replay_clear_only_named_hold": true,
+    "replay_simultaneous_open_wins": true,
+    "replay_invalid_control_ignored": true,
+    "method_shock_release_gap": true,
+    "method_shock_monthly_gap": true,
+    "method_shock_daily_gap": true,
+    "six_missing_months_catchup": true,
+    "public_case_A_valid_genesis": true,
+    "public_case_B_valid_genesis": true,
+    "public_case_C_valid_genesis": true,
+    "public_case_D_valid_genesis": true,
+    "public_case_E_valid_genesis": true,
+    "public_case_F_valid_genesis": true,
+    "public_case_G_valid_genesis": true,
+    "public_case_H_valid_genesis": true,
+    "public_case_I_valid_genesis": true,
+    "public_case_J_valid_genesis": true,
+    "public_case_K_valid_genesis": true,
+    "public_case_L_valid_genesis": true,
+    "public_case_E_frozen": true,
+    "public_case_F_frozen": true,
+    "public_case_G_frozen": true,
+    "public_case_H_frozen": true,
+    "public_case_I_frozen": true,
+    "public_case_J_frozen": true,
+    "public_case_K_frozen": true,
+    "public_D_catchup_valid_genesis": true,
+    "public_C_below_base": true,
+    "public_F_automatic_correction_hold": true,
+    "public_L_spoof_cannot_block_valid": true,
+    "public_timezone_day_normalized": true,
+    "public_timezone_direct_datetime": true,
+    "naive_time_rejected": true,
+    "decimal_grammar_3/2": true,
+    "decimal_grammar_1e3": true,
+    "decimal_grammar_1_0": true,
+    "decimal_grammar_03.0": true,
+    "decimal_grammar_ 300": true,
+    "decimal_grammar_+300": true,
+    "canonical_edition_ignores_labels": true,
+    "unconfigured_paths_cannot_vote": true,
+    "unconfigured_monitor_cannot_vote": true,
+    "unverified_normalization_latches_hold": true,
+    "rolling_impairment_trigger": true,
+    "reassessment_survives_normal_return": true,
+    "public_tuple_metadata": true,
+    "non_value_display_suppressed": true,
+    "gap_recovery_2_0": true,
+    "gap_recovery_2_.03": true,
+    "gap_recovery_2_.20": true,
+    "gap_recovery_3_0": true,
+    "gap_recovery_3_.03": true,
+    "gap_recovery_3_.20": true,
+    "gap_recovery_6_0": true,
+    "gap_recovery_6_.03": true,
+    "gap_recovery_6_.20": true,
+    "Treasury_May2026_day_1": true,
+    "Treasury_May2026_day_2": true,
+    "Treasury_May2026_day_3": true,
+    "Treasury_May2026_day_4": true,
+    "Treasury_May2026_day_5": true,
+    "Treasury_May2026_day_6": true,
+    "Treasury_May2026_day_7": true,
+    "Treasury_May2026_day_8": true,
+    "Treasury_May2026_day_9": true,
+    "Treasury_May2026_day_10": true,
+    "Treasury_May2026_day_11": true,
+    "Treasury_May2026_day_12": true,
+    "Treasury_May2026_day_13": true,
+    "Treasury_May2026_day_14": true,
+    "Treasury_May2026_day_15": true,
+    "Treasury_May2026_day_16": true,
+    "Treasury_May2026_day_17": true,
+    "Treasury_May2026_day_18": true,
+    "Treasury_May2026_day_19": true,
+    "Treasury_May2026_day_20": true,
+    "Treasury_May2026_day_21": true,
+    "Treasury_May2026_day_22": true,
+    "Treasury_May2026_day_23": true,
+    "Treasury_May2026_day_24": true,
+    "Treasury_May2026_day_25": true,
+    "Treasury_May2026_day_26": true,
+    "Treasury_May2026_day_27": true,
+    "Treasury_May2026_day_28": true,
+    "Treasury_May2026_day_29": true,
+    "Treasury_May2026_day_30": true,
+    "Treasury_May2026_day_31": true,
+    "conflict_health_before_next_plan": true,
+    "publisher_mismatch_resolution_prospective": true,
+    "resolution_cannot_rewrite_prior_conflict": true,
+    "conflict_health_at_exact_receipt": true
+  },
+  "failed": [],
+  "case_examples": {
+    "A": {
+      "exact": "201/200",
+      "reference_index": "603/2",
+      "binding": "1.005000000000000000",
+      "status": "VALUE",
+      "display": "1.005000",
+      "mode": "NORMAL"
+    },
+    "B": {
+      "exact": "21/20",
+      "reference_index": "315",
+      "binding": "1.050000000000000000",
+      "status": "VALUE",
+      "display": "1.050000",
+      "mode": "NORMAL"
+    },
+    "C": {
+      "first_endpoint": "0.980000000000000000",
+      "second_endpoint": "0.960000000000000000"
+    },
+    "D": {
+      "december_end": "1624/5",
+      "january": {
+        "exact": "1005863/1006880",
+        "reference_index": "1005863/3100",
+        "binding": "0.998989949149849039",
+        "status": "VALUE",
+        "display": "0.998990",
+        "mode": "CATCH_UP"
+      }
+    },
+    "E": {
+      "at_cutoff": "FROZEN",
+      "one_microsecond_before": "NORMAL"
+    },
+    "F": {
+      "historical": "1.005000000000000000",
+      "future_endpoint": "303"
+    },
+    "G": {
+      "frozen_months": 3,
+      "endpoint": "303"
+    },
+    "H": {
+      "next_plan": "FROZEN",
+      "endpoint": "303"
+    },
+    "I": {
+      "next_plan": "FROZEN",
+      "endpoint": "303"
+    },
+    "J": {
+      "mode": "FROZEN",
+      "reason": "CONFLICT"
+    },
+    "K": {
+      "precommitted": {
+        "exact": "3019/3000",
+        "reference_index": "3019/10",
+        "binding": "1.006333333333333333",
+        "status": "VALUE",
+        "display": "1.006333",
+        "mode": "NORMAL"
+      },
+      "late_delivery": "FROZEN"
+    },
+    "L": {
+      "spoof_ignored": true,
+      "authenticated_extreme_endpoint": "999999"
+    }
+  },
+  "public_interface_cases": {
+    "A": {
+      "exact": "201/200",
+      "reference_index": "603/2",
+      "binding": "1.005000000000000000",
+      "status": "VALUE",
+      "display": "1.005000",
+      "mode": "NORMAL",
+      "issuanceDataOK": true,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-03-31T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "DATA_OK_NECESSARY_ONLY"
+    },
+    "B": {
+      "exact": "21/20",
+      "reference_index": "315",
+      "binding": "1.050000000000000000",
+      "status": "VALUE",
+      "display": "1.050000",
+      "mode": "NORMAL",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "330",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "1c1950e3aa5f89ed508a473cee34b6d1e8a63b5af67b5fa1dcb2f0c5060d4007",
+      "cutoff": "2026-03-31T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "C": {
+      "exact": "24/25",
+      "reference_index": "288",
+      "binding": "0.960000000000000000",
+      "status": "VALUE",
+      "display": "0.960000",
+      "mode": "NORMAL",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "294",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "294",
+          "end": "288",
+          "endpoint_month": "2026-03",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-06",
+          "start": "288",
+          "end": "282",
+          "endpoint_month": "2026-04",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "31d18bf92a9a1b0f8a49e65cbd1b823bf3d63770f70444882f7901cf1128ba27",
+      "cutoff": "2026-05-31T00:00:00+00:00",
+      "source_observation_month": "2026-04",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-04', '2026-05-19T23:00:00+00:00', '7a478941a65aa4b6e238cd3e1a1651240f1f5388dbb780d76c27d7fa62bb7289')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "D": {
+      "exact": "1005863/992000",
+      "reference_index": "1005863/3100",
+      "binding": "1.013974798387096774",
+      "status": "VALUE",
+      "display": "1.013975",
+      "mode": "CATCH_UP",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2025-11",
+          "start": "320",
+          "end": "1624/5",
+          "endpoint_month": "2025-09",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2025-12",
+          "start": "1624/5",
+          "end": "1624/5",
+          "endpoint_month": "2025-09",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 1
+        },
+        {
+          "month": "2026-01",
+          "start": "1624/5",
+          "end": "162061/500",
+          "endpoint_month": "2025-11",
+          "mode": "CATCH_UP",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "236abf1e006722c9fff84e0ba3e06ef3964a595185c50da479f9a542019d84e9",
+      "cutoff": "2025-12-31T00:00:00+00:00",
+      "source_observation_month": "2025-11",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2025-11', '2025-12-19T23:00:00+00:00', 'fe7846cf59670da40c7afb616da1b1af0c11121652ad3efe115503dfdf6b4793')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "E": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "F": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "INDEX_REVIEW_HOLD",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "350a64050fdcecac0d59854176779aaded9460d3c39a56634d0c24f0abdbb92a",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "G": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": true,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 1
+        },
+        {
+          "month": "2026-06",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 2
+        },
+        {
+          "month": "2026-07",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 3
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-06-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "H": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "INDEX_REVIEW_HOLD",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "84bba4c2b0265e0ef86fad6562b2ba36973bb153d981541215b32a1e864e473e",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "I": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "INDEX_REVIEW_HOLD",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "ca130263880b0da5566daa5351b11003a4d4ec25610d0950e6cffec956508b91",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "J": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "CONFLICT",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "67611d2d170896fceaddc2ff478ea26d12e9d5543757cbf8fc4b2263496e81e7",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "K": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "L": {
+      "exact": "1573/1550",
+      "reference_index": "9438/31",
+      "binding": "1.014838709677419355",
+      "status": "VALUE",
+      "display": "1.014839",
+      "mode": "NORMAL",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "306",
+          "endpoint_month": "2026-03",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "b0258f54f5b46426bed9f4b48d848ad1159e64f0a2b7ec218a080c9f6db6e5a2",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-03",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-03', '2026-04-19T23:00:00+00:00', 'c70f6b2a98c611162671a1a1cc734b46fa4e55745306553456509f51e2a386ce')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    }
+  },
+  "gap_recovery_grid": [
+    {
+      "missing_observations": 2,
+      "annual_growth": "0",
+      "recovery_month": "2026-07",
+      "elapsed_monthly_intervals": 3,
+      "recovery_change_percent": "0E-49",
+      "daily_step_percent_of_old_endpoint": "0E-49",
+      "slope_multiple_vs_one_month_same_start_days": null,
+      "pre_recovery_real_shortfall_percent": "0"
+    },
+    {
+      "missing_observations": 2,
+      "annual_growth": ".03",
+      "recovery_month": "2026-07",
+      "elapsed_monthly_intervals": 3,
+      "recovery_change_percent": "0.7417071777732952105187955020933359188917445807800",
+      "daily_step_percent_of_old_endpoint": "0.023926037992686942274799854906236642544894986476774",
+      "slope_multiple_vs_one_month_same_start_days": "3.0074048918035005783908058191525845723492620347311",
+      "pre_recovery_real_shortfall_percent": "0.73624638548604874262445033254285868268743733948800"
+    },
+    {
+      "missing_observations": 2,
+      "annual_growth": ".20",
+      "recovery_month": "2026-07",
+      "elapsed_monthly_intervals": 3,
+      "recovery_change_percent": "4.6635139392105555783462377487283245894888059892700",
+      "daily_step_percent_of_old_endpoint": "0.15043593352292114768858831447510724482221954804097",
+      "slope_multiple_vs_one_month_same_start_days": "3.0461627913861757915665403254428370974991180118934",
+      "pre_recovery_real_shortfall_percent": "4.4557207795633189663620115781386475359530672359550"
+    },
+    {
+      "missing_observations": 3,
+      "annual_growth": "0",
+      "recovery_month": "2026-08",
+      "elapsed_monthly_intervals": 4,
+      "recovery_change_percent": "0E-49",
+      "daily_step_percent_of_old_endpoint": "0E-49",
+      "slope_multiple_vs_one_month_same_start_days": null,
+      "pre_recovery_real_shortfall_percent": "0"
+    },
+    {
+      "missing_observations": 3,
+      "annual_growth": ".03",
+      "recovery_month": "2026-08",
+      "elapsed_monthly_intervals": 4,
+      "recovery_change_percent": "0.9901634049960980990468124940527030984901925095400",
+      "daily_step_percent_of_old_endpoint": "0.031940754999874132227316532066216228983554597081935",
+      "slope_multiple_vs_one_month_same_start_days": "4.0148219635812335304959937741735179315381794805354",
+      "pre_recovery_real_shortfall_percent": "0.98045529545812537091946648288944464385906622727900"
+    },
+    {
+      "missing_observations": 3,
+      "annual_growth": ".20",
+      "recovery_month": "2026-08",
+      "elapsed_monthly_intervals": 4,
+      "recovery_change_percent": "6.2658569182611066047742222165463050733435115628900",
+      "daily_step_percent_of_old_endpoint": "0.20212441671810021305723297472730016365624230848032",
+      "slope_multiple_vs_one_month_same_start_days": "4.0927979307782813473500027029301203433940060717893",
+      "pre_recovery_real_shortfall_percent": "5.8963971118971508922447272985370862002082906008360"
+    },
+    {
+      "missing_observations": 6,
+      "annual_growth": "0",
+      "recovery_month": "2026-11",
+      "elapsed_monthly_intervals": 7,
+      "recovery_change_percent": "0E-49",
+      "daily_step_percent_of_old_endpoint": "0E-49",
+      "slope_multiple_vs_one_month_same_start_days": null,
+      "pre_recovery_real_shortfall_percent": "0"
+    },
+    {
+      "missing_observations": 6,
+      "annual_growth": ".03",
+      "recovery_month": "2026-11",
+      "elapsed_monthly_intervals": 7,
+      "recovery_change_percent": "1.7392146958159338319233434234994846494260765773700",
+      "daily_step_percent_of_old_endpoint": "0.057973823193864461064111447449982821647535885912333",
+      "slope_multiple_vs_one_month_same_start_days": "7.0520050780634348701628492019609748565605293115169",
+      "pre_recovery_real_shortfall_percent": "1.7094831142700571056761853443356839146353732352850"
+    },
+    {
+      "missing_observations": 6,
+      "annual_growth": ".20",
+      "recovery_month": "2026-11",
+      "elapsed_monthly_intervals": 7,
+      "recovery_change_percent": "11.221579968265757837322347880315305136446340553540",
+      "daily_step_percent_of_old_endpoint": "0.37405266560885859457741159601051017121487801845133",
+      "slope_multiple_vs_one_month_same_start_days": "7.3298289241700234750885404731458855243490643309309",
+      "pre_recovery_real_shortfall_percent": "10.089390900100097101928668129275178140322187206760"
+    }
+  ],
+  "full_replay_examples": {
+    "normal": {
+      "exact": "201/200",
+      "reference_index": "603/2",
+      "binding": "1.005000000000000000",
+      "status": "VALUE",
+      "display": "1.005000",
+      "mode": "NORMAL",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-03-31T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "correction_may": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "INDEX_REVIEW_HOLD",
+          "frozen_count": 1
+        }
+      ],
+      "plan_prefix_hash": "fde8353fc8ceb631aa3f0e067e05aec31b75788304759d8eb32b60c8a897b9ae",
+      "cutoff": "2026-04-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "correction_june": {
+      "exact": "51/50",
+      "reference_index": "306",
+      "binding": "1.020000000000000000",
+      "status": "VALUE",
+      "display": "1.020000",
+      "mode": "CATCH_UP",
+      "issuanceDataOK": false,
+      "reassessment_required": false,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "INDEX_REVIEW_HOLD",
+          "frozen_count": 1
+        },
+        {
+          "month": "2026-06",
+          "start": "303",
+          "end": "309",
+          "endpoint_month": "2026-04",
+          "mode": "CATCH_UP",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        }
+      ],
+      "plan_prefix_hash": "306afcb4d9772faf1e1c83cfb2e45b914acb7b368d1b7c619338e72d4d799a40",
+      "cutoff": "2026-05-31T00:00:00+00:00",
+      "source_observation_month": "2026-04",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-04', '2026-05-19T23:00:00+00:00', '7a478941a65aa4b6e238cd3e1a1651240f1f5388dbb780d76c27d7fa62bb7289')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    },
+    "extended_outage": {
+      "exact": "101/100",
+      "reference_index": "303",
+      "binding": "1.010000000000000000",
+      "status": "VALUE",
+      "display": "1.010000",
+      "mode": "FROZEN",
+      "issuanceDataOK": false,
+      "reassessment_required": true,
+      "plans": [
+        {
+          "month": "2026-04",
+          "start": "300",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "NORMAL",
+          "reason": "ELIGIBLE",
+          "frozen_count": 0
+        },
+        {
+          "month": "2026-05",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 1
+        },
+        {
+          "month": "2026-06",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 2
+        },
+        {
+          "month": "2026-07",
+          "start": "303",
+          "end": "303",
+          "endpoint_month": "2026-02",
+          "mode": "FROZEN",
+          "reason": "SOURCE_ABSENT",
+          "frozen_count": 3
+        }
+      ],
+      "plan_prefix_hash": "e845253845e07bf225ea79a8ab3a6db6d00e9379ebcd112421ad4fcf4641aa08",
+      "cutoff": "2026-06-30T00:00:00+00:00",
+      "source_observation_month": "2026-02",
+      "vintage_ids": [
+        "('CUUR0000SA0', '2026-02', '2026-03-19T23:00:00+00:00', '3156058eed8c3d7fcce1b23f3e213e68a678e886c44cc447dc5fa3bf37f49485')"
+      ],
+      "health_status": "ISSUANCE_DATA_BLOCKED"
+    }
+  },
+  "lag_scenarios": [
+    {
+      "annual_growth": 0.03,
+      "current_over_lagged_percent": 0.6177083779499659,
+      "purchasing_power_shortfall_percent": 0.6139161663567982
+    },
+    {
+      "annual_growth": 0.1,
+      "current_over_lagged_percent": 2.005473483484277,
+      "purchasing_power_shortfall_percent": 1.966044972879788
+    },
+    {
+      "annual_growth": 0.2,
+      "current_over_lagged_percent": 3.871425772384529,
+      "purchasing_power_shortfall_percent": 3.727132600324612
+    },
+    {
+      "annual_growth": 1.0,
+      "current_over_lagged_percent": 15.535269687227293,
+      "purchasing_power_shortfall_percent": 13.446343899385694
+    }
+  ],
+  "pass": true
+}

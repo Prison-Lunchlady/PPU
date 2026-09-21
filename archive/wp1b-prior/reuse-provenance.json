@@ -1,0 +1,196 @@
+{
+  "source": "prior local WP1B research dated 2026-09-19; reused under SRC016, not treated as current approval",
+  "date": "2026-09-21",
+  "files": [
+    {
+      "source_path": "01-protocol-state.md",
+      "repository_path": "docs/canonical/01-protocol-state.md",
+      "prior_local_sha256": "365C9DD3739951387163A450243A83728CBF19CB2382A4EE3A2291245A34C1F0"
+    },
+    {
+      "source_path": "02-decision-register.md",
+      "repository_path": "docs/canonical/02-decision-register.md",
+      "prior_local_sha256": "84107D5FEEF22AE5356D8FB21CF277C47E8ECE46F3B1AB282B90D332C7A09382"
+    },
+    {
+      "source_path": "03-risk-register.md",
+      "repository_path": "docs/canonical/03-risk-register.md",
+      "prior_local_sha256": "E5CA4153732DD486BF6AD073C3513BE324541978F23D8E175716BEE91990019A"
+    },
+    {
+      "source_path": "04-active-hypotheses.md",
+      "repository_path": "docs/canonical/04-active-hypotheses.md",
+      "prior_local_sha256": "0EAB94CDC7FDD6FA722A42B7DFE0D223763DB5249C369DDDC4D32D8B63DED862"
+    },
+    {
+      "source_path": "05-unresolved-questions.md",
+      "repository_path": "docs/canonical/05-unresolved-questions.md",
+      "prior_local_sha256": "1BDD674461932B64F2648E57871C7C58D0E4B3E47DF9F12913F5D7198B84DF87"
+    },
+    {
+      "source_path": "06-research-library-index.md",
+      "repository_path": "docs/canonical/06-research-library-index.md",
+      "prior_local_sha256": "33AA07FFB44D691DD13ADDD80162C7D1658FDB0628E249A0BC840B2D83250F65"
+    },
+    {
+      "source_path": "09-work-package-register.md",
+      "repository_path": "docs/canonical/09-work-package-register.md",
+      "prior_local_sha256": "5311828318156B4732BA738B071D250DE8EB46EBCE826A210D328510803D7C8E"
+    },
+    {
+      "source_path": "10-review-gate-register.md",
+      "repository_path": "docs/canonical/10-review-gate-register.md",
+      "prior_local_sha256": "1B171C6CA8603088AEB1AE144A2E57E1605090F6D164C7C2C88B16B278134F93"
+    },
+    {
+      "source_path": "wp1b/01-target-specification.md",
+      "repository_path": "research/wp1b/01-target-specification.md",
+      "prior_local_sha256": "29F0825B3B8F7D7970793A7630876E9D8C0D196DFFF285096CE46A2AFCABB7F8"
+    },
+    {
+      "source_path": "wp1b/02-base-and-reference.md",
+      "repository_path": "research/wp1b/02-base-and-reference.md",
+      "prior_local_sha256": "E4689FF33672F5A8DAC4879284A8248FAF429FDF3AFA0A8CE91E27D7FCC6765C"
+    },
+    {
+      "source_path": "wp1b/03-method-comparison.md",
+      "repository_path": "research/wp1b/03-method-comparison.md",
+      "prior_local_sha256": "B89E8EB2F9F7CD56A109369AA4F25D7FA22A59BC1FA3AD16B34E8DF929E0CEA6"
+    },
+    {
+      "source_path": "wp1b/04-tips-compatibility.md",
+      "repository_path": "research/wp1b/04-tips-compatibility.md",
+      "prior_local_sha256": "DE354859587A5B26C2890A08957232E1723B8B66877A64934E90C925442195DD"
+    },
+    {
+      "source_path": "wp1b/05-publication-lag.md",
+      "repository_path": "research/wp1b/05-publication-lag.md",
+      "prior_local_sha256": "7BBACDDF66D55C8B7D44717EDB21F08A3DC73D2A63C0A786150ECECF72BC35A7"
+    },
+    {
+      "source_path": "wp1b/06-revisions-and-finality.md",
+      "repository_path": "research/wp1b/06-revisions-and-finality.md",
+      "prior_local_sha256": "0BD44AD82F3CE8341BFEB139D2C609C11393E50DD88E56AAA6054FDD012BD93F"
+    },
+    {
+      "source_path": "wp1b/07-missing-and-outage.md",
+      "repository_path": "research/wp1b/07-missing-and-outage.md",
+      "prior_local_sha256": "4518D8CA3BB3185010DD967923C371072D35F0D32B28FB50E6736BCE200CEF41"
+    },
+    {
+      "source_path": "wp1b/08-deflation.md",
+      "repository_path": "research/wp1b/08-deflation.md",
+      "prior_local_sha256": "766E24272497A8CD78268DF69314CEC1D91DEA880B7A13AB93BDF17DFE10D7C7"
+    },
+    {
+      "source_path": "wp1b/09-contingency-hierarchy.md",
+      "repository_path": "research/wp1b/09-contingency-hierarchy.md",
+      "prior_local_sha256": "A4B3D1913895C2CB12C51966695854F8A958F82B8509A86120C0950C386F0665"
+    },
+    {
+      "source_path": "wp1b/10-oracle-timing.md",
+      "repository_path": "research/wp1b/10-oracle-timing.md",
+      "prior_local_sha256": "DA443860504AB591843F47DD60FEEF97321179F8BEE839ED29850E6D8D236BF9"
+    },
+    {
+      "source_path": "wp1b/11-adversarial-scenarios.md",
+      "repository_path": "research/wp1b/11-adversarial-scenarios.md",
+      "prior_local_sha256": "459A3600D89B53352BFD0FC3676FFF3BAA16F487E5CCFA5B48F9340557B5F65F"
+    },
+    {
+      "source_path": "wp1b/12-worked-examples.md",
+      "repository_path": "research/wp1b/12-worked-examples.md",
+      "prior_local_sha256": "146F2A533F619D33B1B649D7887F44697D217B6BB77E90AB8D43D0AF3D35BA03"
+    },
+    {
+      "source_path": "wp1b/14-proposed-constitution-updates.md",
+      "repository_path": "research/wp1b/14-proposed-constitution-updates.md",
+      "prior_local_sha256": "BFA888EE1CE8E363A316E14139560AAB2B0A5A40D8A318A17FB49E9B8A40A009"
+    },
+    {
+      "source_path": "wp1b/15-required-question-answers.md",
+      "repository_path": "research/wp1b/15-required-question-answers.md",
+      "prior_local_sha256": "8988E4C7E4E34E1ACF4E7E2C37241D79376D80E53D5097810FB22D680813D090"
+    },
+    {
+      "source_path": "wp1b/16-parameter-and-assumption-register.md",
+      "repository_path": "research/wp1b/16-parameter-and-assumption-register.md",
+      "prior_local_sha256": "50C543AFAEC7643D31B84810D07724F8BD536B30BF85858845BBBF1C5197C41A"
+    },
+    {
+      "source_path": "wp1b/17-review-clarifications.md",
+      "repository_path": "research/wp1b/17-review-clarifications.md",
+      "prior_local_sha256": "0FA1E5BF2430542D50E1F3D6C1CA78584A90768C6DB6D6C445043614B3F30284"
+    },
+    {
+      "source_path": "wp1b/Gate-1B-submission.md",
+      "repository_path": "research/wp1b/Gate-1B-submission.md",
+      "prior_local_sha256": "69378D8A83D0420A740F9D00B7B8DEF085C87035256D68C484077C8B991C3293"
+    },
+    {
+      "source_path": "wp1b/model-validation.json",
+      "repository_path": "research/wp1b/model-validation.json",
+      "prior_local_sha256": "30490B18E259CF142258992F73DB1A23EC7BB6D71688570817CB7C02C92A7801"
+    },
+    {
+      "source_path": "wp1b/reference_model.py",
+      "repository_path": "research/wp1b/reference_model.py",
+      "prior_local_sha256": "719AF0236FF8D18C330E2F9E4F2E7FABB8A79382368F2421A230448FB21240A2"
+    },
+    {
+      "source_path": "wp1b/reviewer-reconciliation.md",
+      "repository_path": "research/wp1b/reviewer-reconciliation.md",
+      "prior_local_sha256": "F151C2617821EA8A64B6FFE7855C27F1507B35C7176914DE6A852B3D5FD0CCD6"
+    },
+    {
+      "source_path": "wp1b/sources.md",
+      "repository_path": "research/wp1b/sources.md",
+      "prior_local_sha256": "797AF7AEA343BBEDBD6F81B60A2A590450B72A89B9990869D0368E851239E2C6"
+    },
+    {
+      "source_path": "wp1b/submission-manifest.json",
+      "repository_path": "archive/wp1b-prior/submission-manifest.json",
+      "prior_local_sha256": "ADD1DCB02A7B369FC3C5D173EC2A86FF666A216A041CADF8A29704EACFE6C696"
+    },
+    {
+      "source_path": "wp1b/test_reference_model.py",
+      "repository_path": "research/wp1b/test_reference_model.py",
+      "prior_local_sha256": "7B4677634E3C3E8183F8F46B5F1F0B01B02D7158C6DD6591F1F34828F4064941"
+    },
+    {
+      "source_path": "wp1b/treasury-may2026-fixture.json",
+      "repository_path": "research/wp1b/treasury-may2026-fixture.json",
+      "prior_local_sha256": "71469D8759EB83316A05D77D06FB737E038039C8E2CE0ECDE4288EE2BB0EE847"
+    },
+    {
+      "source_path": "wp1b/validation.json",
+      "repository_path": "archive/wp1b-prior/validation.json",
+      "prior_local_sha256": "A463B1A7C62E76C0A75603D7658B9990674A57DC648F02649B5A047A7B7A7DB9"
+    },
+    {
+      "source_path": "wp1b/WP1B-completion-report.md",
+      "repository_path": "research/wp1b/WP1B-completion-report.md",
+      "prior_local_sha256": "B527930A07B69A7986B3D55F03BF751A30DC15492403C63CC70AB2173AAEAC31"
+    },
+    {
+      "source_path": "evidence/gate1a-approval-wp1b-authorization.txt",
+      "repository_path": "evidence/gate1a-approval-wp1b-authorization.txt",
+      "prior_local_sha256": "E158E8A9BFA356349458DDF94A66C78C2CF2EB583A9B5BFF77AC97B03A5E0D2A"
+    },
+    {
+      "source_path": "evidence/wp1b-claude-review-input.txt",
+      "repository_path": "evidence/wp1b-claude-review-input.txt",
+      "prior_local_sha256": "07F3A1B094597D87A85F9EDD5FD7D7AADB3BB5494C1BF2E76DAC392CD3FA4A02"
+    },
+    {
+      "source_path": "evidence/wp1b-claude-review-request.md",
+      "repository_path": "evidence/wp1b-claude-review-request.md",
+      "prior_local_sha256": "77EBCC2FEA7973F2C89B3693A993EBFD3D0D8A590E09E6473C825B89A161CAEA"
+    },
+    {
+      "source_path": "evidence/wp1b-treasury-may2026.pdf",
+      "repository_path": "evidence/wp1b-treasury-may2026.pdf",
+      "prior_local_sha256": "CB01AC8DB618CDCBAFFEE8398FE5AD36382AB308B257E112B4275DF680BFFFF2"
+    }
+  ]
+}

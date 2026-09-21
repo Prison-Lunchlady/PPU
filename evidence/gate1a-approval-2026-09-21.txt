@@ -1,0 +1,13 @@
+Approve Gate 1A with the primary review conditions.
+Record the canonical wording for the approved purchasing-power standard as:
+“PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).”
+Do not characterize this as preserving every holder’s individual cost of living or universal global purchasing power.
+Gate 1A approval does not approve or determine target-calculation mechanics, including base date, base index value, TIPS Reference CPI timing, publication lag, interpolation, rounding, corrections, missing observations, prolonged outages, deflation treatment, successor-index rules, oracle architecture, reserve architecture, collateralization, capital structure, minting, redemption, governance, or blockchain selection.
+Carry forward the 2025 CPI data-gap issue as a mandatory WP1B design input.
+Keep the Treasury contingency-methodology conflict explicitly open. Do not automatically adopt Treasury fallback methodology solely because PPU may later hold TIPS.
+Keep CPI-U institutional-dependence and reconstruction limitations explicitly documented.
+Keep C-CPI-U and PCE as live research comparators rather than rejected or failed alternatives.
+Do not treat Gate 1A as evidence of demonstrated user demand.
+The prior Draft Monetary Constitution / Hypothesis Set remains unratified except where later decisions are explicitly approved through the roadmap.
+Authorize Work Package 1B — Target Calculation.
+Stop at Gate 1B when WP1B is complete. Do not advance beyond Gate 1B without Brad’s approval.

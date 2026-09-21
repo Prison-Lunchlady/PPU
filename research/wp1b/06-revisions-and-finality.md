@@ -1,0 +1,11 @@
+# Revision and Target-Finality Analysis
+
+BLS says CPI-U/W are final when issued for ordinary use but rare errors are corrected. Its error policy provides public errata and corrections; therefore “NSA never changes” is false. Routine seasonal revisions are irrelevant to the selected NSA series. [CPI FAQ](https://www.bls.gov/cpi/questions-and-answers.htm), [error policy](https://www.bls.gov/about-bls/bls-error-correction-policy.htm).
+
+Proposed rule: archive original editions and freeze each monthly event prefix at cutoff. An official correction cannot rewrite a previous target, I0, a committed future daily schedule, or a claimed earlier admission timestamp. Correction of a relevant value creates an immediate data-health block and prospective index review hold. A later normal CPI level can incorporate BLS's corrected statistical history; PPU does not subtract that effect or patch old obligations. This can create a prospective level adjustment after review and temporary/permanent basis to a revised statistical series.
+
+Example: April schedule uses February=303; on April 20 BLS corrects February to 302. April 16 remains $1.005 on I0=300. April's remaining committed values continue; the next uncommitted month's endpoint freezes unless the hold is cleared. No operator may replace February=303 in the old schedule. Even a genuine statistical correction is not permission for monetary retroactivity.
+
+Rejected alternatives: rewrite all history (breaks settlement/accounting finality); silently use latest databases (unreproducible edition selection); change only the current day (mid-plan arbitrary discontinuity); blindly continue after known serious error (conceals data integrity). Cost of the recommended hold: denial of service and prolonged deviation after even a benign correction. A correction to an unrelated regional series does not trigger a national-series hold. The admission/hold rules require exact affected-series identification.
+
+Logical finality relies on actual append-only consensus finality. A chain reorganization or forged evidence can undermine it; this report does not claim those solved. Deep finality violations are technical incident handling, not retroactive permission in the monetary formula. Preserve the conflicting history and stop issuance pending the later security process.

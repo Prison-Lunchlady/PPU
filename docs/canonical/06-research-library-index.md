@@ -46,3 +46,17 @@ Inflation/index comparison research is now executed in [WP1A](../../research/wp1
 
 Permanent Gate 0 condition: SRC003 is authoritative based on user-confirmed recovery from the original PPU conversation, never represented as a formal platform export. D010 and SRC010 do not upgrade its provenance class.
 
+
+## WP1B sources and authority
+**SRC-013:** [Gate1A approval and WP1B authorization](../../evidence/gate1a-approval-wp1b-authorization.txt), exact user-supplied attachment bytes. Authoritative user instruction, not third-party advice; records seven standing conditions,30questions,A–L and17deliverable groups. Prior canonical snapshot:evidence/gate1a-approved/.
+**SRC-014:** [WP1B primary sources](../../research/wp1b/sources.md), W1B-S01–S16, fresh BLS/Treasury/NIST research and explicit design/fact boundary.
+**SRC-015:** [WP1B independent review reconciliation](../../research/wp1b/reviewer-reconciliation.md), frozen input and reviewer evidence; opinion cannot approve gates.
+Source003 provenance remains permanently unchanged: authoritative user-confirmed recovered original conversation, never a formal platform export.
+
+
+SRC015 completed: Claude Opus5High reviewed initial frozen packet;20operator dispositions and corrected v0.2 candidate. No re-review/endorsement of final package. Archived official Treasury May2026PDF and extracted31row fixture expand primary numeric evidence. Current validation/manifest belong to wp1b; old gate artifacts remain historical.
+
+
+## Current approval reconciliation — 2026-09-21
+
+**SRC-016:** [Current Gate 1A approval and WP1B authorization](../../evidence/gate1a-approval-2026-09-21.txt), direct user instruction dated 2026-09-21. Controls the exact standard, conditions and current execution scope. SRC013 is retained as historical prior local authority; it is not the authority for silently importing a different approved standard. [Current reconciliation](../../reviews/gate1b/current-reconciliation.md) records reuse and renewed validation.

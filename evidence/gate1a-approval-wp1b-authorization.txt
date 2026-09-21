@@ -1,0 +1,299 @@
+Gate 1A is approved subject to the conditions identified in primary review.
+
+Record the following:
+
+**Gate 1A Status:** APPROVED WITH CONDITIONS  
+**WP1A — Purchasing-Power Standard:** COMPLETE  
+**Phase 1 — Monetary Architecture:** IN PROGRESS  
+**Next Authorized Work Package:** WP1B — Target Calculation
+
+Update the canonical project records accordingly.
+
+## Gate 1A standing conditions
+
+1. PPU v0.1 shall use a narrowly defined U.S. benchmark promise.
+
+The approved concept is:
+
+**A U.S.-dollar reference value indexed to cumulative changes in the U.S. urban consumer price level measured by CPI-U NSA, U.S. City Average, All Items.**
+
+Do not represent this as preservation of every holder’s individual purchasing power or as a global cost-of-living guarantee.
+
+2. U.S. benchmark scope is a v0.1 design choice, not a permanent constitutional truth.
+
+Record the possibility of later regional or global benchmark architectures as future research only.
+
+3. Gate 1A approves the underlying benchmark only.
+
+It does NOT yet approve:
+
+- three-month lag;
+- daily interpolation;
+- specific TIPS Reference CPI mechanics;
+- rounding;
+- binding timestamps;
+- revision treatment;
+- missing-observation treatment;
+- deflation mechanics;
+- successor-index rules;
+- index-contingency rules.
+
+Those belong to WP1B.
+
+4. WP1B may reopen Gate 1A if target-calculation research demonstrates that CPI-U cannot support a sufficiently deterministic, robust and constitutionally acceptable monetary target.
+
+5. CPI-U is externally administered.
+
+Do not describe the purchasing-power measurement itself as trustless or decentralized merely because PPU’s monetary rules may be transparent and software-enforced.
+
+6. Preserve Q021 as open unless WP1B or later authorized work directly resolves it.
+
+7. Preserve the distinction between selecting CPI-U for PPU v0.1 and claiming that CPI-U is universally or objectively the best inflation measure.
+
+## WP1B — AUTHORIZED
+
+### Objective
+
+Convert the approved CPI-U benchmark into a precise, deterministic PPU target-value function.
+
+The core question is:
+
+> At every relevant point in time, what exactly is one PPU worth, and what rules govern that value when source data are delayed, missing, revised, discontinued or structurally changed?
+
+Do not assume that the current draft TIPS-style daily interpolation method is correct.
+
+Actively test alternative target-calculation methods.
+
+## Required research scope
+
+Evaluate at minimum:
+
+- Treasury TIPS Reference CPI methodology;
+- monthly CPI publication schedule;
+- CPI observation month versus publication date;
+- three-month reference lag;
+- daily interpolation;
+- CPI publication interruptions;
+- missing monthly observations;
+- source-data corrections and revisions;
+- official restatements;
+- index rebasing;
+- methodology changes;
+- series discontinuation;
+- successor series;
+- deflation;
+- negative monthly inflation;
+- rounding precision;
+- contract timestamp conventions;
+- UTC versus U.S. release-time handling;
+- oracle update timing;
+- stale-data rules;
+- conflicting source values;
+- delayed oracle publication;
+- chain downtime;
+- source unavailability;
+- retroactivity;
+- target finality.
+
+Use authoritative BLS, Treasury and other primary-source documentation wherever possible.
+
+## Required questions
+
+WP1B must answer:
+
+1. What exact formula determines the PPU Target Value?
+2. What is the Base Date?
+3. What is the Base Reference Index?
+4. Which CPI observation controls each date?
+5. Should PPU use monthly step changes or daily interpolation?
+6. If daily interpolation is used, what exact formula applies?
+7. Is the Treasury TIPS Reference CPI methodology appropriate to copy directly, adapt, or reject?
+8. What lag exists between actual price conditions and the PPU target?
+9. Is that lag economically acceptable?
+10. How does the target behave under measured deflation?
+11. Is there any nominal floor?
+12. If no floor exists, what are the consequences?
+13. What happens if a monthly CPI observation is missing?
+14. What happens if BLS delays publication?
+15. What happens if BLS later corrects or restates a previously published value?
+16. Can prior PPU target values ever change retroactively?
+17. At what exact timestamp does a newly released CPI value become binding?
+18. What timezone governs protocol target changes?
+19. How many decimal places are used internally and externally?
+20. What rounding method applies?
+21. What happens when oracle data are stale?
+22. What happens when independent oracle sources disagree?
+23. What happens if CPI-U is materially redefined?
+24. What happens if CPI-U is rebased?
+25. What happens if CPI-U is discontinued?
+26. What successor hierarchy, if any, should be predetermined?
+27. Which contingency decisions can be completely mechanical?
+28. Which contingency decisions inevitably require human governance?
+29. Can those human powers be sufficiently constrained?
+30. Does the resulting target architecture remain consistent with the Gate 1A promise?
+
+## Specific adversarial cases
+
+The target architecture must be tested against at least:
+
+### Case A — Normal publication
+
+All expected CPI observations exist and are published on schedule.
+
+### Case B — High inflation
+
+Monthly CPI rises rapidly for an extended period.
+
+### Case C — Deflation
+
+The index declines for multiple consecutive months.
+
+### Case D — Missing monthly observation
+
+Model a scenario analogous to October 2025 where the expected all-items CPI observation does not exist.
+
+### Case E — Publication delay
+
+The source exists eventually, but publication is materially delayed.
+
+### Case F — Correction after publication
+
+An authoritative value previously used by the protocol is subsequently corrected.
+
+### Case G — Extended source outage
+
+No usable CPI observations are published for multiple months.
+
+### Case H — Methodology change
+
+BLS materially changes CPI-U methodology while retaining the same series identity.
+
+### Case I — Series replacement
+
+CPI-U is discontinued and an official successor is introduced.
+
+### Case J — Oracle disagreement
+
+Different oracle paths report inconsistent values.
+
+### Case K — Blockchain or oracle downtime
+
+The source data exist but the protocol cannot receive them at the expected time.
+
+### Case L — Malicious or erroneous input
+
+A clearly abnormal value reaches one oracle source.
+
+For each case, define the exact protocol behavior and identify any remaining discretionary authority.
+
+## Design principles
+
+The preferred architecture should maximize:
+
+- determinism;
+- reproducibility;
+- contractual clarity;
+- resistance to discretionary manipulation;
+- target finality;
+- graceful failure;
+- economic continuity;
+- compatibility with later reserve hedging.
+
+Do not maximize smoothness merely for appearance.
+
+Do not introduce forecasting solely to eliminate publication lag unless strong evidence demonstrates that doing so improves the monetary architecture without adding unacceptable discretion or model risk.
+
+When data quality deteriorates, prefer conservative behavior.
+
+New issuance should never become easier because source data are stale, missing or uncertain.
+
+## Retroactivity principle
+
+WP1B must explicitly address whether previously established target values are final.
+
+Strong preference should be given to a system in which holders can know what the binding target was at a given historical timestamp without later revisions rewriting prior monetary obligations.
+
+If an alternative approach is recommended, justify the consequences for contracts, accounting and redemption rights.
+
+## Index contingency
+
+Develop a proposed mechanical hierarchy for:
+
+- temporary publication delay;
+- missing observation;
+- official correction;
+- temporary source outage;
+- permanent discontinuation;
+- official successor index;
+- material methodology change.
+
+Do not allow administrators to opportunistically select whichever index reduces PPU liabilities.
+
+Any unavoidable governance role must be:
+
+- narrowly defined;
+- transparent;
+- time-limited where possible;
+- constrained by objective criteria.
+
+## Out of scope for WP1B
+
+Do not decide or redesign:
+
+- final reserve composition;
+- first-loss capital structure;
+- collateralization thresholds;
+- Authorized Participant structure;
+- mint/redemption economics beyond implications directly caused by target calculation;
+- blockchain selection;
+- smart-contract implementation;
+- governance architecture outside index/target-contingency requirements;
+- legal entity structure;
+- production deployment.
+
+If WP1B identifies implications for those areas, record them for the appropriate later Work Package.
+
+## Required deliverables
+
+Produce:
+
+1. Formal PPU Target Calculation Specification
+2. Base-Date and Reference-Index Specification
+3. Daily/Monthly Target Method Comparison
+4. TIPS Reference CPI Compatibility Analysis
+5. Publication-Lag Analysis
+6. Revision and Target-Finality Analysis
+7. Missing-Observation and Source-Outage Policy
+8. Deflation Treatment Analysis
+9. Index-Contingency and Successor Hierarchy
+10. Oracle Timing and Staleness Requirements
+11. Adversarial Scenario Matrix covering Cases A–L
+12. Worked numerical examples
+13. Machine-readable pseudocode or formal algorithm for the recommended target calculation
+14. Recommended updates to the Draft Monetary Constitution / Hypothesis Set
+15. Required updates to:
+   - Protocol State
+   - Decision Register
+   - Risk Register
+   - Active Hypotheses
+   - Unresolved Questions
+   - Research Library
+16. WP1B Completion Report
+17. Gate 1B Submission
+
+Use Claude Opus as an independent adversarial reviewer when useful.
+
+Claude’s findings must be reconciled, not automatically adopted.
+
+Clearly distinguish:
+
+- source-backed fact;
+- project design choice;
+- unresolved question;
+- recommendation.
+
+If the evidence materially undermines the CPI-U selection itself, do not force WP1B to preserve Gate 1A. Record the problem and recommend reopening Gate 1A.
+
+Stop at Gate 1B.
+
+Do not begin WP1C or any later Work Package without Brad’s approval.

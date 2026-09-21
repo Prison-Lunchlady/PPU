@@ -1,0 +1,771 @@
+# FILE: 01-target-specification.md
+# Formal PPU Target Calculation Specification
+
+WP1B candidate v0.1, 2026-09-19. **RECOMMENDATION — NOT APPROVED.** Gate 1A approved only the underlying benchmark. This specification defines a reference value, not market price, an unconditional redemption guarantee, or a reserve design.
+
+## Recommendation and controlling order
+
+Adapt the normal TIPS daily interpolation convention, but do not import Treasury's forecasting, successor discretion, nominal maturity floor or intermediate rounding. Publish an immutable monthly schedule in advance. Carry the last committed endpoint forward when an eligible observation cannot be admitted; resume prospectively toward the next eligible observation. Never relabel a carried endpoint as measured CPI.
+
+Decision priority: historical finality and no invented observations first; authentic benchmark identity second; continuity and compatibility with ordinary TIPS indexing third; speed of response last. These are proposed project choices, not statistically established optimal weights. Monthly steps are a serious alternative if the lag fails acceptance. [Comparison](03-method-comparison.md) and [lag](05-publication-lag.md).
+
+## Inputs and identities
+
+Underlying series: BLS CUUR0000SA0, CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted; published reference base 1982–1984=100. The approved promise remains the exact promise in [Gate 1A authority](../evidence/gate1a-approval-wp1b-authorization.txt). The PPU contractual index is a delayed, vintage-fixed transformation of this series, not the current statistical series in all circumstances.
+
+M is a Gregorian calendar month in UTC; d is its calendar day (1 through D); D is its actual number of days. M−k means calendar-month subtraction. B = USD 1 exactly. G is a future first-of-month 00:00:00 UTC base date, configured before activation. **No live G is selected in research.** I0 is the authenticated, normalized first-release CPI for G−3, fixed forever. Initialization also requires eligible G−2 CPI. Without both, activation is undefined and prohibited, not silently assigned $1. See [base specification](02-base-and-reference.md).
+
+For every month M, define cutoff C(M) = first instant of M minus exactly 86,400 POSIX seconds. Only evidence finalized strictly before C(M) counts; an event at the cutoff is late. A monthly plan becomes irrevocable at C(M), even if computed lazily later from the immutable event prefix. There is no privileged optional seal transaction. This avoids a discretionary scheduler withholding an otherwise valid plan. No evidence may be backdated. The value API is defined from a finalized, append-only event log with trustworthy UTC timestamps; establishment of that log is a later technical requirement, not solved by this research model.
+
+Each observation packet records month, series, seasonal status, base, positive exact decimal value, original BLS publication/edition identifier, captured content hashes and URLs, delivery identities, publication time, and finalized admission times. Minimum requirement: two distinct preconfigured delivery paths independently capture matching original BLS evidence before cutoff. They are not independent price measurements. Admission authentication and delivery independence must be proved before implementation; neither web scraping nor a hash alone authenticates BLS. Any unresolved authenticated contradiction about the *same first edition* blocks admission, even if two paths agree. A different official correction edition is handled under the correction policy, not majority voting.
+
+Use the first official released value for each observation, including if an unconsumed value is later corrected. Never select a vintage opportunistically. If the first release cannot be authenticated, that observation is unavailable. Ordinary revisions of other series do not substitute for CUUR0000SA0. Dash, null, zero, negative, NaN, wrong-series, wrong-month, wrong-base, seasonally adjusted and unauthenticated packets are ineligible. A very large *authenticated* positive CPI is not rejected solely because its inflation rate is surprising.
+
+## Formula and monthly state transition
+
+At G: S(G) = I0. Subsequently S(M) = E(M−1), including during recovery or a hold. Let eligible(M) mean that the required first-release observation for M−2 satisfies the packet rules and that no unresolved index review hold is in force in the event prefix at C(M).
+
+E(M) = normalized CPI(M−2) if eligible(M); otherwise E(M) = S(M).
+
+J(M,d) = S(M) + ((d−1)/D) × (E(M)−S(M)).
+
+T(t) = roundHalfEven18(B × J(M,d) / I0), for every instant t on day d in UTC.
+
+No intraday interpolation. Each daily value binds at 00:00:00 UTC and remains binding until the next UTC midnight. The last day uses (D−1)/D; the following month's first day reaches E(M). Thus there is one ordinary daily increment at the month boundary, not a discontinuity in excess of that increment. A missing month still completes the preceding committed slope; its own slope is zero. The endpoint is not compounded from rounded targets.
+
+Normal conditions give S(M)=CPI(M−3), E(M)=CPI(M−2), matching Treasury's unrounded mathematical reference path. After a gap, S can be older than M−3: the next eligible endpoint restores the level prospectively over a month, in either direction. No missing CPI is reconstructed; no makeup payments or retroactive values arise. This creates catch-up slopes and temporary basis risk. The normalized next observed level may itself reflect BLS imputations, which PPU cannot remove.
+
+## Arithmetic, time and totality
+
+Parse decimal inputs to exact rational numbers; retain fractions through index normalization, interpolation and division. Final reference target is a decimal with 18 places, ties to even. Human display uses six places independently rounded from the exact rational, and labels the full 18-place value as binding. Do not round to six and then eighteen, use binary floats, copy Treasury's five-place ratio, or round balances here. Token units and transaction payment rounding belong to WP1C/1F and technical design.
+
+Use UTC Gregorian date from POSIX time; all contractual days have 86,400 seconds. A leap second belongs to the same civil date and causes no extra target step. Leap years use 29 February. Ignore local daylight-saving transitions. U.S. release timestamps must be converted using the applicable Eastern offset, not a hard-coded 13:30 UTC.
+
+For t<G return NOT_ACTIVE. For positive inputs the exact rational remains positive; rounding can theoretically yield zero at extreme deflation. If rounded output is zero, return UNREPRESENTABLE with the exact rational and issuance-blocked status; never invent a floor. A bounded implementation must similarly detect overflow and fail closed rather than wrap or clamp. Supported numeric bounds must be demonstrated in Phase 4. These states prevent falsely promising a numeric decimal at every conceivable input.
+
+## Data health and conservative behavior
+
+Return a tuple: binding target (or explicit nonactive/unrepresentable state), plan mode, source observation month, fixed vintage IDs, cutoff, event-prefix hash, and data-health status. Modes are NORMAL, CATCH_UP or FROZEN. NORMAL means the start and endpoint correspond to consecutive expected observation months; a recovery month is CATCH_UP even when the numerical difference is zero.
+
+The target is not a freshness assertion. A precommitted path continues during an intramonth communications outage. Define a necessary `issuanceDataOK` flag: true only in NORMAL mode, with no unresolved review hold or authenticated conflict, and at least two fresh monitoring attestations finalized strictly before the query instant, each younger than 86,400 seconds. Monitor attestations cover the expected release status, BLS notices/errata, series identity and path availability; their truth remains a trust assumption. At age exactly 86,400 seconds they are stale. An authenticated adverse event makes the flag false immediately upon finalization. FROZEN and CATCH_UP always return false. Restoration requires a NORMAL plan and fresh clean evidence, plus any required review-hold clearance. This is a necessary restriction, never sufficient authority to mint.
+
+Delayed release alone before cutoff does not change the current precommitted target. A missed advertised publication, path failure or unresolved discrepancy must be recorded and block the health flag until resolved; calendar announcements must be archived, and a later calendar amendment cannot erase the missed-deadline history. The quantitative function does not depend on interpreting that calendar. This monitoring interface requires implementation and adversarial assurance later.
+
+## Corrections, changes, holds and finality
+
+Official correction of an admitted/committed observation triggers INDEX_REVIEW_HOLD on authenticated receipt. All committed plans and historical targets stay fixed. Every not-yet-committed plan freezes until an explicit, documented prospective disposition clears the hold. First-edition observations remain locked even after clearance. An official correction before first use is also disclosed and held for review; no known correction is silently ignored. Authenticity disputes hold admission rather than pick a favorable number.
+
+Ordinary methodological maintenance explicitly within the existing CPI-U framework (routine expenditure weights, sample rotation, quality adjustments) is inherited and disclosed. A change to population, expenditure coverage, index formula framework, publication identity, or an official fundamental redefinition triggers review hold. Distinguishing a technical improvement from a substantive scope change is not fully algorithmic: authenticated notice plus reasoned classification is required and can be wrong or late. An unrecognized change may enter the target; disclose this residual institutional risk.
+
+A pure base rescaling can be normalized mechanically only when official evidence establishes an exact conversion on the same economic series. Prefer continued old-base publication. Otherwise require documented official conversion K into the original base, fixed prospectively; normalized value = new-base value × K. Do not infer K from a single pair of rounded observations. If exact equivalence cannot be established, hold. Existing plans and I0 never change.
+
+Discontinuation or substantive successor: freeze not-yet-committed plans. No automatic move to CPI-W, C-CPI-U, PCE, private indexes, Treasury estimates or an official successor merely because it is official. A successor requires primary/Brad review of concept equivalence, mapping, public overlap, impact and prospective notice, with Gate 1A reopening if scope changes. Existing protected terms and voluntary-migration tension remain Q011; WP1B grants no administrator power to rewrite them.
+
+Temporary absence alone permits automatic prospective resumption to the next expected observation. Three consecutive frozen plans trigger mandatory BENCHMARK_REASSESSMENT_REQUIRED disclosure and primary review request; no permission to select another index or unlimited emergency amendment arises. The disclosure persists until review records a disposition, even if normal observations resume. The target may stay frozen indefinitely; inflation preservation does not continue during that condition.
+
+Index review must publish reasons and evidence within seven calendar days of the hold, and a proposed disposition within thirty; missed deadlines keep the hold and escalate disclosure. These deadlines do not force approval or empower anyone to replace the index. Hold clearance is a narrow prospective decision requiring demonstrated return to the same benchmark/first-vintage policy; any altered terms require a separately authorized version and review. Authority implementation, abuse resistance and coexistence remain WP1G dependencies.
+
+## Limits of the recommendation
+
+Deterministic conditional on a canonical log, configuration and validated event facts; not deterministic discovery of truth or governance judgments. This model does not establish oracle security, chain finality, legal enforceability, solvency or actual execution during downtime. Reference value can be reconstructed while transfers cannot execute. A future transaction must use its actual finalized contractual time, never a user's chosen pre-downtime timestamp; liability timing belongs to WP1C/1F.
+
+Gate 1A remains defensible only with the disclosed delayed/vintage-fixed transformation and explicit failure states. An uninterrupted contemporaneous purchasing-power guarantee is not supported. Reject this recommendation and reopen Gate 1A if that stronger promise is required, if lag is unacceptable, or if constrained contingency authority cannot be reconciled with protected terms. No target mechanics are accepted until Gate 1B approval.
+
+# FILE: 02-base-and-reference.md
+# Base-Date and Reference-Index Specification
+
+Status: proposed configuration requirements, not an activation decision.
+
+Choose G as a future Gregorian month start at 00:00:00 UTC only after all required later reviews. Fix B=1 USD and I0=original first-release CUUR0000SA0 for G−3 on its original 1982–1984 base, or an exactly normalized equivalent. Require both G−3 and G−2 authenticated, positive, unambiguous and admitted before G−24 hours; no active review hold. Otherwise do not activate. The version's signed configuration must identify G, I0, evidence hashes, original editions, normalization map, arithmetic convention and observation-path identities. No reset of I0 after inflation, deflation or rebasing.
+
+Illustration only: G=2026-04-01T00:00:00Z, synthetic January CPI=300 and February=303. I0=300; April 1 T=1; April 16 T=1.005; May 1 T=1.01. These are synthetic, not actual 2026 CPI observations or a historical launch.
+
+The CPI published base (1982–1984=100) and the PPU base date are different concepts. A 300 CPI level does not mean 300 dollars per PPU. Numerator and denominator must use the same normalization. Monthly-average source prices cannot establish the exact purchasing power on G; G defines contractual $1 reference value, not a surveyed spot basket on that day.
+
+Alternative rejected: choosing today's date while writing this report. It would manufacture a launch commitment, incomplete vintage evidence and an intramonth base complication. A future date is an explicit required parameter, not a missing formula variable. Dates before G return NOT_ACTIVE.
+
+# FILE: 03-method-comparison.md
+# Daily / Monthly Target Method Comparison
+
+All choices below retain CPI-U; Gate 1A did not choose the transformation. These are analytical alternatives, not historical backtest results.
+
+| Method | Strength | Adversarial failure / cost | Disposition |
+|---|---|---|---|
+| Release-time step to newest CPI | Lowest contractual delay beyond publication; simple ratio | Release/oracle ordering changes transaction values; discontinuity equals whole observed change; outage recovery jump; still not spot prices | Credible alternative if lag dominates; not recommended under current finality/matching priority |
+| Monthly step at UTC month start to M−2 | Known fixed change time, no interpolation | Known entire monthly jump concentrates exposure around a boundary; no within-month measured information gained; no ordinary TIPS daily path | Closest fallback alternative; reject provisionally, not mathematically inferior |
+| Normal TIPS daily formula with frozen monthly plans | Exact preknown daily increments; ordinary mathematical index matching; fewer contingent timestamp decisions | Adds lag; known daily carry; missing data break matching; catch-up slope | Recommend adaptation in 01 |
+| Copy all TIPS conventions | Maximum contractual convention similarity to a TIPS position | Imports forecasts, Secretary's replacement judgment, separate rounding and maturity floor issues | Reject direct copying |
+| Continuous per-second interpolation | Spreads same increment more finely | More timing surface; no new price evidence; differs from TIPS day convention | Reject added precision without measurement benefit |
+| Latest-release daily catch-up over arbitrary window | Lower apparent lag than TIPS | Window choice and midmonth re-planning complicate obligations; can cancel previously promised path | Defer/reject for v0.1 |
+| Nowcast / forecast | Attempts current-price estimate | Model error, revisions, discretion, extra data and manipulation channels | Reject absent evidence of superior net architecture |
+
+For synthetic 300→330: a monthly step moves 10% at one boundary; a 30-day interpolation moves 1/300 of base value per day (USD 0.003333… with I0=300), reaching USD 1.10 at the next boundary. Both are predictable and expose issuance/redemption timing economics. Daily interpolation reduces single-boundary concentration, not free arbitrage or capital needs. Later WP1F must test transaction timing; this report does not fix fees, collateral or redemption rights.
+
+Reason for recommendation is contractual exposure distribution plus ordinary TIPS formula compatibility, not visual smoothness. A material cost is approximately 2.5 months of price-observation age in a stylized midpoint convention. If users prioritize prompt index reflection over this compatibility, monthly/release steps deserve reconsideration. Q021 has no demand evidence and remains OPEN.
+
+# FILE: 04-tips-compatibility.md
+# TIPS Reference CPI Compatibility Analysis
+
+Source-backed facts: Treasury's rule uses M−3 CPI at month start and linear daily interpolation toward M−2; its example for April 15, 1996 uses 154.40 and 154.90 to obtain 154.63333 after Treasury rounding. Treasury retains unrevised CPI, prefers original-base publication, estimates missing values using prior twelve-month change, and reserves successor discretion. [31 CFR 356, Appendix B I.B.3–4](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356).
+
+| Feature | PPU proposal | Matching consequence |
+|---|---|---|
+| M−3 start and M−2 daily interpolation | Adopt in normal operation | Same unrounded index path if vintages/base agree |
+| Truncate six then round five, and rounded ratio | Reject; exact arithmetic then 18 places | Small systematic convention differences; not literally identical ratios |
+| Previously reported vintage | Retain first edition, explicit evidence and correction hold | Normal alignment; review holds can add basis |
+| Missing-month estimate | Reject; carry committed endpoint | Potentially material contingency basis |
+| Successor discretion | Reject automatic inheritance | Future index divergence possible |
+| Original-base preference | Adapt with exact evidence rules | Approximate rounded conversions can fail admission |
+| TIPS original-principal maturity protection | Do not adopt for PPU target | PPU may decline below $1; instrument floor is not target symmetry |
+
+Treasury announced 325.604 for missing October 2025. PPU's analogous January 2026 starting endpoint would be September 324.800 if December's missing endpoint froze. Difference at January 1: (325.604−324.800)/324.800 = about 0.24754% of that carried level. This is a comparison of *contractual conventions*, not proof of October's true inflation. January PPU would interpolate toward November 324.122 if eligible; Treasury would interpolate from 325.604 toward 324.122. [Treasury announcement](https://home.treasury.gov/news/press-releases/sb0324), [BLS historical table](https://www.bls.gov/regions/mid-atlantic/data/consumerpriceindexhistorical_us_table.htm).
+
+Same underlying CPI does not hedge the price at which bonds can be liquidated or instant redemption claims. Duration, maturity, coupons, floor value, timing and liquidity remain WP1D/Phase 2. This paper selects no reserve asset, allocation, duration, derivative or funding commitment. The recommendation sacrifices exact contingency matching for no PPU-created forecast; R021 remains open.
+
+# FILE: 05-publication-lag.md
+# Publication-Lag Analysis
+
+Fact: CPI's observation month is not its release date. BLS's current calendar lists January 2026 released February 13, February released March 11, and August released September 11. September 2025 publication was delayed from October 15 to October 24. [Calendar](https://www.bls.gov/schedule/news_release/cpi.htm), [shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm).
+
+Interpretation: the proposal's April dates combine January and February averages. Calling this a three-month *reference convention* must not imply every price is exactly three months old. If monthly averages are represented by their midpoints and calendar months approximated equally, the weighted source midpoint is about 2.5 months behind the valuation day. Individual CPI inputs, sampling and imputations add different ages. No single exact economic lag follows from the index formula.
+
+For constant illustrative annual price growth r, a 2.5-month delay corresponds to current/lagged price ratio (1+r)^(2.5/12). At 3%, 10%, 20% and 100%, this is about 0.618%, 2.005%, 3.871% and 15.535% above the lagged level. These are scenario calculations, not CPI backtests or guaranteed errors. Relative purchasing-power shortfall uses 1−1/ratio instead; do not conflate denominators. A sudden 10% price jump before any reflection leaves a previously matched nominal claim with 9.091% less current purchasing power. Freezing can make delay unbounded.
+
+Daily interpolation does not manufacture daily measurement. Monthly M−2 steps shorten average effective lag but produce larger discrete changes. Release-time steps reduce delay further but become event-timing dependent. No empirical user tolerance or hedge cost study establishes that 2.5 months is acceptable. Recommendation: acceptable only as a disclosed delayed contractual standard, conditional on Gate 1B review, Q021 user-scope work and later matching tests. Do not market real-time protection. Reopen Gate 1A if contemporaneous or uninterrupted coverage is essential.
+
+# FILE: 06-revisions-and-finality.md
+# Revision and Target-Finality Analysis
+
+BLS says CPI-U/W are final when issued for ordinary use but rare errors are corrected. Its error policy provides public errata and corrections; therefore “NSA never changes” is false. Routine seasonal revisions are irrelevant to the selected NSA series. [CPI FAQ](https://www.bls.gov/cpi/questions-and-answers.htm), [error policy](https://www.bls.gov/about-bls/bls-error-correction-policy.htm).
+
+Proposed rule: archive original editions and freeze each monthly event prefix at cutoff. An official correction cannot rewrite a previous target, I0, a committed future daily schedule, or a claimed earlier admission timestamp. Correction of a relevant value creates an immediate data-health block and prospective index review hold. A later normal CPI level can incorporate BLS's corrected statistical history; PPU does not subtract that effect or patch old obligations. This can create a prospective level adjustment after review and temporary/permanent basis to a revised statistical series.
+
+Example: April schedule uses February=303; on April 20 BLS corrects February to 302. April 16 remains $1.005 on I0=300. April's remaining committed values continue; the next uncommitted month's endpoint freezes unless the hold is cleared. No operator may replace February=303 in the old schedule. Even a genuine statistical correction is not permission for monetary retroactivity.
+
+Rejected alternatives: rewrite all history (breaks settlement/accounting finality); silently use latest databases (unreproducible edition selection); change only the current day (mid-plan arbitrary discontinuity); blindly continue after known serious error (conceals data integrity). Cost of the recommended hold: denial of service and prolonged deviation after even a benign correction. A correction to an unrelated regional series does not trigger a national-series hold. The admission/hold rules require exact affected-series identification.
+
+Logical finality relies on actual append-only consensus finality. A chain reorganization or forged evidence can undermine it; this report does not claim those solved. Deep finality violations are technical incident handling, not retroactive permission in the monetary formula. Preserve the conflicting history and stop issuance pending the later security process.
+
+# FILE: 07-missing-and-outage.md
+# Missing-Observation and Source-Outage Policy
+
+Normal plan cutoff is month start minus 24 hours, strict `<`. Missing required M−2 observation means E=S. A late observation cannot change that month even if it arrives one second after cutoff. Its archive may explain the gap; the next month seeks its own required observation, not an arbitrary stale “latest available” value. A missing expected next observation causes another freeze. Resumption is prospective toward the next eligible observed level, with CATCH_UP and issuanceDataOK=false; one further normal consecutive-observation plan is required to remove the recovery-mode block.
+
+October 2025 is a real absence, not a value of zero. BLS did not issue the October CPI news release and marks missing observations with dashes. The protocol must not use seasonal-adjustment approximations as published NSA CPI. [BLS shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm).
+
+Illustrative December plan: S=September324.800, October absent ⇒ E=324.800. January: S=324.800, November324.122 admitted ⇒ interpolate downward in recovery mode. February: if December eligible and source health clean, consecutive expected endpoints permit NORMAL. No assertion about unobserved October purchasing power is made.
+
+Source page outage with original evidence already authenticated does not invalidate the plan. Missing delivery evidence before cutoff freezes even if BLS did publish: liveness is traded for verifiability. Loss of heartbeat blocks new issuance after at most 24 hours since the last required fresh monitoring attestation; detection is not instantaneous, and false clean attestations remain possible. Blockchain downtime cannot rewrite cutoffs. Already committed targets are calculable off-chain; actual transfer availability and order execution are not guaranteed.
+
+After three consecutive frozen plans, publish BENCHMARK_REASSESSMENT_REQUIRED and request primary review. Absent observations, no automatic resumption or substitute exists. Review cannot conjure past missing data. Return of eligible original-series data permits mechanical resumption, while the reassessment disclosure remains outstanding until disposition. A non-temporary benchmark change requires 09's hold/clearance rules instead.
+
+Freeze is a final monetary reference, not a statement of preserved purchasing power. It can understate inflation or overstate deflation and redistribute economic exposure; conservative issuance blocking is not necessarily conservative for every holder or reserve provider. Redemptions and accrued claims during freezes are unresolved WP1C/1F matters. No new fee, haircut, redemption pause or collateral ratio is selected here.
+
+# FILE: 08-deflation.md
+# Deflation Treatment Analysis
+
+Recommendation: symmetric indexing, no nominal $1 floor and no high-water mark. Negative monthly changes give negative daily slopes; balances do not rebase. With synthetic I0=300 and endpoints 294 then 288, endpoint targets are 0.98 and 0.96. Monthly returns are −2% then approximately −2.040816%, not two equal percentage drops.
+
+A floor max(1,T) would grant a one-sided protection option and change the benchmark promise. It can accumulate divergence from CPI after deflation and needs separate funding/valuation. Treasury's maturity principal protection belongs to its instrument terms; it does not justify copying a perpetual PPU nominal floor. [Treasury TIPS overview](https://www.treasurydirect.gov/marketable-securities/tips/).
+
+Consequence: nominal PPU reference value and the dollar value of claims not yet fixed under later liability rules can decline. A holder's personal prices might rise simultaneously. No inflation-only marketing or no-loss representation is justified. A zero/negative CPI input is invalid, whereas a positive falling CPI is valid. Extreme rounding-to-zero returns explicit UNREPRESENTABLE; no hidden floor is introduced. Existing claims' fixation time belongs to WP1C and is not changed by this recommendation.
+
+# FILE: 09-contingency-hierarchy.md
+# Index-Contingency and Successor Hierarchy
+
+This is a proposed index-specific authority constraint, not a governance architecture or grant of live power.
+
+1. Valid original observation and normal identity: deterministic admission and daily path.
+2. Delay, missing observation, temporary delivery/source failure: immutable committed path, then mechanical endpoint carry; prospective recovery only.
+3. Official correction of the relevant first edition: preserve vintage/history, block data health, freeze uncommitted plans pending transparent review.
+4. Pure base change: prefer old-base continuation, else exact officially supported normalization; no rounded-pair inference. If equivalence is uncertain, review hold.
+5. Routine sampling/weights/quality maintenance within existing framework: disclose and inherit. Material population/coverage/formula/identity change: review hold, even if series ID remains the same.
+6. Discontinuation: hold. An official successor is the first *candidate for review*, never an automatic replacement. Same concept and documented overlap/mapping must be demonstrated. Other public indexes are research alternatives; private/proprietary substitutes require reopening benchmark scope. No administrator selects a low-liability index.
+7. Failure to establish an acceptable successor: remain frozen with impaired-coverage disclosure. Seek primary Gate 1A reconsideration or a separately authorized version. Do not impose new terms or decide reserve/liquidation mechanics here.
+
+Mechanical matters: month arithmetic, cutoffs, packet-field equality, positive-value checks, age, interpolation, carry, fixed vintages, exact documented base scaling, reporting counters. Human/institutional matters: authentic source evidence, independence of paths, whether a change is substantive, whether official mapping establishes equivalence, future version/holder protections. No honest rule makes these entirely trustless.
+
+Proposed constraint: evidence/reason published within seven days of a review hold, proposed disposition within thirty; failure keeps the hold. Clearance may confirm only restored original benchmark terms and locked first vintages. Substitution or policy change requires explicit primary/Brad approval and prospective version specification, not emergency in-place discretion. Public impact comparison must show consequences in both inflation and deflation, not only lower liability scenarios. Appointment, quorum, appeal, removal, enforceability and migration continuity are Q011/WP1G/Phase 3 dependencies; no personnel or voting design selected.
+
+Concrete counterexample: BLS's announced 2028 geographic sample update is not automatically a new purchasing-power promise. It updates geographic sampling for population shifts. Rejecting all maintenance would freeze an evolving statistical index almost inevitably; ignoring every same-ID change would permit scope drift. Its detailed compatibility still needs monitoring as methodology is finalized. [BLS notice, July 27, 2026](https://www.bls.gov/cpi/notices/2026/geographic-revision.htm).
+
+Unresolved tension explicitly retained: protected monetary terms versus necessary future successor action; voluntary migration versus ongoing reserve obligations; refusal to forecast versus hedge contracts that do. No Gate 1B recommendation silently resolves these.
+
+# FILE: 10-oracle-timing.md
+# Oracle Timing and Staleness Requirements
+
+This specifies required behavior, not a blockchain, committee, software contract or oracle vendor.
+
+Three clocks must be separate: BLS observation month, official publication instant/edition, finalized receipt in the protocol log. A BLS release does not itself change that day's PPU target. Required observation M−2 affects month M only if qualifying admissions precede C(M); its first numerical increment binds on M's second day at 00:00 UTC, while its monthly plan is committed at C(M). The first day remains S. At equality with cutoff admission is late.
+
+BLS releases commonly say 08:30 Eastern. That is 13:30 UTC in standard time and 12:30 UTC in daylight time; the date-specific timezone conversion must be recorded. [BLS August 2025 release](https://www.bls.gov/news.release/archives/cpi_09112025.htm), [NIST timezone FAQ](https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs). BLS may change dates; release calendars are monitoring inputs, not substitutes for actual publication evidence or changes to fixed cutoffs.
+
+Require at least two distinct configured delivery paths, original-publication capture, exact fields/base/month match, trustworthy finalized receipt time and immutable historical queries. Mirrored APIs sharing a common backend are not automatically independent. A content hash proves identity of captured bytes, not publisher authenticity. Conflicting authentic first-edition claims block; official correction editions trigger review instead. A single malformed/spoofed abnormal input is quarantined. Two valid agreeing paths can admit despite an unauthenticated bad third path, but two matching compromised paths can defeat this minimum: threshold choice alone is not a security proof.
+
+Monitoring attestations must cover notices, source access and expected release status at least daily. The necessary issuance flag requires two clean attestations younger than 24 hours and no unresolved adverse event. Source absence at an announced release time blocks on recorded detection; an unreported incident is detectable only through monitoring. Stale health cannot increase issuance eligibility. Restoring monitoring cannot alter historical targets or make a FROZEN/CATCH_UP month issuance-eligible. This flag leaves all other mint conditions unspecified.
+
+Chain downtime after plan cutoff: preserve the precommitted mathematical schedule; block executable issuance without current health. Downtime spanning a cutoff: if qualifying evidence was not finalized before cutoff, that month's endpoint freezes. On recovery, no use of a source's earlier publication timestamp as if it were earlier protocol receipt. A later chain must establish finality, timestamp bounds and outage semantics sufficient to enforce this requirement; absent that, the specification is not deployable.
+
+Security limits to retain: common-source compromise, plausible false CPI, censorship near cutoff, denial of service through genuine conflict, unnoticed institutional change, forged monitor attestations and consensus-history failure. A numerical reasonableness filter cannot reliably distinguish hyperinflation from an attack and therefore must not silently cap authenticated CPI. Operational authenticity and anomaly review remain open implementation work.
+
+# FILE: 11-adversarial-scenarios.md
+# Adversarial Scenario Matrix
+
+All outcomes are proposed behavior under validated event inputs, not observed performance of a deployed system. `issuanceDataOK` is a necessary restriction only. [Executable cases and results](model-validation.json).
+
+| Case | Trigger and exact quantitative behavior | Data/issuance result | Remaining discretion / limitation |
+|---|---|---|---|
+| A — Normal | Two authenticated timely paths for M−2; E=CPI(M−2), S=prior E; daily fraction (d−1)/D | NORMAL; health flag only if fresh and no adverse event | Authenticity and monitoring infrastructure, not value selection |
+| B — High inflation | 300→330→363→399.3→439.23; no slope cap; April midpoint=1.05, next start=1.10 | Normal source health does not prove solvency | Later reserve/capital stress; no power to suppress true inflation |
+| C — Deflation | 300→294→288 gives endpoint targets .98 then .96 | Same rules as inflation, no floor | Liability fixation timing later; no holder-specific preservation |
+| D — Missing October analogue | December starts September324.800 and freezes endpoint there; January moves toward November324.122 | FROZEN then CATCH_UP; both data flags false | No estimate of missing October; BLS later imputation remains institutional exposure |
+| E — Delayed publication | February observation received March31 00:00 UTC misses April cutoff exactly; April E=S; arrival before cutoff by one microsecond qualifies | Late data cannot restore April eligibility | Delivery censorship can force conservative freeze |
+| F — Official correction | Used February303 corrected to302 after April commitment; old April16 stays1.005; next uncommitted endpoint carries303 | Immediate health block and INDEX_REVIEW_HOLD | Transparent prospective clearance required, no retroactive substitution |
+| G — Multiple-month outage | May–July unavailable: endpoint stays303 for each month; frozen counter=3 | Reassessment disclosure latched; no new issuance data approval | Review cannot invent CPI; coverage can fail indefinitely |
+| H — Material same-ID method change | On authenticated classification, preserve committed plan, freeze first uncommitted and later plans | Review hold | Materiality detection/classification human and fallible; no automatic redefinition |
+| I — Official successor | Old series discontinued; no successor admission; hold carry at303 in fixture | Review hold, no auto-clear by publishing new series | Scope/mapping/protected-term compatibility requires primary review; reopen Gate1A if needed |
+| J — Oracle disagreement | Two authenticated paths say303, third credible first-edition claim304: no eligible observation | FROZEN; health conflict block | Authentication and resolution; no majority chosen for liability advantage; denial-of-service risk |
+| K — Chain/oracle downtime | Precommitted April20 remains3019/3000; source publication before cutoff but receipt at/after cutoff freezes new month | Stale attestations block health; no backdating | Mathematical value available does not mean transfer execution available |
+| L — Bad one-feed input | Unauthenticated999999 quarantined; two good303 paths govern; two authenticated999999 reports are not clipped by an inflation cap | Spoof need not block valid observation; authenticated contradiction does | Correlated compromise can defeat paths; authenticity assumption remains |
+
+Boundary tests additionally cover 28/29/30/31-day months, leap day, UTC offsets, half-even ties, exact rebase equivalence, failed base equivalence, invalid values, failed genesis, and conservative health restoration. Cases H/I/F explicitly supply a validated review-hold fact: the executable test does not certify human materiality judgments or real authentication.
+
+# FILE: 12-worked-examples.md
+# Worked Numerical Examples
+
+All synthetic except the explicitly identified Treasury example and BLS/Treasury 2025 comparison. Exact executable outputs in [model-validation.json](model-validation.json); reproduction: `python test_reference_model.py` from this directory (standard library).
+
+1. Normal, I0=300, S=300, E=303, 30-day April: day1=1; day16=1+(15/30)(3/300)=1.005000000000000000; day30=1.009666666666666667; next month day1=1.010000000000000000. No rounding feeds the next endpoint.
+2. High inflation: S=300, E=330 gives day16=1.05, next start1.10. Endpoints363,399.3,439.23 continue uncapped. A target rising correctly does not ensure funded liabilities.
+3. Deflation: 300→294→288 gives .98 and .96 at subsequent month starts. No nominal floor or balance rebase.
+4. Missing October analogue: E(December)=324.800. E(January)=324.122 if admitted. January16 J=324.800+(15/31)(−.678)=324.4719354838709677…; with illustrative I0=324.800, T≈0.998989949150. This does not impute October.
+5. Correction: original February303 stays in April's committed plan after a correction to302. April16 remains1.005; an unresolved hold fixes May endpoint303. No historical redemption/accounting recalculation is prescribed.
+6. Rebase: old-base CPI303 and officially exact new-base101 with K=3 yield identical normalized index303. If K was guessed from rounded outputs, equivalence is unproven and admission must hold. I0 stays300.
+7. External vector: Treasury April15,1996:154.40+(14/30)(154.90−154.40)=154.633333…; five-place reference154.63333. PPU would retain exact rational internally instead of Treasury's intermediate rounding. [Treasury rule](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356).
+8. Half-even 18-place rounding: exact1+0.5×10^−18→1.000000000000000000; exact1+1.5×10^−18→1.000000000000000002. Maximum absolute one-target quantization error is 0.5×10^−18 dollars. It is not the error bound for summing many separately rounded transaction amounts.
+9. Leap February: 29 days, S300,E329; day29 index328, next start329. Local clock changes never add/remove a target day.
+10. Strict cutoff: for April2026, C=March31 00:00UTC. Receipt at C is late. Publication March30 plus delayed protocol receipt March31 does not qualify retroactively.
+
+Lag scenario values and the two denominators are preserved in model-validation.json. Rounding examples are arithmetic validation, not assurance about measurement, assets, contracts or software security.
+
+# FILE: 14-proposed-constitution-updates.md
+# Proposed Constitution / Hypothesis Set Updates
+
+**All WP1B language below is recommended, NOT RATIFIED.** Preserve the original 24-article draft and source verbatim. This separate amendment proposal avoids rewriting historical evidence. Gate 1A accepted only its bounded benchmark promise.
+
+| Draft area | Recommended change / clarification | Rationale and unresolved dependency |
+|---|---|---|
+| I — Unit / deflation | Use Gate1A's exact U.S. reference-value promise; specify delayed, fixed-vintage contractual transformation and failure disclosures. No nominal floor or wallet rebase. | No current/individual/global purchasing-power guarantee; nominal declines possible |
+| II–IV — Index / target | Replace implicit copying of Treasury rules with 01's exact monthly plan, UTC day, rational arithmetic and 18-place half-even result. Future month-start G and fixed I0. | Treasury estimation and replacement powers are not adopted; all proposed parameters await1B |
+| Target finality | Committed monthly paths and historical values never rewritten by later releases, corrections, admission backdating or rebasing. | Does not determine when later transaction obligations become fixed, WP1C/1F |
+| XIX — Protected rules | Propose protecting original-vintage history, unit definition and prohibition on opportunistic replacement; disclose freeze and no retroactive makeup. | Full protected-rule set and its enforceability remain WP1G/Phase3 |
+| XX — Emergencies | Index data impairment blocks necessary issuance-health eligibility and future unsupported endpoint changes; does not itself authorize redemption seizure, claim haircut or general emergency government. | Existing emergency/redemption tensions remain Q010/Q011 |
+| XXI — Contingency | Adopt mechanical absence/carry/recovery; narrow prospective correction/materiality/successor hold with public evidence/deadlines and primary review; no automatic economic successor. | Human semantic judgment remains; voluntary migration and continued old-version reserve obligations unresolved |
+| XXIV — Research status | Record benchmark approved under Gate1A conditions, target candidate pending Gate1B, other economics/technical/legal assumptions unvalidated. | No production readiness inferred |
+
+H001 remains a bounded benchmark selection with open user-fit and implementation/matching risks. H002 receives conditional support for the adapted normal daily convention, not the entire original TIPS hypothesis. H003–H008 are not validated. No original constitutional protection is weakened or changed by this proposal.
+
+# FILE: 15-required-question-answers.md
+# WP1B Required Question Coverage
+
+Answers are the recommendation in 01 unless labeled fact or unresolved. None is Gate1B approval.
+
+1. **Formula:** T=halfEven18([S+(d−1)(E−S)/D]/I0) USD; S=prior committed E; E=eligible expected M−2 first CPI or S. Explicit NOT_ACTIVE/UNREPRESENTABLE exceptions. 01.
+2. **Base Date:** future configured month-start G at00UTC, not selected as a live date here. 02.
+3. **Base Reference Index:** authenticated original normalized CPI(G−3), fixed permanently. 02.
+4. **Controlling observation:** normally M−3 to M−2; after gap start=prior committed endpoint, endpoint still expected M−2 if eligible. 01/07.
+5. **Step or daily:** recommend daily under finality/matching priority; monthly and release steps evaluated as credible alternatives. 03.
+6. **Interpolation:** exact day fraction(d−1)/D, constant intraday. 01.
+7. **TIPS:** adapt normal formula, reject wholesale copying of forecast, replacement power, rounding and instrument floor. 04.
+8. **Lag:** three-month reference label, roughly2.5-month weighted midpoint age under approximation, plus input ages; outages unbounded. Fact/interpretation separated in05.
+9. **Acceptability:** conditional design judgment, not established user demand; Q021 OPEN. Reopen benchmark if unacceptable. 05.
+10. **Deflation:** negative slopes and sub-$1 references permitted. 08.
+11. **Floor:** none. 08.
+12. **Consequences:** nominal loss possible; no individual price guarantee; later liability-fixation time matters. 08.
+13. **Missing:** endpoint carry, FROZEN, issuanceDataOK=false; no imputation. 07.
+14. **Delay:** if admission strictly before cutoff qualifies; otherwise month frozen, no late rewrite. 07/10.
+15. **Correction/restatement:** preserve first vintage/history; relevant authenticated correction opens prospective review hold and immediate health block. 06.
+16. **Retroactivity:** prohibited; technical finality assurance remains prerequisite. 06.
+17. **Binding time:** plan commits at month-start−24h; first new endpoint contribution at second day00UTC; each day's value at00UTC. 10.
+18. **Timezone:** UTC Gregorian/POSIX, no DST; release clocks converted separately. 01/10.
+19. **Precision:** exact rational intermediate;18-place binding target;6-place display rounded independently. 01.
+20. **Rounding:** nearest ties-to-even, once from exact target; no Treasury double-round. 01/12.
+21. **Stale:** committed value survives, missing next input freezes; daily monitor age≥24h blocks necessary issuance flag. 07/10.
+22. **Conflict:** unresolved authenticated original-edition contradiction blocks admission; no favorable-value/majority selection. 10.
+23. **Material redefinition:** hold first uncommitted plan; detection/classification requires fallible institutional evidence. 09.
+24. **Rebase:** prefer old base, else exact official equivalence factor; never reset I0; uncertain mapping holds. 09.
+25. **Discontinued:** freeze, disclose failure of ongoing purchasing-power coverage, seek primary review. 09.
+26. **Successor:** official successor first review candidate, no automatic substitution; alternatives require benchmark reconsideration. 09.
+27. **Mechanical:** calendar/arithmetic/cutoffs/equality/freshness/carry/exact rescaling/counters. 09.
+28. **Human:** source authenticity and path independence, materiality/equivalence classification, future terms/approval. 09/10.
+29. **Constrained powers:** evidence7days, proposal30days, hold on missed deadlines, prospective original-terms-only clearance, no forced successor. Sufficient institutional/legal enforcement NOT demonstrated; WP1G/Phase3. 09.
+30. **Promise consistency:** supports an explicitly delayed, vintage-fixed reference, not uninterrupted/current/global protection. Conditional consistency; reopen Gate1A if that qualification or necessary authority is unacceptable. 01/05/09.
+
+Every research-scope item maps to these answers and 01–12. Required deliverable13 is reference_model.py plus EVENT_RULES and tests;14 is the separate amendment proposal;15 comprises updated canonical registers;16/17 are completion and Gate submission. The roadmap and original draft remain unchanged.
+
+# FILE: model-validation.json
+{
+  "scope": "offline reference arithmetic and validated-input scenarios; not oracle/security/solvency certification",
+  "checks": {
+    "A_midmonth_independent_1_005": true,
+    "A_first_1": true,
+    "A_month_boundary_1_01": true,
+    "A_boundary_one_daily_increment": true,
+    "B_halfway_1_05": true,
+    "B_extended_2026-05": true,
+    "B_extended_2026-06": true,
+    "B_extended_2026-07": true,
+    "C_no_floor": true,
+    "D_absence_not_zero": true,
+    "D_recovery_can_decline": true,
+    "E_equal_cutoff_is_late": true,
+    "E_before_cutoff_eligible": true,
+    "F_corrected_vintage_not_selected": true,
+    "F_past_target_unchanged": true,
+    "F_future_hold": true,
+    "G_three_frozen_triggers_reassessment": true,
+    "H_hold_no_automatic_successor": true,
+    "I_hold_no_automatic_successor": true,
+    "J_authenticated_conflict_blocks_even_two_agree": true,
+    "K_late_delivery_same_as_missing": true,
+    "K_downtime_does_not_rewrite_precommit": true,
+    "L_unauthenticated_abnormal_quarantined": true,
+    "L_authentic_extreme_not_price_capped": true,
+    "health_normal_fresh": true,
+    "health_age_equality_stale": true,
+    "health_adverse_blocks": true,
+    "health_frozen_cannot_restore_by_monitor": true,
+    "health_catchup_cannot_restore_by_monitor": true,
+    "health_no_future_attestations": true,
+    "round_tie_even_down": true,
+    "round_tie_even_up": true,
+    "round_18_tie": true,
+    "round_18_odd_tie": true,
+    "leap_29_days": true,
+    "UTC_equivalent_instants": true,
+    "UTC_standard_offset": true,
+    "Treasury_external_vector_15463333": true,
+    "exact_rebase_invariance": true,
+    "unverified_rebase_blocked": true,
+    "invalid_-": true,
+    "invalid_0": true,
+    "invalid_-1": true,
+    "invalid_NaN": true,
+    "round_to_zero_explicit": true,
+    "genesis_requires_both": true,
+    "month_shift_year": true,
+    "convex_monotonic_2024_2_300_303": true,
+    "convex_monotonic_2024_2_303_300": true,
+    "convex_monotonic_2024_2_300_300": true,
+    "convex_monotonic_2025_2_300_303": true,
+    "convex_monotonic_2025_2_303_300": true,
+    "convex_monotonic_2025_2_300_300": true,
+    "convex_monotonic_2026_4_300_303": true,
+    "convex_monotonic_2026_4_303_300": true,
+    "convex_monotonic_2026_4_300_300": true,
+    "convex_monotonic_2026_5_300_303": true,
+    "convex_monotonic_2026_5_303_300": true,
+    "convex_monotonic_2026_5_300_300": true
+  },
+  "failed": [],
+  "case_examples": {
+    "A": {
+      "exact": "201/200",
+      "reference_index": "603/2",
+      "binding": "1.005000000000000000",
+      "status": "VALUE",
+      "display": "1.005000",
+      "mode": "NORMAL"
+    },
+    "B": {
+      "exact": "21/20",
+      "reference_index": "315",
+      "binding": "1.050000000000000000",
+      "status": "VALUE",
+      "display": "1.050000",
+      "mode": "NORMAL"
+    },
+    "C": {
+      "first_endpoint": "0.980000000000000000",
+      "second_endpoint": "0.960000000000000000"
+    },
+    "D": {
+      "december_end": "1624/5",
+      "january": {
+        "exact": "1005863/1006880",
+        "reference_index": "1005863/3100",
+        "binding": "0.998989949149849039",
+        "status": "VALUE",
+        "display": "0.998990",
+        "mode": "CATCH_UP"
+      }
+    },
+    "E": {
+      "at_cutoff": "FROZEN",
+      "one_microsecond_before": "NORMAL"
+    },
+    "F": {
+      "historical": "1.005000000000000000",
+      "future_endpoint": "303"
+    },
+    "G": {
+      "frozen_months": 3,
+      "endpoint": "303"
+    },
+    "H": {
+      "next_plan": "FROZEN",
+      "endpoint": "303"
+    },
+    "I": {
+      "next_plan": "FROZEN",
+      "endpoint": "303"
+    },
+    "J": {
+      "mode": "FROZEN",
+      "reason": "CONFLICT"
+    },
+    "K": {
+      "precommitted": {
+        "exact": "3019/3000",
+        "reference_index": "3019/10",
+        "binding": "1.006333333333333333",
+        "status": "VALUE",
+        "display": "1.006333",
+        "mode": "NORMAL"
+      },
+      "late_delivery": "FROZEN"
+    },
+    "L": {
+      "spoof_ignored": true,
+      "authenticated_extreme_endpoint": "999999"
+    }
+  },
+  "lag_scenarios": [
+    {
+      "annual_growth": 0.03,
+      "current_over_lagged_percent": 0.6177083779499659,
+      "purchasing_power_shortfall_percent": 0.6139161663567982
+    },
+    {
+      "annual_growth": 0.1,
+      "current_over_lagged_percent": 2.005473483484277,
+      "purchasing_power_shortfall_percent": 1.966044972879788
+    },
+    {
+      "annual_growth": 0.2,
+      "current_over_lagged_percent": 3.871425772384529,
+      "purchasing_power_shortfall_percent": 3.727132600324612
+    },
+    {
+      "annual_growth": 1.0,
+      "current_over_lagged_percent": 15.535269687227293,
+      "purchasing_power_shortfall_percent": 13.446343899385694
+    }
+  ],
+  "pass": true
+}
+
+# FILE: reference_model.py
+"""WP1B executable mathematical reference; not production or authentication code.
+
+Validated evidence/hold facts are inputs. See 01 and 10 for their required proof.
+No network, contracts, funds or transactions. Standard Python library only.
+"""
+from dataclasses import dataclass
+from datetime import datetime, timezone, timedelta
+from calendar import monthrange
+from fractions import Fraction as F
+
+UTC = timezone.utc
+
+def instant(s):
+    t = datetime.fromisoformat(s.replace('Z', '+00:00'))
+    if t.tzinfo is None:
+        raise ValueError('timezone required')
+    return t.astimezone(UTC)
+
+def shift(m, n):
+    y, mo = map(int, m.split('-'))
+    q = y * 12 + mo - 1 + n
+    return f'{q // 12:04d}-{q % 12 + 1:02d}'
+
+def first(m):
+    return instant(m + '-01T00:00:00Z')
+
+def cutoff(m):
+    return first(m) - timedelta(days=1)
+
+def rounded(x, places=18):
+    """Exact rational, nearest decimal, ties to even; no binary floating point."""
+    x = F(x)
+    if x < 0:
+        return '-' + rounded(-x, places)
+    n, rem = divmod(x.numerator * 10**places, x.denominator)
+    if rem * 2 > x.denominator or (rem * 2 == x.denominator and n % 2):
+        n += 1
+    return f'{n // 10**places}.{n % 10**places:0{places}d}'
+
+@dataclass(frozen=True)
+class Packet:
+    month: str
+    value: str
+    edition: str
+    path: str
+    received: datetime
+    published: datetime
+    authenticated: bool = True
+    series: str = 'CUUR0000SA0'
+    original_edition: bool = True
+    # Exact normalization is a validated input; default original base.
+    factor: str = '1'
+    normalization_verified: bool = True
+
+def select(month, boundary, packets):
+    candidates = []
+    for p in packets:
+        if p.month != month or p.received >= boundary:
+            continue
+        if not (p.authenticated and p.original_edition and p.normalization_verified):
+            continue
+        if p.series != 'CUUR0000SA0' or p.published > p.received:
+            continue
+        try:
+            v = F(p.value) * F(p.factor)
+        except (ValueError, ZeroDivisionError):
+            continue
+        if F(p.value) <= 0 or F(p.factor) <= 0:
+            continue
+        candidates.append((p, v))
+    identities = {(p.edition, v) for p, v in candidates}
+    if len(identities) > 1:
+        return None, 'CONFLICT'
+    if not candidates or len({p.path for p, _ in candidates}) < 2:
+        return None, 'UNAVAILABLE'
+    return candidates[0][1], 'ELIGIBLE'
+
+@dataclass(frozen=True)
+class Plan:
+    month: str
+    start: F
+    end: F
+    endpoint_month: str
+    mode: str
+    frozen_count: int
+    reason: str
+
+def plan(month, previous, base, packets, review_hold=False):
+    expected = shift(month, -2)
+    start = F(base) if previous is None else previous.end
+    value, reason = select(expected, cutoff(month), packets)
+    if review_hold:
+        value, reason = None, 'INDEX_REVIEW_HOLD'
+    if value is None:
+        return Plan(month, start, start,
+                    shift(month, -3) if previous is None else previous.endpoint_month,
+                    'FROZEN', 1 + (previous.frozen_count if previous else 0), reason)
+    normal = previous is None or previous.endpoint_month == shift(month, -3)
+    return Plan(month, start, value, expected,
+                'NORMAL' if normal else 'CATCH_UP', 0, 'ELIGIBLE')
+
+def initialize(month, packets, review_hold=False):
+    base, reason = select(shift(month, -3), cutoff(month), packets)
+    endpoint, _ = select(shift(month, -2), cutoff(month), packets)
+    if base is None or endpoint is None or review_hold:
+        raise ValueError('NOT_ACTIVE: genesis evidence incomplete or held')
+    return base, plan(month, None, base, packets)
+
+def value(plan_, at, base):
+    if at.strftime('%Y-%m') != plan_.month:
+        raise ValueError('wrong plan month')
+    d = at.day
+    days = monthrange(at.year, at.month)[1]
+    ref = plan_.start + F(d - 1, days) * (plan_.end - plan_.start)
+    exact = ref / F(base)
+    output = rounded(exact)
+    return {'exact': str(exact), 'reference_index': str(ref),
+            'binding': output if F(output) > 0 else None,
+            'status': 'VALUE' if F(output) > 0 else 'UNREPRESENTABLE',
+            'display': rounded(exact, 6), 'mode': plan_.mode}
+
+def issuance_data_ok(plan_, at, monitor_times, unresolved_adverse=False):
+    # monitor_times maps distinct validated clean path IDs to finalized instants.
+    fresh = sum(t < at and at - t < timedelta(days=1) for t in monitor_times.values())
+    return plan_.mode == 'NORMAL' and fresh >= 2 and not unresolved_adverse
+
+# Normative event folding (machine-readable algorithm in addition to functions):
+EVENT_RULES = {
+  'plan_prefix': 'use only finalized events with receipt_time < cutoff(month)',
+  'monthly_order': 'generate every Gregorian month from G, no skipped state transitions',
+  'hold_open': ['relevant official correction', 'material methodology change',
+                'discontinuation', 'uncertain base conversion'],
+  'hold_close': 'explicit prospective authorized original-terms clearance only',
+  'correction': 'archive corrected edition, never overwrite original packet',
+  'late_event': 'never modify a previously computed plan prefix',
+  'reassessment': '3 consecutive frozen plans latch public review-required flag',
+  'reassessment_clear': 'recorded primary review disposition only',
+  'numeric_hold': 'effective first not-yet-committed month; no cancellation of committed plans',
+  'health_hold': 'effective immediately upon finalized adverse event',
+  'not_active': 'before G or failed initialization, no target',
+}
+
+# FILE: sources.md
+# WP1B Primary Research Library
+
+Accessed 2026-09-19 America/Chicago. Fresh online inspection; source pages are living documents unless an archived release is specified. This registry is a claim locator and retrieval record, not a certified full platform/web archive. Prior WP1A bibliography remains historical. Numerical scenarios are operator calculations, not publisher forecasts.
+
+| ID | Primary source and location | Fact supported / version limit | Affected work |
+|---|---|---|---|
+| W1B-S01 | [eCFR31CFR356 AppendixB I.B.3–4](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356) | Current page as of2026-09-17; normal reference formula, rounding, original vintage, base, missing12month extrapolation, Secretary successor power;1996 numerical example | 01/04/06/09/12 |
+| W1B-S02 | [BLS CPI release calendar](https://www.bls.gov/schedule/news_release/cpi.htm) | Reference/release month and scheduled08:30 times; mutable calendar, not guaranteed releases | 05/10 |
+| W1B-S03 | [BLS CPI FAQ, revisions section](https://www.bls.gov/cpi/questions-and-answers.htm) | NSA ordinary finality versus rare corrections; not “never revised” | 06 |
+| W1B-S04 | [BLS error correction policy](https://www.bls.gov/about-bls/bls-error-correction-policy.htm) | Last modified2026-08-28; publish errata and correct errors, rare small-error exception | 06/10 |
+| W1B-S05 | [BLS shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm) | September2025 release delay; noOctober release; dash missing data; later imputations and11month annualaverage. Does not supply measured missing national headline | 04/05/07 |
+| W1B-S06 | [Treasury contingency announcement](https://home.treasury.gov/news/press-releases/sb0324) | November26,2025; Treasury October replacement325.604; this is a contractual substitute | 04 |
+| W1B-S07 | [BLS historical national all-items table](https://www.bls.gov/regions/mid-atlantic/data/consumerpriceindexhistorical_us_table.htm) | September2025=324.800, November=324.122, October gap; living historical table not proof of first-edition archive | 04/07/12 |
+| W1B-S08 | [BLS rebasing factsheet](https://www.bls.gov/cpi/factsheets/rebasing.htm) | Arithmetic base conversion distinct from economics; BLS recomputes consistent history. PPU exact-equivalence admission is its own stricter rule | 02/09 |
+| W1B-S09 | [BLS May2026 selected-series rebasing notice](https://www.bls.gov/cpi/notices/2026/rebasing.htm) | Selected series April2026 rebased December2024=100; not evidence that headline CUUR0000SA0 was rebased | 09 |
+| W1B-S10 | [BLS 2028 geographic revision notice](https://www.bls.gov/cpi/notices/2026/geographic-revision.htm) | July27,2026; prospective2028–2030 sample changes based on2020population | 09 |
+| W1B-S11 | [BLS calculation methodology](https://www.bls.gov/opub/hom/cpi/calculation.htm) | Statistical framework and routine updates; public output reproduction not public reconstruction of confidential inputs | 09/10; R022 |
+| W1B-S12 | [NIST local time FAQ](https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs) | Eastern ESTUTC−5 / EDTUTC−4; use date-appropriate conversion | 10 |
+| W1B-S13 | [BLS archived September11,2025 CPI release](https://www.bls.gov/news.release/archives/cpi_09112025.htm) |08:30Eastern release convention; archive may note later reviseddata, not immutable first-vintage proof by itself | 10 |
+| W1B-S14 | [Treasury TIPS overview](https://www.treasurydirect.gov/marketable-securities/tips/) | Principal rises/falls; original-principal maturity protection; no implication of perpetual PPUfloor | 04/08 |
+
+Fact/recommendation boundary: no source specifies PPU's24hour cutoff/monitor, two paths,18decimal half-even, three-freeze escalation or7/30day review deadlines. These are explicit candidate design parameters requiring primary review and later operating evidence. Authentic publication capture, deadline monitoring and human semantic decisions are not solved by this source list.
+
+Contrary evidence preserved: actual2025 missing index contradicts unconditional availability; rare corrections contradict immutable-source assumptions; Treasury contingency undermines exact no-forecast hedge matching; geographic maintenance contradicts freezing a forever-unchanged methodology. None changes Gate1A unilaterally.
+
+# FILE: test_reference_model.py
+"""Offline adversarial examples and invariant checks; not a financial backtest."""
+import json
+from pathlib import Path
+from fractions import Fraction as F
+from dataclasses import replace
+from datetime import timedelta
+from reference_model import *
+
+checks = {}
+examples = {}
+def check(name, condition):
+    checks[name] = bool(condition)
+def pair(m, v, received='2026-03-20T00:00:00Z', **kw):
+    t = instant(received)
+    return [Packet(m, str(v), m+'-first', p, t, t-timedelta(hours=1), **kw)
+            for p in ['A', 'B']]
+
+packets = pair('2026-01', 300) + pair('2026-02', 303)
+base, april = initialize('2026-04', packets)
+a = value(april, instant('2026-04-16T00:00:00Z'), base)
+examples['A'] = a
+check('A_midmonth_independent_1_005', a['binding'] == '1.005000000000000000')
+check('A_first_1', value(april, first('2026-04'), base)['binding'] == '1.000000000000000000')
+may = plan('2026-05', april, base, pair('2026-03',306, '2026-04-20T00:00:00Z'))
+check('A_month_boundary_1_01', value(may, first('2026-05'), base)['binding'] == '1.010000000000000000')
+check('A_boundary_one_daily_increment', may.start - F(value(april, instant('2026-04-30T00:00:00Z'),base)['reference_index']) == F(1,10))
+
+high = plan('2026-04', None, 300, pair('2026-02',330))
+examples['B'] = value(high, instant('2026-04-16T00:00:00Z'), 300)
+check('B_halfway_1_05', examples['B']['binding'] == '1.050000000000000000')
+prev = high
+for m, idx in [('2026-05',363),('2026-06','399.3'),('2026-07','439.23')]:
+    nxt = plan(m,prev,300,pair(shift(m,-2),idx))
+    check('B_extended_'+m,nxt.end>nxt.start and nxt.mode=='NORMAL')
+    prev=nxt
+
+down = plan('2026-04',None,300,pair('2026-02',294))
+down2 = plan('2026-05',down,300,pair('2026-03',288))
+examples['C'] = {'first_endpoint':rounded(down.end/F(300)), 'second_endpoint':rounded(down2.end/F(300))}
+check('C_no_floor', examples['C']=={'first_endpoint':'0.980000000000000000','second_endpoint':'0.960000000000000000'})
+
+dec = plan('2025-12',None,F('324.800'),[])
+jan = plan('2026-01',dec,F('324.800'),pair('2025-11','324.122','2025-12-20T00:00:00Z'))
+examples['D']={'december_end':str(dec.end),'january':value(jan,instant('2026-01-16T00:00:00Z'),F('324.800'))}
+check('D_absence_not_zero',dec.end==F('324.800') and dec.mode=='FROZEN')
+check('D_recovery_can_decline',jan.end==F('324.122') and jan.mode=='CATCH_UP' and jan.end<jan.start)
+
+late = pair('2026-02',303,'2026-03-31T00:00:00Z')
+e = plan('2026-04',None,300,late)
+check('E_equal_cutoff_is_late',e.mode=='FROZEN')
+early=[replace(p,received=cutoff('2026-04')-timedelta(microseconds=1),published=cutoff('2026-04')-timedelta(hours=1)) for p in late]
+check('E_before_cutoff_eligible',plan('2026-04',None,300,early).end==303)
+examples['E']={'at_cutoff':e.mode,'one_microsecond_before':'NORMAL'}
+
+correction=[replace(p,value='302',edition='corrected',original_edition=False) for p in pair('2026-02',303)]
+check('F_corrected_vintage_not_selected',plan('2026-04',None,300,packets+correction)==april)
+check('F_past_target_unchanged',value(april,instant('2026-04-16T00:00:00Z'),300)==a)
+f=plan('2026-05',april,300,pair('2026-03',306),review_hold=True)
+check('F_future_hold',f.mode=='FROZEN' and f.end==303)
+examples['F']={'historical':a['binding'],'future_endpoint':str(f.end)}
+
+g=april
+for m in ['2026-05','2026-06','2026-07']:
+    g=plan(m,g,300,[])
+check('G_three_frozen_triggers_reassessment',g.frozen_count==3 and g.end==303)
+examples['G']={'frozen_months':g.frozen_count,'endpoint':str(g.end)}
+for case in ['H','I']:
+    held=plan('2026-05',april,300,pair('2026-03',306),review_hold=True)
+    check(case+'_hold_no_automatic_successor',held.end==303 and held.reason=='INDEX_REVIEW_HOLD')
+    examples[case]={'next_plan':held.mode,'endpoint':str(held.end)}
+
+jpack=pair('2026-02',303)+[replace(pair('2026-02',304)[0],path='C')]
+j=plan('2026-04',None,300,jpack)
+check('J_authenticated_conflict_blocks_even_two_agree',j.mode=='FROZEN' and j.reason=='CONFLICT')
+examples['J']={'mode':j.mode,'reason':j.reason}
+check('K_late_delivery_same_as_missing',plan('2026-04',None,300,late).end==300)
+check('K_downtime_does_not_rewrite_precommit',F(value(april,instant('2026-04-20T00:00:00Z'),300)['exact'])==F(3019,3000))
+examples['K']={'precommitted':value(april,instant('2026-04-20T00:00:00Z'),300),'late_delivery':'FROZEN'}
+bad=replace(pair('2026-02',999999)[0],path='C',authenticated=False)
+check('L_unauthenticated_abnormal_quarantined',plan('2026-04',None,300,packets+[bad])==april)
+auth_high=plan('2026-04',None,300,pair('2026-02',999999))
+check('L_authentic_extreme_not_price_capped',auth_high.end==999999)
+examples['L']={'spoof_ignored':True,'authenticated_extreme_endpoint':str(auth_high.end)}
+
+at=instant('2026-04-16T00:00:00Z')
+fresh={'A':at-timedelta(hours=1),'B':at-timedelta(hours=2)}
+check('health_normal_fresh',issuance_data_ok(april,at,fresh))
+check('health_age_equality_stale',not issuance_data_ok(april,at,{'A':at-timedelta(days=1),'B':at-timedelta(hours=1)}))
+check('health_adverse_blocks',not issuance_data_ok(april,at,fresh,True))
+check('health_frozen_cannot_restore_by_monitor',not issuance_data_ok(e,at,fresh))
+check('health_catchup_cannot_restore_by_monitor',not issuance_data_ok(jan,at,fresh))
+check('health_no_future_attestations',not issuance_data_ok(april,at,{'A':at,'B':at+timedelta(seconds=1)}))
+check('round_tie_even_down',rounded(F(5,2),0)=='2.0')
+check('round_tie_even_up',rounded(F(7,2),0)=='4.0')
+check('round_18_tie',rounded(F(1)+F(5,10**19))=='1.000000000000000000')
+check('round_18_odd_tie',rounded(F(1)+F(15,10**19))=='1.000000000000000002')
+
+leap=plan('2024-02',None,300,pair('2023-12',329,'2024-01-20T00:00:00Z'))
+check('leap_29_days',F(value(leap,instant('2024-02-29T23:59:59Z'),300)['reference_index'])==328)
+check('UTC_equivalent_instants',instant('2026-03-11T08:30:00-04:00')==instant('2026-03-11T12:30:00Z'))
+check('UTC_standard_offset',instant('2026-02-13T08:30:00-05:00')==instant('2026-02-13T13:30:00Z'))
+treasury=F('154.40')+F(14,30)*(F('154.90')-F('154.40'))
+check('Treasury_external_vector_15463333',rounded(treasury,5)=='154.63333')
+rebased=plan('2026-04',None,300,pair('2026-02',101,factor='3'))
+check('exact_rebase_invariance',rebased.end==april.end)
+check('unverified_rebase_blocked',plan('2026-04',None,300,pair('2026-02',101,factor='3',normalization_verified=False)).mode=='FROZEN')
+for invalid in ['-', '0', '-1', 'NaN']:
+    check('invalid_'+invalid,plan('2026-04',None,300,pair('2026-02',invalid)).mode=='FROZEN')
+tiny=plan('2026-04',None,F('0.0000000000000000000001'),[])
+check('round_to_zero_explicit',value(tiny,first('2026-04'),300)['status']=='UNREPRESENTABLE')
+try:
+    initialize('2026-04',[])
+    check('genesis_requires_both',False)
+except ValueError:
+    check('genesis_requires_both',True)
+check('month_shift_year',shift('2026-01',-3)=='2025-10')
+for y,m in [(2024,2),(2025,2),(2026,4),(2026,5)]:
+    days=monthrange(y,m)[1]
+    for s,e_ in [(F(300),F(303)),(F(303),F(300)),(F(300),F(300))]:
+        vals=[s+F(d-1,days)*(e_-s) for d in range(1,days+1)]
+        check(f'convex_monotonic_{y}_{m}_{s}_{e_}',all(min(s,e_)<=v<=max(s,e_) for v in vals)
+              and all(vals[i+1]-vals[i]==(e_-s)/days for i in range(days-1)))
+
+result={'scope':'offline reference arithmetic and validated-input scenarios; not oracle/security/solvency certification',
+        'checks':checks,'failed':[k for k,v in checks.items() if not v],
+        'case_examples':examples,
+        'lag_scenarios':[{'annual_growth':r,'current_over_lagged_percent':100*((1+r)**(2.5/12)-1),
+                          'purchasing_power_shortfall_percent':100*(1-(1+r)**(-2.5/12))} for r in [.03,.10,.20,1.0]],
+        'pass':all(checks.values())}
+Path(__file__).with_name('model-validation.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'checks':len(checks),'failed':result['failed'],'pass':result['pass'],'lag':result['lag_scenarios']},indent=2))
+if not result['pass']:
+    raise SystemExit(1)
+

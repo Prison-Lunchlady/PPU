@@ -3,7 +3,7 @@ Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Start with [Protocol State](canonical/01-protocol-state.md). This Git repository is the version-controlled execution record for the PPU project; this guide was imported from the Gate 1A baseline. No separate cloud Work task or automatic sync to ChatGPT project sources has been created or claimed.
 
-**Phase 0 / WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS. WP1A COMPLETE FOR REVIEW; Gate 1A AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1B and later packages NOT AUTHORIZED.**
+**Phase 0 / WP0A COMPLETE. Gate 0 and Gate 1A APPROVED WITH CONDITIONS. WP1A COMPLETE. WP1B COMPLETE FOR REVIEW; Gate 1B AWAITING REVIEW / NOT APPROVED. Next authorized package NONE; WP1C and later packages NOT AUTHORIZED.**
 
 Current handoff: [WP1A completion report](../reviews/gate1a/WP1A-completion-report.md), [proposed standard](../research/wp1a/06-recommended-standard.md), [Gate 1A submission](../reviews/gate1a/Gate-1A-submission.md). [User approval](../evidence/gate0-approval-wp1a-authorization.md) preserves SRC003 provenance, architectural tensions and package boundaries. Earlier dated WP0A reports are historical; current Protocol State controls.
 
@@ -48,3 +48,5 @@ Roadmap precedence: evidence/roadmap-v0.1-original.txt is the adopted source sna
 
 ## Source recovery revision 0.2
 WP0A is complete and Gate 0 approved with conditions. Q001 is CLOSED on source recovery; Q019 is CLOSED on later direct approval. Source fidelity evidence remains in reviews/source-recovery-reconciliation.md. WP1A is now complete for review; no next package is authorized. Original roadmap and draft are unchanged.
+
+Current authority is SRC016 and the latest Protocol State. Earlier dated handoff statements describe historical submissions; they do not supersede the current gate register. GitHub remains the version-controlled source.
