@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-19T20:52:10.8672362-05:00",
+  "requiredCanonicalFiles": 10,
+  "missingFiles": [],
+  "inheritedIdCoverage": true,
+  "recoveredDraftVerbatim": true,
+  "roadmapByteIdentical": true,
+  "roadmapSHA256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+  "brokenLocalLinks": [],
+  "sourceResponseTruncated": true,
+  "completeConstitutionPreservation": false,
+  "gate0": "HOLD - Q-001 source ending missing; no user approval",
+  "wp1a": "NOT AUTHORIZED / NOT STARTED",
+  "localIntegrityPass": true
+}

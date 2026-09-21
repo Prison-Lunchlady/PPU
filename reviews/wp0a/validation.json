@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-19T21:18:38.3616224-05:00",
+  "requiredCanonicalFiles": 10,
+  "missingFiles": [],
+  "inheritedIdCoverage": true,
+  "recoveredDraftVerbatim": true,
+  "roadmapByteIdentical": true,
+  "roadmapSHA256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+  "brokenLocalLinks": [],
+  "sourceResponseTruncated": true,
+  "fullEvidenceSHA256": "237A8EEA4F2D64B6B83C597DFA11C7AC02E9BD9A10DE1536083A8D37BA48953E",
+  "suppliedSourceCopyMatches": true,
+  "normalizedPrefixMatches": true,
+  "articleCoverage24": true,
+  "postAnalysisAndFinalBoundary": true,
+  "completeConstitutionPreservation": true,
+  "provenance": "User-supplied complete recovery; not independent platform export",
+  "q001": "CLOSED",
+  "gate0": "AWAITING REVIEW / NOT APPROVED",
+  "wp1a": "NOT AUTHORIZED / NOT STARTED",
+  "localIntegrityPass": true
+}

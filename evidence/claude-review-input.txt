@@ -1,0 +1,1894 @@
+FILE: 01-protocol-state.md
+
+# PPU Protocol State
+Version 0.1 • Recorded 2026-09-19 America/Chicago • Primary project state
+
+**Phase:** 0 — Project Infrastructure  
+**Current package:** WP0A — Canonical Project Structure  
+**Package status:** Deliverables created; preservation verification blocked on Q-001  
+**Review Gate 0:** HOLD / not approved  
+**Next authorized work:** WP0A source recovery and reconciliation only  
+**Next planned package:** WP1A — Purchasing-Power Standard; NOT AUTHORIZED
+
+## Purpose and current architecture
+PPU (Purchasing Power Unit, placeholder name) is a research and engineering investigation into an open, programmable monetary unit preserving an explicitly standardized basket's purchasing power. Economic viability, legal enforceability and production feasibility are unproven.
+
+Working target: T_t = B × I_t / I_0, with B = USD 1.00; I_0 is the base-date reference index, I_t the current reference index. A cumulative 18% index increase yields a USD 1.18 target. Preferred balances do not rebase merely with inflation; supply expands by collateralized minting and contracts by redemption/burning. A market price near this target is a hypothesis, not a guarantee.
+
+Working reserve hypothesis: cash, Treasury bills, qualifying short-term Treasury repo and short-duration TIPS; a distinct first-loss capital layer; PPU claims senior to reserve-surplus claims. CPI-U NSA and TIPS-style daily reference interpolation are candidates, not settled choices. Minting requires collateral, liquidity, oracle and settled-reserve checks. Redemption is intended to anchor price through arbitrage. Governance and emergency powers should be narrowly constrained, with emergency actions generally reducing risk.
+
+Bitcoin, gold, equities, commodities, XRP and other RWAs remain research candidates; no reserve weights or blockchain have been selected. Global/24-hour token settlement does not establish global basket coverage or 24-hour off-chain reserve redemption.
+
+## Constitution and decisions
+Current constitution: [Draft Constitution / Hypothesis Set v0.1](08-draft-constitution.md); recovered text is incomplete from Article XVIII onward. No monetary principles were amended or ratified in WP0A.
+
+[Decision Register](02-decision-register.md) preserves PPU-D001–D005: research-first purpose; economics-before-software sequencing; custom-index question open; evidence-first alternative-reserve methodology; first-loss structure unresolved. PPU-D006–D008 record documentation controls only.
+
+Rejected organizational alternatives: chat-only state; treating assistant draft wording as approved policy; automatic gate progression; invented missing source text. Monetary alternatives remain candidates unless the source explicitly states otherwise.
+
+## Equations, definitions and evidence status
+Draft liability: L = S × T + Q, with S circulating PPU and Q accepted unsettled redemption obligations. The treatment of queued tokens must be defined to avoid double counting (Q-006).
+Draft GCR = gross eligible reserve value / L.
+Draft RARV = sum of market value × (1 − haircut) minus senior non-PPU liabilities.
+Draft RACR = RARV / L.
+If collateralization C = 1.20 and liabilities grow by ΔL, required reserve growth is C × ΔL, including (C − 1) × ΔL of junior capital. This is an illustrative arithmetic relationship, not a funding solution.
+All thresholds and calculation details remain provisional; see the draft.
+
+**Simulations, validated datasets, stress-test results, contracts, selected chain and legal opinions:** none produced or validated in WP0A. No real funds, assets or token issuance.
+
+## Open research and risks
+[H-001–H-008](04-active-hypotheses.md) all remain unvalidated.
+[Questions](05-unresolved-questions.md) cover capital ownership/incentives, index, calculation, liabilities, reserves, access, governance, oracle, legal and technical design.
+[Risk Register](03-risk-register.md) preserves all fifteen initial risks. Critical areas include inflation-liability mismatch, capital scalability, runs, enforceable reserve claims, oracles, governance, regulation and contract failure.
+Legal classification, jurisdiction, custody, bankruptcy priority, reserve ownership and enforceable redemption are unresolved Phase 3 questions; early dependencies must be recorded without assuming a legal conclusion.
+
+## Gate handoff
+All ten records and the unmodified roadmap are available. Self-review identified and reconciled structural issues in the [review](reviews/wp0a-structural-review.md). Claude Opus review was unavailable: browser reached sign-in and no Claude connector was exposed. This is not independent review.
+
+Blocking preservation gap: full earlier constitution ending unavailable through the bounded reader; browser source also requires sign-in. Recover its ending, reconcile all added articles, refresh preservation checks and submit Gate 0 again. Brad has not approved any progression.
+
+
+
+FILE: 02-decision-register.md
+
+# Decision Register
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Inherited IDs and statuses are preserved below. Source: [Phase 0 response](evidence/phase0-source.md); governing process: [roadmap](07-development-roadmap.md). Historical decision dates were not explicitly stated; this is a recording date, not an invented approval date.
+
+## Inherited entries
+
+**PPU-D001 — Project purpose**
+
+PPU will be treated as a monetary research and engineering project, not as an immediate token-launch project.
+
+**Status:** Accepted.
+
+This follows the roadmap's explicit statement that token issuance is not the initial objective.
+
+---
+
+**PPU-D002 — Development sequencing**
+
+Economic architecture will be designed before blockchain selection and production contract development.
+
+**Status:** Accepted.
+
+The roadmap places monetary architecture and economic simulation before legal architecture, technical design, and testnet implementation.
+
+---
+
+**PPU-D003 — Custom purchasing-power index**
+
+PPU will **not assume** that a proprietary index is superior to CPI.
+
+CPI-U, TIPS methodology, C-CPI-U, PCE, alternatives, and potential future global indexes must first be researched under Work Package 1A.
+
+**Status:** Open hypothesis.
+
+---
+
+**PPU-D004 — Alternative reserve assets**
+
+Gold, Bitcoin, commodities, equities, and tokenized RWAs will not automatically become core reserve assets.
+
+They must demonstrate improved monetary resilience relative to the Treasury/TIPS baseline after volatility, liquidity, correlation, custody, drawdown, legal, and basis-risk effects are included.
+
+**Status:** Accepted research methodology.
+
+---
+
+**PPU-D005 — First-loss capital**
+
+Overcollateralization requires a distinct capital structure and cannot simply be assumed to arise from ordinary PPU minting.
+
+**Status:** Critical unresolved architecture question.
+
+This receives its own Work Package because we need to determine who supplies that capital, how it is compensated, how dilution and recapitalization work, and what happens during insolvency.
+
+
+
+## Decision metadata and reconsideration
+| ID | Alternatives considered | Evidence and rationale | Tradeoff / reconsideration trigger |
+|---|---|---|---|
+| PPU-D001 | Research-first versus immediate token launch | Adopted roadmap Purpose; accepted in Phase 0 state | Slower commercialization; reconsider only by explicit project scope approval, never inferred from readiness |
+| PPU-D002 | Economics-first versus chain/contract-first | Roadmap phases 1–5; architecture must drive software | Defers platform implementation; documented sequencing defect may justify a proposed roadmap revision |
+| PPU-D003 | CPI-U, TIPS method, C-CPI-U, PCE, proprietary and future global indexes | Phase 0 open hypothesis; no comparative validation completed | Benchmark tradeoffs untested; WP1A evidence required before selection |
+| PPU-D004 | Treasury/TIPS baseline versus immediate alternative-asset inclusion | Roadmap WP1D and WP2E; resilience must include risk/custody/legal/basis effects | May omit useful diversifiers initially; reconsider with comparative stress evidence |
+| PPU-D005 | Protocol equity, retained earnings, subscribed junior capital, reserve-company equity, subordinated token, combinations, lower ratios if justified | Phase 0 capital example and roadmap WP1E; funding cannot be assumed | Economics/ownership unresolved; WP1E and Phase 2 evidence needed; no final structure selected |
+
+For D003 and D005, there is no final decision. Their original placement in the Decision Register must not be interpreted as acceptance.
+
+## WP0A implementation decisions
+**PPU-D006 — Durable local records.** Date: 2026-09-19. Status: implemented documentation choice within WP0A. Question: where does canonical state live? Alternatives: chat-only; edits to synced sources; maintained ppu-work folder with preserved evidence. Decision: use this folder and ten indexed Markdown files. Evidence: current user request and parent AGENTS.md read-only restriction. Rationale: handoff and traceability. Tradeoff: no automatic cloud synchronization or off-device backup. Reconsider if an explicitly authorized shared persistence mechanism is selected.
+
+**PPU-D007 — Preserve epistemic status.** Date: 2026-09-19. Status: implemented documentation choice. Alternatives: silently ratify “shall” clauses; drop draft; preserve draft with hypothesis and completeness labels. Decision: preserve text and qualify it using later Phase 0 state. Evidence: latest Phase 0 response explicitly calls it a draft/hypothesis set. Tradeoff: normative wording remains historical and must be read with its status. Reconsider on explicit constitutional approval with complete source evidence.
+
+**PPU-D008 — Fail closed on source completeness and gate authority.** Date: 2026-09-19. Status: implemented documentation choice. Alternatives: reconstruct missing articles; mark complete despite truncation; hold. Decision: hold Gate 0 pending recovery and reconciliation; user approval remains separate. Evidence: reader truncated=true and login-only browser; user's preservation request and gate restriction. Tradeoff: WP0A cannot honestly be declared complete yet. Reconsider after Q-001 is resolved.
+
+## New entry template
+ID; date; status; question; alternatives; source/evidence IDs; final decision or explicitly none; rationale; tradeoffs; reconsideration trigger; author; approval evidence when needed; supersedes/superseded-by; affected hypotheses/risks/packages.
+
+
+
+FILE: 03-risk-register.md
+
+# Risk Register
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Source: [Phase 0 response](evidence/phase0-source.md). Original IDs and severity preserved. Every original risk remains OPEN; probability, quantitative loss and residual severity are UNASSESSED. No mitigation has been validated. Brad is the gate authority; technical/research owners are unassigned until authorization.
+
+## Preserved risks
+
+I would start the register with these as the highest-priority risks:
+
+| ID | Risk | Current severity |
+|---|---|---|
+| R-001 | Reserve assets fail to grow with inflation-linked PPU liabilities | Critical |
+| R-002 | Capital requirements make PPU economically unscalable | Critical |
+| R-003 | Redemption run forces reserve losses at unfavorable market prices | Critical |
+| R-004 | TIPS duration/real-rate risk causes collateral impairment | High |
+| R-005 | Inflation-index methodology fails to represent intended purchasing power | High |
+| R-006 | CPI publication lag creates meaningful target mismatch | Medium/High |
+| R-007 | Reserve custody or legal structure prevents holders from having enforceable claims | Critical |
+| R-008 | Oracle failure or manipulation corrupts mint/redemption calculations | Critical |
+| R-009 | Governance gradually acquires central-bank-like discretionary powers | Critical |
+| R-010 | Authorized Participants become concentrated or fail during stress | High |
+| R-011 | Off-chain reserves cannot be continuously verified with adequate confidence | High |
+| R-012 | Regulatory treatment makes proposed reserve/redemption architecture impractical | Critical |
+| R-013 | Smart-contract failure compromises liabilities or collateral | Critical |
+| R-014 | Cross-chain architecture introduces unacceptable bridge risk | High |
+| R-015 | Secondary-market liquidity is insufficient for arbitrage to maintain target proximity | High |
+
+That matches the roadmap's requirement to track economic, reserve, liquidity, oracle, governance, custodial, legal, blockchain, smart-contract, adoption, and operational risks.
+
+
+
+## Investigation routing and candidate controls
+| ID | Category | Future evidence / candidate control, not implemented | Planned work |
+|---|---|---|---|
+| R-001 | Economic/reserve | Asset-liability model and adverse inflation paths | 1C–1E, Phase 2 |
+| R-002 | Economic/adoption | Junior capital incentive and scalability model | 1E, 2D |
+| R-003 | Liquidity | Run, forced-sale and settlement stress model | 1F, 2C, 2F |
+| R-004 | Reserve | Duration/real-rate valuation and haircut tests | 1D, Phase 2 |
+| R-005 | Economic/index | Benchmark scope and methodology analysis | 1A |
+| R-006 | Index/operational | Publication/interpolation timing analysis | 1A–1B |
+| R-007 | Custodial/legal | Qualified review of ownership and claim priority | Phase 3 |
+| R-008 | Oracle | Staleness/manipulation/fallback threat model | 1B, 1G, Phases 4–5 |
+| R-009 | Governance | Enumerated powers, indirect-change and emergency review | 1G, Phases 4–5 |
+| R-010 | Adoption/operational | Multi-participant concentration and failure scenarios | 1F, Phase 3 |
+| R-011 | Custodial/operational | Assets, liabilities, liens and reconciliation design | 1D, Phases 3–4 |
+| R-012 | Legal | Jurisdiction/classification and counsel questions | Phase 3 |
+| R-013 | Smart-contract | Threat model and independent security testing | Phases 4–6 |
+| R-014 | Blockchain | Chain/bridge selection and failure analysis | Phase 4 |
+| R-015 | Adoption/liquidity | Arbitrage cost, access and depth model | 1F, Phase 2 |
+
+## Added infrastructure risks
+| ID | Risk | Severity | Status and response |
+|---|---|---|---|
+| R-016 | Truncated constitution silently treated as complete | High | OPEN; Q-001, Gate 0 HOLD; preserve exact partial response |
+| R-017 | Local files mistaken for synced/backed-up cloud records | Medium | OPEN residual; explicit README location and portable archive, no sync claim |
+| R-018 | Draft wording mistaken for constitutional approval | High | Controlled in documentation; status banner, D007 and gate log; no ratification |
+| R-019 | Assistant self-review mistaken for independent Claude review | Medium | Controlled in documentation; reviewer identity and availability disclosed |
+| R-020 | Registers diverge or future packages begin automatically | High | Controlled procedurally; common state, change log, stable IDs and explicit approval evidence required |
+
+Infrastructure controls are documentation measures, not validated monetary risk controls. Reopen controlled items when a later edit violates the stated control.
+
+
+
+FILE: 04-active-hypotheses.md
+
+# Active Hypotheses
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Source: [Phase 0 state](evidence/phase0-source.md). Original IDs preserved. All are OPEN / UNVALIDATED; no hypothesis was tested or promoted by WP0A.
+
+## Preserved hypothesis set
+
+These should be explicitly recorded rather than silently treated as facts:
+
+**H-001:** CPI-U NSA is currently the strongest starting benchmark because it is externally administered and has a natural hedge through TIPS.
+
+**H-002:** Daily interpolation is preferable to monthly step changes.
+
+**H-003:** A Treasury/TIPS-dominant reserve can sufficiently hedge PPU's inflation-linked liability without relying heavily on risky assets.
+
+**H-004:** First-loss capital can be structured in a way that simultaneously provides meaningful solvency protection and permits practical supply growth.
+
+**H-005:** A functioning redemption mechanism can keep market price sufficiently close to target without algorithmic market intervention.
+
+**H-006:** PPU can permit monetary supply elasticity without granting any party discretionary issuance authority.
+
+**H-007:** Governance can be minimized sufficiently that the protocol does not simply recreate a small private central bank.
+
+**H-008:** A legally enforceable relationship between token liability and off-chain reserves can be constructed.
+
+None should be promoted to constitutional fact until the relevant Work Package resolves it.
+
+
+
+## Future falsification routing — not executed
+| ID | Evidence that could defeat or qualify it | Planned package | Linked risks |
+|---|---|---|---|
+| H-001 | Benchmark coverage/basis or legal/operational mismatch undermines proposed hedge | 1A, 1D, Phase 2 | R-001, R-004–006 |
+| H-002 | Interpolation creates unacceptable lag or fails deterministic edge-case handling | 1B | R-005, R-006, R-008 |
+| H-003 | Stress losses or liquidity needs exceed viable capital | 1D, 2C–2F | R-001–004 |
+| H-004 | Capital incentives, scaling, withdrawal or recapitalization cannot sustain protection | 1E, 2D | R-002, R-003 |
+| H-005 | Access, costs, delays or participant concentration defeat arbitrage in stress | 1F, Phase 2 | R-003, R-010, R-015 |
+| H-006 | Mint/settlement rules admit unbacked issuance or prevent needed contraction | 1C, 1F | R-001, R-008, R-011 |
+| H-007 | Upgrade, emergency or oracle authority can change core liabilities indirectly | 1G, Phase 4 | R-009, R-013 |
+| H-008 | Holders lack enforceable priority or reserve access in insolvency | 1C, Phase 3 | R-007, R-012 |
+
+These are research prompts, not new acceptance thresholds. Future packages must define measurable tests before claiming validation. Record supporting and contrary evidence, limits, reviewer objections and reconciliation.
+
+
+
+FILE: 05-unresolved-questions.md
+
+# Unresolved Questions
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+All entries OPEN. Q IDs are new indexing identifiers; they do not imply these questions were previously resolved. Brad controls authorization; future package owners are unassigned.
+
+| ID | Question / uncertainty | Provenance | Resolution evidence and route |
+|---|---|---|---|
+| Q-001 | What is the complete ending of the earlier constitution, starting in Article XVIII? | Reader returned truncated=true at 20,000 characters | Recover full original response/export; reconcile all remaining clauses in WP0A. **Blocks preservation completion and Gate 0 readiness.** |
+| Q-002 | Who owns, funds and is compensated for the first-loss layer; can it scale? | D005; Phase 0 central unresolved question | Capital Structure Specification, WP1E; stress validation Phase 2 |
+| Q-003 | What standardized purchasing power does PPU promise and which benchmark is defensible? | D003, H001 | Purchasing-Power Standard Specification, WP1A |
+| Q-004 | What are base date, index, daily interpolation, rounding, stale/discontinued-index and deflation rules? | Draft I–IV; roadmap 1B | Formal Target Calculation Specification, WP1B |
+| Q-005 | What exactly is the liability and what claims have seniority? | Draft V, XV; H008 | WP1C plus Phase 3 legal evidence |
+| Q-006 | When queued redemptions enter Q, do their tokens leave S, and at what target/time is the obligation fixed? | Structural ambiguity in draft L = S × T + Q | Explicit mutually exclusive accounting states in WP1C/1F; no double-count assumption |
+| Q-007 | What reserve assets, duration, valuation, haircuts, concentration and liquidity limits are defensible? | Draft VI–IX; H003 | WP1D and Phase 2 |
+| Q-008 | Is first-loss capital a financing/claim layer, and how are its underlying reserve assets represented without counting twice? | Roadmap WP2A lists first-loss capital among assets; draft VI describes a distinct layer | Clarify accounting convention in WP1C/1E before WP2A implementation |
+| Q-009 | Which capital instruments, dilution, withdrawal, recapitalization and insolvency waterfall work? | Phase 0 alternatives; roadmap 1E | WP1E and Phase 3 |
+| Q-010 | Who mints/redeems, in what units, fees, settlement windows and form; does arbitrage work in stress? | Draft XII–XIV; H005–006 | WP1F and Phase 2 |
+| Q-011 | Which principles are protected; which parameters may change; how are emergency, migration and index-contingency powers bounded? | Draft XVIII incomplete; H007 | Recover source in WP0A; specify later in WP1G |
+| Q-012 | What jurisdiction, classification, ownership, segregation, bankruptcy, AML/KYC, tax and accounting structure is feasible? | R007/R012; roadmap Phase 3 | Counsel questions and legal/institutional deliverables, Phase 3 |
+| Q-013 | How are off-chain reserves, liabilities, prices, liens and oracle freshness credibly verified? | Draft XV–XVII; R008/R011 | Later oracle, attestation and reconciliation specifications |
+| Q-014 | Which blockchain, bridge policy and software design faithfully enforce the monetary requirements? | Initial proposal; roadmap Phase 4 | Deferred until Phase 4; no chain selection in WP0A |
+| Q-015 | Can global/24-hour settlement coexist with business-day reserve settlement and limited reserve-layer access? | Initial global goal versus draft IX/XIV | WP1F and Phase 3 operational analysis |
+| Q-016 | What exact package definitions and approval criteria apply in Phases 3–8 where the roadmap does not assign package IDs, and to Phases 7–8 without numbered gate headings? | Roadmap structural gap | Define before those phases are authorized; never invent roadmap provisions |
+| Q-017 | Where should an off-device/shared canonical copy live if needed? | Local persistence implementation | Explicitly authorized migration/sync choice; current local record remains authoritative here |
+| Q-018 | What are the precise boundaries, precedence and actions for provisional collateral modes, including insolvency? | Draft VII ranges share boundaries and several tests can disagree | WP1D/1E/1F and Phase 2; document before implementation |
+
+## Preserved capital example and alternatives
+At USD 1 billion liabilities and 120% backing, USD 1.2 billion reserves imply USD 200 million junior capital. Doubling liabilities to USD 2 billion at the same ratio implies USD 2.4 billion reserves and another USD 200 million junior capital beyond backing the new USD 1 billion monetary claims. This illustration is not an approved collateral requirement.
+
+Candidates preserved from the Phase 0 state: permanent protocol equity; retained reserve earnings; separately subscribed junior capital; regulated reserve-company equity; subordinated capital token; combinations; lower required ratios if simulations justify them. No candidate selected.
+
+## Assumptions about the records
+A-001: Later Phase 0 status qualifies earlier normative draft language.
+A-002: Local maintained files satisfy the persistence implementation portion; automatic remote sync is not assumed.
+A-003: Missing source text is unknown, not absent from the original.
+A-004: Historical citation tokens are leads, not independently verified evidence.
+A-005: Draft thresholds remain illustrative until authorized research and review.
+
+
+
+FILE: 06-research-library-index.md
+
+# Research Library Index
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+This library preserves project evidence and queues future research. No WP1A literature review or fresh economic/legal validation was performed in WP0A.
+
+| Source ID | Source and local record | Coverage / evidence status |
+|---|---|---|
+| SRC-001 | [Adopted roadmap original](evidence/roadmap-v0.1-original.txt) | Complete attachment recovered through conversation reader; identical copy of supplied Pasted text.txt. SHA256 A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3 |
+| SRC-002 | [Initial user proposal](evidence/initial-proposal.md) | Complete returned user text; preserves goals, candidates and original pre-roadmap sequence |
+| SRC-003 | [Earlier assistant architecture response](evidence/architecture-response-PARTIAL.md) | PARTIAL, 20,000 characters returned, truncated during Article XVIII; exact available text preserved |
+| SRC-004 | [Phase 0 state](evidence/phase0-source.md) | Complete returned 10,337-character assistant response: D001–D005, R001–R015, H001–H008, questions and status |
+| SRC-005 | [Reader response capture](evidence/conversation-recovered.json) | Metadata, attachment mapping and returned messages; not a full original-chat export; truncated flags preserved |
+| SRC-006 | Current user authorization, transcribed in [scope record](evidence/wp0a-authorization.md) | Authorizes only Phase 0/WP0A, ten files, preservation/review, stop at Gate 0 |
+| SRC-007 | [Structural review](reviews/wp0a-structural-review.md) | Current operator's self-review; no external or Claude endorsement |
+
+Original conversation: Design PPU Monetary Architecture (private conversation reference withheld). Source turn IDs: 7473f2f6-c325-4c17-9cf7-a99775f4390c (Phase 0), e33f44fb-26ff-45bc-9a7c-2b4c4ef6c7e8 (original proposal/architecture). Retrieved 2026-09-19 America/Chicago. The user's historical /mnt/data/Pasted text.txt path is not mounted locally; the attachment reader supplied a temporary Windows copy. Permanent evidence copy above removes dependence on that temporary path.
+
+## Subject shelves — research queued, not validated
+| Shelf | Leads / questions already present | Planned route |
+|---|---|---|
+| Inflation indexes | CPI-U NSA, C-CPI-U, PCE, alternatives and possible global benchmarks | 1A |
+| TIPS | Treasury daily reference method, duration, real yields, basis and liquidity | 1A–1D, Phase 2 |
+| Monetary economics | Elasticity, standardized basket, liability matching, junior capital | Phase 1 |
+| Stablecoins | Mint/redemption, arbitrage, reserve transparency | 1F / later comparative research |
+| Flatcoins | AMPL/SPOT, Nuon, ISC, FPI, as named in initial proposal; outcomes unverified | Later authorized comparative research |
+| Reserve management | Cash, bills, repo, TIPS, stress and liquidity | 1D, Phase 2 |
+| Tokenized assets | Gold, Bitcoin, equities, commodities, other RWAs as research alternatives | 1D, 2E |
+| Banking | First-loss structure, claims, custody, runs | 1E, Phase 3 |
+| Payment systems | Reserve settlement windows, AP access, global transfers; Agorá named as a comparison lead | 1F, Phases 3–4 |
+| Blockchain architecture | Ethereum/L2s, XRPL EVM/interoperability and others; no selection | Phase 4 |
+| Smart-contract security | Oracles, mint/burn, liability accounting, upgrades, invariants | Phases 4–6 |
+| Law and regulation | Classification, custody, ownership, bankruptcy, AML/KYC, tax, audit | Phase 3 |
+
+No claim that an external source was read follows merely from its name appearing here. Old opaque citation tokens cannot be resolved from this capture; future researchers must obtain primary sources and record exact URLs, publisher, title, publication/retrieval dates, version, supported claim, limitations, relevant section, affected IDs and contrary evidence. Store licensed copies or bounded excerpts where appropriate; never replace the project record with a list of unsupported URLs.
+
+
+
+FILE: 07-development-roadmap.md
+
+# PPU — Purchasing Power Unit
+## Development Roadmap v0.1
+
+### Purpose
+
+The objective of the PPU project is to determine whether a purchasing-power-preserving digital monetary unit can be designed that is:
+
+- economically sustainable;
+- transparently and verifiably reserved;
+- elastic in response to legitimate economic demand;
+- resistant to discretionary monetary issuance;
+- redeemable for real reserve value;
+- programmable and globally transferable;
+- resilient under financial stress;
+- governed under narrowly constrained rules;
+- and technically capable of eventual production deployment.
+
+PPU is a research and engineering project first.
+
+Token issuance is not the initial objective.
+
+The protocol shall advance through defined development phases. Each phase must produce specified deliverables and satisfy a review gate before the project proceeds.
+
+The roadmap may be changed when research, simulation, legal analysis, or engineering demonstrates that the current plan is inadequate.
+
+---
+
+# OPERATING MODEL
+
+Development shall occur through discrete Work Packages.
+
+For each Work Package:
+
+1. Work receives a defined objective.
+2. Work performs research, analysis, modeling, coding, or documentation necessary to complete the package.
+3. Work may use Claude Opus as an independent reviewer or adversarial critic when useful.
+4. Work shall actively search for flaws rather than merely confirm existing assumptions.
+5. Work shall document assumptions and uncertainties.
+6. Work shall produce the required deliverables.
+7. Work shall stop at the Review Gate.
+8. Brad and the primary PPU architecture conversation review the results.
+9. The next Work Package begins only after approval or revision.
+
+Work may make routine implementation decisions necessary to complete an authorized Work Package.
+
+Work may not independently:
+
+- change constitutionally protected monetary principles;
+- launch a production token;
+- accept real customer or investor funds;
+- commit project capital;
+- execute legal agreements;
+- represent the project to regulators;
+- deploy unaudited production contracts;
+- materially change PPU's monetary target;
+- or advance beyond a Review Gate without approval.
+
+---
+
+# PHASE 0 — PROJECT INFRASTRUCTURE
+
+## Objective
+
+Create the permanent research, documentation, decision, and engineering environment for PPU.
+
+## Work Package 0A — Canonical Project Structure
+
+Create and maintain:
+
+### PPU Protocol State
+
+A concise authoritative record containing:
+
+- current protocol architecture;
+- current Monetary Constitution;
+- accepted decisions;
+- rejected proposals and reasons;
+- unresolved questions;
+- active hypotheses;
+- equations and definitions;
+- simulation results;
+- known risks;
+- regulatory questions;
+- current development phase;
+- next authorized Work Package.
+
+This document becomes the primary source of truth.
+
+### Decision Register
+
+Each major protocol decision should include:
+
+- decision ID;
+- date;
+- question;
+- alternatives considered;
+- evidence;
+- final decision;
+- rationale;
+- known tradeoffs;
+- circumstances that would justify reconsideration.
+
+### Risk Register
+
+Track:
+
+- economic risks;
+- reserve risks;
+- liquidity risks;
+- oracle risks;
+- governance risks;
+- custodial risks;
+- legal risks;
+- blockchain risks;
+- smart-contract risks;
+- adoption risks;
+- operational risks.
+
+### Research Library
+
+Maintain source material relating to:
+
+- inflation indexes;
+- monetary economics;
+- TIPS;
+- stablecoins;
+- flatcoins;
+- reserve management;
+- tokenized assets;
+- banking;
+- payment systems;
+- blockchain architecture;
+- smart-contract security;
+- applicable law and regulation.
+
+## Review Gate 0
+
+Project infrastructure is sufficiently organized that another qualified researcher or engineer could understand the current state of PPU without reading the complete chat history.
+
+---
+
+# PHASE 1 — MONETARY ARCHITECTURE
+
+## Objective
+
+Define precisely what PPU is before designing software around it.
+
+## Work Package 1A — Purchasing-Power Standard
+
+Research and validate:
+
+- CPI-U NSA;
+- TIPS Reference CPI methodology;
+- CPI publication lag;
+- CPI revisions;
+- CPI methodology risk;
+- C-CPI-U;
+- PCE;
+- alternative purchasing-power indexes;
+- possible future global indexes.
+
+Primary question:
+
+**What exactly does one PPU promise to preserve?**
+
+Required output:
+
+Purchasing-Power Standard Specification.
+
+---
+
+## Work Package 1B — Target Calculation
+
+Define mathematically:
+
+- Base Date;
+- Base Reference Index;
+- Daily Reference CPI;
+- Target Value;
+- interpolation rules;
+- rounding;
+- stale-data handling;
+- discontinued-index handling;
+- deflation behavior.
+
+Required output:
+
+Formal Target Calculation Specification with worked examples.
+
+---
+
+## Work Package 1C — Liability Model
+
+Define:
+
+- outstanding monetary liability;
+- accepted but unsettled redemptions;
+- seniority of PPU claims;
+- effects of inflation;
+- effects of deflation;
+- effects of supply expansion and contraction.
+
+Required output:
+
+PPU Liability Model.
+
+---
+
+## Work Package 1D — Reserve Architecture
+
+Determine candidate reserve structure.
+
+Initial baseline:
+
+- cash;
+- Treasury bills;
+- short-term Treasury repo;
+- short-duration TIPS;
+- first-loss capital.
+
+Evaluate:
+
+- duration;
+- liquidity;
+- inflation matching;
+- credit exposure;
+- real-rate exposure;
+- custody;
+- concentration;
+- basis risk.
+
+Alternative assets such as:
+
+- gold;
+- Bitcoin;
+- commodities;
+- equities;
+- tokenized RWAs;
+
+shall initially be treated as research alternatives rather than assumed reserve assets.
+
+Required output:
+
+Reserve Architecture Specification.
+
+---
+
+## Work Package 1E — Capital Structure
+
+Resolve the first-loss-capital problem.
+
+Determine:
+
+- who provides junior capital;
+- how junior capital is compensated;
+- required capitalization;
+- whether capital is permanent or redeemable;
+- dilution mechanics;
+- recapitalization mechanics;
+- insolvency waterfall;
+- reserve surplus treatment.
+
+This Work Package is critical.
+
+Required output:
+
+PPU Capital Structure Specification.
+
+---
+
+## Work Package 1F — Mint and Redemption Architecture
+
+Define:
+
+- authorized minting;
+- reserve settlement;
+- creation price;
+- redemption price;
+- mint fees;
+- redemption fees;
+- creation units;
+- Authorized Participants;
+- secondary-market arbitrage;
+- in-kind redemption;
+- liquidity management;
+- settlement timing.
+
+Required output:
+
+Mint/Redemption Specification.
+
+---
+
+## Work Package 1G — Governance Constitution
+
+Define:
+
+- immutable monetary rules;
+- adjustable operational parameters;
+- governance powers;
+- governance prohibitions;
+- emergency powers;
+- timelocks;
+- upgrade procedures;
+- protocol migration;
+- oracle replacement;
+- index contingency.
+
+Required output:
+
+PPU Monetary Constitution v1.0 candidate.
+
+---
+
+## Review Gate 1
+
+The economic architecture must be internally coherent.
+
+The project must be able to answer clearly:
+
+- What is one PPU?
+- What creates its value?
+- What legally and economically backs it?
+- Who absorbs reserve losses first?
+- How does supply expand?
+- How does supply contract?
+- Why should market price remain near target?
+- What happens during inflation?
+- What happens during deflation?
+- What happens during a bank run?
+- What happens during reserve losses?
+- What happens during insolvency?
+- Who can change the rules?
+- Which rules can never be changed?
+
+No simulation assumptions should remain hidden.
+
+---
+
+# PHASE 2 — ECONOMIC MODEL AND SIMULATION
+
+## Objective
+
+Attempt to mathematically break PPU before building production smart contracts.
+
+## Work Package 2A — Balance-Sheet Simulator
+
+Build a reproducible model containing:
+
+### Assets
+
+- cash;
+- T-bills;
+- repo;
+- TIPS;
+- first-loss capital;
+- optional experimental reserve assets.
+
+### Liabilities
+
+- circulating PPU;
+- redemption queue;
+- operating liabilities.
+
+### Variables
+
+- inflation;
+- real interest rates;
+- nominal rates;
+- TIPS duration;
+- reserve yield;
+- redemption demand;
+- liquidity;
+- supply growth;
+- market price deviations;
+- collateral ratios.
+
+Required output:
+
+Reproducible PPU balance-sheet simulator.
+
+---
+
+## Work Package 2B — Historical Data Environment
+
+Build clean datasets for relevant historical periods.
+
+Include where possible:
+
+- CPI-U;
+- Treasury yields;
+- real yields;
+- TIPS;
+- short-term interest rates;
+- Treasury bills;
+- market liquidity indicators;
+- gold;
+- equities;
+- Bitcoin;
+- commodities;
+- energy.
+
+Data provenance must be documented.
+
+Required output:
+
+Version-controlled research dataset and data dictionary.
+
+---
+
+## Work Package 2C — Historical Stress Tests
+
+Test PPU against environments including:
+
+- 1970s inflation;
+- Volcker tightening;
+- 1987 crash;
+- dot-com collapse;
+- Global Financial Crisis;
+- COVID liquidity crisis;
+- 2021–2022 inflation;
+- rapid rate increases;
+- commodity shocks;
+- deflation;
+- severe redemption runs.
+
+Required metrics:
+
+- minimum GCR;
+- minimum RACR;
+- reserve drawdown;
+- first-loss-capital drawdown;
+- redemption liquidity;
+- forced-sale volume;
+- mint shutdown frequency;
+- recapitalization requirements;
+- insolvency events;
+- time to recovery.
+
+Required output:
+
+Historical Stress-Test Report.
+
+---
+
+## Work Package 2D — Capital-Ratio Optimization
+
+Test candidate starting collateral ratios such as:
+
+- 105%;
+- 110%;
+- 115%;
+- 120%;
+- 125%;
+- 130%.
+
+Determine the relationship between:
+
+- safety;
+- scalability;
+- capital efficiency;
+- reserve composition;
+- liquidity;
+- issuance capacity.
+
+Required output:
+
+Capital Efficiency Study.
+
+---
+
+## Work Package 2E — Reserve Optimization
+
+Begin with Treasury/TIPS baseline.
+
+Only afterward test additions such as:
+
+- gold;
+- Bitcoin;
+- commodity exposure;
+- equities;
+- other RWAs.
+
+An asset should be added only if it improves PPU's monetary resilience after accounting for:
+
+- volatility;
+- liquidity;
+- correlation;
+- drawdowns;
+- custody;
+- legal treatment;
+- basis risk.
+
+Required output:
+
+Reserve Optimization Study.
+
+---
+
+## Work Package 2F — Monte Carlo and Adversarial Simulation
+
+Generate extreme but plausible combinations of:
+
+- inflation;
+- deflation;
+- rate shocks;
+- liquidity crises;
+- redemption runs;
+- reserve losses;
+- supply growth;
+- oracle interruptions;
+- custodian failures.
+
+Search specifically for combinations that cause protocol failure.
+
+Required output:
+
+PPU Failure-Mode Simulation Report.
+
+---
+
+## Review Gate 2
+
+PPU proceeds only if the model indicates a viable range of:
+
+- reserve compositions;
+- collateral ratios;
+- liquidity requirements;
+- capital structures;
+- issuance rules;
+
+capable of surviving defined stress conditions.
+
+If PPU cannot satisfy these requirements economically, redesign the protocol before continuing.
+
+---
+
+# PHASE 3 — LEGAL AND INSTITUTIONAL ARCHITECTURE
+
+## Objective
+
+Determine whether the economic model can exist legally and operationally.
+
+Work Packages should investigate:
+
+- U.S. stablecoin law;
+- securities law;
+- commodities law;
+- money-transmission law;
+- banking law;
+- investment-company issues;
+- custody;
+- bankruptcy remoteness;
+- reserve ownership;
+- redemption rights;
+- Authorized Participants;
+- AML/KYC requirements;
+- tax treatment;
+- accounting;
+- attestations;
+- audits.
+
+Required outputs:
+
+- Legal Issues Matrix;
+- Institutional Architecture Proposal;
+- Required Counsel Questions;
+- Regulatory Classification Analysis.
+
+## Review Gate 3
+
+No production architecture proceeds until credible legal paths have been identified.
+
+---
+
+# PHASE 4 — TECHNICAL PROTOCOL DESIGN
+
+## Objective
+
+Translate the economic constitution into software architecture.
+
+Candidate components:
+
+- PPUToken;
+- TargetCalculator;
+- PurchasingPowerOracle;
+- ReservePriceOracle;
+- ProofOfReserveAdapter;
+- LiabilityAccounting;
+- CollateralManager;
+- MintBurnController;
+- RedemptionManager;
+- RiskEngine;
+- LiquidityManager;
+- EmergencyController;
+- GovernanceTimelock.
+
+Research blockchain candidates independently.
+
+Possible candidates include:
+
+- Ethereum;
+- Ethereum L2s;
+- XRPL EVM;
+- XRPL interoperability;
+- other suitable networks.
+
+Blockchain selection must follow monetary-system requirements rather than dictate them.
+
+Required outputs:
+
+- Technical Architecture Specification;
+- Contract Interface Specification;
+- Threat Model;
+- Blockchain Selection Report.
+
+## Review Gate 4
+
+The proposed software architecture must faithfully enforce the Monetary Constitution.
+
+---
+
+# PHASE 5 — TESTNET IMPLEMENTATION
+
+## Objective
+
+Build PPU without real reserve assets.
+
+Develop:
+
+- smart contracts;
+- simulated reserve tokens;
+- CPI oracle;
+- reserve oracle;
+- minting;
+- redemption;
+- collateral controls;
+- emergency controls;
+- dashboards;
+- automated tests.
+
+Required testing:
+
+- unit tests;
+- integration tests;
+- fuzz testing;
+- invariant testing;
+- oracle failures;
+- reserve losses;
+- governance attacks;
+- liquidity runs;
+- reentrancy;
+- access-control failure;
+- contract-upgrade attacks;
+- malformed inputs.
+
+Required output:
+
+Functional PPU testnet prototype.
+
+## Review Gate 5
+
+No real assets may enter the protocol until the implementation survives independent technical review.
+
+---
+
+# PHASE 6 — INDEPENDENT REVIEW
+
+Required external review should include:
+
+- monetary economist;
+- reserve/risk specialist;
+- digital-asset counsel;
+- smart-contract auditors;
+- tax/accounting professionals;
+- custody professionals.
+
+Claude Opus and other AI systems may supplement adversarial review but do not substitute for qualified independent human review.
+
+Required output:
+
+Independent Review Dossier.
+
+## Review Gate 6
+
+All material findings must be resolved, accepted, or explicitly documented before production planning.
+
+---
+
+# PHASE 7 — CONTROLLED PILOT
+
+Only after previous phases succeed.
+
+Possible pilot characteristics:
+
+- limited issuance;
+- limited reserve assets;
+- limited Authorized Participants;
+- strict issuance caps;
+- public reserve reporting;
+- independent attestations;
+- enhanced monitoring;
+- conservative liquidity requirements.
+
+The pilot should test monetary mechanics rather than pursue rapid adoption.
+
+---
+
+# PHASE 8 — PRODUCTION PROTOCOL
+
+Production deployment shall occur only if:
+
+- the monetary architecture survives economic testing;
+- the legal structure is viable;
+- reserve custody is established;
+- redemption rights are enforceable;
+- smart contracts are independently audited;
+- governance controls are operational;
+- reserve transparency is credible;
+- appropriate capital exists;
+- and the system has survived a controlled pilot.
+
+Production does not end research.
+
+PPU shall remain continuously monitored for:
+
+- monetary failure modes;
+- reserve behavior;
+- liquidity;
+- regulatory changes;
+- oracle reliability;
+- governance risks;
+- technological risks;
+- and changes in the economic environment.
+
+FILE: 08-draft-constitution.md
+
+# Draft Monetary Constitution / Hypothesis Set v0.1
+Recorded 2026-09-19 America/Chicago
+
+**Status: RESEARCH DRAFT / NOT RATIFIED / SOURCE INCOMPLETE.**
+Latest Phase 0 state explicitly reframed the earlier “Monetary Constitution v0.1” as a draft/hypothesis set. Historical “shall” language below is preserved, not adopted as new production policy. WP0A changes no protected principles and selects no monetary parameters.
+
+The original response was truncated at 20,000 characters during Article XVIII. Articles I–XVII and the available beginning of XVIII follow; any further text is UNKNOWN. Full preservation cannot be certified until Q-001 is resolved. See [partial source](evidence/architecture-response-PARTIAL.md) and [Phase 0 qualification](evidence/phase0-source.md).
+
+## Reading map
+- Articles I–IV: target, deflation/no floor, base date, CPI-U NSA and interpolation candidates → WP1A/1B.
+- V: liability and seniority hypothesis → WP1C; Q006 accounting ambiguity.
+- VI–XI: capital layers, reserve, collateral, liquidity and income/loss treatment → WP1D/1E and Phase 2.
+- XII–XIV: issuance, redemption and AP access → WP1F.
+- XV: legal ownership/claims → Phase 3.
+- XVI–XVII: oracle/transparency candidates → later technical design.
+- XVIII and any later articles: incomplete governance source → Q001, later WP1G.
+
+Provisional values preserved: 120% GCR normal and 110% RACR normal; recovery bands 110–120% GCR or 105–110% RACR; defensive below 110%/105%; insolvency test as drafted; approximately two-year TIPS duration exposure; 30% liabilities liquid within one business day; 125% 30-day liquidity coverage. These are unvalidated draft simulation parameters, not approved operating policy.
+
+## Recovered original draft text
+The following is copied from SRC-003 without rewriting its monetary provisions.
+
+# PPU MONETARY CONSTITUTION v0.1
+
+**Status:** Research specification — not production monetary policy  
+**Working name:** Purchasing Power Unit (PPU)  
+**Version:** 0.1
+
+## PREAMBLE
+
+PPU is intended to function as an open, programmable monetary unit whose nominal redemption target changes in accordance with measured purchasing power rather than remaining permanently fixed to one nominal U.S. dollar.
+
+PPU shall not depend upon discretionary monetary issuance, algorithmic reflexivity, unsecured credit creation, or speculative appreciation for maintenance of its monetary target.
+
+The protocol shall instead rely upon:
+
+- objectively defined purchasing-power measurement;
+- verifiable reserve assets;
+- senior redemption rights;
+- first-loss reserve capital;
+- deterministic issuance and redemption rules;
+- transparent risk measurement;
+- constrained governance;
+- limited emergency powers;
+- and rules enforced wherever possible by immutable software.
+
+PPU shall be designed primarily as a unit of account, settlement asset, and store of standardized purchasing power. It shall not be designed primarily as an investment or yield-bearing instrument.
+
+---
+
+# ARTICLE I — DEFINITION OF ONE PPU
+
+One PPU represents the nominal U.S.-dollar amount required, according to the protocol's designated purchasing-power index, to represent the same standardized purchasing power as **$1.00 on the PPU Base Date**.
+
+PPU wallet balances shall not rebase merely because the purchasing-power index changes.
+
+Instead, the reference and redemption value of each individual PPU shall change.
+
+If:
+
+Base Target = $1.00
+
+Base Reference Index = I₀
+
+Current Reference Index = Iₜ
+
+then:
+
+**PPU Target Valueₜ = $1.00 × Iₜ / I₀**
+
+Example:
+
+If the relevant index has risen cumulatively by 18% since the Base Date:
+
+PPU Target Value = $1.18.
+
+If the index falls because of genuine measured deflation, the PPU Target Value shall also fall.
+
+There shall be no automatic $1.00 nominal floor.
+
+Adding such a floor would create an asymmetric deflation guarantee and therefore an additional liability that would have to be separately funded.
+
+PPU represents standardized U.S. consumer purchasing power. It does not claim to preserve the individual cost of living of every holder.
+
+---
+
+# ARTICLE II — BASE DATE
+
+The production Base Date shall be the official monetary genesis date of the protocol at 00:00 UTC.
+
+The Base Reference Index shall be the valid Daily Reference CPI applicable to that date.
+
+Regardless of the absolute CPI level on that date:
+
+**1 PPU = $1.000000 reference value at genesis.**
+
+Testnet deployments may use arbitrary historical base dates for simulation.
+
+---
+
+# ARTICLE III — PURCHASING-POWER INDEX
+
+PPU v0.1 shall use:
+
+**U.S. Consumer Price Index for All Urban Consumers (CPI-U)**  
+**U.S. City Average**  
+**All Items**  
+**Not Seasonally Adjusted**
+
+published by the U.S. Bureau of Labor Statistics.
+
+PPU shall not use core CPI.
+
+Food and energy shall remain included because PPU is intended to preserve purchasing power rather than forecast underlying monetary-policy inflation.
+
+PPU v0.1 shall not use an internally created proprietary inflation index.
+
+A proprietary purchasing-power index may be researched independently and compared against CPI-U during Phase 2, but it shall not control PPU v0.1 liabilities.
+
+---
+
+# ARTICLE IV — DAILY TARGET CALCULATION
+
+PPU shall use a daily reference-index methodology based substantially on the methodology used for U.S. Treasury Inflation-Protected Securities.
+
+For a day occurring in calendar month M:
+
+Reference CPI for the first day of month M shall equal CPI-U for the third preceding calendar month.
+
+Reference CPI shall then be linearly interpolated across the month toward the CPI-U value applicable to the first day of the following month.
+
+Conceptually:
+
+**RefCPI(d) = RefCPI(M) + ((d − 1) / D) × [RefCPI(M+1) − RefCPI(M)]**
+
+where:
+
+d = calendar day within the month  
+D = number of days within the month
+
+The resulting PPU target shall therefore change gradually each day.
+
+This design intentionally accepts an index-publication lag in exchange for:
+
+deterministic calculation,
+
+smooth target changes,
+
+absence of inflation forecasting,
+
+and substantially improved liability matching with TIPS.
+
+The PurchasingPowerOracle shall never forecast future inflation.
+
+---
+
+# ARTICLE V — PPU LIABILITIES
+
+Total PPU monetary liabilities shall be calculated as:
+
+**L = Circulating PPU Supply × Current PPU Target Value**
+
+plus any PPU redemption obligations already accepted but not yet settled.
+
+PPU liabilities shall be senior to claims on reserve surplus.
+
+---
+
+# ARTICLE VI — RESERVE STRUCTURE
+
+The PPU reserve shall consist of two economically distinct layers.
+
+### Senior Reserve
+
+Assets supporting redemption of outstanding PPU.
+
+### First-Loss Capital
+
+Assets subordinate to PPU claims that absorb reserve losses before PPU becomes impaired.
+
+This separation is necessary because overcollateralization cannot be created merely by charging ordinary PPU buyers more than the monetary unit is worth.
+
+If reserve collateralization is C and liabilities increase by ΔL, maintaining collateralization C requires reserve assets to increase by:
+
+**C × ΔL**
+
+Therefore, at 120% collateralization, every $1.00 of new PPU liability ultimately requires:
+
+$1.00 of senior reserve assets
+
+plus
+
+$0.20 of first-loss capital.
+
+PPU issuance shall therefore be constrained not merely by demand but by available reserve capital.
+
+No protocol mechanism shall conceal this capital requirement.
+
+---
+
+# ARTICLE VII — COLLATERALIZATION
+
+PPU v0.1 shall initially model a:
+
+**120% normal gross collateralization target**
+
+together with a separate risk-adjusted collateral test.
+
+Gross Collateral Ratio:
+
+**GCR = Gross Eligible Reserve Value / PPU Liabilities**
+
+Risk-Adjusted Reserve Value:
+
+**RARV = Σ [Market Valueᵢ × (1 − Haircutᵢ)] − Senior Non-PPU Liabilities**
+
+Risk-Adjusted Collateral Ratio:
+
+**RACR = RARV / PPU Liabilities**
+
+Initial simulation thresholds:
+
+Normal operation:
+
+GCR ≥ 120%
+
+and
+
+RACR ≥ 110%
+
+Restricted recovery mode:
+
+GCR between 110% and 120%
+
+or
+
+RACR between 105% and 110%.
+
+In recovery mode, new PPU may only be issued if the associated transaction restores or improves required collateral ratios.
+
+Defensive mode:
+
+GCR < 110%
+
+or
+
+RACR < 105%.
+
+Ordinary minting shall automatically stop.
+
+Redemptions shall continue while the reserve remains economically solvent.
+
+Actual insolvency:
+
+Gross realizable reserve assets < 100% of PPU liabilities.
+
+At this point the protocol shall not pretend that full redemption remains possible.
+
+A predefined resolution mechanism shall convert redemption to pro-rata realizable reserve value unless the reserve is recapitalized.
+
+The 120%, 110%, and 105% levels are provisional v0.1 engineering parameters and must be validated or replaced through Phase 2 stress testing.
+
+They are not ideological constants.
+
+---
+
+# ARTICLE VIII — RESERVE ELIGIBILITY
+
+PPU v0.1 Core Reserve assets shall initially be restricted to assets with low credit risk, high transparency, and measurable liquidity.
+
+Eligible categories shall initially consist of:
+
+cash and qualifying cash equivalents;
+
+short-duration U.S. Treasury bills;
+
+appropriately collateralized short-term Treasury repo;
+
+and short-duration U.S. Treasury Inflation-Protected Securities.
+
+Individual TIPS used as core reserve assets should initially have no more than approximately two years of remaining effective duration exposure unless additional hedging exists.
+
+The weighted interest-rate duration of the entire reserve shall be strictly limited.
+
+Reserve-risk haircuts must include:
+
+interest-rate risk;
+
+real-rate risk;
+
+liquidity risk;
+
+custodian risk;
+
+settlement risk;
+
+oracle risk;
+
+and basis risk.
+
+A simplified duration stress approximation may be expressed as:
+
+**Approximate price loss ≈ Duration × Yield Shock**
+
+A two-year-duration inflation-linked security exposed to a hypothetical instantaneous +500 basis-point real-yield shock could therefore experience approximately a 10% duration-driven price decline before accounting for convexity.
+
+This is why inflation linkage alone does not eliminate TIPS market-value risk.
+
+Bitcoin, XRP, gold, equities, commodity exposures, energy assets, corporate credit, unsecured loans, DeFi lending positions, and speculative tokenized assets shall not count toward required v0.1 Core Reserve collateral.
+
+They may be modeled during Phase 2.
+
+They may not be introduced merely because their historical returns appear attractive.
+
+No reserve asset may be:
+
+rehypothecated;
+
+pledged for unrelated liabilities;
+
+secretly leveraged;
+
+or counted simultaneously toward more than one reserve obligation.
+
+---
+
+# ARTICLE IX — REDEMPTION LIQUIDITY
+
+At all times during normal operation, the protocol shall maintain liquid assets available within one business day equal to at least:
+
+**30% of outstanding PPU liabilities**
+
+unless Phase 2 demonstrates that a different level provides superior resilience.
+
+Additionally:
+
+**30-Day Liquidity Coverage Ratio ≥ 125%**
+
+where the denominator represents modeled stressed redemption requirements over 30 days.
+
+Liquidity shall be measured against liabilities, not merely as a percentage of reserve assets.
+
+The protocol shall maintain sufficient liquidity to prevent routine redemption demand from forcing liquidation of longer-duration inflation hedges.
+
+---
+
+# ARTICLE X — RESERVE OUTPERFORMANCE
+
+PPU holders shall receive the purchasing-power target defined by this Constitution.
+
+PPU holders shall not automatically receive reserve investment gains.
+
+If reserve assets outperform growth in PPU liabilities, the excess shall first strengthen First-Loss Capital.
+
+Reserve income shall follow the following priority:
+
+required custody, audit, oracle, insurance, legal, and protocol operating expenses;
+
+restoration of liquidity requirements;
+
+restoration of collateral requirements;
+
+growth of First-Loss Capital;
+
+and only afterward treatment as true reserve surplus.
+
+PPU v0.1 shall distribute no reserve surplus while the monetary model remains experimental.
+
+Reserve outperformance shall not cause the PPU Target Value to rise faster than its designated purchasing-power index.
+
+PPU therefore remains a purchasing-power unit rather than an investment fund.
+
+---
+
+# ARTICLE XI — RESERVE UNDERPERFORMANCE
+
+Reserve underperformance shall first reduce First-Loss Capital.
+
+It shall not automatically reduce the PPU Target Value.
+
+As collateralization deteriorates:
+
+surplus distributions stop;
+
+new issuance becomes restricted;
+
+ordinary minting stops at predefined thresholds;
+
+reserve risk is reduced;
+
+liquidity is increased where possible;
+
+all reserve income is retained;
+
+and external recapitalization may be accepted under predefined rules.
+
+Governance may not solve undercollateralization by issuing unbacked PPU.
+
+Governance may not retrospectively redefine inflation in order to reduce PPU liabilities.
+
+If reserve assets become insufficient to satisfy all PPU liabilities, losses must be recognized explicitly through the predetermined resolution mechanism.
+
+---
+
+# ARTICLE XII — MINTING
+
+PPU supply shall expand only in response to actual collateralized issuance.
+
+No administrator, governance body, founder, validator, custodian, central bank, oracle operator, or emergency committee shall possess unrestricted authority to create PPU.
+
+A valid mint requires:
+
+a valid PurchasingPowerOracle;
+
+a valid ReserveOracle;
+
+confirmed settlement of eligible reserve assets;
+
+satisfaction of liquidity requirements;
+
+satisfaction of post-mint collateral requirements;
+
+and authorization by the MintBurnController.
+
+PPU shall never be minted against:
+
+anticipated collateral;
+
+unsettled transfers;
+
+accounts receivable;
+
+future revenue;
+
+expected reserve yield;
+
+or unsecured promises.
+
+For N newly issued PPU:
+
+**Senior reserve contribution = N × Current PPU Target Value**
+
+plus whatever additional first-loss capital is necessary to maintain mandatory collateral ratios.
+
+Mint fees may exist to cover operating and liquidity costs but must be transparent, bounded, and formulaic.
+
+Mint fees shall not constitute discretionary monetary policy.
+
+---
+
+# ARTICLE XIII — REDEMPTION
+
+Redemption is a fundamental monetary mechanism of PPU.
+
+A qualified reserve-layer participant surrendering PPU shall be entitled, while the protocol is solvent and functioning normally, to redemption based upon:
+
+**Number of PPU Redeemed × Current PPU Target Value**
+
+minus a transparent predefined redemption cost.
+
+Redeemed PPU shall be burned.
+
+Redemption must create real economic arbitrage.
+
+If secondary-market PPU trades materially below target, participants must be capable of acquiring PPU and redeeming it for reserve value.
+
+If PPU trades materially above target, qualified participants must be capable of creating additional fully backed PPU and selling it into the market.
+
+This mint/redemption mechanism, rather than an unsupported algorithmic price target, shall provide the primary economic force anchoring PPU to its target.
+
+Redemption fees may compensate the reserve for genuine transaction and liquidation costs.
+
+They shall not be increased arbitrarily to conceal insolvency or prevent economically legitimate redemptions.
+
+Large redemptions may eventually permit settlement through qualifying in-kind Treasury assets when legally and operationally practical, reducing forced asset sales.
+
+---
+
+# ARTICLE XIV — RESERVE-LAYER ACCESS
+
+At initial production deployment, direct reserve-layer minting and redemption shall occur through multiple qualified Authorized Participants.
+
+Authorized Participants may include appropriately regulated financial institutions, market makers, custodians, or other entities meeting published eligibility requirements.
+
+Authorized Participant criteria shall be objective and public.
+
+No single Authorized Participant shall have an exclusive franchise.
+
+Holding and transferring PPU should remain as open as legally possible.
+
+The monetary constitution shall separate access-control requirements imposed by law from monetary-policy rules.
+
+Compliance requirements may determine who can interact directly with the off-chain reserve.
+
+They shall not authorize discretionary changes to the PPU monetary target.
+
+---
+
+# ARTICLE XV — RESERVE LEGAL OWNERSHIP
+
+Assets counted as PPU reserves must be legally owned or held for the benefit of the appropriate reserve structure.
+
+Proof of Reserve alone shall not be sufficient.
+
+The protocol must also establish:
+
+proof of liabilities;
+
+legal ownership;
+
+absence of undisclosed liens;
+
+custodial segregation;
+
+bankruptcy treatment;
+
+and the senior economic position of PPU redemption claims.
+
+Assets that cannot be legally verified as available to satisfy PPU obligations shall receive zero reserve value.
+
+---
+
+# ARTICLE XVI — ORACLE ARCHITECTURE
+
+The protocol shall distinguish between:
+
+PurchasingPowerOracle;
+
+ReserveAssetPriceOracle;
+
+Custodian/Proof-of-Reserve Oracle;
+
+and Liability Accounting.
+
+Purchasing-power data shall be deterministic from authoritative source data.
+
+Reserve-market pricing shall use independent market sources.
+
+Custodial assets shall require verifiable reporting from custodians and independent attestations.
+
+The protocol shall not rely upon one organization's unaudited statement that reserves exist.
+
+Oracle disagreement shall cause the protocol to become more conservative.
+
+It shall never automatically allow increased issuance.
+
+When critical oracle data become stale:
+
+minting shall fail closed;
+
+additional reserve haircuts may apply;
+
+and the last cryptographically verified purchasing-power value may temporarily govern redemptions according to predefined fallback rules.
+
+---
+
+# ARTICLE XVII — TRANSPARENCY
+
+The protocol shall publicly expose in machine-readable form:
+
+circulating PPU supply;
+
+current PPU Target Value;
+
+total PPU liabilities;
+
+reserve composition;
+
+gross collateral ratio;
+
+risk-adjusted collateral ratio;
+
+available liquidity;
+
+pending redemptions;
+
+reserve haircuts;
+
+oracle freshness;
+
+and emergency-system status.
+
+On-chain PPU liabilities shall be observable continuously.
+
+Off-chain reserve assets shall be reconciled as frequently as operationally possible and subject to independent external examination.
+
+The reserve must be auditable as a balance sheet, not merely advertised through wallet addresses.
+
+---
+
+# ARTICLE XVIII — GOVERNANCE
+
+PPU shall practice minimized governance rather than attempting to eliminate all human governance.
+
+Governance shall be able to perform only explicitly enumerated functions.
+
+Adjustable peripheral parameters may include matters such as:
+
+approved custodians;
+
+approved Authorized Participants;
+
+oracle implementations;
+
+reserve-asset adapters;
+
+operational fees within constitutional bounds;
+
+and collateral haircuts within predetermined risk limits.
+
+Core monetary rules shall not be casually upgradeable.
+
+The production PPUToken, T
+
+[END OF RECOVERED TEXT — source truncates mid-sentence above. No completion inferred.]
+
+
+
+FILE: 09-work-package-register.md
+
+# Work Package Register
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Governing source: [Development Roadmap v0.1](07-development-roadmap.md). Register entries describe future work; listing a package never authorizes it.
+
+## WP0A — Canonical Project Structure
+Phase 0. Objective: permanent research/documentation/decision environment that supports handoff without reading the complete conversation.
+Authority: current user request, SRC-006. Operator: current assistant. Approver: Brad.
+Inputs: SRC-001–SRC-006. Outputs: ten canonical files, source captures, structural review, report, validation evidence and portable archive.
+Acceptance: all required records exist; inherited state is faithfully preserved and traceable; uncertainties and rejected organizational alternatives are visible; a new researcher can identify architecture/status/risks/next authority; Review Gate 0 stops progression.
+Status: **deliverables created; source-completeness verification BLOCKED by Q-001**.
+Work performed: roadmap and chat recovery, record extraction, persistent organization, internal structural review and reconciliation.
+Exit: recover complete SRC-003, reconcile missing articles, rerun integrity/preservation checks, update report, submit Gate 0.
+Next authorized action: source recovery within WP0A only.
+
+## Roadmap packages
+| Package | Title | Required output | Status |
+|---|---|---|---|
+| 1A | Purchasing-Power Standard | Purchasing-Power Standard Specification | NOT AUTHORIZED / not started |
+| 1B | Target Calculation | Formal Target Calculation Specification with worked examples | NOT AUTHORIZED |
+| 1C | Liability Model | PPU Liability Model | NOT AUTHORIZED |
+| 1D | Reserve Architecture | Reserve Architecture Specification | NOT AUTHORIZED |
+| 1E | Capital Structure | PPU Capital Structure Specification | NOT AUTHORIZED |
+| 1F | Mint and Redemption Architecture | Mint/Redemption Specification | NOT AUTHORIZED |
+| 1G | Governance Constitution | PPU Monetary Constitution v1.0 candidate | NOT AUTHORIZED |
+| 2A | Balance-Sheet Simulator | Reproducible PPU balance-sheet simulator | NOT AUTHORIZED |
+| 2B | Historical Data Environment | Version-controlled research dataset and data dictionary | NOT AUTHORIZED |
+| 2C | Historical Stress Tests | Historical Stress-Test Report | NOT AUTHORIZED |
+| 2D | Capital-Ratio Optimization | Capital Efficiency Study | NOT AUTHORIZED |
+| 2E | Reserve Optimization | Reserve Optimization Study | NOT AUTHORIZED |
+| 2F | Monte Carlo and Adversarial Simulation | PPU Failure-Mode Simulation Report | NOT AUTHORIZED |
+
+## Later phases without assigned package IDs in the source
+| Phase | Scope | Required deliverables / source description | Status |
+|---|---|---|---|
+| 3 | Legal and Institutional Architecture | Legal Issues Matrix; Institutional Architecture Proposal; Required Counsel Questions; Regulatory Classification Analysis | NOT AUTHORIZED; package definitions pending |
+| 4 | Technical Protocol Design | Technical Architecture Specification; Contract Interface Specification; Threat Model; Blockchain Selection Report | NOT AUTHORIZED |
+| 5 | Testnet Implementation | Functional PPU testnet prototype | NOT AUTHORIZED |
+| 6 | Independent Review | Independent Review Dossier | NOT AUTHORIZED |
+| 7 | Controlled Pilot | Limited pilot characteristics listed; exact package/output specification pending | NOT AUTHORIZED |
+| 8 | Production Protocol | Conditional deployment and ongoing monitoring; exact package/output specification pending | NOT AUTHORIZED |
+
+No invented 3A–8A IDs. See Q-016. Roadmap sequence is preserved; no dependency bypass is inferred from a later phase needing evidence about an earlier hypothesis.
+
+## Execution protocol for any future authorized package
+1. Verify exact authorization, objective, inputs, deliverables and acceptance conditions.
+2. Record supporting/contrary evidence, assumptions, uncertainty and rejected alternatives.
+3. Complete in-scope work and adversarial review when useful/available. Record reviewer identity, model if known, actual objections and reasoned dispositions.
+4. Update Protocol State, decisions, risks, hypotheses, questions, research sources, package record and change log.
+5. Produce report and stop. Brad's approval of the exact next package is required even between packages in a phase. Phase gates are additional review checkpoints, not blanket authorization.
+
+
+
+FILE: 10-review-gate-register.md
+
+# Review Gate Register
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Authority: Brad and the primary PPU architecture conversation review results under the roadmap; **Brad's explicit approval is required to progress**. An assistant or external reviewer cannot self-approve. Governing [roadmap](07-development-roadmap.md) is preserved verbatim.
+
+## Review Gate 0
+Criterion: “Project infrastructure is sufficiently organized that another qualified researcher or engineer could understand the current state of PPU without reading the complete chat history.”
+
+Status: **HOLD — not approved; source preservation incomplete.**
+Submission: [WP0A report](WP0A-report.md).
+Evidence: ten canonical files; [structural review](reviews/wp0a-structural-review.md); [validation](reviews/validation.json).
+Blocking finding: Q-001 / F-001, incomplete original constitution from Article XVIII onward.
+Nonblocking limitations: external historical citations unvalidated; local storage has no automatic cloud synchronization; Claude unavailable; no independent review claim.
+Approval record: NONE. Date/quote/source/conditions: not supplied.
+Next authorized work: WP0A remediation only. WP1A remains NOT AUTHORIZED.
+To resubmit: recover complete source, preserve remaining text, reconcile conflicts/statuses, update validation and affected records. Do not replace the gap with invented clauses.
+
+## Preserved phase gates
+| Gate | Roadmap criterion, summarized | Status |
+|---|---|---|
+| 1 | Internally coherent economic architecture answering unit/value/backing/losses/supply/arbitrage/inflation/deflation/runs/insolvency/governance; no hidden simulation assumptions | NOT REACHED / not approved |
+| 2 | Model establishes viable reserve, capital, liquidity, capital-structure and issuance ranges surviving defined stress; redesign if not | NOT REACHED |
+| 3 | Credible legal paths before production architecture | NOT REACHED |
+| 4 | Software architecture faithfully enforces the Monetary Constitution | NOT REACHED |
+| 5 | Independent technical review before real assets enter | NOT REACHED |
+| 6 | Material findings resolved, accepted or explicitly documented before production planning | NOT REACHED |
+
+Phases 7 and 8 have prerequisites but **no numbered Review Gate 7/8 headings** in v0.1. Do not fabricate them. Their authorization and precise review criteria must be resolved before execution (Q-016). No production action is currently authorized.
+
+## Approval record template
+Gate/package ID; submitted version and artifact hashes; approving user; exact approval text; source reference; date/time; conditions; disposition (approve / revise / reject / hold); exact next package authorized. Missing approval fields mean no progression. Gate approval alone must not be interpreted as permission for prohibited real-world actions.
+
+## Package checkpoints
+The roadmap operating model requires approval before the next Work Package begins. Apply this to 1A→1B and all other package transitions as well as numbered phase gates. Current checkpoint: WP0A only.
+
+
+
+FILE: CHANGELOG.md
+
+# Change log
+## 2026-09-19 — WP0A initial persistent baseline
+Created ten canonical records and execution/maintenance instructions. Preserved roadmap bytes and recovered conversation evidence. Retained original D001–D005, R001–R015 and H001–H008. Added documentation decisions D006–D008, questions Q001–Q018, infrastructure risks R016–R020 and structural findings F001–F014. Copied available constitution without changing provisions and flagged truncation. Gate 0 HOLD; WP1A NOT AUTHORIZED. No monetary research or ratification performed.
+
+
+
+FILE: README.md
+
+# PPU execution workspace
+Version 0.1 • Recorded 2026-09-19 America/Chicago
+
+Start with [Protocol State](01-protocol-state.md). This local folder is the persistent execution record for the existing PPU project. No separate cloud Work task or automatic sync to ChatGPT project sources has been created or claimed.
+
+**Phase 0 / WP0A only. Review Gate 0: HOLD — source preservation incomplete. WP1A: NOT AUTHORIZED.**
+
+The ten canonical files are:
+1. [Protocol State](01-protocol-state.md)
+2. [Decision Register](02-decision-register.md)
+3. [Risk Register](03-risk-register.md)
+4. [Active Hypotheses](04-active-hypotheses.md)
+5. [Unresolved Questions](05-unresolved-questions.md)
+6. [Research Library Index](06-research-library-index.md)
+7. [Development Roadmap](07-development-roadmap.md)
+8. [Draft Monetary Constitution / Hypothesis Set](08-draft-constitution.md)
+9. [Work Package Register](09-work-package-register.md)
+10. [Review Gate Register](10-review-gate-register.md)
+
+Supporting records: [structural review](reviews/wp0a-structural-review.md), [completion report](WP0A-report.md), [change log](CHANGELOG.md), and original captures in evidence/.
+
+The full roadmap, initial user proposal, five original decision entries, fifteen original risks, eight hypotheses and latest Phase 0 response have been recovered. The earlier assistant response was capped at 20,000 characters, ending during Article XVIII. No missing constitutional language is invented. Resolve Q-001 before claiming complete preservation.
+
+## Maintenance contract
+Use stable IDs; never reuse or silently renumber them. Keep accepted decisions separate from hypotheses. Append a dated amendment and its evidence when changing a record; preserve superseded text in evidence/history and record what superseded it. Dates for inherited decisions are recorded as unknown when not explicitly stated in the source.
+
+The operator checks authorization in the Gate and Work Package registers before work. On completion, update affected records, Protocol State, change log and report together; check IDs, links, statuses and source coverage. No status wording can substitute for Brad's explicit approval. Record approval quote, source, date, conditions and exact next package before activation. Reviewer advice cannot authorize progression.
+
+Routine documentation implementation is delegated to the current operator. Brad owns approvals; specialist research owners remain unassigned until a package is authorized. Read-only sources/ in the parent directory must never be modified. Keep source snapshots separate from maintained records. Preserve this folder when transferring the project; local files are not an off-device backup.
+
+## Source precedence
+Current user authorization and restrictions control scope. Adopted roadmap v0.1 controls process. Latest Phase 0 state qualifies the earlier constitution as a hypothesis set. Earlier proposal and constitution retain historical value; conflicts are logged, not silently reconciled into new policy. External claims in the old chat are unverified leads until researched in the appropriate authorized package.
+
+
+
+FILE: WP0A-report.md
+
+# WP0A Completion and Exception Report
+Recorded 2026-09-19 America/Chicago
+
+**Outcome: ten persistent project records created. WP0A is not fully complete because the original constitution's ending could not be recovered. Review Gate 0 is on HOLD.**
+
+## Delivered
+All ten requested records, README maintenance instructions, original roadmap copy, recovered chat evidence, structural review and change log are in this local ppu-work folder. Start at [Protocol State](01-protocol-state.md). [Validation evidence](reviews/validation.json) records integrity/coverage checks. A portable archive is supplied beside this folder.
+
+Preserved: D001–D005 with original statuses, R001–R015 with original severity, H001–H008, current hypotheses, capital question and alternatives, roadmap phases/package sequence and Gates 0–6. Earlier draft Articles I–XVII and available XVIII text are preserved verbatim; all remain research hypotheses, not ratified monetary rules.
+
+## Work performed and flaws found
+Recovered the uploaded roadmap from the original conversation attachment mapping, rather than relying on the unavailable historical /mnt/data path. Kept synced sources/ read-only. Created stable IDs, provenance, status distinctions, maintenance and approval controls. Logged fourteen structural findings and dispositions; unresolved accounting/threshold issues were routed to future research without redesign.
+
+No external financial or legal assertions were freshly validated. Historical web citations remain unverified leads. Claude Opus was unavailable through exposed tools or the logged-out browser session, so the adversarial pass was explicitly self-review.
+
+## Blocking exception
+Q-001 / F-001: conversation reader caps each returned response at 20,000 characters. Earlier constitution ends during Article XVIII at “The production PPUToken, T”. Direct browser access requires sign-in. Missing articles/clauses are UNKNOWN. Claiming complete preservation would be false.
+
+Remaining WP0A work: obtain the full original response or conversation export; append its missing text to preserved evidence; reconcile all additional constitutional/hypothesis/decision/risk/question material; update records and checks; resubmit Gate 0. This requires source access, not permission to redesign PPU.
+
+## Verification
+See validation.json for required-file, original-record coverage, roadmap byte-integrity, draft recovered-text and local-link checks. These checks verify local documentation integrity, not economic viability, constitutional completeness, user approval or cloud sync.
+
+## Review Gate decision
+Recommendation: HOLD.
+Brad approval: not received.
+Next authorized action: WP0A source recovery.
+WP1A: not begun and NOT AUTHORIZED.
+No production deployment, capital acceptance, fund commitment, agreement, external publication or constitutional amendment was performed.
+
+## Handoff to the next operator
+Read Protocol State → Decision Register → draft status → Questions Q001 → Work Package and Gate registers. Resolve source recovery first. Preserve current IDs and hypothesis statuses. Update the change log and affected records together. Do not infer authorization from this report's existence.
+
+
+
+FILE: reviews/wp0a-structural-review.md
+
+# WP0A Structural Adversarial Review
+Recorded 2026-09-19 America/Chicago
+Reviewer: current assistant (self-review). Scope: preservation, organization, authority and handoff; no monetary validation.
+Claude check: no Claude tool exposed; browser https://claude.ai/ redirected to sign-in. No prompt submitted, no Opus model verified and no independent critique obtained. This optional review limitation does not itself block WP0A.
+
+| Finding | Objection / potential failure | Disposition and reconciliation | Evidence |
+|---|---|---|---|
+| F-001 High | Full preservation claimed despite truncated earlier constitution | ACCEPTED, OPEN BLOCKER. Preserve partial verbatim, label every dependent record; Gate 0 HOLD. Need original ending, not a reconstructed constitution | SRC-003 truncated=true, ends “The production PPUToken, T” |
+| F-002 High | Draft “shall” wording silently becomes accepted monetary policy | ACCEPTED, addressed by D007, draft banner and reading map. Original monetary wording retained with latest Phase 0 hypothesis status | SRC-004 explicitly reframes draft |
+| F-003 High | D003/D005 in Decision Register are mistaken for resolved decisions | ACCEPTED, addressed: original statuses retained, explicit no-final-decision note and metadata | SRC-004 |
+| F-004 High | Gate completion and permission to start next phase become one status | ACCEPTED, addressed: artifact readiness, gate approval and next-package authorization separated | Gate and Work Package registers |
+| F-005 Medium | A phase gate authorizes all packages within that phase | ACCEPTED, addressed: per-package checkpoints required as well as phase gates | Roadmap Operating Model |
+| F-006 Medium | Phase 3–8 package IDs or Gate 7/8 are invented | ACCEPTED, addressed: source omissions documented; Q016 remains future planning issue | SRC-001 |
+| F-007 Medium | Source files edited in synced read-only sources/ | ACCEPTED, prevented: all outputs under ppu-work; parent sources untouched | Parent AGENTS.md and output location |
+| F-008 Medium | Empty research shelf is presented as completed benchmark research | ACCEPTED, addressed: library distinguishes captured evidence and unverified research leads | Research Library |
+| F-009 Medium | Local persistence is mistaken for cloud Work conversion/sync or backup | ACCEPTED, addressed with README scope and portable archive; remote persistence remains unknown/unconfigured | Local filesystem evidence |
+| F-010 High, deferred | L = S × T + Q may count accepted redemptions twice | ACCEPTED AS QUESTION, not a finding of proven monetary error. Q006 routed to 1C/1F; draft unchanged | SRC-003 Article V |
+| F-011 High, deferred | First-loss capital appears as an asset and as subordinate financing, inviting double counting | ACCEPTED AS AMBIGUITY. Q008 routed to later accounting/capital specification; roadmap retained verbatim | SRC-001 WP2A and SRC-003 VI |
+| F-012 Medium, deferred | 24/7 settlement wording can imply unavailable reserve redemption | ACCEPTED AS QUESTION. Q015 makes distinction visible; access rules unchanged | SRC-002 goal and SRC-003 IX/XIV |
+| F-013 Medium | Claude's absence concealed by generic “adversarial review” | ACCEPTED, addressed: self-review labeled; no independent validation claim | Browser sign-in observation |
+| F-014 Medium, deferred | Threshold boundary equality and mixed collateral signals lack explicit precedence | ACCEPTED AS QUESTION. Q018 registered; no revised thresholds or insolvency rule selected | SRC-003 VII |
+
+## Rejected organizational alternatives
+- Reconstruct missing clauses from typical monetary constitutions: rejected because this would invent source content.
+- Treat all numerical draft parameters as approved constants: rejected because the source calls them provisional and the latest state is a hypothesis set.
+- Preserve only links to old chat: rejected because it forces handoff readers to retrieve history.
+- Begin CPI research to make the library appear complete: rejected as WP1A scope expansion.
+- Advance after self-review: rejected because Brad owns gate approval.
+
+## Review result
+The organization supports a clear handoff and exposes unknowns. Complete source preservation is not yet demonstrable. Recommendation: HOLD Gate 0 for Q001; do not start WP1A. Deferred economic questions are preserved for later authorized work and do not themselves constitute WP0A research obligations.
+
+

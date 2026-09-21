@@ -1,0 +1,289 @@
+# FILE: 01-purchasing-power-standard-research-report.md
+
+# WP1A — Purchasing-Power Standard Research Report
+Revision 1.0 • 2026-09-19 America/Chicago • Research recommendation awaiting Gate 1A
+
+## Finding
+Recommend an explicitly **U.S. urban consumer-price-indexed** v0.1 unit, using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted as its underlying benchmark. This is a conditional choice about the economic promise, not proof that the protocol can deliver it. The recommendation is narrower than universal purchasing-power preservation and does not approve TIPS interpolation, a reserve portfolio or the original constitution.
+
+The choice survives comparison because a useful monetary reference must combine meaningful coverage, a publicly identifiable series, manageable vintage uncertainty and a practical path to matching indexed obligations. It does not survive as a claim that CPI is the best possible measure of individual living costs, fully independently reconstructible, immune to institutional influence, always published, or a perfect hedge. See the [comparison matrix](02-comparative-benchmark-matrix.md), [methodology](03-methodology-and-revisions.md), [institutional risks](04-benchmark-institutional-risk.md) and [hedge analysis](05-hedgeability-and-matching.md). Those documents contain the factual evidence; the judgments below are model interpretation and recommendations.
+
+## Method and decision criteria
+The authorized question is benchmark choice, not maximizing compatibility with the old draft. The assessment first distinguishes economic concepts, then compares coverage, statistical construction, publication/revision behavior, independent verification, institutional dependency and hedgeability. No arbitrary weighted score is used: its weights would obscure the value judgment about what PPU promises. No empirical PPU performance claim is made. Source retrieval was live on 2026-09-19 local time; source versions, limitations and affected questions are indexed in [the source register](sources.md).
+
+Economic concepts considered:
+
+- **Nominal dollars:** observable and familiar, but does not meet the inflation-adjusting objective.
+- **Price change for a permanently fixed physical basket:** concrete but increasingly unrepresentative as goods disappear, quality changes and spending changes. This is not what modern CPI-U does.
+- **Constant household utility/cost of living:** economically attractive but depends on household preferences and substitution, cannot be one observable universal basket. C-CPI-U is the strongest direct challenger for this concept.
+- **Broad U.S. consumption prices:** PCE is a serious candidate when consumption financed on households' behalf is part of the intended promise.
+- **Named published consumer-price index:** narrower and auditable at the output level; its definition and exceptions must be disclosed. Recommended for v0.1.
+- **Worldwide purchasing power:** requires a population, country weights, exchange-rate convention and consumption concept. Global transfer alone defines none of these.
+
+## Answers to the twelve authorized questions
+### 1. What economic concept should one PPU preserve?
+**Recommendation:** cumulative change in the price level of a specified aggregate U.S. urban consumption measure, relative to a base reference. Describe this as a benchmark-linked target, not an unconditional ability to buy the same goods today. The proposed standard states the reference economic exposure. Whether a token holder can realize that target depends on later economic and legal work.
+
+### 2. Is standardized U.S. consumer purchasing power the correct v0.1 promise?
+**Interpretation:** defensible only as qualified shorthand. Prefer “U.S. urban consumer-price-indexed” with the index named alongside it. “Standardized” must not imply a real representative person's budget, all U.S. residents, or fixed welfare. **Uncertainty:** user demand for this limited promise has not been tested. If the intended users principally want non-U.S. local living-cost preservation, this recommendation should be reopened.
+
+### 3. Which benchmark best represents that promise?
+**Recommendation:** CPI-U NSA all-items U.S. City Average. C-CPI-U better addresses a particular substitution issue; PCE covers a broader consumption concept. Neither is inherently inferior. CPI-U wins for this proposed v0.1 objective after explicitly accepting its representativeness and measurement limits. TIPS Reference CPI is a transformation/contract convention, not a competing basket.
+
+### 4. What limitations and basis risks follow?
+**Interpretation:** household, income, age, tenure, location and non-U.S. spending can differ; asset affordability differs from consumption-service inflation; updated weights and quality adjustment change the measured object. Publication and target lag create timing basis. Any mismatch in chosen vintages or contingencies introduces contractual basis. Index tracking cannot cure market discounts, access costs, fees or insolvency. Detailed routing is in the hedge analysis; no related risk is closed.
+
+### 5. How significant is publication lag?
+**Fact:** publication is normally in the following month, whereas Treasury's daily convention adds a separate lag. **Interpretation:** smooth low inflation can make the timing gap look small; shocks and outages can make it material. The [lag examples](03-methodology-and-revisions.md) show sensitivity, not a calibrated acceptable tolerance. No frequency, lag, nowcast or fallback is selected in WP1A.
+
+### 6. Are published values revised?
+**Fact:** NSA CPI-U avoids routine revision but can be corrected for errors; C-CPI-U and PCE have meaningful revision/vintage considerations. Treasury obligations can retain a previously reported number despite later revisions. **Recommendation:** prohibit the blanket phrase “never revised.” Benchmark selection does not itself define which vintage is binding.
+
+### 7. Can it be independently and deterministically reproduced?
+**Finding:** two different tests have different answers. Published index observations can be independently retrieved and a fully specified transformation recomputed. Full CPI construction from public raw observations cannot be assumed, because confidential microdata and statistical judgments are involved. Even downstream determinism is incomplete until WP1B specifies vintage, dates, arithmetic and exceptional states. Multiple mirrors improve delivery resilience, not independent measurement.
+
+### 8. How vulnerable is it to methodology or institutional influence?
+**Interpretation:** nonzero and unavoidable for an externally administered statistical index. Legitimate updates, resource constraints, collection interruptions and discretionary replacement differ from malicious manipulation. Reviewed evidence establishes institutional dependencies and an actual outage; it does not establish deliberate falsification. Freezing the name of a series does not freeze its underlying methodology. See the risk analysis; no governance mechanism is selected.
+
+### 9. Is there a practical hedge?
+**Fact:** TIPS provide CPI-related contractual cash flows. **Interpretation:** this gives CPI-U a useful asset-liability research advantage. It does not establish a replicating portfolio for continuously redeemable PPU, particularly when target and security conventions differ. No allocation, duration, capital or collateral ratio is chosen.
+
+### 10. Would another benchmark materially improve the architecture?
+**Finding:** it could, under a different prioritized promise. C-CPI-U improves substitution representation; PCE broadens consumption coverage; a regional index improves fit for its own population; daily private data may improve timeliness. These gains bring finality, basis, access or institutional tradeoffs. The reviewed evidence does not demonstrate that their net benefit exceeds the cost for this v0.1 objective. No absolute “no hedge exists” claim is made.
+
+### 11. What is lost by choosing a theoretically better but operationally weaker index?
+**Interpretation:** greater conceptual fidelity can require stale final observations, provisional obligations later corrected, or intentionally frozen preliminary observations that diverge from the final statistic. It can also increase custom hedge and data-access dependencies. These costs are real, but operational convenience cannot rescue a benchmark that fails the intended promise. If constant-utility approximation is non-negotiable, CPI-U should lose and the project should accept or investigate those costs explicitly.
+
+### 12. Should v0.1 remain U.S.-based despite global transferability?
+**Recommendation:** yes, as a deliberately bounded first standard, subject to primary/user review of that scope. Global transfer is a delivery capability. If x is local currency per dollar, local real exposure is proportional to PPU's dollar reference × x / local price index. A hypothetical 4% increase in the U.S. reference and 10% fall in x yields 1.04 × 0.90 = 0.936 local nominal value before local inflation. Thus international use can lose local purchasing power even while the U.S. reference is followed.
+
+## Attempts to defeat the CPI-U hypothesis
+| Challenge | Result and consequence |
+|---|---|
+| A cost-of-living index should account for substitution more completely | Substantive objection accepted. CPI-U is not a constant-utility guarantee. C-CPI-U remains the counterfactual choice if that promise takes priority. |
+| A stablecoin-like liability cannot wait for stale consumer-price measurements | Objection qualifies the promise. No instantaneous preservation claim; quantify tolerances later. Faster input is not necessarily representative input. |
+| A public index must be reproducible without institutional trust | Strong version falsified. Public transformations are reproducible; raw measurement is not fully permissionlessly reconstructible. |
+| CPI and TIPS share an index, so the hedge must be exact | Falsified as a blanket claim. Vintage, missing-index rules, duration and liquidity can differ. Actual 2025 contingency makes this operational rather than hypothetical. |
+| U.S. CPI can preserve worldwide purchasing power | Falsified. Geographic and currency basis remain. |
+| A proprietary index eliminates political risk and fixes lag | Unsupported. It substitutes provider, data access and methodology control risks; full counterfactual replication and independent audit were not established. |
+| Existing constitutional wording should dictate the winner | Rejected research method. Recommend amendments rather than retain inaccurate claims. |
+
+## Uncertainty and research limits
+No return backtest, hedge-cost estimate, demand study, full input-data audit or institutional-independence probability model was performed. Those absences limit investment/solvency or universal-optimality claims, not the ability to make a bounded benchmark recommendation. Source schedules and methodology can change. WP1B must treat exceptional states as requirements and later work must test the economic consequences. The [recommended standard](06-recommended-standard.md) identifies exactly what Gate 1A can accept and what remains unselected.
+
+
+# FILE: 02-comparative-benchmark-matrix.md
+
+# Comparative Benchmark Matrix
+WP1A • 2026-09-19 • All dispositions are recommendations pending review
+
+Rows combine established source properties with explicitly labeled project judgments. “Hedge path” describes research plausibility, not selected reserves or verified trading access.
+
+| Benchmark | Concept and coverage | Timing / revision issue | Verification and institutional dependency | Hedge path / project judgment |
+|---|---|---|---|---|
+| CPI-U NSA, U.S. City Average, All Items | Aggregate urban U.S. consumer prices; evolving expenditure basket | Monthly; normally following-month release; no routine NSA revision, errors possible | Public series/method; confidential underlying observations; BLS methodology evolves | Direct TIPS index connection; preferred underlying benchmark for the bounded U.S. promise |
+| TIPS Reference CPI | Same underlying CPI, transformed into a daily contractual reference | Interpolated lag; Treasury vintage and contingency rules | Arithmetic verifiable from specified observations; replacement authority external | Matching potential depends on identical conventions; study as WP1B candidate, not a new basket or automatic adoption |
+| C-CPI-U | Urban consumption with contemporaneous upper-level substitution | Preliminary/interim/final vintages; finalization roughly a year later | Public outputs/method; expenditure-data dependency remains | CPI-U basis requires separate study; strongest conceptual challenger for cost-of-living approximation; defer as controlling v0.1 index |
+| Headline PCE price index | U.S. consumption by and on behalf of households, including a broader financing scope | Monthly national-accounts series with revisions; standard headline series is seasonally adjusted | BEA combines multiple data systems, including BLS inputs; changing weights/vintages | No direct PCE-matched government bond identified in reviewed sources; custom hedges untested; prefer if broad consumption is the chosen promise |
+| Euro-area HICP | Harmonized monetary consumption in its defined territory; excludes imputed rent | Monthly, preliminary/final distinctions, revisions possible | Harmonized official methodology across statistical institutions | Different geography/currency; country/linker contract basis would require research; credible for a different regional product |
+| UK CPIH | UK consumer inflation including owner-occupier housing costs and Council Tax | Monthly; applicable revision policy would need final specification | ONS official measurement; national housing conventions | Better UK conceptual fit, not a substitute for U.S. scope; no direct match established here |
+| World Bank ICP purchasing-power parities | Cross-country comparisons of price levels/real volumes | Benchmark spatial exercise, not daily temporal monetary index | Multilateral comparison and aggregation assumptions | Useful for studying international comparisons; reject as a direct temporal PPU target |
+| Private daily index: Truflation TruCPI-US | Provider's U.S. consumption-price construction | Daily output includes carried-forward lower-frequency inputs; frozen and revised vintages distinguished by provider | Published methodology v1.4; complete independent input access/audit not established | Investigate as supplementary timeliness comparator; not demonstrated fit for controlling obligations |
+| Proprietary PPU index | Could target custom population or basket | PPU must define observations, updates, correction and continuity | Creates new measurement institution, data rights and methodology discretion | No demonstrated improvement/hedge; defer research and reject inclusion as v0.1 controlling benchmark on present evidence |
+
+Primary evidence: [BLS definition/revisions](https://www.bls.gov/cpi/questions-and-answers.htm), [chained CPI](https://www.bls.gov/cpi/additional-resources/chained-cpi-questions-and-answers.htm), [Treasury convention](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356), [BEA PCE](https://www.bea.gov/data/personal-consumption-expenditures-price-index), [PCE revision study](https://apps.bea.gov/scb/issues/2024/08-august/0824-revisions-to-gdp-gdi.htm), [HICP metadata](https://webgate.ec.europa.eu/eurostat/cache/metadata/en/prc_hicp_esms.htm), [ONS CPIH](https://www.ons.gov.uk/datasets/cpih01/editions/time-series/versions/66), [World Bank ICP](https://www.worldbank.org/en/programs/icp/faq), [Truflation methodology entry](https://truflation.com/marketplace/us-inflation-rate?tab=constituents).
+
+## Sensitivity of the recommendation
+If regional user fit dominates, select and research the appropriate regional standard rather than claim a U.S. series is global. If constant-utility approximation dominates, C-CPI-U becomes preferable conceptually, with its vintage costs explicit. If timeliness dominates, investigate independently validated faster measurement and its hedging cost before selecting it. None of these priorities has been established through user-demand evidence. The proposed U.S. scope is a reviewable product choice, not a discovered universal optimum.
+
+Core/trimmed inflation metrics deliberately remove or downweight parts of all-items consumption; that is a different promise. CPI-W is narrower by population than CPI-U; subgroup-specific alternatives may improve fit for that subgroup but would require a new target-population decision. No such decision is made here. [BLS index distinctions](https://www.bls.gov/cpi/questions-and-answers.htm).
+
+
+# FILE: 03-methodology-and-revisions.md
+
+# Benchmark Methodology and Revision Analysis
+WP1A • 2026-09-19 • Facts, interpretation and open implementation requirements
+
+## Measurement construction
+**Established facts:** CPI-U is not a permanently fixed physical basket. Expenditure weights are updated annually using lagged Consumer Expenditure information; most elementary indexes use geometric means, while upper aggregation uses a modified Laspeyres approach. Sampling, product replacement and quality adjustment are part of the measurement process. [BLS calculation handbook](https://www.bls.gov/opub/hom/cpi/calculation.htm).
+
+The final C-CPI-U uses monthly contemporaneous expenditure weights and a Törnqvist construction to account for substitution across categories. Its initial release has three interim revisions; BLS describes final data as posted 10–12 months after initial release. That is a release-vintage rule, not a guaranteed fixed delay from every observation date; consult the actual publication schedule. [BLS chained CPI FAQ, questions 5 and 9](https://www.bls.gov/cpi/additional-resources/chained-cpi-questions-and-answers.htm).
+
+PCE uses Fisher chain weighting and covers spending financed on people's behalf as well as directly by them. Its weights are not permanently fixed. These choices make it a different economic object, not merely a more accurate release of CPI. [BEA formula](https://www.bea.gov/help/faq/1006), [BEA comparison](https://www.bea.gov/help/faq/555). BEA's revision study documents changes in monthly PCE estimates as source information develops. Freezing a preliminary value would make PPU track a specified vintage, not necessarily the subsequently published historical PCE path. [BEA revision analysis](https://apps.bea.gov/scb/issues/2024/08-august/0824-revisions-to-gdp-gdi.htm).
+
+## Three distinct clocks
+1. **Observation and weight age:** some prices and expenditure information refer to earlier periods; monthly labels are not real-time shopping quotes.
+2. **Publication lag:** CPI for a reference month is normally published in the following month; actual dates vary. Use the [BLS calendar](https://www.bls.gov/schedule/news_release/cpi.htm), not a claimed universal number of days.
+3. **Contractual reference lag:** Treasury's first-of-month reference uses CPI for the third preceding month and interpolates toward the next month's reference. Thus April 1 references January CPI, ordinarily released in February. This is additional intentional timing, not a three-month BLS publication delay. Treasury also specifies decimal treatment and unrevised vintages. These are existing Treasury rules, **not rules selected for PPU**. [31 CFR 356, Appendix B, I.B](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356).
+
+**Interpretation:** interpolation smooths the reference between already measured points; it neither observes today's price level nor removes lag. The whole CPI production process has no single precise age that can be inferred from the interpolation label.
+
+## Revision and outage distinctions
+NSA CPI-U is ordinarily final for routine release purposes, but errors can be corrected. Seasonally adjusted CPI is recalculated with annually updated seasonal factors, revising the prior five years. NSA avoids that recurring vintage problem, not all error risk. [BLS FAQ](https://www.bls.gov/cpi/questions-and-answers.htm), [BLS seasonal adjustment](https://www.bls.gov/cpi/seasonal-adjustment/).
+
+A July 2026 BLS correction involved June Tampa-area electricity/energy data. This is evidence that correction procedures operate, **not** evidence that national all-items CPI-U changed in that incident. [BLS correction notice](https://www.bls.gov/cpi/notices/2026/electricity-correction-202606.htm).
+
+The 2025 appropriations lapse prevented October CPI collection/publication. BLS discusses carry-forward inputs for subsequent compilation; that does not create a published October headline CPI. Treasury separately announced **325.604** for October 2025 under its contingency provisions on November 26, to remain binding for its obligations even if BLS later reports an October value. These are distinct statistical and contractual actions. [BLS shutdown FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm), [Treasury announcement](https://home.treasury.gov/news/press-releases/sb0324).
+
+HICP permits revisions, so “official” does not imply immutable; the scope excludes imputed housing rent. CPIH serves a different housing-inclusive UK concept. Neither is silently assigned NSA CPI-U's revision properties. [Eurostat metadata](https://webgate.ec.europa.eu/eurostat/cache/metadata/en/prc_hicp_esms.htm), [ONS definition](https://www.ons.gov.uk/datasets/cpih01/editions/time-series/versions/66).
+
+Truflation's current methodology distinguishes frozen published values from revised observations and carries forward lower-frequency data. Daily publication does not establish daily measurement of every component. Immutable storage is not equivalent to one unrevisable economic truth. These are provider claims, not an independent operational audit. [TruCPI-US methodology v1.4, March 26, 2026](https://ddsvqvocwuhvopwpzmgo.supabase.co/storage/v1/object/public/site-files/indexes/1774868881730-TruCPI-US%20Index%20-%202026%20-%20Methodology%20v1.4%20%282026-03-26%29.pdf).
+
+## Illustrative significance of lag — not a backtest
+For a hypothetical smooth annual price increase r and a stylized three-month-old measure, current price / lagged price − 1 = (1+r)^(3/12) − 1.
+
+| Hypothetical annual rate | Current level above three-month-old level |
+|---|---:|
+| 3% | 0.742% |
+| 10% | 2.411% |
+| 20% | 4.664% |
+
+If prices instead jump 10% immediately and the target has not responded, unchanged nominal target buys 1/1.10 − 1 = **−9.091%** less of the affected basket. This simplified scenario isolates timing. It is not the exact TIPS lag profile, PPU performance, a forecast or an approved tolerance. Under falling prices the direction can reverse. Actual tolerances and shock tests belong to WP1B requirements and Phase 2 validation.
+
+## Reproducibility boundary and handoff
+Public output verification: identify series, observation month, release timestamp/vintage and preserved value. Deterministic transformation: calculate the same answer from those fixed inputs using a complete specification. Independent statistical reconstruction: repeat sampling and estimation from underlying observations. Only the first is presently established as a practical public-data operation; the second needs WP1B; the third is constrained by confidential statistical data. [BLS confidentiality framework](https://www.bls.gov/bls/cipsea-report.htm).
+
+WP1B must resolve base reference, observation vintage, publication authentication, arithmetic, day convention, corrections, missing values, prolonged outages and negative inflation behavior. WP1G must resolve any methodology/contingency authority. WP1A neither picks those rules nor treats Treasury's choices as automatically inherited. The old draft's “no forecasts” position versus Treasury extrapolation is a newly evidenced tension, preserved for those packages.
+
+
+# FILE: 04-benchmark-institutional-risk.md
+
+# Benchmark Manipulation / Governance Risk Analysis
+WP1A • 2026-09-19 • Benchmark institutions only; no PPU governance design
+
+## Established evidence
+BLS methodology openly includes sampling, quality adjustment, aggregation and expenditure updates. Publication of methods makes those choices inspectable but does not eliminate judgment or guarantee methodological invariance. [Calculation handbook](https://www.bls.gov/opub/hom/cpi/calculation.htm). Housing inflation measures consumption services, including owners' equivalent rent, rather than house purchase prices; this creates an asset-affordability mismatch by design, not evidence of falsification. [BLS housing factsheet](https://www.bls.gov/cpi/factsheets/owners-equivalent-rent-and-rent.htm).
+
+The 2025 shutdown interrupted collection and created missing inputs, with later implications for expenditure weighting. Thus funding and institutional continuity affect statistics even without a change to the nominal index name. [BLS impact FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm), [missing Consumer Expenditure panels](https://www.bls.gov/cpi/notices/2026/missing-ce-data-panels.htm).
+
+Treasury's existing terms permit replacement of an index judged materially adversely altered and specify handling when observations are late. This demonstrates externally retained judgment in the hedge's contract, not an immutable basket guarantee. [Treasury terms, Appendix B, I.B.4](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356).
+
+## Threat analysis — interpretation, not allegations
+| Failure/influence channel | Consequence for PPU research | Residual uncertainty / later route |
+|---|---|---|
+| Legitimate methodological evolution | Same series name can represent evolving weights/quality conventions | Materiality and monitoring requirements in WP1B/1G; no automatic freeze or replacement chosen |
+| Political pressure or resource control | Possible delays, impaired collection or changed measurement incentives | No probability or deliberate-falsification finding established; institution risk cannot be coded away |
+| Missing/corrected observations | Two honest data feeds can disagree across vintages | Define binding input rules in WP1B and verify later oracle requirements |
+| Confidential input data | Independent observers cannot completely reconstruct the statistic from public raw inputs | Separate published-value verification from measurement trust; disclose R022 |
+| Multi-provider delivery of one BLS number | Improves availability, not independent economic measurement | Do not count mirrors as distinct statistical institutions; Phase 4 dependency |
+| Private provider data/license/method changes | Changes access, composition or continuity | Independent audit, full methodology/vintage access and exit/continuity evidence needed before reconsidering |
+| Proprietary PPU basket | PPU itself gains influence over what counts as inflation | Defer controlling-index proposal; research only if measurable benefit exceeds institution-building costs |
+| Mechanical following of Treasury successor | Potentially imports outside judgment into protected PPU promise | Explicit unresolved protected-target versus hedge-continuity tension, WP1B/1G |
+
+**Recommendation:** describe the index as externally administered and publicly documented, not manipulation-proof or independent of governments. A benchmark cannot both keep adapting to contemporary consumption and preserve every methodological parameter forever. This is a choice requiring transparent requirements and review, not a reason to secretly choose a successor rule in WP1A.
+
+**Unresolved uncertainty:** no complete audit of institutional independence, dataset licensing or private-provider operations was conducted. Public methodology documents cannot prove absence of hidden influence. The CPI-U recommendation therefore accepts an explicit measurement institution dependency; if that dependency violates the intended product promise, the promise or benchmark must be reconsidered before approval.
+
+## Preserved tensions
+The earlier conflicts about insolvency versus claim protection, emergency restrictions versus orderly redemption, index contingency versus protected terms, and voluntary version migration versus reserve/custody continuity remain unresolved. This analysis adds evidence about the index conflict; it does not settle any of them. No PPU voting system, emergency authority, appointment process or governance constitution is designed here.
+
+
+# FILE: 05-hedgeability-and-matching.md
+
+# Hedgeability and Asset-Liability Matching Analysis
+WP1A • 2026-09-19 • Conceptual feasibility screen, not reserve architecture
+
+## Established facts
+TIPS adjust principal with inflation/deflation, pay interest against adjusted principal, and provide a principal floor at maturity. Those contractual features differ from a transferable unit potentially redeemed before the bond matures. [Treasury TIPS description](https://www.treasurydirect.gov/marketable-securities/tips/).
+
+Treasury uses a defined lagged CPI reference and its own vintage and contingency rules. In 2025 it applied a substitute observation for missing October CPI. “Both use CPI” therefore does not establish identical obligations in every state. [Treasury actual contingency announcement](https://home.treasury.gov/news/press-releases/sb0324). Full convention analysis is in the [methodology report](03-methodology-and-revisions.md).
+
+## Model interpretation
+Let a hypothetical liability reference move with I_L(t)/I_L(0), while an indexed asset's principal reference moves with I_A(t)/I_A(0). Even before coupons, market prices and credit effects, relative index coverage depends on [I_A(t)/I_A(0)] / [I_L(t)/I_L(0)]. If those paths differ because of vintages, lag, corrections or fallback, index matching is imperfect. This identity is diagnostic, not a reserve or liability design.
+
+| Mismatch | Why an index connection is insufficient | Authorized later destination |
+|---|---|---|
+| Different geography or consumption scope | CPI-linked cash flow does not promise PCE, CPIH or global consumption | Reconsider standard if desired; WP1D/Phase 2 quantify basis |
+| Different lag, vintage or outage handling | Asset and target can use different observations | WP1B specifies candidate target; WP1D tests match; WP1G handles authority |
+| Real-yield duration and sale timing | Indexed maturity cash flows need not equal interim market sale value | WP1D and Phase 2 |
+| Coupons, maturity, reinvestment | Income timing differs from liability timing | WP1C/1D/1E; no retained-income sufficiency assumed |
+| Deflation floor | Asset floor depends on security terms and maturity; it is not a free floor for PPU | WP1B, WP1D, Phase 2 |
+| Liquidity, access, settlement and transaction costs | Transferable token time differs from reserve realization time | WP1F and Phase 3 |
+| Capital and reserve losses | Hedge relevance does not prove solvency or scalable junior funding | WP1E and Phase 2 |
+
+**Conclusion:** CPI-U has a practical hedge research advantage because an established security references the same broad index family. Exact replication, cost, availability to the eventual entity and required capital remain unproved. Shortening bond duration can change risk but is not chosen or endorsed as sufficient here.
+
+For C-CPI-U and PCE, the reviewed sources did not establish an off-the-shelf government security directly matching those series. That is a limit of this evidence, not proof that no hedge or derivative can exist. A custom swap or cross-index hedge might help, but pricing, counterparties, basis and legal access need separate investigation. Regional inflation-linked instruments would require checking each contract's index, currency and lag; no portfolio is selected by the matrix.
+
+## Most consequential contrary evidence
+The draft favors observed values and TIPS matching simultaneously. Treasury's missing-data rule can use extrapolation and its index substitution can involve external judgment. A PPU rule that forbids both may intentionally depart from the asset reference. A rule that follows Treasury may instead relax the draft's intended constraints. **No resolution selected.** WP1B must expose alternatives and WP1G must address constitutional authority; preserving this tension is a standing Gate 0 condition.
+
+**Recommendation:** use hedgeability as one criterion in benchmark selection, not as a backdoor selection of Treasury/TIPS reserve composition, collateral ratios, junior capital, redemption terms or APs. The six collateral ratios and alternative assets preserved from WP0A remain later simulation work, untouched here.
+
+
+# FILE: 06-recommended-standard.md
+
+# Recommended PPU v0.1 Purchasing-Power Standard
+WP1A • 2026-09-19 • Proposed specification for Gate 1A; not ratified
+
+## Proposed economic promise
+**One PPU is intended to have a U.S.-dollar reference value that tracks cumulative changes in the U.S. urban consumer price level, as measured by the BLS CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted, relative to a defined base reference.**
+
+This is a proposed benchmark standard. Final target timing, base reference, vintage and exceptional-state rules remain for WP1B. It is not a guarantee of any individual's living costs, a fixed physical basket, constant welfare, asset affordability, worldwide purchasing power, a current-day price level, or a market price/redeemability outcome. The latter outcomes require later economic, operational and legal validation.
+
+## Choices recommended for review
+1. Adopt the named CPI-U NSA all-items U.S. City Average as the underlying v0.1 benchmark, conditional on accepting the stated scope and limitations.
+2. Use “U.S. urban consumer-price-indexed” as the precise description; qualify any broader purchasing-power shorthand.
+3. Keep v0.1's benchmark U.S.-based even if transferable globally. Make geographic and currency basis explicit.
+4. Defer proprietary index research; exclude a proprietary controlling index from v0.1 on current evidence. Retain C-CPI-U, PCE and faster private observations as research comparators, not selected fallback indexes.
+5. Carry the TIPS reference convention forward as a WP1B candidate, with its costs and institutional dependencies exposed. **Do not adopt its lag, rounding, deflation, vintage, extrapolation or successor rules at Gate 1A.**
+
+Rationale and disconfirming evidence: [research report](01-purchasing-power-standard-research-report.md), [benchmark matrix](02-comparative-benchmark-matrix.md). This recommendation narrows H001; it does not validate H002/H003 or solve any capital question.
+
+## Proposed changes to the draft — not applied to preserved source
+| Draft area | Recommended clarification | Boundary |
+|---|---|---|
+| Article I / purchasing-power claim | Replace unqualified preservation with the explicit named-index promise and limitations above | Economic standard proposal only |
+| Article III / benchmark choice | State why CPI-U is selected for this scope; remove categorical assumptions that alternatives are inherently unsuitable | Pending Gate 1A acceptance |
+| Articles II–IV / reference calculation | Separate underlying benchmark from lagged daily target; avoid “never revised” or fully reconstructible claims | Detailed rule selection deferred to WP1B |
+| Article XXI / contingency | Flag no-forecast and protected-index tensions against actual Treasury terms | WP1B/1G must reconcile; no successor or authority chosen |
+| Supporting analysis / hedge assertions | Replace automatic or exact matching language with conditional same-index cash-flow advantage | No reserve selection; WP1D/Phase 2 validate |
+
+Original wording in [the draft](../08-draft-constitution.md) and [SRC003 evidence](../evidence/PPU_full_recovered_source.txt) remains intact and unratified. User-confirmed recovery provenance remains permanent; it is not a formal platform export.
+
+## Preconditions for an operational specification — later work, not current approval requests
+WP1B must specify a complete deterministic reference calculation and handle correction, missing observations, prolonged outage, methodology evolution and deflation. It must quantify acceptable lag exposure and distinguish target continuity from authentic observation. WP1D/Phase 2 must test match and liquidity. WP1G must confront external discretion and protected terms. User-facing promise validation remains an open question; this report is not market-demand evidence.
+
+## Gate 1A decision boundary
+Brad and the primary PPU review can accept, revise or reject this benchmark recommendation. Acceptance does not ratify the monetary constitution or authorize later packages implicitly. **WP1B and all later packages remain NOT AUTHORIZED.** Phase-level Gate 1 remains NOT REACHED. This package stops at Review Gate 1A.
+
+
+# FILE: sources.md
+
+# WP1A Research Source Register
+Accessed 2026-09-19 America/Chicago (UTC retrieval may be September 20). Primary publishers unless identified as provider claims. This is a claim/locator registry, not an archived export of each entire website. Live URLs can change; preserved source notes describe the material actually consulted. Historical opaque chat citations are not used as research evidence.
+
+| ID | Primary source and locator | Version/date observed | Supported use and limitation |
+|---|---|---|---|
+| W1A-S01 | [BLS CPI FAQ](https://www.bls.gov/cpi/questions-and-answers.htm), definitions, population, revisions | Live FAQ | CPI scope and routine NSA finality/error exception; not proof of individual purchasing power |
+| W1A-S02 | [BLS chained CPI FAQ](https://www.bls.gov/cpi/additional-resources/chained-cpi-questions-and-answers.htm), Q5/Q9/Q11 | Modified July 30, 2026 | Monthly weighting and vintage schedule; source uses example and generalized delay, actual calendar controls |
+| W1A-S03 | [BLS calculation handbook](https://www.bls.gov/opub/hom/cpi/calculation.htm), aggregation and expenditure weights | Live methods page | Annual weights, geometric means and upper aggregation; not an independent statistical reconstruction |
+| W1A-S04 | [BLS seasonal adjustment](https://www.bls.gov/cpi/seasonal-adjustment/), revisions | Live methods page | Recurring revision of prior five years in SA series; distinguish NSA |
+| W1A-S05 | [BEA CPI/PCE comparison FAQ 555](https://www.bea.gov/help/faq/555) | Published November 2010, live text | Formula, weight and scope differences. Initial retrieval/read and search excerpt available; subsequent opens intermittently timed out |
+| W1A-S06 | [BEA PCE weights FAQ 1006](https://www.bea.gov/help/faq/1006) | Published February 2012, live text | Fisher formula and changing weights |
+| W1A-S07 | [BEA PCE price index](https://www.bea.gov/data/personal-consumption-expenditures-price-index) | Live series landing page | Monthly PCE and spending on behalf; not a selected PPU series |
+| W1A-S08 | [BEA revision study](https://apps.bea.gov/scb/issues/2024/08-august/0824-revisions-to-gdp-gdi.htm), monthly PCE section | August 2024 | PCE revision evidence; full-page retrieval intermittent, indexed primary excerpt independently supports revision claim; no numerical revision magnitude relied on |
+| W1A-S09 | [31 CFR Part 356](https://www.ecfr.gov/current/title-31/subtitle-B/chapter-II/subchapter-A/part-356), Appendix B I.B.2–4 | Current eCFR reached via Treasury's official announcement | TIPS reference/vintage/contingency terms. Replaces reliance on historical 2004 UOC PDF as current authority; no PPU legal conclusion |
+| W1A-S10 | [Treasury TIPS description](https://www.treasurydirect.gov/marketable-securities/tips/) | Live Treasury page | Adjusted principal, coupon and maturity floor; does not prove market-value hedge |
+| W1A-S11 | [Treasury index contingency announcement](https://home.treasury.gov/news/press-releases/sb0324), announcement body | November 26, 2025 | October substitute 325.604 and permanent use for Treasury obligations; not a BLS release |
+| W1A-S12 | [BLS 2025 shutdown CPI impact FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm) | Updated September 16, 2026 | Actual collection/release interruption; BLS compilation treatment distinct from Treasury substitution |
+| W1A-S13 | [BLS electricity correction notice](https://www.bls.gov/cpi/notices/2026/electricity-correction-202606.htm) | July 23, 2026 | Local Tampa energy correction only; national all-items correction not inferred |
+| W1A-S14 | [BLS owners' equivalent rent and rent](https://www.bls.gov/cpi/factsheets/owners-equivalent-rent-and-rent.htm) | February 13, 2026 | Housing service concept and asset-price mismatch |
+| W1A-S15 | [BLS confidentiality framework](https://www.bls.gov/bls/cipsea-report.htm) | Live BLS policy/report | Confidential identifiable statistical inputs; supports limitation of full public reconstruction, not impossibility of checking aggregates |
+| W1A-S16 | [BLS CPI release calendar](https://www.bls.gov/schedule/news_release/cpi.htm) | Current calendar | Following-month publication pattern; no fixed universal delay promised |
+| W1A-S17 | [Eurostat HICP metadata](https://webgate.ec.europa.eu/eurostat/cache/metadata/en/prc_hicp_esms.htm), scope and revision sections | Current metadata, includes 2026 changes | HICP monetary consumption scope, imputed-rent exclusion, revision policy |
+| W1A-S18 | [ONS CPIH dataset version 66](https://www.ons.gov.uk/datasets/cpih01/editions/time-series/versions/66), definition | January 21, 2026 snapshot | UK housing/Council Tax coverage, monthly series; no unverified revision guarantee |
+| W1A-S19 | [World Bank ICP FAQ](https://www.worldbank.org/en/programs/icp/faq) | Live program FAQ | Spatial PPP comparison concept; infer unsuitability as directly executable temporal target |
+| W1A-S20 | [Truflation methodology entry](https://truflation.com/marketplace/us-inflation-rate?tab=constituents) and [v1.4 PDF](https://ddsvqvocwuhvopwpzmgo.supabase.co/storage/v1/object/public/site-files/indexes/1774868881730-TruCPI-US%20Index%20-%202026%20-%20Methodology%20v1.4%20%282026-03-26%29.pdf), pp8–10 | March 26, 2026, 37 pages | Provider's daily inputs, carry-forward, frozen/revised vintage claims. Not audited by this project; older Methodology.pdf not treated as current |
+| W1A-S21 | [BLS missing CE panels](https://www.bls.gov/cpi/notices/2026/missing-ce-data-panels.htm) | June 30, 2026 | Collection gaps and weighting implications; no independent proof of deliberate influence |
+
+## Claim-to-deliverable map
+Definition/coverage: S01/S03/S05/S07/S14/S17–S20 → report, matrix, recommendation; H001/Q003/R005.
+Lag/revision: S02/S04/S08/S09/S11–S13/S16/S20/S21 → methodology; Q004/R006/R021.
+Reproducibility/institution: S03/S09/S12/S15/S20/S21 → risk analysis; Q011/Q013/R022.
+Hedgeability: S09–S11 plus explicit model interpretation → matching; R001/R004/R021; H003 remains unvalidated.
+Global scope: S17–S19 plus algebraic interpretation → report Q12; Q021/R005.
+
+## Evidence handling and uncertainty
+Facts in reports cite publisher URLs near their use; judgments and illustrative equations are identified separately. No historical returns/dataset was downloaded or validated. No error-adjusted C-CPI/PCE contract or proprietary-index audit was built. Pending questions are explicit rather than filled with assumptions. Independent review is an opinion layer; it does not upgrade source facts or approve recommendations.
+

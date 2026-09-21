@@ -1,0 +1,202 @@
+{
+  "submission": "WP0A review amendment 2026-09-19",
+  "createdAt": "2026-09-19T21:05:22.2307501-05:00",
+  "exclusion": "This manifest excludes itself. Archive digest is stored outside the archive.",
+  "files": [
+    {
+      "path": "01-protocol-state.md",
+      "bytes": 6791,
+      "sha256": "72E34D3DC172E06CBDFB270683D49F817EA4DB5A21A7531DD189752175C5CF11"
+    },
+    {
+      "path": "02-decision-register.md",
+      "bytes": 5658,
+      "sha256": "D71729AD4B902344AE94CD6AD51004784C8D548F2B3B2864FCA7E15B91D14162"
+    },
+    {
+      "path": "03-risk-register.md",
+      "bytes": 6096,
+      "sha256": "5217D435937E6A85105BE06D6D396E7147B04749B3F587F19F0C022C3827AEE7"
+    },
+    {
+      "path": "04-active-hypotheses.md",
+      "bytes": 2743,
+      "sha256": "9EABC221283B5934441CCB4A546CFF68D2C6F90D3D54D71CE83FCE061621C3F0"
+    },
+    {
+      "path": "05-unresolved-questions.md",
+      "bytes": 6256,
+      "sha256": "03B97C007FDBA35A120CAA902CCA6597E78F4CDCE636A4DF18ACD7B3D0B7E650"
+    },
+    {
+      "path": "06-research-library-index.md",
+      "bytes": 5998,
+      "sha256": "A3A73286D671C2C52ED9D8EC669F80F5F7F402B793AFB86006255573DF23F694"
+    },
+    {
+      "path": "07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "08-draft-constitution.md",
+      "bytes": 19022,
+      "sha256": "D077D83A2DEDBDADF7B2E67F30D44F54E4B390535B673A0C3BAC7E0F59B2B0BE"
+    },
+    {
+      "path": "09-work-package-register.md",
+      "bytes": 4898,
+      "sha256": "8882E874F5DD198533E4A1F19ED55357CA40A73F65BCE4C391E9475DE3E9C3A8"
+    },
+    {
+      "path": "10-review-gate-register.md",
+      "bytes": 4067,
+      "sha256": "D9CE3FA306FBBCE6D8DFB05CC3F6A9CD932C02D35C88796A0E18F2CC2E14CC1E"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1086,
+      "sha256": "3D5CC8CE6AEDEB38674EFD1C7B8099165C6FF427101AEAE0314D85DF5D3EC195"
+    },
+    {
+      "path": "evidence\\architecture-response-PARTIAL.md",
+      "bytes": 20401,
+      "sha256": "CCE3D49CBF4299800A773B6F1E43525388F00DA69D8C41A664AD831335E36250"
+    },
+    {
+      "path": "evidence\\claude-review-input.txt",
+      "bytes": 80660,
+      "sha256": "192EB86419055ED6254D2E635520513A7701B9E2901750E40E1D3F83336CE51B"
+    },
+    {
+      "path": "evidence\\conversation-recovered.json",
+      "bytes": 53009,
+      "sha256": "CF979374C9162CF22473275E9575389B66D5CFF670ACF63DBD28CFAF3E11D981"
+    },
+    {
+      "path": "evidence\\initial-proposal.md",
+      "bytes": 8633,
+      "sha256": "77412968E4575BD728BB055F525AA43DBBEF3BDAAA76529EA1266753B52D6A5A"
+    },
+    {
+      "path": "evidence\\phase0-source.md",
+      "bytes": 10694,
+      "sha256": "704D9722DDB7182038C036DA4B8F21F1B898E480671FF1258D6B5CFE9B1E1459"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\01-protocol-state.md",
+      "bytes": 4928,
+      "sha256": "AF686E08F85A3071192D97A2A1AE3B4D4132673766041DF968C90F075C70A63E"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\02-decision-register.md",
+      "bytes": 5499,
+      "sha256": "7E3686C41907CC4CF4EA06702CA3981A474BE4C2FA2E13C4BD9B677F75F3F67A"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\03-risk-register.md",
+      "bytes": 4578,
+      "sha256": "465DA098125F79912B205E763E8459456A84BB0A6CB1EAC32BC5FC1FB4D8343E"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\04-active-hypotheses.md",
+      "bytes": 2743,
+      "sha256": "9EABC221283B5934441CCB4A546CFF68D2C6F90D3D54D71CE83FCE061621C3F0"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\05-unresolved-questions.md",
+      "bytes": 5289,
+      "sha256": "AC8A3928540D0E6ED2D5DCDD362B18926986CE81F117FE3FD313DC8FFA57F4AF"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\06-research-library-index.md",
+      "bytes": 3990,
+      "sha256": "3ECE526448B89C72C8A46261B35CFFED18863D23D49FA5C776B561EA68B34A22"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\07-development-roadmap.md",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\08-draft-constitution.md",
+      "bytes": 18973,
+      "sha256": "283C080E6C8C3E6E2EB44227B28F368F72661117D2564348FEF9CF673E82FFCE"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\09-work-package-register.md",
+      "bytes": 4391,
+      "sha256": "2732D83F5C372E09385FEF82428CD18C13F9426FCD62B595FF8CA1BAB7A71DBE"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\10-review-gate-register.md",
+      "bytes": 3054,
+      "sha256": "FC82CF092A1010BD3F43A2B3C1A5E3FF72C31B01EDCA588795B96BE66B6D7590"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\CHANGELOG.md",
+      "bytes": 556,
+      "sha256": "23AE933231D3DC8E22F122016E6AFEF3C340A7889E2CF3086AAC379F45BE35D6"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\README.md",
+      "bytes": 3123,
+      "sha256": "D3E4576F264AC6E1538669605C66A5156E3ED4525CBED8E7780D6403AFB582E1"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\validation.json",
+      "bytes": 553,
+      "sha256": "CE74DC38FF825D473181C2DF958B38D411DD8DDB60EA624C433AA03D66E20AAF"
+    },
+    {
+      "path": "evidence\\pre-claude-review\\WP0A-report.md",
+      "bytes": 3211,
+      "sha256": "D481B5325D49FCFA001C245904F941E13BAEA117134C78233F6BD6A7FA8696C7"
+    },
+    {
+      "path": "evidence\\roadmap-v0.1-original.txt",
+      "bytes": 15462,
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "evidence\\wp0a-authorization.md",
+      "bytes": 1307,
+      "sha256": "04773BBECDB32EA3DD85747C7DCD24C01AF3332136639135989D96051008FA3E"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4797,
+      "sha256": "D45DE2FAF769966B83E59FF0D30918475191C43A8CE73A5834A4F411B40C82B1"
+    },
+    {
+      "path": "reviews\\claude-opus-reconciliation.md",
+      "bytes": 4958,
+      "sha256": "1F8FCE03456C4F7B1E7DDE384A876A9046490F3DF83EE56097A9F21396EB5721"
+    },
+    {
+      "path": "reviews\\handoff-coverage.md",
+      "bytes": 3187,
+      "sha256": "09DC84F6D71E20465DC945E60D95A61AC5E3BFDBE59A291A3F095EACC7803B77"
+    },
+    {
+      "path": "reviews\\validate.ps1",
+      "bytes": 3265,
+      "sha256": "DBE726613389EE4BC173A019F2F8D3B7F5FC1DE63572A52DB075073EA7492BC7"
+    },
+    {
+      "path": "reviews\\validation.json",
+      "bytes": 553,
+      "sha256": "F74EE65542D577DB45D6D93A945A09CC13E2E3D654EEBA63499935087EF31936"
+    },
+    {
+      "path": "reviews\\wp0a-structural-review.md",
+      "bytes": 4414,
+      "sha256": "426A8DF5D92F38CFE260FBD15A42F91BF2B730C9996DE94FECE195168E2CAD58"
+    },
+    {
+      "path": "WP0A-report.md",
+      "bytes": 4062,
+      "sha256": "AB88D560D938496349614521976FFBFD91BD581B03422897AECD8A43B14CDE19"
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "date": "2026-09-21",
+  "source_archive": "PPU-WP1A-Gate1A-package.zip",
+  "original_archive_sha256": "43D2808341AF631CC63CA402CB88D4EBFA9C7351E1305CFA8BDA59F5657ECB93",
+  "source_manifest_verified_files": 88,
+  "public_copy_sha256": "200832CC1FAADCF0C70A7F514526D04E9919D307162A3404E0607C6D20A99730",
+  "redacted_files": [
+    "evidence/claude-review-input.txt",
+    "evidence/conversation-recovered.json",
+    "evidence/wp1a-claude-review-request.md",
+    "evidence/pre-claude-review/06-research-library-index.md",
+    "evidence/pre-source-recovery/06-research-library-index.md",
+    "reviews/claude-opus-reconciliation.md",
+    "wp1a/reviewer-reconciliation.md"
+  ],
+  "files": [
+    {
+      "source_path": "01-protocol-state.md",
+      "repository_path": "docs/canonical/01-protocol-state.md",
+      "original_sha256": "0DAB18DF9A8D28ECAE814349A751F6466707FE2B5F86F0CB6E0B9119AECB59E5",
+      "repository_sha256": "AC3321886A706034E6551155AD3C79D642584A3C1C8DD61177AB60A25E5149DD",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "02-decision-register.md",
+      "repository_path": "docs/canonical/02-decision-register.md",
+      "original_sha256": "2C5D07CAE1F8ADDF7E9A328DEEFADC1FDAD1D44ACFD8C44DD55D02486012E56C",
+      "repository_sha256": "154B77D508C4308B73AAF93F5A19A842AFB3F26A174901D4E32DF5B4AEC3E6A2",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "03-risk-register.md",
+      "repository_path": "docs/canonical/03-risk-register.md",
+      "original_sha256": "1492E0DE570793D8308FB1E09E9E671F5AB9996E0A1D69BA24AC8B7CDDEFE831",
+      "repository_sha256": "52CC161CEC8CCEFAA1E57DC6B2082FA1B073D0EB5A7E5B154412250FD261BF5F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "04-active-hypotheses.md",
+      "repository_path": "docs/canonical/04-active-hypotheses.md",
+      "original_sha256": "3D6E95287D8A27A3D62A5BF7764014314E939D577180E4C12C76D7288285C45D",
+      "repository_sha256": "1CB3D4F4E60272E0A0FCCD126686841A0C6588F6248C0DFFA1EEFDA9E2858792",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "05-unresolved-questions.md",
+      "repository_path": "docs/canonical/05-unresolved-questions.md",
+      "original_sha256": "70F52E39462AC3B9F4845312A76A6F5CA41C4A9892D04D2EE369A5165DF9FAB8",
+      "repository_sha256": "322105CE362E463192A3B90A6EBEC8140FF849BCE0F3D6E59A4DBB3C904798B8",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "06-research-library-index.md",
+      "repository_path": "docs/canonical/06-research-library-index.md",
+      "original_sha256": "60054BE66F71755D81366FCEA6EB5E704F33772DEB5E0EBD0CDAB6A660A8850F",
+      "repository_sha256": "2E18E450D5FCB2D1E3AD5CFE1BA35A0718F19696B54E28AF078499A14A874D9A",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "07-development-roadmap.md",
+      "repository_path": "docs/roadmap/07-development-roadmap.md",
+      "original_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "repository_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "08-draft-constitution.md",
+      "repository_path": "docs/constitution/08-draft-constitution.md",
+      "original_sha256": "9CB1B6DE89D4EFC45E20744B64CE2B4E4BEA01B21F77172B7CD592DF91438D10",
+      "repository_sha256": "A2AA0E0504FE87310236AB3CB692451D64F11F43196BF7CBE66552E0D156002F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "09-work-package-register.md",
+      "repository_path": "docs/canonical/09-work-package-register.md",
+      "original_sha256": "814DE8C8A6A6682E1DD34ABAE687D5AA30C9803EAF481AE5DA270A97799CCAB6",
+      "repository_sha256": "F7C457A20C40C459AB6F4E0B86E250F2B3D028970ACFAAE3D4BEE83E6A78F81D",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "10-review-gate-register.md",
+      "repository_path": "docs/canonical/10-review-gate-register.md",
+      "original_sha256": "B0B7DCC3F802A6108D2AA97DC3328ECA6C17B0E1B406DEA9DBDF436E4D3F9830",
+      "repository_sha256": "C65EE3F6F417F07F5E3D2F2308ADE2DCADA9E109F95DF7C8F51629DAE106F8EF",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "CHANGELOG.md",
+      "repository_path": "CHANGELOG.md",
+      "original_sha256": "0466B81473AB74A11DAD11AAB8309507E0F53191877B0D324BE4CD0C09B39CB3",
+      "repository_sha256": "70149DC3B772840AA11CBDEABE7E3C6728B61DC36AA31CBC2F03686136B037C9",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "README.md",
+      "repository_path": "docs/workspace-guide.md",
+      "original_sha256": "E9380EEBF04B503B5C5CFB07B0EF31D57BE8A5C8EA95F2EFD50145E0B5C097FB",
+      "repository_sha256": "00F1FB45ED8A086B86F03C02FAA818D9B18A418BA5E61E009F26B28538128CEF",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "WP0A-report.md",
+      "repository_path": "reviews/wp0a/WP0A-report.md",
+      "original_sha256": "D769ACBB3A15F78B052818674FA5C7A40923E5E248CF7579A083BC544813601C",
+      "repository_sha256": "AF6B9478C79EABAA37EE2AFB176AD6C152F97C11BD10A1EA58074357F1C92CB6",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/architecture-response-PARTIAL.md",
+      "repository_path": "evidence/architecture-response-PARTIAL.md",
+      "original_sha256": "CCE3D49CBF4299800A773B6F1E43525388F00DA69D8C41A664AD831335E36250",
+      "repository_sha256": "CCE3D49CBF4299800A773B6F1E43525388F00DA69D8C41A664AD831335E36250",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/claude-review-input.txt",
+      "repository_path": "evidence/claude-review-input.txt",
+      "original_sha256": "192EB86419055ED6254D2E635520513A7701B9E2901750E40E1D3F83336CE51B",
+      "repository_sha256": "E58D9FF8D0B242E7ABB9E0B7A2B6C12332168D683112B09BFD25BB28DE87B06D",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "evidence/conversation-recovered.json",
+      "repository_path": "evidence/conversation-recovered.json",
+      "original_sha256": "CF979374C9162CF22473275E9575389B66D5CFF670ACF63DBD28CFAF3E11D981",
+      "repository_sha256": "A8ED2ED505DF97F3CCC4FC0C9EBC517D06920B824E3F18C4244C291BCC21D0F5",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "evidence/gate0-approval-wp1a-authorization.md",
+      "repository_path": "evidence/gate0-approval-wp1a-authorization.md",
+      "original_sha256": "DE3208F34786327C571D2453CA2B9E7145ACF13C2446AB53A7E587311D58537F",
+      "repository_sha256": "DE3208F34786327C571D2453CA2B9E7145ACF13C2446AB53A7E587311D58537F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/initial-proposal.md",
+      "repository_path": "evidence/initial-proposal.md",
+      "original_sha256": "77412968E4575BD728BB055F525AA43DBBEF3BDAAA76529EA1266753B52D6A5A",
+      "repository_sha256": "77412968E4575BD728BB055F525AA43DBBEF3BDAAA76529EA1266753B52D6A5A",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/phase0-source.md",
+      "repository_path": "evidence/phase0-source.md",
+      "original_sha256": "704D9722DDB7182038C036DA4B8F21F1B898E480671FF1258D6B5CFE9B1E1459",
+      "repository_sha256": "704D9722DDB7182038C036DA4B8F21F1B898E480671FF1258D6B5CFE9B1E1459",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/PPU_full_recovered_source.txt",
+      "repository_path": "evidence/PPU_full_recovered_source.txt",
+      "original_sha256": "237A8EEA4F2D64B6B83C597DFA11C7AC02E9BD9A10DE1536083A8D37BA48953E",
+      "repository_sha256": "237A8EEA4F2D64B6B83C597DFA11C7AC02E9BD9A10DE1536083A8D37BA48953E",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/roadmap-v0.1-original.txt",
+      "repository_path": "evidence/roadmap-v0.1-original.txt",
+      "original_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "repository_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/wp0a-authorization.md",
+      "repository_path": "evidence/wp0a-authorization.md",
+      "original_sha256": "04773BBECDB32EA3DD85747C7DCD24C01AF3332136639135989D96051008FA3E",
+      "repository_sha256": "04773BBECDB32EA3DD85747C7DCD24C01AF3332136639135989D96051008FA3E",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/wp1a-claude-review-input.txt",
+      "repository_path": "evidence/wp1a-claude-review-input.txt",
+      "original_sha256": "3C2242E8A7FCA9551C717425FBFF1DE9B707B89BEF4E619E8913634ACE95970A",
+      "repository_sha256": "3C2242E8A7FCA9551C717425FBFF1DE9B707B89BEF4E619E8913634ACE95970A",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/wp1a-claude-review-request.md",
+      "repository_path": "evidence/wp1a-claude-review-request.md",
+      "original_sha256": "A0F5036E91A1BEDC69C80108E4D029159C4EC3F5B1CD6F9F552AC2F839FC5D24",
+      "repository_sha256": "2353D4D7BA40EDD1DE6387E6357838C340B6534436CA02855AE9A9E8184D43F1",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "evidence/wp1a-trucpi-us-methodology-v1.4.pdf",
+      "repository_path": "evidence/wp1a-trucpi-us-methodology-v1.4.pdf",
+      "original_sha256": "AA7E491342387F15F24CDD1F1AFB45E1003FD8D22BF8148F1A77F5A1AC4B8567",
+      "repository_sha256": "AA7E491342387F15F24CDD1F1AFB45E1003FD8D22BF8148F1A77F5A1AC4B8567",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/01-protocol-state.md",
+      "repository_path": "archive/history/gate0-approved/01-protocol-state.md",
+      "original_sha256": "904002F581C6033944A8EEAEC17B67E99B0F18B50FF54CB826A735B7453ED946",
+      "repository_sha256": "12227946D6A84A1EA2A6AA3326DA8C856487ED41B4AB7089DD059FBA11CE50CD",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/02-decision-register.md",
+      "repository_path": "archive/history/gate0-approved/02-decision-register.md",
+      "original_sha256": "C81EA16C77622A68614A171CB8856CD3A70B88BCC49F65483AB673F3D60B468E",
+      "repository_sha256": "59A13A65EDD89AC7952B2CA796AC53798AEF48B8651C8F963E598B6E58548260",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/03-risk-register.md",
+      "repository_path": "archive/history/gate0-approved/03-risk-register.md",
+      "original_sha256": "90428C103F146DA2334A140E401587316D3A8B50DC292FA598A796A8C21F5A6E",
+      "repository_sha256": "AD847597AB3F1C9C22DA0DD7045C85A2CCAE96BCF51DF4AC40AFECD366E68983",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/04-active-hypotheses.md",
+      "repository_path": "archive/history/gate0-approved/04-active-hypotheses.md",
+      "original_sha256": "EDA5370AC493297E591DA2550D57BA24A019247A37C3DD1924164C8F98607810",
+      "repository_sha256": "FFB093006B0AD896BADFB3103DF606ADEB374A136B41A11B33CC727F639186B3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/05-unresolved-questions.md",
+      "repository_path": "archive/history/gate0-approved/05-unresolved-questions.md",
+      "original_sha256": "1AFA39D5EEB6DABD0D025FFF907EDAD90091BBD0E476C718DFD6CF005F07049B",
+      "repository_sha256": "1AFA39D5EEB6DABD0D025FFF907EDAD90091BBD0E476C718DFD6CF005F07049B",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/06-research-library-index.md",
+      "repository_path": "archive/history/gate0-approved/06-research-library-index.md",
+      "original_sha256": "F7DC4CEA71862DB701F36BFBB83C4B7C144CC9B0C3B993D0C67C76623B7BA73F",
+      "repository_sha256": "1E1EEBA737C3E89B438350B8B69BB28BA52EEF68611F6CC9B4E3B36F32173A3F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/07-development-roadmap.md",
+      "repository_path": "archive/history/gate0-approved/07-development-roadmap.md",
+      "original_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "repository_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/08-draft-constitution.md",
+      "repository_path": "archive/history/gate0-approved/08-draft-constitution.md",
+      "original_sha256": "9CB1B6DE89D4EFC45E20744B64CE2B4E4BEA01B21F77172B7CD592DF91438D10",
+      "repository_sha256": "4311A6422B3C49448A26742CE990E04F72F161E3017F4373FFB20EF889C595FC",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/09-work-package-register.md",
+      "repository_path": "archive/history/gate0-approved/09-work-package-register.md",
+      "original_sha256": "AF2C9E0E29E1265D46EC80CCE5D7D161E1D8436C40F20819CEA2F4A934CCC1E0",
+      "repository_sha256": "AF2C9E0E29E1265D46EC80CCE5D7D161E1D8436C40F20819CEA2F4A934CCC1E0",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/10-review-gate-register.md",
+      "repository_path": "archive/history/gate0-approved/10-review-gate-register.md",
+      "original_sha256": "D0AA60276B4B7AE08AB742D9560268761CF61B8483B916FBD1BE95149EA8DC6D",
+      "repository_sha256": "A0AF4D8116BA62768CD8B7E077DA03267E2CBA815E7208C20DAB1074579B2A52",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/CHANGELOG.md",
+      "repository_path": "archive/history/gate0-approved/CHANGELOG.md",
+      "original_sha256": "838EDC7799CBEE1CE1C49254BA466703973A24127100574AF3393801C3ECF93E",
+      "repository_sha256": "838EDC7799CBEE1CE1C49254BA466703973A24127100574AF3393801C3ECF93E",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/README.md",
+      "repository_path": "archive/history/gate0-approved/README.md",
+      "original_sha256": "144FE8F56FE81B5D7B0C4FF845B008705ACB297C613FC0ED9A2BD9AA50085395",
+      "repository_sha256": "ED54AF54F4997E0EE71176C1EDDC478228928474457DA8C7D72566B883986AF1",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/submission-manifest.json",
+      "repository_path": "archive/history/gate0-approved/submission-manifest.json",
+      "original_sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989",
+      "repository_sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/gate0-approved/WP0A-report.md",
+      "repository_path": "archive/history/gate0-approved/WP0A-report.md",
+      "original_sha256": "D769ACBB3A15F78B052818674FA5C7A40923E5E248CF7579A083BC544813601C",
+      "repository_sha256": "BCA259E5CA5257A52CC4118AF5A28D01DB41E31433B1F146219ACBF0A3AC7394",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/01-protocol-state.md",
+      "repository_path": "archive/history/pre-claude-review/01-protocol-state.md",
+      "original_sha256": "AF686E08F85A3071192D97A2A1AE3B4D4132673766041DF968C90F075C70A63E",
+      "repository_sha256": "B3A8CA1FE44F9C85EF4766D0962987FC9C9B2A54BFFD9B6300DCF7E48B415CE1",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/02-decision-register.md",
+      "repository_path": "archive/history/pre-claude-review/02-decision-register.md",
+      "original_sha256": "7E3686C41907CC4CF4EA06702CA3981A474BE4C2FA2E13C4BD9B677F75F3F67A",
+      "repository_sha256": "2C303895A3ABDE54983B5377731213AC5A275DCAD14E2DDE8C7332E76E4973C3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/03-risk-register.md",
+      "repository_path": "archive/history/pre-claude-review/03-risk-register.md",
+      "original_sha256": "465DA098125F79912B205E763E8459456A84BB0A6CB1EAC32BC5FC1FB4D8343E",
+      "repository_sha256": "EF67B0DE4E2DA767A76926FD036B50E1E9D4C2FD0660D10B7AAC5ECC807FDA9F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/04-active-hypotheses.md",
+      "repository_path": "archive/history/pre-claude-review/04-active-hypotheses.md",
+      "original_sha256": "9EABC221283B5934441CCB4A546CFF68D2C6F90D3D54D71CE83FCE061621C3F0",
+      "repository_sha256": "AE6B7B84C0A5B334389FD5143585D33254C9BE0ADAFCF7131DC7D94D8D3019F5",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/05-unresolved-questions.md",
+      "repository_path": "archive/history/pre-claude-review/05-unresolved-questions.md",
+      "original_sha256": "AC8A3928540D0E6ED2D5DCDD362B18926986CE81F117FE3FD313DC8FFA57F4AF",
+      "repository_sha256": "AC8A3928540D0E6ED2D5DCDD362B18926986CE81F117FE3FD313DC8FFA57F4AF",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/06-research-library-index.md",
+      "repository_path": "archive/history/pre-claude-review/06-research-library-index.md",
+      "original_sha256": "3ECE526448B89C72C8A46261B35CFFED18863D23D49FA5C776B561EA68B34A22",
+      "repository_sha256": "1D5A89BDA41E6CCAE60E0F6A753FC1118E242D9F40BEA71227CFB2CB0440E9F3",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "evidence/pre-claude-review/07-development-roadmap.md",
+      "repository_path": "archive/history/pre-claude-review/07-development-roadmap.md",
+      "original_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "repository_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/08-draft-constitution.md",
+      "repository_path": "archive/history/pre-claude-review/08-draft-constitution.md",
+      "original_sha256": "283C080E6C8C3E6E2EB44227B28F368F72661117D2564348FEF9CF673E82FFCE",
+      "repository_sha256": "9CD7F3C2BEF735DC2D9EB8B2C86EE58885E11D409B9A1E076B2AC7F7A42DFDF7",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/09-work-package-register.md",
+      "repository_path": "archive/history/pre-claude-review/09-work-package-register.md",
+      "original_sha256": "2732D83F5C372E09385FEF82428CD18C13F9426FCD62B595FF8CA1BAB7A71DBE",
+      "repository_sha256": "2732D83F5C372E09385FEF82428CD18C13F9426FCD62B595FF8CA1BAB7A71DBE",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/10-review-gate-register.md",
+      "repository_path": "archive/history/pre-claude-review/10-review-gate-register.md",
+      "original_sha256": "FC82CF092A1010BD3F43A2B3C1A5E3FF72C31B01EDCA588795B96BE66B6D7590",
+      "repository_sha256": "2F71506AA618FA99092ADED04E8D8712327A4C7038721940F55B0842AD172C48",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/CHANGELOG.md",
+      "repository_path": "archive/history/pre-claude-review/CHANGELOG.md",
+      "original_sha256": "23AE933231D3DC8E22F122016E6AFEF3C340A7889E2CF3086AAC379F45BE35D6",
+      "repository_sha256": "23AE933231D3DC8E22F122016E6AFEF3C340A7889E2CF3086AAC379F45BE35D6",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/README.md",
+      "repository_path": "archive/history/pre-claude-review/README.md",
+      "original_sha256": "D3E4576F264AC6E1538669605C66A5156E3ED4525CBED8E7780D6403AFB582E1",
+      "repository_sha256": "FD54DAC5C312A6604362DB3929011C73E99D75B88B2A771FB23D391E30DD4023",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/validation.json",
+      "repository_path": "archive/history/pre-claude-review/validation.json",
+      "original_sha256": "CE74DC38FF825D473181C2DF958B38D411DD8DDB60EA624C433AA03D66E20AAF",
+      "repository_sha256": "CE74DC38FF825D473181C2DF958B38D411DD8DDB60EA624C433AA03D66E20AAF",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-claude-review/WP0A-report.md",
+      "repository_path": "archive/history/pre-claude-review/WP0A-report.md",
+      "original_sha256": "D481B5325D49FCFA001C245904F941E13BAEA117134C78233F6BD6A7FA8696C7",
+      "repository_sha256": "86D2CB602913D240440596D420B1EBEB7563BA9D86E1005ACBC3014C365F8581",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/01-protocol-state.md",
+      "repository_path": "archive/history/pre-source-recovery/01-protocol-state.md",
+      "original_sha256": "72E34D3DC172E06CBDFB270683D49F817EA4DB5A21A7531DD189752175C5CF11",
+      "repository_sha256": "8852FC7B3758B1642A0F12039DD51FC2D2798B29379B8F9CE3C1B77F7E925709",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/02-decision-register.md",
+      "repository_path": "archive/history/pre-source-recovery/02-decision-register.md",
+      "original_sha256": "D71729AD4B902344AE94CD6AD51004784C8D548F2B3B2864FCA7E15B91D14162",
+      "repository_sha256": "E3C02F7D3E813EF229D89EBE16DA8E313BCC7CA77ABD5BC3F69DBC516F17FF81",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/03-risk-register.md",
+      "repository_path": "archive/history/pre-source-recovery/03-risk-register.md",
+      "original_sha256": "5217D435937E6A85105BE06D6D396E7147B04749B3F587F19F0C022C3827AEE7",
+      "repository_sha256": "64642898CD724EC5D9B78501750DAC1A859BDACF6B1F9D2719D9D965580608ED",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/04-active-hypotheses.md",
+      "repository_path": "archive/history/pre-source-recovery/04-active-hypotheses.md",
+      "original_sha256": "9EABC221283B5934441CCB4A546CFF68D2C6F90D3D54D71CE83FCE061621C3F0",
+      "repository_sha256": "AE6B7B84C0A5B334389FD5143585D33254C9BE0ADAFCF7131DC7D94D8D3019F5",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/05-unresolved-questions.md",
+      "repository_path": "archive/history/pre-source-recovery/05-unresolved-questions.md",
+      "original_sha256": "03B97C007FDBA35A120CAA902CCA6597E78F4CDCE636A4DF18ACD7B3D0B7E650",
+      "repository_sha256": "03B97C007FDBA35A120CAA902CCA6597E78F4CDCE636A4DF18ACD7B3D0B7E650",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/06-research-library-index.md",
+      "repository_path": "archive/history/pre-source-recovery/06-research-library-index.md",
+      "original_sha256": "A3A73286D671C2C52ED9D8EC669F80F5F7F402B793AFB86006255573DF23F694",
+      "repository_sha256": "9139560E70110B05852E78219DCB7758DA0462034C2F33592ABAC73862F9492D",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/07-development-roadmap.md",
+      "repository_path": "archive/history/pre-source-recovery/07-development-roadmap.md",
+      "original_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "repository_sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/08-draft-constitution.md",
+      "repository_path": "archive/history/pre-source-recovery/08-draft-constitution.md",
+      "original_sha256": "D077D83A2DEDBDADF7B2E67F30D44F54E4B390535B673A0C3BAC7E0F59B2B0BE",
+      "repository_sha256": "5D8AD5ACA4A524DA851BFD46F944CFDDF89CFF5330BAF5717959F353DD5FDC83",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/09-work-package-register.md",
+      "repository_path": "archive/history/pre-source-recovery/09-work-package-register.md",
+      "original_sha256": "8882E874F5DD198533E4A1F19ED55357CA40A73F65BCE4C391E9475DE3E9C3A8",
+      "repository_sha256": "8882E874F5DD198533E4A1F19ED55357CA40A73F65BCE4C391E9475DE3E9C3A8",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/10-review-gate-register.md",
+      "repository_path": "archive/history/pre-source-recovery/10-review-gate-register.md",
+      "original_sha256": "D9CE3FA306FBBCE6D8DFB05CC3F6A9CD932C02D35C88796A0E18F2CC2E14CC1E",
+      "repository_sha256": "860A1961AC639E95B8B2C95F010D7D13D18E73DA93A4F6001092A21E1C62BB1D",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/CHANGELOG.md",
+      "repository_path": "archive/history/pre-source-recovery/CHANGELOG.md",
+      "original_sha256": "3D5CC8CE6AEDEB38674EFD1C7B8099165C6FF427101AEAE0314D85DF5D3EC195",
+      "repository_sha256": "3D5CC8CE6AEDEB38674EFD1C7B8099165C6FF427101AEAE0314D85DF5D3EC195",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/handoff-coverage.md",
+      "repository_path": "archive/history/pre-source-recovery/handoff-coverage.md",
+      "original_sha256": "09DC84F6D71E20465DC945E60D95A61AC5E3BFDBE59A291A3F095EACC7803B77",
+      "repository_sha256": "09DC84F6D71E20465DC945E60D95A61AC5E3BFDBE59A291A3F095EACC7803B77",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/README.md",
+      "repository_path": "archive/history/pre-source-recovery/README.md",
+      "original_sha256": "D45DE2FAF769966B83E59FF0D30918475191C43A8CE73A5834A4F411B40C82B1",
+      "repository_sha256": "33898C805AEE1B1D789E971BD3FECB3D891192D9BBB03A0EEB901C21E3F1AE13",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/submission-manifest.json",
+      "repository_path": "archive/history/pre-source-recovery/submission-manifest.json",
+      "original_sha256": "98BBC37F165D81BDEB5437E03F85A2B421EE33BB27DB4E4C5E3546B810C73247",
+      "repository_sha256": "98BBC37F165D81BDEB5437E03F85A2B421EE33BB27DB4E4C5E3546B810C73247",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/validation.json",
+      "repository_path": "archive/history/pre-source-recovery/validation.json",
+      "original_sha256": "F74EE65542D577DB45D6D93A945A09CC13E2E3D654EEBA63499935087EF31936",
+      "repository_sha256": "F74EE65542D577DB45D6D93A945A09CC13E2E3D654EEBA63499935087EF31936",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "evidence/pre-source-recovery/WP0A-report.md",
+      "repository_path": "archive/history/pre-source-recovery/WP0A-report.md",
+      "original_sha256": "AB88D560D938496349614521976FFBFD91BD581B03422897AECD8A43B14CDE19",
+      "repository_sha256": "E64AA7CBE29BBE7775C715D5818FE5292F27BE8D317AEAC701587333AA68753E",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/claude-opus-reconciliation.md",
+      "repository_path": "reviews/wp0a/claude-opus-reconciliation.md",
+      "original_sha256": "1F8FCE03456C4F7B1E7DDE384A876A9046490F3DF83EE56097A9F21396EB5721",
+      "repository_sha256": "704C27015FA7DDAAC0BE9D4A60D79B12E8146A99A002E31F56A18CBACB51F8C9",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "reviews/handoff-coverage.md",
+      "repository_path": "reviews/wp0a/handoff-coverage.md",
+      "original_sha256": "61753C0F4CCBA914D03503DC8D529C3902319D70DBC000351ECB961C57F319F8",
+      "repository_sha256": "61753C0F4CCBA914D03503DC8D529C3902319D70DBC000351ECB961C57F319F8",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/source-recovery-reconciliation.md",
+      "repository_path": "reviews/wp0a/source-recovery-reconciliation.md",
+      "original_sha256": "C120D3215163CAD825FDD4FCB09EE491DD0ECC0D2E842D4F97E79F11E9527CD6",
+      "repository_sha256": "572529A1693B8E690F9D5D5835245DAD77D6CA0EDE8552CC5BE1B53BADCF7428",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/submission-manifest.json",
+      "repository_path": "reviews/wp0a/submission-manifest.json",
+      "original_sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989",
+      "repository_sha256": "04CFCB36D32A309E32E98A4BC12E20D09D14DF6307DF750A29D235C14110B989",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/validate-wp1a.ps1",
+      "repository_path": "reviews/wp0a/validate-wp1a.ps1",
+      "original_sha256": "B6805470AE45EA9F57B0E930FD3F9B3BE55054703D6471B9DA767570141BF855",
+      "repository_sha256": "B6805470AE45EA9F57B0E930FD3F9B3BE55054703D6471B9DA767570141BF855",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/validate.ps1",
+      "repository_path": "reviews/wp0a/validate.ps1",
+      "original_sha256": "EB37BD52497FF39688B7D8CBDDFDAFAB62915A15E922833B5BE54D9DF0DD4DA5",
+      "repository_sha256": "EB37BD52497FF39688B7D8CBDDFDAFAB62915A15E922833B5BE54D9DF0DD4DA5",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/validation.json",
+      "repository_path": "reviews/wp0a/validation.json",
+      "original_sha256": "BB5E431BC715F961CA4DAE457E49F22DEBF8CACCAB3CD6F80B22208D75E83E76",
+      "repository_sha256": "BB5E431BC715F961CA4DAE457E49F22DEBF8CACCAB3CD6F80B22208D75E83E76",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "reviews/wp0a-structural-review.md",
+      "repository_path": "reviews/wp0a/wp0a-structural-review.md",
+      "original_sha256": "426A8DF5D92F38CFE260FBD15A42F91BF2B730C9996DE94FECE195168E2CAD58",
+      "repository_sha256": "426A8DF5D92F38CFE260FBD15A42F91BF2B730C9996DE94FECE195168E2CAD58",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/01-purchasing-power-standard-research-report.md",
+      "repository_path": "research/wp1a/01-purchasing-power-standard-research-report.md",
+      "original_sha256": "18110E839FA1306B358B0F4816D41237D338A349216CDC580A00779FB4AD6F5B",
+      "repository_sha256": "18110E839FA1306B358B0F4816D41237D338A349216CDC580A00779FB4AD6F5B",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/02-comparative-benchmark-matrix.md",
+      "repository_path": "research/wp1a/02-comparative-benchmark-matrix.md",
+      "original_sha256": "9FD9B48B77B8A966CABE4B949D11D432067691360E3156520D83AAAAF7233827",
+      "repository_sha256": "9FD9B48B77B8A966CABE4B949D11D432067691360E3156520D83AAAAF7233827",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/03-methodology-and-revisions.md",
+      "repository_path": "research/wp1a/03-methodology-and-revisions.md",
+      "original_sha256": "F7AA5A7223260ACA59EF3AAAE104D60FC8687268162B017596C71FB11DC9739F",
+      "repository_sha256": "F7AA5A7223260ACA59EF3AAAE104D60FC8687268162B017596C71FB11DC9739F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/04-benchmark-institutional-risk.md",
+      "repository_path": "research/wp1a/04-benchmark-institutional-risk.md",
+      "original_sha256": "2BC33F2DD2898A540DAB5BAB0037B19902A7B1F65824E25823CF2DBB40C2F6D3",
+      "repository_sha256": "2BC33F2DD2898A540DAB5BAB0037B19902A7B1F65824E25823CF2DBB40C2F6D3",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/05-hedgeability-and-matching.md",
+      "repository_path": "research/wp1a/05-hedgeability-and-matching.md",
+      "original_sha256": "F90BEAD13922B164DABE5B99DE75D5EF888AE12FD21EA9E3CEB068975BDCBC50",
+      "repository_sha256": "F90BEAD13922B164DABE5B99DE75D5EF888AE12FD21EA9E3CEB068975BDCBC50",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/06-recommended-standard.md",
+      "repository_path": "research/wp1a/06-recommended-standard.md",
+      "original_sha256": "60E191F878E74DD349DA0DC386790A260FFAD256BA967F6E772BF3A9BC686D77",
+      "repository_sha256": "9B7D7B1E66614C4612AF5DD40E8129E11662E3FA00DCF487A544DC7BEE237A4F",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/Gate-1A-submission.md",
+      "repository_path": "reviews/gate1a/Gate-1A-submission.md",
+      "original_sha256": "E9344AE86DE3FC50C48B841CB44DE5E619C3B91ADD67D5C36926DF7DB756CF2A",
+      "repository_sha256": "3B64BAF004EA926139B35FCF5A1AF43C7BCE8C1CE5AFC1F7CCC18723EBC7A878",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/reviewer-reconciliation.md",
+      "repository_path": "reviews/gate1a/reviewer-reconciliation.md",
+      "original_sha256": "0B1716858B412DCA2C5C27D036B64B8960BAB9DDEEA2E1517C56C69FDBF03A7E",
+      "repository_sha256": "66CBFCFCB3E9CD407800C384E21013AFB5F3395E9F71CDA633725F51C544DF4D",
+      "privacy_redacted": true
+    },
+    {
+      "source_path": "wp1a/sources.md",
+      "repository_path": "research/wp1a/sources.md",
+      "original_sha256": "19C6420EA39BBE92F27E19C8F7FA3AD2E196F7F3267BE955043375F84BF4A5F9",
+      "repository_sha256": "8B294F5C35422E2B7BB93B825621740DEAF5255F090D4DF049712EE60DE43828",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/submission-manifest.json",
+      "repository_path": "reviews/gate1a/submission-manifest.json",
+      "original_sha256": "DF53C0B48E3FB097633A414123BCB29679E48CB1B3C1473783FF2725FA88DBBA",
+      "repository_sha256": "DF53C0B48E3FB097633A414123BCB29679E48CB1B3C1473783FF2725FA88DBBA",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/validation.json",
+      "repository_path": "reviews/gate1a/validation.json",
+      "original_sha256": "AE7E0E39835DBDC01522CC1973CF419FBB8A3EB89ACFEB7C15E35B99EE8D0669",
+      "repository_sha256": "AE7E0E39835DBDC01522CC1973CF419FBB8A3EB89ACFEB7C15E35B99EE8D0669",
+      "privacy_redacted": false
+    },
+    {
+      "source_path": "wp1a/WP1A-completion-report.md",
+      "repository_path": "reviews/gate1a/WP1A-completion-report.md",
+      "original_sha256": "40B10CABE3530012F098AA7EFC89024A79B54C13004867FA368B242DCD471413",
+      "repository_sha256": "E03CA16876D3C2D2E5792C10A398D716AA749340D185EE23311FDBA7C0BC7218",
+      "privacy_redacted": false
+    }
+  ]
+}

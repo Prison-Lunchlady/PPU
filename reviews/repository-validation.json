@@ -1,0 +1,13 @@
+{
+  "scope": "Repository import only; no monetary approval or model validation",
+  "checks": 1387,
+  "local_markdown_links_checked": 272,
+  "files_and_archive_entries_scanned": 185,
+  "status": "PASS",
+  "errors": [],
+  "gate0": "APPROVED WITH CONDITIONS",
+  "wp1a": "COMPLETE FOR REVIEW",
+  "gate1a": "AWAITING REVIEW / NOT APPROVED",
+  "wp1b": "NOT AUTHORIZED",
+  "privacy_scan_limit": "Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; import provenance applies to relocated public copies."
+}
