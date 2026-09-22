@@ -1,0 +1,27 @@
+{
+  "passed": 20,
+  "failed": [],
+  "checks": {
+    "exact_reproduction": true,
+    "count_comparisons": true,
+    "count_duration": true,
+    "count_alternative_tail_counterexamples": true,
+    "count_cumulative_run_curve": true,
+    "count_joint_shock_run_costs": true,
+    "count_alternative_joint_comparison": true,
+    "count_repo_horizon_comparison": true,
+    "gross_B_assets": true,
+    "gross_B_indexed_face": true,
+    "gross_B_negative_buffer": true,
+    "gross_B_fixed_face": true,
+    "deflation_fixed_exposure": true,
+    "run_remaining_harm": true,
+    "net_real_carry_exhaustion": true,
+    "joint_B_remaining_assets": true,
+    "joint_B_remaining_buffer": true,
+    "repo_before_maturity": true,
+    "repo_at_maturity": true,
+    "signed_alternative_sensitivities": true
+  },
+  "scope": "Deterministic artifact reproduction and scenario accounting; magnitudes are synthetic, no historical/economic validation"
+}

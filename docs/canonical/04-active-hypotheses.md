@@ -1,4 +1,13 @@
 # Active Hypotheses
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Source: [Phase 0 state](../../evidence/phase0-source.md). Original IDs preserved. WP0A did not test or promote them. Current WP1A status: H001 conditionally supported as a benchmark recommendation; H002–H008 OPEN / UNVALIDATED.
@@ -71,3 +80,6 @@ H001 remains bounded by the exact Gate 1A standard; unchanged. H002 retains cond
 ## WP1C hypothesis disposition
 H002's daily development path and impairment state concept are accepted within SRC018 conditions; structural economic remedy remains unvalidated. H008 senior-claim hypothesis remains a proposed economic ordering over surplus, not demonstrated legal priority. WP1C shows how liabilities can be represented without double counting, but does not validate effective replacement, proof of discharge or solvency. H003–H007 and user-fit assumptions are not newly confirmed. No holder true-up or fallback adopted.
 
+
+## WP1D hypothesis disposition
+H003 reserve resilience remains OPEN / UNVALIDATED: segmented cash/bill/short-TIPS baseline is conditionally research-worthy, not proven matching or sustainable funding. H004 first-loss scalability/compensation remains OPEN; financed assets plus equity are not two asset pools. H001/H002 accepted scope/mechanics unchanged and falsifiable; daily interpolation not universally superior. H005–H008 remain unvalidated in their relevant architecture/market/legal branches. No newly accepted monetary hypothesis follows from illustrative stress survival. Negative real carry and run counterexamples are explicit falsification evidence.

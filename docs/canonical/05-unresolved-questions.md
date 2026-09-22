@@ -1,4 +1,13 @@
 # Unresolved Questions
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Entries OPEN except Q001/Q019 CLOSED and Q020 NO LONGER APPLICABLE, as documented below. Q003 is CLOSED for the narrow v0.1 benchmark selection by Gate1A; Q021 remains OPEN and target mechanics remain pending Gate1B. Stable IDs do not imply approval. Brad controls authorization; future package owners are unassigned.
@@ -88,3 +97,12 @@ Q021 OPEN; Q022 OPEN; **Q023 OPEN — production-activation blocker**; Q024 OPEN
 
 **Q-025 — What proves a single effective claim replacement and final partial/full discharge? OPEN.** Required facts include scoped ownership/obligor perimeter, predecessor invalidation/replacement, accepted terms, authenticated pricing/effective times, unpaid refunds/other claims and reversal treatment. The model assumes these facts; WP1F, Phase 3/4 and any intervening authorized package must establish them. No work in those packages is authorized here.
 
+
+## Current Gate 1C / WP1D disposition
+Q005/Q006 economic definitions accepted for continued development under SRC019; legal priority, effective replacement, fixed/indexed accepted terms, timestamps, cancellation and payment mechanics remain OPEN. Q007 reserve matching researched but not proven; Q008 capital economics unresolved. Q021 OPEN; Q022 OPEN; Q023 OPEN — production-activation blocker; Q024 OPEN; Q025 OPEN. Treasury contingency conflict OPEN. No unrelated question closed.
+
+**Q-026 — Which reserve duration/liquidity/haircut bounds survive joint calibrated shocks and actual outflow terms? OPEN.** WP1D offers candidate measurements and counterexamples, not empirical bounds. Route WP1F/Phase2, capital-budget dependency WP1E.
+
+**Q-027 — What funds persistent net real carry deficits, expenses and run losses without fictitious or discretionary backing? OPEN.** WP1D shows finite-buffer exhaustion; sustainable first-loss funding/instrument/compensation WP1E, performance Phase2.
+
+**Q-028 — What proves enforceable reserve title, disjoint encumbrances/claims and deadline access across custodians? OPEN.** Nominal ownership labels and positive market assets are insufficient. Phase3/later technical verification; concentration/closeout tests Phase2. Do not close Q025 using asset evidence alone.

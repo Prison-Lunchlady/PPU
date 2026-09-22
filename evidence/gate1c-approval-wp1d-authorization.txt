@@ -1,0 +1,398 @@
+Continue the PPU project under the adopted PPU Development Roadmap v0.1 and the current canonical GitHub repository state.
+Repository:
+Prison-Lunchlady/PPU
+Current project status:
+- Gate 0: APPROVED WITH CONDITIONS
+- WP1A: COMPLETE
+- Gate 1A: APPROVED WITH CONDITIONS
+- WP1B revision 0.3: APPROVED WITH CONDITIONS
+- WP1C revision 0.1: APPROVED WITH CONDITIONS
+- Q023 remains OPEN and is a production-activation blocker
+- Q025 remains OPEN
+- Treasury contingency-methodology conflict remains OPEN
+- No fallback benchmark has been adopted
+- No holder true-up has been adopted
+- WP1D is the only currently authorized Work Package
+- WP1E and all later Work Packages remain unauthorized until explicit approval
+The project remains a monetary-system research and engineering effort first. Do not treat it as a token-launch project.
+Use the GitHub repository as the canonical version-controlled source of truth.
+Maintain and update all relevant canonical records, including:
+1. PPU Protocol State
+2. Decision Register
+3. Risk Register
+4. Active Hypotheses
+5. Unresolved Questions
+6. Research Library Index
+7. Development Roadmap
+8. Draft Monetary Constitution / Hypothesis Set
+9. Work Package Register
+10. Review Gate Register
+11. Changelog
+12. Work Package research, evidence, validation, reviewer-reconciliation, and submission files
+Core execution rules
+Work through one authorized Work Package at a time.
+For each authorized Work Package:
+- research and execute the task to completion;
+- actively search for flaws rather than merely confirming the current architecture;
+- preserve distinctions between fact, assumption, inference, hypothesis, recommendation, accepted decision, and unresolved issue;
+- document sources, assumptions, uncertainties, rejected alternatives, edge cases, and failure modes;
+- preserve prior approved decisions unless new evidence justifies reopening them;
+- never silently override a prior Gate condition;
+- update the canonical project records;
+- produce a clear completion report;
+- prepare a formal Review Gate submission;
+- stop at the Review Gate;
+- do not begin the next Work Package without Brad’s explicit approval.
+Mandatory Claude Opus adversarial review
+Claude Opus must be used continuously throughout this project as an independent adversarial reviewer whenever available.
+Do not reserve Claude only for occasional final checks.
+For every major Work Package, use Claude at multiple meaningful stages where useful, including:
+1. after the initial research/design draft is complete;
+2. after the main quantitative or architectural model is formed;
+3. before final Gate submission;
+4. again after any material revision resulting from primary review, if the revision changes economics, accounting, governance, reserve design, oracle logic, legal assumptions, smart-contract architecture, or security behavior.
+Claude’s role is to attack the design, not endorse it.
+Ask Claude specifically to search for:
+- hidden assumptions;
+- circular reasoning;
+- economic inconsistencies;
+- accounting errors;
+- unit/dimensional errors;
+- unbounded liabilities;
+- insolvency paths;
+- reserve mismatch;
+- liquidity failures;
+- bank-run dynamics;
+- inflation/deflation asymmetries;
+- duration and real-rate risk;
+- basis risk;
+- oracle manipulation;
+- stale-data behavior;
+- source-institution dependence;
+- governance capture;
+- emergency-power abuse;
+- centralization creep;
+- legal-claim inconsistencies;
+- double counting;
+- claim-replacement errors;
+- redemption arbitrage;
+- minting arbitrage;
+- transaction-timing options;
+- adverse selection;
+- market-manipulation incentives;
+- game-theoretic exploits;
+- attacks by Authorized Participants;
+- custodian failure;
+- chain congestion;
+- bridge risk;
+- smart-contract attack surfaces;
+- hidden discretionary authority;
+- failure to satisfy the stated PPU monetary promise;
+- conditions under which PPU is materially worse than a simpler alternative.
+Do not ask Claude merely “does this look good?”
+Prompt Claude to falsify the design.
+Preserve in the repository:
+- the exact Claude review input;
+- review date;
+- model/version used if known;
+- Claude’s findings;
+- operator disposition for every material finding;
+- whether each finding was accepted, partly accepted, rejected, deferred, or unresolved;
+- evidence supporting the disposition;
+- resulting revisions;
+- remaining objections.
+Do not automatically accept Claude’s conclusions.
+Independently verify each material objection against primary sources, mathematics, accounting logic, simulations, code, or the governing project rules.
+If Claude and Work disagree, document the disagreement and reasoning.
+If Claude is unavailable, explicitly record:
+CLAUDE REVIEW UNAVAILABLE
+with the reason if known.
+Do not falsely imply that a Claude review occurred.
+A Work Package should normally not be submitted to its Review Gate without a fresh Claude adversarial review unless Claude is unavailable or the package is purely administrative. If no fresh review occurs, state that prominently in the Gate submission.
+AI review never substitutes for qualified human review required later in the roadmap.
+Primary review authority
+Brad and the primary PPU architecture conversation retain Review Gate authority.
+Claude does not approve Gates.
+Work does not approve Gates.
+Passing tests do not approve Gates.
+Completion of a Work Package does not authorize the next Work Package.
+Every Gate submission must clearly state:
+- current Gate status;
+- whether the package is approved or awaiting review;
+- next authorized Work Package, if any;
+- unresolved blockers;
+- number and scope of validation checks;
+- whether Claude reviewed the current exact revision;
+- whether any external human review has occurred.
+Validation discipline
+For mathematical, accounting, simulation, or software artifacts:
+- create reproducible tests;
+- include boundary conditions;
+- include adversarial cases;
+- include invariant tests;
+- include negative tests;
+- include dimensional/unit checks;
+- test state-transition errors;
+- test duplicate-event behavior;
+- test stale-data behavior;
+- test missing-data behavior;
+- test timing boundaries;
+- test extreme inflation and deflation;
+- test arithmetic precision and rounding;
+- test conditions that should fail closed;
+- document what the tests do NOT prove.
+Never represent passing internal tests as:
+- production certification;
+- economic viability proof;
+- legal validation;
+- solvency proof;
+- oracle-security proof;
+- market-adoption evidence;
+- independent professional audit.
+Source discipline
+Prefer primary sources whenever possible.
+Examples include:
+- BLS
+- U.S. Treasury
+- Federal Reserve
+- BEA
+- BIS
+- SEC
+- CFTC
+- FinCEN
+- OCC
+- FDIC
+- Federal Register
+- U.S. Code / CFR
+- issuer documentation
+- protocol technical documentation
+- audited filings
+- peer-reviewed or institutional research
+Distinguish clearly between:
+- official fact;
+- model assumption;
+- Work inference;
+- Claude opinion;
+- user decision;
+- hypothetical scenario.
+Archive important source evidence when practical.
+Preserve source provenance and hashes for critical evidence.
+Constitutional discipline
+Do not independently:
+- change constitutionally protected monetary principles;
+- redefine what one PPU represents;
+- replace the approved CPI-U benchmark;
+- create an automatic fallback benchmark;
+- create a holder true-up;
+- change historical finalized target values;
+- introduce a nominal floor;
+- authorize discretionary unbacked issuance;
+- launch a production token;
+- accept real customer or investor capital;
+- commit project funds;
+- execute legal agreements;
+- represent the project to regulators;
+- deploy production smart contracts;
+- expose secrets or credentials;
+- make irreversible external actions.
+If research demonstrates that an approved principle is flawed, do not silently change it.
+Instead:
+1. document the flaw;
+2. quantify it where possible;
+3. identify affected prior decisions;
+4. propose explicit reconsideration;
+5. stop for Gate review where required.
+Current accepted monetary-development state
+Preserve the following unless explicitly reopened:
+PPU v0.1 targets:
+“U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).”
+This does not mean:
+- individual cost-of-living preservation;
+- universal global purchasing-power preservation;
+- demonstrated user demand.
+The current development target path includes, subject to existing Gate conditions:
+- adapted daily CPI-U reference calculation;
+- fixed first-release vintages;
+- exact arithmetic;
+- UTC timing;
+- 18-place binding calculation;
+- no nominal floor;
+- symmetric deflation;
+- committed-plan historical finality;
+- temporary endpoint carry;
+- prospective same-benchmark recovery;
+- BENCHMARK_IMPAIRED as a fail-closed/disclosure state.
+Do not interpret BENCHMARK_IMPAIRED as an economic remedy.
+Q023 remains OPEN and blocks production activation.
+The current liability framework accepted for continued development is:
+L_PPU,v(t) = (N_v + Qidx_v) × T_v(t) + Qfix_v
+subject to the Gate 1C conditions.
+Preserve the distinction between:
+- monetary face liability;
+- reserve assets;
+- recovery value;
+- legal seniority;
+- accounting classification.
+Do not equate token total supply with total economic liability.
+Current authorized Work Package
+PHASE 1 — MONETARY ARCHITECTURE
+WORK PACKAGE 1D — RESERVE ARCHITECTURE
+Objective:
+Determine candidate reserve architecture capable of supporting the PPU liability structure.
+Begin with the roadmap baseline:
+- cash;
+- U.S. Treasury bills;
+- short-term Treasury repo;
+- short-duration TIPS;
+- first-loss capital as a distinct financing/economic layer whose accounting must not be double counted.
+Treat the following only as research alternatives unless evidence justifies inclusion:
+- gold;
+- Bitcoin;
+- commodities;
+- energy exposure;
+- equities;
+- tokenized real-world assets;
+- corporate credit;
+- other reserve candidates.
+Do not optimize for maximum investment return.
+Optimize for:
+- liability matching;
+- purchasing-power preservation;
+- liquidity;
+- solvency resilience;
+- low credit risk;
+- low forced-sale risk;
+- transparent valuation;
+- custody reliability;
+- stress survivability.
+WP1D required analysis
+Research and define:
+- reserve-asset eligibility criteria;
+- reserve segmentation;
+- liquidity sleeve;
+- inflation-hedging sleeve;
+- duration limits;
+- interest-rate exposure;
+- real-rate exposure;
+- inflation basis risk;
+- cash drag;
+- rollover risk;
+- repo counterparty risk;
+- Treasury-market liquidity;
+- TIPS liquidity;
+- custody risk;
+- concentration risk;
+- settlement risk;
+- rehypothecation prohibition;
+- valuation methodology;
+- reserve haircuts;
+- encumbrance treatment;
+- reserve legal ownership assumptions;
+- asset segregation requirements;
+- off-chain verification requirements;
+- gross versus risk-adjusted reserve value;
+- how reserve adequacy should reference WP1C gross monetary liabilities;
+- how first-loss capital is represented without being counted twice;
+- failure modes during high inflation;
+- failure modes during deflation;
+- failure modes during rapid real-rate increases;
+- failure modes during Treasury-market stress;
+- failure modes during mass redemption;
+- forced-sale behavior;
+- minimum liquidity concepts;
+- interaction with BENCHMARK_IMPAIRED;
+- interaction with fixed versus indexed accepted redemption claims;
+- dependencies for WP1E, WP1F, Phase 2, and Phase 3.
+Do not yet finalize:
+- first-loss capital instrument;
+- capital-provider compensation;
+- collateral-ratio optimum;
+- mint/redemption fees;
+- AP architecture;
+- legal entity structure;
+- bankruptcy priority;
+- production custodian;
+- blockchain;
+- smart-contract implementation.
+Those belong to later packages.
+Required WP1D comparisons
+At minimum compare:
+1. cash/T-bill-heavy reserve;
+2. T-bill + short-duration TIPS reserve;
+3. varying TIPS durations;
+4. varying liquidity sleeves;
+5. simple Treasury/TIPS baseline versus carefully bounded alternative-asset additions.
+For alternative assets, test whether they actually improve monetary resilience after:
+- volatility;
+- drawdown;
+- liquidity;
+- correlation;
+- basis risk;
+- custody;
+- legal treatment;
+- operational complexity;
+- forced-sale risk.
+Do not include an asset because its historical return is high.
+Required WP1D adversarial scenarios
+At minimum analyze:
+- 1970s-style inflation;
+- rapid disinflation;
+- Volcker-style tightening;
+- sharp real-yield increase;
+- Treasury-duration losses;
+- TIPS real-rate drawdown;
+- COVID-style liquidity shock;
+- 2008-style financial stress;
+- redemption surge;
+- simultaneous inflation and liquidity stress;
+- Treasury-market dysfunction;
+- repo counterparty failure;
+- custodian impairment;
+- index impairment while reserves remain liquid;
+- reserve impairment while index remains normal;
+- fixed redemption claims during rising target values;
+- indexed redemption claims during rising target values;
+- deflation with fixed accepted claims;
+- long-duration TIPS mismatch;
+- forced liquidation before maturity.
+Use historical evidence where available, but do not turn WP1D into the full Phase 2 simulator. Phase 2 remains responsible for comprehensive backtesting and Monte Carlo/adversarial simulation.
+Required WP1D deliverables
+Create and commit:
+- Reserve Architecture Research Report
+- Reserve Eligibility Specification
+- Candidate Reserve Structures
+- Duration and Liquidity Analysis
+- Inflation-Matching and Basis-Risk Analysis
+- Haircut Framework
+- Custody / Segregation / Encumbrance Requirements
+- Adversarial Failure Analysis
+- Alternative Asset Comparison
+- Parameter and Assumption Register
+- Sources / Research Library updates
+- Claude adversarial review input
+- Claude findings
+- Claude reconciliation
+- reproducible calculations/tests where appropriate
+- validation report
+- WP1D completion report
+- Gate 1D submission
+- updated canonical project records
+- updated submission manifest
+WP1D Review Gate
+Stop at Gate 1D.
+The Gate 1D submission should clearly answer:
+- What assets are eligible?
+- What assets are excluded and why?
+- How much liquidity is conceptually required?
+- What duration exposure is tolerable?
+- How closely can reserves match the PPU liability?
+- Where does unavoidable basis risk remain?
+- What happens when real yields rise sharply?
+- What happens in a redemption run?
+- What happens when the benchmark is impaired?
+- What reserve losses reach first-loss capital?
+- Which questions must wait for WP1E or Phase 2?
+- Which reserve parameters remain hypotheses rather than accepted values?
+Do not authorize WP1E yourself.
+Do not proceed beyond Gate 1D without Brad’s approval.
+If the research shows that the current PPU design cannot be responsibly backed, say so clearly and stop rather than forcing the architecture to survive.

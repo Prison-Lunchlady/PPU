@@ -1,4 +1,7 @@
 # PPU execution workspace
+
+**Current handoff:** WP1D COMPLETE FOR REVIEW; Gate1D AWAITING REVIEW / NOT APPROVED. Gate1C0.1 APPROVED WITH CONDITIONS under SRC019. WP1E NOT AUTHORIZED. Use [submission](../reviews/gate1d/Gate-1D-submission.md). Earlier dated handoffs are historical; source texts and old manifests retain their original scope.
+
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Start with [Protocol State](canonical/01-protocol-state.md). This Git repository is the version-controlled execution record for the PPU project; this guide was imported from the Gate 1A baseline. No separate cloud Work task or automatic sync to ChatGPT project sources has been created or claimed.

@@ -12,11 +12,13 @@ PPU is a gated research project investigating a programmable monetary unit tied 
 | Gate 1A | APPROVED WITH CONDITIONS |
 | WP1B — Target Calculation | COMPLETE; revision 0.3 accepted for development |
 | Gate 1B | APPROVED WITH CONDITIONS |
-| WP1C — Liability Model | COMPLETE FOR REVIEW |
-| Gate 1C | AWAITING REVIEW / NOT APPROVED |
-| WP1D and later packages | NOT AUTHORIZED |
+| WP1C — Liability Model | COMPLETE; revision0.1 accepted for development |
+| Gate 1C | APPROVED WITH CONDITIONS |
+| WP1D — Reserve Architecture | COMPLETE FOR REVIEW |
+| Gate 1D | AWAITING REVIEW / NOT APPROVED |
+| WP1E and later packages | NOT AUTHORIZED |
 
-The initial commit preserved the Gate 1A review baseline. Brad subsequently approved Gate 1A and Gate 1B with conditions and authorized WP1C only; see [current approval](evidence/gate1b-approval-wp1c-authorization-2026-09-21.md). Completion of research or repository setup does not approve a gate. No production token, contracts, capital commitments, or technical architecture are authorized here.
+The initial commit preserved the Gate 1A review baseline. Brad subsequently approved Gates1A/1B/1C with conditions and authorized WP1D only; see [current authority](evidence/gate1c-approval-wp1d-authorization.txt). Completion of research or repository setup does not approve a gate. No production token, contracts, capital commitments, or technical architecture are authorized here.
 
 ## Start here
 
@@ -33,7 +35,7 @@ The initial commit preserved the Gate 1A review baseline. Brad subsequently appr
 
 ## WP1A review
 
-Read the [research report](research/wp1a/01-purchasing-power-standard-research-report.md), [benchmark comparison](research/wp1a/02-comparative-benchmark-matrix.md), and [recommended standard](research/wp1a/06-recommended-standard.md), then the [completion report](reviews/gate1a/WP1A-completion-report.md) and [Gate 1A submission](reviews/gate1a/Gate-1A-submission.md). Those research documents preserve the original submission; the underlying standard is now approved only within the current conditions. Target mechanics remain unapproved.
+Read the [research report](research/wp1a/01-purchasing-power-standard-research-report.md), [benchmark comparison](research/wp1a/02-comparative-benchmark-matrix.md), and [recommended standard](research/wp1a/06-recommended-standard.md), then the [completion report](reviews/gate1a/WP1A-completion-report.md) and [Gate 1A submission](reviews/gate1a/Gate-1A-submission.md). Those research documents preserve the original submission; the underlying standard is now approved only within the current conditions. The original target-mechanics pending status is superseded only by Gate1B conditional approval.
 
 The [public review package](archive/PPU-WP1A-Gate1A-package-public-copy.zip) preserves the original layout and historical snapshots, with documented privacy redactions. See the [import record](archive/README.md) and [file-level provenance](archive/import-provenance.json). Historical validation reports describe their original submissions; the [repository validation](reviews/repository-validation.json) covers this reorganized import.
 
@@ -68,3 +70,7 @@ Primary disposition: REVISION REQUIRED. [Benchmark Impairment Policy revision](r
 [Gate 1B approval and conditions](evidence/gate1b-approval-wp1c-authorization-2026-09-21.md) accept the v0.1 daily development path and impairment state concept. This is not proof indefinite freezing preserves purchasing power. Q023 remains OPEN and a production-activation blocker. No true-up or fallback adopted; Treasury conflict and Q021/Q022/Q024 remain OPEN.
 
 [Liability model](research/wp1c/01-liability-model.md) · [completion report](research/wp1c/WP1C-completion-report.md) · [Gate 1C submission](reviews/gate1c/Gate-1C-submission.md). 220 WP1B model/policy checks plus 58 separate WP1C accounting checks; neither production certification nor independent economic validation. WP1D NOT AUTHORIZED. Current SRC018/Protocol State supersedes dated prior handoff text.
+
+
+## Current WP1D submission
+[Reserve research](research/wp1d/01-reserve-architecture-report.md), [Gate1D submission](reviews/gate1d/Gate-1D-submission.md), [completion report](research/wp1d/WP1D-completion-report.md), [Claude reconciliation](reviews/gate1d/claude-reconciliation.md). Numerical portfolio/risk parameters remain hypotheses. Q023 structural remedy is OPEN and blocks production activation; Q025 remains OPEN. No demonstrated sustainable backing, new fallback or holder true-up. WP1E NOT AUTHORIZED.

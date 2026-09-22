@@ -1,5 +1,8 @@
 # PPU Liability Model — WP1C
 
+**Current disposition (SRC019): WP1C revision0.1 APPROVED WITH CONDITIONS for continued development.** [User authority](../../evidence/gate1c-approval-wp1d-authorization.txt). Original submission text below is historical. No legal/transaction/claim-replacement facts are certified; Q023/Q025 remain OPEN. WP1D-only authority is now complete for review, not approval of any later package.
+
+
 Revision 0.1, 2026-09-21. **RECOMMENDATION / PENDING GATE 1C.** Gate 1B revision 0.3 is accepted for continued development within SRC018 conditions, not production certification. This model defines monetary-claim accounting; it does not select a legal issuer, accounting standard, reserve, capital instrument or redemption architecture.
 
 ## Scope and evidence boundary

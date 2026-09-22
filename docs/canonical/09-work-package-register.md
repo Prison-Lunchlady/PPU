@@ -1,4 +1,13 @@
 # Work Package Register
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Revision 0.3 • Recorded 2026-09-19 America/Chicago
 
 **Historical pre-SRC018 status:** Phase 0 and WP0A COMPLETE. Gate 0 APPROVED WITH CONDITIONS under SRC010/D010. WP1A COMPLETE; Gate 1A APPROVED WITH CONDITIONS under SRC016/D012 (earlier SRC013 historical). WP1B COMPLETE FOR REVIEW; Gate1B AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1C and later packages NOT AUTHORIZED. Dated WP0A narrative below is retained as history and superseded by this status and the WP1A entry.
@@ -19,9 +28,9 @@ Source recovery exit completed in revision 0.2; subsequent direct user approval 
 | Package | Title | Required output | Status |
 |---|---|---|---|
 | 1A | Purchasing-Power Standard | Purchasing-Power Standard Specification and expanded user-required deliverables | COMPLETE; Gate1A APPROVED WITH CONDITIONS |
-| 1B | Target Calculation | Formal Target Calculation Specification with expanded SRC013 deliverables | COMPLETE FOR REVIEW; Gate1B awaiting primary disposition |
-| 1C | Liability Model | PPU Liability Model | NOT AUTHORIZED |
-| 1D | Reserve Architecture | Reserve Architecture Specification | NOT AUTHORIZED |
+| 1B | Target Calculation | Formal Target Calculation Specification with expanded SRC013 deliverables | COMPLETE; revision0.3 APPROVED WITH CONDITIONS |
+| 1C | Liability Model | PPU Liability Model | COMPLETE; revision0.1 APPROVED WITH CONDITIONS |
+| 1D | Reserve Architecture | Reserve Architecture Specification | COMPLETE FOR REVIEW; Gate1D AWAITING REVIEW |
 | 1E | Capital Structure | PPU Capital Structure Specification | NOT AUTHORIZED |
 | 1F | Mint and Redemption Architecture | Mint/Redemption Specification | NOT AUTHORIZED |
 | 1G | Governance Constitution | PPU Monetary Constitution v1.0 candidate | NOT AUTHORIZED |
@@ -78,3 +87,9 @@ SRC017: Gate 1B REVISION REQUIRED. Narrow Benchmark Impairment Policy revision c
 ## Current WP1C handoff — SRC018
 
 WP1B revision 0.3 ACCEPTED FOR CONTINUED DEVELOPMENT; Gate 1B APPROVED WITH CONDITIONS. WP1C Liability Model COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED. Next authorized package NONE. WP1D and later NOT AUTHORIZED. Six roadmap topics covered: monetary liability, accepted unsettled redemption, seniority assumptions, inflation, deflation and supply changes. No reserve/capital/transaction/governance/legal or structural-remedy choice silently made.
+
+
+## WP1D — Reserve Architecture
+Authority SRC019, only authorized package. Status COMPLETE FOR REVIEW; Gate1D AWAITING REVIEW / NOT APPROVED. Eleven research/specification/source documents, calculations/tests, phased Claude critique/reconciliation, completion report and manifest. Each required asset, risk, scenario and dependency maps to the report/specifications; historical analogues are not Phase2 backtests.
+
+Adopted Roadmap v0.1 source remains byte-identical. Its reserve, capital and simulation sequence is preserved: first-loss instrument/compensation WP1E; transaction terms/APs WP1F; calibrated backtests/ratio optimization Phase2; title/segregation/enforceability/entity analysis Phase3. Draft ArticlesV/VIII–X have implications documented without ratification. No future technical placeholder architecture created. WP1E NOT AUTHORIZED.

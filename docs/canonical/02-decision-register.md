@@ -1,4 +1,13 @@
 # Decision Register
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Inherited IDs and statuses are preserved below. Source: [Phase 0 response](../../evidence/phase0-source.md); governing process: [roadmap](../roadmap/07-development-roadmap.md). Historical decision dates were not explicitly stated; this is a recording date, not an invented approval date.
@@ -154,3 +163,9 @@ Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1
 ## PPU-D016 — Disjoint monetary-claim liability framework
 2026-09-21. RECOMMENDATION / PENDING GATE 1C. [WP1C model](../../research/wp1c/01-liability-model.md) replaces ambiguous supply-plus-queue shorthand with an economic partition and dimensional measurements. Alternatives rejected: physical totalSupply as complete liability, counting predecessor and accepted replacement twice, extinguishing claims on burn/payment initiation, and silently choosing fixed versus indexed redemption terms. Recommendation: explicit typed states, gross reference exposure and unresolved perimeter/ranking/discharge requirements. Tradeoff: model depends on unproven effective replacement and completeness facts; it cannot implement or validate those facts. Reconsider on later transaction/legal findings. Q005/Q006 are review-pending, not a complete legal/transaction resolution.
 
+
+## PPU-D017 — Gate 1C disposition and WP1D authorization
+ACCEPTED user process decision, SRC019,2026-09-21. D016 accepted for continued development only with scoped gross monetary liability, claim-replacement Q025 and all stated Gate conditions retained. No accepted fixed/indexed queue choice, enforceable seniority, entity/accounting classification or proof of completeness. Full additional primary-review conditions not independently retrieved; current direct user evidence is not a formal export. WP1D only authorized and now submitted; WP1E unauthorized.
+
+## PPU-D018 — Candidate reserve architecture and analytical controls
+RECOMMENDATION / PENDING GATE 1D. [WP1D report](../../research/wp1d/01-reserve-architecture-report.md) recommends conditional baseline eligibility, segmentation, no borrowing/rehypothecation, separate gross/available values, paired encumbrance claims and horizon-based liquidity tests. Alternative assets remain research comparators. No asset allocation, ratio optimum or safe haircut is accepted. Counterexamples defeat unconditional solvency/liquidity claims; finite buffer cannot cure persistent negative net real carry. Reopen if funding, liquidity, ownership or empirical stress evidence defeats the candidate. WP1E/1F/Phase2/3 dependencies are recorded, not executed.

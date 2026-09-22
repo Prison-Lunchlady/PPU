@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-21",
+  "model_ui_label": "Opus 5 High",
+  "stage1": "COMPLETED:15 findings",
+  "stage2": "COMPLETED:18 findings",
+  "stage3": "COMPLETED:9 findings plus hash-integrity caveat",
+  "stage4": "CLAUDE REVIEW UNAVAILABLE",
+  "observed_messages": [
+    "Claude is busy right now. Try again in a moment.",
+    "Taking longer than usual. Trying again shortly (attempt 5)"
+  ],
+  "disposition": "Stopped repeated unavailable request; no substantive final review returned. Final core locally tested only.",
+  "final_submitted_files": 35,
+  "operator_decoded_hashes_verified": 35,
+  "claude_final_hashes_verified": null,
+  "external_human_review": false,
+  "gate": "AWAITING REVIEW / NOT APPROVED"
+}

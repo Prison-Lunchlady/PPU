@@ -1,0 +1,137 @@
+{
+  "scope": "Exact core provided for stage3. Subsequent findings/reconciliation/manifest and handoff metadata are outside this reviewed-byte claim.",
+  "files": [
+    {
+      "path": "docs/canonical/01-protocol-state.md",
+      "sha256": "62666DA4EC75B2C4E157FAEC6C0BFD32A2F6B5635D6A5D431B42E6E4DA7BB868"
+    },
+    {
+      "path": "docs/canonical/02-decision-register.md",
+      "sha256": "3562D6319A8EFBCAD69017FB9970431788539DEF38910CB34A6867668DE45C73"
+    },
+    {
+      "path": "docs/canonical/03-risk-register.md",
+      "sha256": "B95D56AB6F584BD3B6B580093DE5644BB2DD3D7D7B1FC76386AB4C35A4342C0F"
+    },
+    {
+      "path": "docs/canonical/04-active-hypotheses.md",
+      "sha256": "FF2D5842ECFE289B7E89E8CC0290D2FF3500CAB2F8D5A9E02525357D810E8791"
+    },
+    {
+      "path": "docs/canonical/05-unresolved-questions.md",
+      "sha256": "19FFD92492773AEB7FD5B3CE3C93D437A2378C62111C59A514024E661B026B61"
+    },
+    {
+      "path": "docs/canonical/06-research-library-index.md",
+      "sha256": "B98E9B148404E6FAC0A4C53CFFDF9CB40F2CE85DA4F2024CCD08FBB1283E7CA9"
+    },
+    {
+      "path": "docs/canonical/09-work-package-register.md",
+      "sha256": "CAEDDB73BE1CBCD9E084DBC3167C15E84C3D14A1DBDFD64E6CFD9CBFACA4D80A"
+    },
+    {
+      "path": "docs/canonical/10-review-gate-register.md",
+      "sha256": "91FE51B22BAD38DCB069F2DCB385D03FA04718BD26E6F2390ED3C8297365EEF5"
+    },
+    {
+      "path": "docs/constitution/08-draft-constitution.md",
+      "sha256": "A2AA0E0504FE87310236AB3CB692451D64F11F43196BF7CBE66552E0D156002F"
+    },
+    {
+      "path": "docs/roadmap/07-development-roadmap.md",
+      "sha256": "A24F5998F0D5AA1CF53EE2B1EFD2E32820BBCBF587C396076C98C95F252A47F3"
+    },
+    {
+      "path": "evidence/gate1c-approval-wp1d-authorization.txt",
+      "sha256": "3E56466781BBF98CA50CC95997235D7793D7EC5DF4BB973EE6E7F197A8BC5247"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2A211A300A34E1A97417651BCBAC1BEB0125D1171F56B3DA263E24CFAF544158"
+    },
+    {
+      "path": "research/wp1d/01-reserve-architecture-report.md",
+      "sha256": "7A1CBB93CA010458E248A1CAED8EF571904C05B87F6F46FDBE6C247797D68A54"
+    },
+    {
+      "path": "research/wp1d/02-reserve-eligibility.md",
+      "sha256": "CBA78DD5E411610DC8A3DB4E922399310884FD435ACC61C0D6B5EB74F618EA98"
+    },
+    {
+      "path": "research/wp1d/03-candidate-structures.md",
+      "sha256": "B55DFC73E43D5E8362C4CD4B7BD60698C9FD005525DC51E96C347C1C2DA7B4BD"
+    },
+    {
+      "path": "research/wp1d/04-duration-liquidity.md",
+      "sha256": "C72B6304251151EF223B1DD583696F72087C7B20C0CD93EC3BC8341259E8BCA9"
+    },
+    {
+      "path": "research/wp1d/05-inflation-basis-risk.md",
+      "sha256": "FA4257C04A103E3985F7184EAEDBF00633B516544C7EA2E8E4673FAB4ED25AA4"
+    },
+    {
+      "path": "research/wp1d/06-haircut-framework.md",
+      "sha256": "D898021496D8473B0536AEC509FC729F83F818925A5C58BCE6C82B7DE7A0667C"
+    },
+    {
+      "path": "research/wp1d/07-custody-segregation.md",
+      "sha256": "9ABA99F0B169F5320F9B9F1AE7E57096DC4952D5351DFB1D7178BCCF8ABCF814"
+    },
+    {
+      "path": "research/wp1d/08-adversarial-failure-analysis.md",
+      "sha256": "27154667191239BFF2062BEA5A36B95C7CB98C1D5D64BF23FDC919737A7C4935"
+    },
+    {
+      "path": "research/wp1d/09-alternative-assets.md",
+      "sha256": "25545659E76629893345C8CC765DC93F984FF69DCC7426E4469793199C4E76D7"
+    },
+    {
+      "path": "research/wp1d/10-parameters.md",
+      "sha256": "BB1A2D174FA9F436423C4A7697BCA7296296F6D7609521009F7C422090E810EE"
+    },
+    {
+      "path": "research/wp1d/11-sources.md",
+      "sha256": "D63E3A81AA77EB29DEA1C3F250C4804663D37279468C87A2FB289D5C859BCF16"
+    },
+    {
+      "path": "research/wp1d/calculate_scenarios.py",
+      "sha256": "B5FEF6B0E39096317C9518C6CC07DB6A94F3C7DBB97D636CEA547D06381565C3"
+    },
+    {
+      "path": "research/wp1d/reserve_model.py",
+      "sha256": "DF564B3E8BA24459AB9B695B0F074053B05359BDF924011DC33541F54F94534B"
+    },
+    {
+      "path": "research/wp1d/scenario-results.json",
+      "sha256": "D08E92F3E6CC1A5C895568CEEA85823DBD8D1E29DA1E9DEC1B7E3FE520D4B3D8"
+    },
+    {
+      "path": "research/wp1d/scenario-validation.json",
+      "sha256": "DF585A9922D76D68CD1DC500EA25783B487CECD5E293022A3CA88AD12CA5343D"
+    },
+    {
+      "path": "research/wp1d/test_reserve_model.py",
+      "sha256": "A114DC46640A50FC20C585F6DC63995DF698BDE769D0F1E74B5DAFD5703BB454"
+    },
+    {
+      "path": "research/wp1d/validate_scenarios.py",
+      "sha256": "8BAF5BBC20B4D26B01CCC39005905B30C7F23DF2B24FFEFD44428B406E463EC2"
+    },
+    {
+      "path": "research/wp1d/validation.json",
+      "sha256": "45438B533891E51646ECC0998C957DE36074DDCB2C04B0462811F39FA22F2B66"
+    },
+    {
+      "path": "research/wp1d/WP1D-completion-report.md",
+      "sha256": "38CAE8C01AE7D05EF93E99F0FF6DFBD701357376A9E13695A92E9132D2C7A30B"
+    },
+    {
+      "path": "reviews/gate1d/claude-reconciliation.md",
+      "sha256": "E576F2308CE5786AAEAE54BCF4BC7EE1FF87AC2526EC8640EEA8093231587D7D"
+    },
+    {
+      "path": "reviews/gate1d/Gate-1D-submission.md",
+      "sha256": "AABAF3C8B8F76CAB78901E4B28C07658CAEF009AC2E9C762B491B89A2B473698"
+    }
+  ]
+}

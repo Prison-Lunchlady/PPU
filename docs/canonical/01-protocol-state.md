@@ -1,16 +1,26 @@
 # PPU Protocol State
-Record revision 0.7 • 2026-09-21 America/Chicago • Primary project state
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
+Record revision 0.8 • 2026-09-21 America/Chicago • Primary project state
 
 **Phase:** 1 — Monetary Architecture; Phase 0 COMPLETE  
-**Current package:** WP1C — Liability Model  
-**Package status:** WP1C COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED  
+**Current package:** WP1D — Reserve Architecture  
+**Package status:** WP1D COMPLETE FOR REVIEW; Gate 1D AWAITING REVIEW / NOT APPROVED  
 **WP0A:** COMPLETE  
 **Review Gate 0:** APPROVED WITH CONDITIONS  
 **Review Gate 1A:** APPROVED WITH CONDITIONS; WP1A COMPLETE
 **Review Gate 1B:** APPROVED WITH CONDITIONS; WP1B revision 0.3 accepted for development
-**Review Gate 1C:** AWAITING REVIEW / NOT APPROVED  
-**Authorized scope completed:** WP1C only; next authorized package NONE  
-**Next planned package after WP1C:** WP1D — Reserve Architecture; NOT AUTHORIZED
+**Review Gate 1C:** APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development
+**Review Gate 1D:** AWAITING REVIEW / NOT APPROVED  
+**Authorized scope completed:** WP1D only; next authorized package NONE  
+**Next planned package after WP1D:** WP1E — Capital Structure; NOT AUTHORIZED
 
 Brad's [approval and conditions](../../evidence/gate0-approval-wp1a-authorization.md) close Q019. Permanent conditions: SRC003 is authoritative user-confirmed recovery, not a formal platform export; unresolved architectural tensions remain unresolved; WP1A authorization does not extend to later packages. The approved Gate 0 record is retained in evidence/gate0-approved/ and the prior archive.
 
@@ -112,3 +122,7 @@ Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1
 ## Current Gate 1C handoff
 
 [Liability model](../../research/wp1c/01-liability-model.md) defines disjoint LIVE/REQUESTED/ACCEPTED_INDEXED/ACCEPTED_FIXED/DISCHARGED economic states. L=(N+Qidx)×T+Qfix; no double-counted predecessor or automatic offset for reserves. Fixed-versus-indexed queue terms remain alternatives, not selected architecture. Gross face, legal priority, recovery and market value are separate. 58 synthetic accounting checks pass; they supplement, not relabel, the 220 WP1B checks. [Submission](../../reviews/gate1c/Gate-1C-submission.md). Q023 remains an OPEN production-activation blocker; WP1D NOT AUTHORIZED.
+
+
+## WP1D findings and boundary
+Research recommends conditional cash/bill/short-TIPS candidates and tightly controlled cash-lender Treasury reverse repo, with separate market, stressed-realizable and deadline-available reporting. No allocation, haircut or duration limit is production calibrated. Negative net real carry, simultaneous inflation/liquidity stress and forced sales can exhaust positive initial buffer. Economic residual A-L-O is not an extra asset or legally guaranteed first-loss funding. R028–R031 and Q026–Q028 record new dependencies. WP1D does not establish responsible production backing; testing/qualified review and Q023 remain necessary. WP1E NOT AUTHORIZED.

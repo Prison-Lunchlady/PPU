@@ -1,0 +1,9 @@
+{
+  "source_id": "SRC019",
+  "source_kind": "Direct user-provided instruction attachment; not platform export",
+  "original_sha256": "C9C6F3CF1D1483ACD4D0892DFD5E6529B71C7E13C3F2D7C092A3E742B98229D2",
+  "repository_sha256": "3E56466781BBF98CA50CC95997235D7793D7EC5DF4BB973EE6E7F197A8BC5247",
+  "text_check": "Exact text after newline/BOM and surrounding whitespace normalization; no wording edits",
+  "date": "2026-09-21",
+  "limits": "Separate complete Gate1C primary-review transcript not independently retrieved; additional conditions not invented or waived"
+}

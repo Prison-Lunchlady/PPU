@@ -1,4 +1,13 @@
 # Risk Register
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Version 0.1 • Recorded 2026-09-19 America/Chicago
 
 Source: [Phase 0 response](../../evidence/phase0-source.md). Original IDs and severity preserved. Every original risk remains OPEN; probability, quantitative loss and residual severity are UNASSESSED. No mitigation has been validated. Brad is the gate authority; technical/research owners are unassigned until authorization.
@@ -128,3 +137,12 @@ R023 remains HIGH / OPEN: a label, deadline or escalation cannot bound loss unde
 **R-027 — Monetary-claim partition differs from enforceable entitlements. HIGH / OPEN, qualitative.** Accepted queue claims can coexist with still-valid bearer claims; token supply can omit refunds or unpaid debt; payment/burn signals can falsely indicate discharge. A correct equation then misstates obligations. Required future evidence: effective replacement, complete scoped inventory, authenticated discharge, partial residual reconciliation and legal mapping. WP1C defines and tests invariants, not their real-world truth. Routes Q005/Q006/Q013/Q025 and later expressly authorized transaction/legal/technical work.
 R021 Treasury contingency, R022 institutional measurement and R023 structural impairment remain OPEN. R025 true-up collection and R026 fallback mismatch remain OPEN; no mechanism adopted. Q023 is a production-activation blocker. No reserve/capital or recovery assumption is validated by accounting tests.
 
+
+## WP1D reserve risks
+**R-028 — Persistent negative net real carry exhausts finite buffer. HIGH / OPEN.** Short nominal/real yields net of expenses can trail indexed liabilities across rolls.120*.98^10<100 counterexample; not a universal current-yield claim. Funding/expense/compensation resolution WP1E and Phase2. No perpetual replenishment assumed.
+
+**R-029 — Joint rate/liquidity shock and sequential exits exhaust reserve. HIGH / OPEN.** TIPS index growth does not prevent sale losses; early exits shift loss to residual holders. B synthetic simultaneous stress turns120/100 starting assets/face into113.76/115. Horizon and run curves are diagnostics, not a cure. WP1F/Phase2.
+
+**R-030 — Asset eligibility, encumbrance and access evidence falsely overstates backing. HIGH / OPEN.** Omnibus title, hidden liens, repo collateral double count, uninsured bank concentration, stale bids and settlement cutoffs can defeat coverage. Paired inventory/claim reconciliation and conservative access required; Phase3 and later technical evidence unresolved.
+
+**R-031 — Treasury reserve concentration shares institutional and contingency exposure. HIGH / OPEN.** Same sovereign, banks/custodians, market infrastructure and2025 CPI contingency can create correlated failures. Shorter duration cannot remove this; no fallback adopted. Links R021/R022/R023, Q023 and later reserve simulation/legal analysis.

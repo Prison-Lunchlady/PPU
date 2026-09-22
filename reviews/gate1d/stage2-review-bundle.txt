@@ -1,0 +1,1257 @@
+PPU WP1D revision 0.1 stage 2 review bundle. Full draft and model, not approved.
+
+
+===== research/wp1d/01-reserve-architecture-report.md =====
+# Reserve Architecture Research Report
+WP1D revision 0.1 • 2026-09-21 • RECOMMENDATION, pending Gate 1D. Source authority SRC019. Research only; no purchase, launch, legal conclusion or later-package authorization.
+
+## Finding and scope
+A segmented cash/bill/short-TIPS architecture is a defensible **candidate to test**, not demonstrated sustainable backing. No allocation here eliminates the conflict between inflation exposure, real-rate losses, settlement liquidity and negative net real carry. With a persistent negative net real return, finite capital can be exhausted even without a run. If viability requires perpetual external subsidy, that must be explicit at WP1E/Phase 2, not hidden inside a reserve yield assumption. Q023 independently prevents production activation regardless of the assets.
+
+The approved liability is `L_PPU,v=(N_v+Qidx_v)*T_v+Qfix_v`, with version/obligor separation and effective replacement Q025 unresolved. Preserve monetary face, asset value, recovery value, legal seniority and statutory accounting as different quantities. This package recommends eligibility and analytical controls, not a capital instrument, return distribution, optimal ratio, fees, APs, redemption terms, entity, bankruptcy priority, production custodian or blockchain.
+
+## Established evidence and interpretation
+Treasury describes bills as nominal instruments paid at face on maturity and TIPS as inflation-adjusted principal with a floor at original principal on maturity. TIPS are issued at 5/10/30-year terms; a short remaining-maturity portfolio requires secondary selection, not an invented short TIPS auction. The floor does not guarantee a secondary purchase price or a forced-sale price. [S01–S02](11-sources.md).
+
+Federal Reserve research identifies TIPS liquidity premia during the financial crisis and dealer-capacity pressure in March 2020 Treasury trading. Consequently, low sovereign credit risk is not sufficient evidence of realizability at a deadline. Repo margin and collateral do not remove closeout and settlement risks; FDIC coverage is conditional and limited, not blanket reserve insurance. [S03–S06](11-sources.md).
+
+Treasury actually invoked a CPI contingency in 2025. Its liability is therefore not identical to PPU's fixed-vintage/impairment liability in all states. No Treasury fallback is imported into PPU. [S07](11-sources.md). Government concentration and CPI institutional dependence cannot be diversified away merely by mixing Treasury instruments.
+
+## Recommended candidate, competing designs and falsifiers
+Compare cash/bill-heavy A, mixed B, larger-liquidity C and TIPS-heavy D before alternative additions. B is a useful central **test case**, not a selected allocation. A reduces rate risk but fails prolonged inflation/net-real-carry tests; D reduces some index sensitivity mismatch but increases sale losses and availability dependence. C buys time at the expense of cash drag. No candidate is uniformly best across the synthetic cases. [Structures](03-candidate-structures.md), [calculations](scenario-results.json).
+
+For a deliberately common A=120 and L=100 comparison, inflation+liquidity factors cash 1, bills .97, TIPS .90 and target +15% give assets A=117.12, B=113.76, C=116.16, D=110.88. Indexed liabilities are 115: buffers +2.12, -1.24, +1.16, -4.12. Positive starting overcollateralization fails for B and D. These are operator stress assumptions, not observed 1970s or COVID returns and not a 120% recommendation. Any realized loss, expense or liability increase uses economic buffer; no capital instrument is presumed available to replenish it.
+
+## What would defeat this direction
+An unsupported liquidity promise, inability to verify single asset ownership, incompatible legal access, repeated roll losses, procyclical forced sales, or a negative residual under reasonable stresses can defeat the candidate. Do not cure that result by recognizing fictitious assets, reducing gross claims, assuming central-bank access, adopting a new benchmark or forecasting new buyers. A simpler direct bill/TIPS portfolio may be preferable for users who do not need transfer/programming functionality; demand and the value of that functionality remain unproved Q021.
+
+## Unresolved limits and package routing
+WP1E must confront sustainable funding, expense drag and residual loss absorption without counting contributed cash twice. WP1F must determine outflow timing, fixed/indexed accepted claims, run incentives and pricing/discharge facts. Phase 2 must fit/reject parameters using historical instruments, joint shocks, transaction costs and Monte Carlo/adversarial paths. Phase 3 must establish actual ownership, legal access, insurance, priority and enforceability. Later technical work must authenticate complete off-chain evidence. None starts here. No chosen assets or successful tests cure Q023.
+
+See the [Gate submission](../../reviews/gate1d/Gate-1D-submission.md) for current status and review coverage. Roadmap and unratified draft constitution retain original text; their WP1D implications are mapped in the package register and this report, not silently ratified.
+
+
+===== research/wp1d/02-reserve-eligibility.md =====
+# Reserve Eligibility Specification
+Revision 0.1 • Proposed research constraints, pending Gate 1D. No asset is production-approved.
+
+## Conditional baseline eligibility
+| Asset | Candidate role | Evidence required before eligible credit | Exclusion / failure |
+|---|---|---|---|
+| USD cash deposit | Operational settlement cash | Bank identity, deposit owner, account type, balance/finality, withdrawal access, verified insurance category/limits, setoff/lien rights | Not central-bank money; uninsured balance and common banking exposure need counterparty stresses; blocked account gets zero horizon credit |
+| Direct Treasury bill | Dated liquidity / nominal sleeve | CUSIP, beneficial title, settled units, maturity, dirty market bid, custody and delivery calendar | No credit from unsettled purchases, pledged units, unverified title or assumed weekend sale |
+| Short Treasury reverse repo, PPU as cash lender | Dated nominal receipt | Receivable amount/interest/term, Treasury-only collateral, margin, enforceable control and closeout, independent valuation, counterparty exposure | No borrowing against PPU reserve, no collateral double count, no renewal assumption; term repo inaccessible before payment/legally available closeout |
+| Direct short remaining-duration TIPS | Partial inflation-matching sleeve | CUSIP, dated principal, Treasury index ratio separately from PPU target, clean+accrued valuation convention, remaining cash flows, duration/key-rate sensitivity, market depth | No maturity-floor sale guarantee, no stale/matrix quote treated as executable, no assumed protection from real-yield increases |
+
+Every candidate must satisfy unit/currency identification, a common as-of time, complete ownership and encumbrance inventory, independent price evidence, conservative stressed conversion and availability, concentration tests, and auditable custody reconciliation. Unknown is not a passing eligibility result. Ledger inventory retains excluded assets and paired obligations; excluding an asset never extinguishes its creditor. Securities lending, rehypothecation, leveraged overlays, lending reserve assets for unrelated yield, opaque affiliates and unbacked receivables are excluded from the proposed baseline.
+
+## Segmentation and constraints
+1. Settlement sleeve: usable USD by actual payment deadline, including operating cash. Access is scenario-dependent; cash at a failed bank is not immediate liquidity.
+2. Dated liquidity sleeve: short bills and qualifying reverse-repo maturities arranged across relevant horizons. Trading proceeds count only after executable sale and settlement delay.
+3. Inflation sleeve: direct short TIPS with measurable cash flows, real-rate sensitivity and divergence from the PPU target.
+4. Exception inventory: encumbered, disputed, stale, unsettled or inaccessible positions; disclose gross balances, no silent deletion or unexplained reserve credit.
+
+Capital is a financing/economic layer across these assets, not a fifth asset sleeve. Proposed baseline prohibits investing a separately imagined equity amount on top of assets already financed by it.
+
+## Limits pending calibration
+Test bills remaining maturity <=1 year; baseline short-TIPS test bracket 0–2 years, contrasted with 5/10 years. These are candidate risk constraints, not tolerable-loss certification. Require issuer, banking group, custodian, settlement agent, repo counterparty and CUSIP concentration reports; a numerical cap is NOT invented before access and loss budgets exist. A Treasury-only portfolio remains sovereign-concentrated. See [parameters](10-parameters.md) for explicit statuses and rejection criteria.
+
+Funds, tokenized Treasury wrappers and stablecoins are not automatically equivalent to direct holdings. Their own redemption, expenses, intermediate claims, liquidity, encumbrance and issuer/chain/bridge risk require separate eligibility. No alternative asset becomes eligible merely by an attractive backtest.
+
+
+===== research/wp1d/03-candidate-structures.md =====
+# Candidate Reserve Structures
+Revision 0.1 • all weights illustrative percent of reserve market value, not liability and not approved allocations.
+
+| Case | Cash | Bills | Short TIPS | Expected strength | Attempt to falsify |
+|---|---:|---:|---:|---|---|
+| A | 20 | 80 | 0 | Lower duration; many dated nominal receipts | Unanticipated inflation, low rollover yields, repeated expenses erode buffer |
+| B | 20 | 40 | 40 | Mixed liability/settlement sensitivity | Simultaneous real-rate increase and run can overwhelm the buffer |
+| C | 40 | 40 | 20 | More immediate capacity if bank cash accessible | Cash drag, bank failure; initial liquidity does not imply full-run coverage |
+| D | 10 | 20 | 70 | Greater index sensitivity before rate/liquidity effects | Long liquidation queue, TIPS fire sale, index/contract basis |
+
+Test reverse repo as a substitution within the bill sleeve (0/10/20% total asset share), never an extra asset. Conditional 100 receivable secured by collateral marked102: a5% collateral fall and1% incremental liquidation cost yields95.931 collateral recovery, not197.931. Matured but unpaid repo remains receivable; default does not magically convert it into usable cash. No unsecured deficiency recovery assumed in the example.
+
+Comparison uses A0=120 and L0=100 USD million only to keep scale common. This does not select 120% collateralization or reproduce Phase 2's full 105–130% grid. Ratios must reference gross WP1C liability, and other claims remain separately visible. Candidate rankings can reverse with target path, net carry, queue mix, sale deadline and price basis; no optimizer is run.
+
+In the synthetic deflation case target -.10, cash1/bills1.01/TIPS.90, B has115.68 assets. All-indexed liability90 gives25.68 buffer; 20 fixed USD plus80 indexed gives92 liability and23.68 buffer. Fixed accepted claims reduce deflation relief. Neither acceptance branch is selected, and face price does not determine legal priority.
+
+Every candidate must also be tested with inaccessible cash and common custodial failure; reallocating between securities at the same inaccessible custodian may add no operational diversification. See [scenario results](scenario-results.json) and [adversarial analysis](08-adversarial-failure-analysis.md).
+
+
+===== research/wp1d/04-duration-liquidity.md =====
+# Duration and Liquidity Analysis
+Revision 0.1 • proposed measurement and diagnostic tests, not finalized risk appetite.
+
+## Rate exposure
+TIPS respond to real discount rates as well as indexed principal. Nominal bills respond to nominal yields; rolling short maturities trades smaller current price sensitivity for reinvestment risk. Measure modified duration, convexity and key-rate exposures by asset, sleeve and entire reserve. Weighted duration is not a substitute for a maturity cash-flow schedule or a stressed executable bid.
+
+Local diagnostic `ΔP/P ≈ -Dmod*Δy` uses years times annual yield change (e.g.300bp=.03). It is not a large-shock valuation. The executable comparison uses exact semiannual zero-coupon repricing `P1/P0=((1+y0/2)/(1+y1/2))^(2m)`, holding maturity m fixed for an instantaneous shock. This is an educational proxy, not a real coupon TIPS including index accretion, cash-flow timing, convexity of coupons or the maturity option. Scenarios use explicit total-return factors instead of multiplying this rate diagnostic into an already stressed TIPS return; no same-loss double counting.
+
+At2% initial yield and+300bp, the exact10-year zero loses about25.37%; the2-year loses about5.73%. Calculate precise outputs in [results](scenario-results.json). A10-year duration is not made appropriate by10-year expected holder loyalty: claims may be transferable/redeemable and fixed claims need nominal funding. Test 0.5/2/5/10-year proxies and±100/300/500bp; these do not prove a safe2-year ceiling.
+
+Proposed limit concept: for each joint stress s, allowed rate exposure must leave nonnegative conditional economic buffer **and** enough deadline liquidity, after unrelated costs and liability changes. A preliminary bound `sum(MV*Dmod)*dy <= explicit loss budget` can screen small shocks only; use full cash-flow repricing for final limits. WP1E/Phase2 must establish the budget and probability/tail tolerances; no universally tolerable duration is determined here.
+
+## Horizon test
+For every cutoff h and joint scenario s, `available_USD(h,s) >= due_outflows(h,s)+operating_cash(h,s)+explicit_uncertainty_margin(h,s)`. Test intraday/24h/72h/7d/30d, weekends/holidays, market closures and settlement delays. Only one use of each asset is allowed: sale proceeds and maturity proceeds are mutually exclusive. No new issuance, counterparty renewal, borrowed reserves or lender-of-last-resort funding in the base stress. Haircuts cannot create liquidity when access is zero.
+
+Minimum liquidity is a function of outflow commitments, not a chosen universal reserve percentage. With immediately usable20, demand30 and operating2, gap=-12 even if total assets120. If60 of bill sale proceeds arrive in24h, they do not meet a23h deadline. WP1F must supply actual terms; until then publish multiple outflow branches, including100% eligible demand, and never promise an inferred deadline.
+
+## Sequential run counterexample
+Initial cash20+securities100, gross face100. Demand80 with20% sale discount requires selling75 marked securities, generates60 cash, destroys15 value, pays80 and leaves25 assets against20 remaining face: buffer5, not20. Demand100 would consume100 marked securities and leave0 assets/0 face; demand130 leaves30 unpaid in the illustrative larger-liability branch. An unpaid balance is still owed. Repeated partial sales can make remaining holders worse off; no seniority/fee/gate mechanism is adopted to cure it.
+
+Report a cumulative-demand curve across0/20/40/60/80/100% and sales discounts0/2/10/20%, including cash inaccessible and deadline-limited sales. The model is a one-shot aggregate accounting illustration, not a behavioral bank-run equilibrium or live order-book model. Timing, acceptance access and adverse selection stay WP1F/Phase2 dependencies.
+
+
+===== research/wp1d/05-inflation-basis-risk.md =====
+# Inflation Matching and Basis Risk
+Revision0.1 • no approved benchmark or historical target is changed.
+
+PPU targets U.S. urban CPI-U NSA purchasing power; it does not promise an individual's living costs or global purchasing power. A TIPS index ratio and the accepted adapted PPU daily calculation may align on the ordinary lagged CPI path. They must still be computed independently by dated vintage and contractual convention; it is incorrect to assume PPU uses the latest release while TIPS necessarily lags it by an additional three months. WP1B remains the authoritative calculation, not this report.
+
+| Basis channel | Mechanism | Consequence / research requirement |
+|---|---|---|
+| Publication/plan timing | Frozen first releases, corrections and daily commitment rules can differ from Treasury | Match actual dated daily observations, never substitute revised values silently |
+| Structural contingency | Treasury2025 substitute October CPI is an actual divergence example | Q023 and Treasury conflict OPEN; liquid TIPS cannot define PPU's remedy |
+| Real rates and liquidity premia | Discounted sale price can fall despite principal growth | Separate index accrual from market yield and sale spread |
+| Coupons and maturity | Cash coupons, real yield, maturity floor and reinvestment differ from perpetual liability | Reinvested coupon assumptions/costs explicit; secondary floor not purchase-price insurance |
+| Cash/nominal sleeve | Nominal returns need not cover target growth | Cash drag and unexpected inflation burn buffer |
+| Fixed versus indexed claims | Qfix does not deflate or inflate after price fix | Test both branches; conditional nominal asset matching for fixed claims is analytical, not selected segmentation of legal assets |
+| Vintage/version and rounding | Different targets, claim units and payment granularity | Version-specific sums;18-place binding target is arithmetic precision, not18-digit CPI accuracy; payment dust rules not chosen |
+| Expenses/taxes/negative real carry | Net return can be below liability growth | Costs separately reduce buffer; no assumed tax exemption or free operating service |
+
+## Net real carry falsifier
+If reserve real growth net of every expense is r<0 while indexed face grows with CPI, normalized assets follow `A_real,n=A_real,0*(1+r)^n` in a simple no-flow branch. At120/100 and r=-2%, after10 years real assets≈98.05<100. This is a mathematical counterexample, not a claim that every allowable allocation always has negative yields or is inherently insolvent now. Finite first-loss funding postpones loss, not an economic source of return. External income, capital replenishment and compensation belong to WP1E and remain unchosen.
+
+## Impaired benchmark
+Continue to show calculable reference face with the impairment flag, alongside reserve values. A rising TIPS index against frozen PPU can create apparent surplus; never represent it as free distributable profit or restored purchasing-power coverage. With deflation, frozen face can exceed current-price exposure and attract exits depending on later transaction terms. With inflation, liquidity needs can still be severe if holders lose confidence; 'nobody redeems' is not a justified prediction. No numerical option price is possible without probabilities, terms and user behavior; use opposite-direction counterexamples and retain Q022/Q023/Q024.
+
+There is no accepted holder true-up, automatic alternate index, Treasury substitution, write-down of face, reopening of finalized plans or nominal floor. Unspecified legal claims remain unknown, not zero. Institution and public reconstruction limits of CPI-U remain documented and OPEN.
+
+
+===== research/wp1d/06-haircut-framework.md =====
+# Haircut Framework
+Revision0.1 • scenario framework proposed; no production percentages calibrated.
+
+Let inventory market value include all recorded positions and exceptions. Let `Aeligible=sum(free, owned, authenticated, fresh market portions)`. For joint scenario s, `Vreal(s)=sum(free_i*shock_factor_i(s)*(1-execution_discount_i(s)))`; define horizon availability by actual access and settlement. Market assets, stressed realizability and deadline liquidity are separate reports and must NEVER be added. Stale/unknown values produce exceptions, not proof that the true assets disappeared.
+
+Shock factors include only specified mark changes, while incremental execution discounts represent **additional** bid/size/closeout costs not already in the price. An observed distressed bid plus a liquidity-premium decline plus a full stressed bid haircut can triple-count one event. Use one coherent joint path and a reconciliation of each loss component. Correlation must be stressed jointly; no sum of independent normal VaRs as a tail guarantee.
+
+Disclose gross WP1C `L_PPU` without netting. Ratios `Aeligible/L_PPU` and `Vreal/L_PPU` are conditional diagnostics, undefined if L=0 and undetermined if L missing. Other known claims O and incomplete inventory are visible. Full-inventory residual `E=A-L_PPU-O` is an economic estimate, not legally available first-loss capital. For available-pool analysis, remove encumbered assets and only the corresponding covered creditor portion together; residual deficiencies stay in O. Never both remove collateral and subtract its entire secured claim again, or exclude the asset and forget the debt. Whether the allocation is legally valid is unresolved Phase3 evidence, not a netting permission.
+
+Rehyped assets, unverifiable title or inaccessible custodial balances receive zero eligible/horizon credit as applicable; percentage haircuts cannot substitute for proof of title/access. Repo is a receivable supported by collateral, not two assets. Repo margin is a collateral requirement on a counterparty exposure; a PPU reserve haircut is a separate analytical adjustment, not additional cash or capital.
+
+Hypothesis ladder for incremental stress testing, NOT recommended production haircuts: nominal security mark shocks0/-1/-3/-5%; TIPS total-return branches and separate exact rate sensitivities; incremental sale costs0/2/10/20%; counterparty recovery0/50/100% with delayed access. Calibrate with executable size-specific data, maturity and settlement horizon in Phase2. Any increase in haircut can turn yesterday's apparent surplus into a deficiency; no forced sale rule is automatically authorized by that analytical event.
+
+Unbounded or unidentified exposure cannot be cured by an arbitrary large finite haircut. Declare adequacy undetermined, retain the gross obligation and route the missing evidence to its owner. Proposed controls do not establish an accounting standard or legal priority.
+
+
+===== research/wp1d/07-custody-segregation.md =====
+# Custody / Segregation / Encumbrance Requirements
+Revision0.1 • evidence requirements and legal assumptions to test, not legal advice or custodian selection.
+
+Candidate holdings must have identified legal owner, beneficial entitlement, obligor/perimeter, account and intermediary chain, asset IDs/quantities, settled versus pending status, transfer/control rights, and all liens, securities lending, setoff, omnibus and third-party claims. Proposed segregation means separate identifiable records and enforceable restrictions on unrelated use; a labelled account or smart-contract balance alone does not establish bankruptcy remoteness. Phase3 counsel must determine what protections actually exist.
+
+Prohibit rehypothecation and unrelated lending in the proposed baseline. Verify intermediary terms and actual transactions rather than accepting a policy assertion. Repo collateral control is documented separately from the receivable; no reuse to finance other backing. Received subscription/deposit money may have refund obligations before issuance, which belong in the WP1C other-claim inventory. Pending security purchases require cash/payable/settlement reconciliation, not simultaneous free cash and full securities.
+
+Daily/as-of reconciliation requirements: independent custodian records versus internal lot ledger, security depository/bank confirmations where obtainable, signed/timestamped evidence retained, price-source provenance, unsettled trades, encumbrance changes, counterparties and complete liability interface. Publication cadence is a proposed minimum reporting concept; actual latency/availability limits remain unresolved. A periodic attestation cannot prove continuous solvency, absence of hidden liabilities or executable access. Proof-of-reserves without liabilities/title is insufficient.
+
+Valuation hierarchy: current size-relevant executable bid with timestamp and settlement terms; independent evaluated price with disclosed model/uncertainty; stale/unsupported mark in exception inventory. TIPS require explicit clean/dirty price, accrued interest and index-ratio convention to prevent double indexation. Cash par is a nominal bank claim, not assured realized recovery. Repo valued as one receivable with separately shown collateral and margin gap.
+
+Unknown staleness threshold, unauthenticated quote or missing mark fails the eligible-coverage assertion; leave last value visible as historical. No benchmark oracle architecture, key quorum or production price-source contract is selected. Test both asset-data impairment with normal CPI and CPI impairment with liquid assets; one never repairs the other.
+
+Concentration report groups custodians, parent banking groups, repo counterparties, common settlement agents and sovereign exposure. Distinct brands can share one critical service. Stress largest group inaccessible, all USD settlement closed72h, and forced transfer/closeout delays. No assumed Fed account, insurance exception, official rescue or third-party credit facility. Retain legal ownership, insolvency priority, custodian access and recovery uncertainties for Phase3, operational authentication for later technical work.
+
+
+===== research/wp1d/08-adversarial-failure-analysis.md =====
+# Adversarial Failure Analysis
+Revision0.1 • named periods anchor mechanisms only; numeric scenarios are synthetic, not historical backtests.
+
+| Scenario / attack | Failure channel | Required diagnostic / unresolved consequence |
+|---|---|---|
+| 1970s-style inflation | Cash/bill real returns lag target; roll may not keep up | Target+15% branch; persistent negative-real-carry exhaustion; WP1E funding dependency |
+| Rapid disinflation | Lagged liabilities and rates evolve at different speeds | +2% target with different asset returns; no assumed immediate fall in lagged target |
+| Volcker-style tightening | Nominal/real yield rise despite inflation | Joint +10% target and asset loss; no claim actual TIPS existed in1979 |
+| Sharp real-yield increase | Long TIPS sale losses overwhelm accretion | ±100/300/500bp exact zero-coupon diagnostic, full pricing later |
+| Treasury-duration loss | Nominal long exposure is not bill-like | Maturity/key-rate stress; prohibit hiding longer exposure in a 'Treasury' label |
+| TIPS real-rate drawdown | Indexed principal growth with falling quote | Track asset factor independently of target |
+| COVID-style liquidity shock | Dealers constrained; spreads/size access break | Cash1/bill.99/TIPS.92 branch plus separate incremental sale-cost test |
+| 2008-style stress | TIPS liquidity discount/counterparty distress | Target-.02/bill1.01/TIPS.85; avoid duplicating price/liquidity shock |
+| Redemption surge | Cash depleted, early exits impose losses | Cumulative demand curve and deadline gap; no chosen run remedy |
+| Inflation plus liquidity stress | Assets fall while indexed obligations rise | Common120/100 B buffer becomes-1.24 |
+| Treasury-market dysfunction | 'Safe' securities not executable by deadline | Reduce bids, delay settlement; no Fed backstop assumption |
+| Repo counterparty failure | Margin gap, closeout stay and collateral sale |102 collateral against100,5% fall+1%cost gives95.931; zero before legal access |
+| Custodian impairment | Title may survive while cash inaccessible | Largest-group block; account diversification not same as service independence |
+| Index impaired, assets liquid | Apparent coverage masks failed promise | Flag reference only; Q023 blocks activation, no surplus entitlement inferred |
+| Reserve impaired, index normal | Good CPI cannot authenticate assets | Zero eligible credit for unverified/stale positions; gross claims remain |
+| Fixed claims, rising T | Qfix lags indexed face; holder loses index exposure |80indexed+20fixed atT1.15 =112 versus115 fully indexed; terms unselected |
+| Indexed claims, rising T | Accepted queue continues increasing |100indexed at1.15=115; funding deadline and price must agree |
+| Deflation plus fixed claims | Qfix prevents full liability relief |80*.90+20=92 versus90; assess nominal matching branch |
+| Long-duration TIPS mismatch | Maturity protection cannot fund early exit |5/10-year sensitivities and forced-sale tests |
+| Forced liquidation before maturity | Purchase price/floor not recovered | Sale proceeds and remaining unpaid face separately retained |
+| Asset double count / fake capital | Receivable+collateral or A+equity fabricates backing | Unique asset identity, disjoint encumbrance inventory, A-L-O residual |
+| Quote manipulation / stale data | Optimistic matrix marks justify phantom capacity | Authentication/freshness exceptions; later oracle design remains open |
+| AP/timing adverse selection | Sophisticated actors exit ahead of known target/price changes | WP1F needed; no AP permission or fee/gate invented |
+| Hidden issuer liabilities | Deposits, taxes, costs, setoff omitted | Completeness false means undetermined aggregate; no zero default |
+| Alternative-asset tail correlation | 'Diversifier' sells off with run | Adverse additive tail tests and no borrowed correlation benefit |
+
+Historical anchors: [S03/S04/S07/S08](11-sources.md). They establish plausible failure mechanisms, not the scenario magnitudes. TIPS began1997, so1970s/Volcker comparisons are counterfactual regime analogues. No fitted probabilities, modern-real-rate historical reconstruction or full Phase2 environment is claimed.
+
+Recommended response to failed diagnostic is to record the shortfall/unknown and require review, not to erase liability, automatically suspend legal rights, mint unbacked assets, change the benchmark, assume recapitalization or silently approve another package. Q023 and Q025 remain OPEN.
+
+
+===== research/wp1d/09-alternative-assets.md =====
+# Alternative Asset Comparison
+Revision0.1 • research comparators; excluded from the proposed initial core pending evidence, not permanently banned by research opinion.
+
+| Candidate | Possible rationale | Attempt to defeat it after frictions | Disposition |
+|---|---|---|---|
+| Gold | Different issuer exposure; possible inflation-crisis demand | No contractual CPI cash flow, drawdown and bid/storage/assay/custody costs; can fall during cash scramble | Research only;5% replacement with-25% tail costs1.5 on120 assets |
+| Bitcoin | Transferability, non-sovereign issuance | Extreme drawdown, unstable inflation correlation, custody/key/venue risk, liquidity depth under forced sales | Research only;-70% tail at5% costs4.2 |
+| Broad commodities | Some consumer-price input exposure | Basket mismatch, futures curve/roll, margin and liquidity; spot index not investable cash return | Research only;-40% tail costs2.4 |
+| Energy | Inflation shock exposure | Concentrated supply/demand risk, futures delivery/roll/margin, severe adverse shocks | Research only;-60% tail costs3.6 |
+| Equities | Long-run earnings growth | Equity drawdown and cyclicality precisely during liquidity stress; not CPI redemption obligation | Research only;-50% tail costs3 |
+| Corporate credit | Spread income | Default/downgrade/correlation/liquidity and legal recovery delays; return compensates extra risk | Research only;-20% tail costs1.2 |
+| Tokenized RWAs | Programmable access to underlying assets | Wrapper is not diversification; assess asset plus issuer, redemption restrictions, custody, chain/bridge and legal claim | Look through underlying plus wrapper; -30% wrapper impairment costs1.8 |
+| Other reserve candidates | Possibly lower basis or better access | Demand cash-flow proof, legal access, cost, stress bids and common-cause dependencies first | No eligibility by name or past return |
+
+All numbers are deliberately adverse synthetic scenarios replacing6 USD million of bills in120 assets, with no baseline bill return in this isolated test. They do **not** estimate historical drawdowns or prove stochastic dominance. Comparative gains also require testing: +25% alternative return contributes1.5; it may help a particular shock but cannot guarantee meeting an arbitrary CPI-linked demand. The scenario suite does not claim a measured diversification premium.
+
+To justify inclusion, future authorized analysis must demonstrate lower joint liability shortfall and deadline-liquidity deficit versus the simplest same-cost Treasury/TIPS baseline across inflation, deflation, rate, run and custody shocks; include transaction costs, tax/legal treatment, market capacity, stressed correlation and operational failures. Historical high return alone is not sufficient. Phase2 should assess alternatives only after its Treasury baseline. Derivatives/leveraged commodity overlays are not smuggled into this unlevered reserve package.
+
+The BIS tokenisation source [S09](11-sources.md) supports the distinction between represented claims and underlying assets/settlement risks. Other rows are financial-mechanism hypotheses and explicit counterexamples, not sourced return estimates. No asset purchase or permanent constitutional exclusion results.
+
+
+===== research/wp1d/10-parameters.md =====
+# Parameter and Assumption Register
+Revision0.1 • all numerical portfolio/risk parameters below remain HYPOTHESES or synthetic inputs, not accepted values.
+
+| ID | Parameter/assumption | Status, rationale and falsification |
+|---|---|---|
+| P1D01 | Common assets120/liabilities100 USD million | Scale-only comparative assumption; not optimal ratio or loss budget |
+| P1D02 | Cash/bill/TIPS weights A20/80/0 B20/40/40 C40/40/20 D10/20/70 | Tradeoff probes, no selected allocation; fail if stress/availability infeasible |
+| P1D03 | TIPS remaining horizon0–2 years candidate; test0.5/2/5/10 | Secondary-market availability/cost unverified; duration is not remaining maturity |
+| P1D04 | Bills<=1year; repo overnight/7/30-day test buckets | Nominal exposures, terms illustrative; cannot count receipts before access |
+| P1D05 | Real-yield shifts±100/300/500bp from2% | Synthetic instantaneous diagnostics, not forecasts or calibrated tails |
+| P1D06 | Inflation-.10/+.02/+.10/+.15 and stress returns | Regime analogues only; extreme-.90/+200% arithmetic tests not forecasts |
+| P1D07 | Liquidity0/24/72h,7/30d; demand up to100%;cost0/2/10/20% | Must become term-specific; no queue/fee policy chosen |
+| P1D08 | Complete title/claims/price evidence | Explicit assumption; fail coverage assertion if missing, Q025/Phase3 |
+| P1D09 | No borrowing, renewal, new inflow or official rescue | Conservative base stress; conditional source must be separately authorized/tested |
+| P1D10 |20% of liability fixed for branch comparison | Not selected queue type; other proportions must be tested later |
+| P1D11 |5% alternative addition with adverse tails | Counterexamples, not historical empirical distribution/correlation model |
+| P1D12 | Negative net real carry-2% for10years | Falsifier of permanent finite-buffer sufficiency; WP1E economics open |
+| P1D13 | Pricing convention, quote freshness, concentration caps, operational margin | UNCALIBRATED; no production eligibility without evidence/limits |
+| P1D14 | Joint shock factors and incremental discounts disjoint | Test loss reconciliation; cannot apply observed distressed price twice |
+| P1D15 | Secured-asset/claim allocation known | Conditional calculation only; full inventory also needed; legal netting unknown |
+
+Rejected shortcuts: treat Treasury as risk-free liquidity; use TIPS maturity floor as current-price floor; use totalSupply as liability; count capital again; assume guaranteed rollover; turn a quoted margin into cash; backfill CPI with Treasury substitute; select fixed/indexed claims to make the portfolio pass; calibrate safe limits from this small suite.
+
+Facts versus inferences: product terms/historical mechanisms in [sources](11-sources.md) are external evidence; weights, shocks and accounting diagnostics are operator assumptions; tests establish identities under those inputs only. Review opinions are attributed in [reconciliation](../../reviews/gate1d/claude-reconciliation.md); Brad controls Gate decisions.
+
+
+===== research/wp1d/11-sources.md =====
+# WP1D Sources and Research Library
+Retrieved/checked2026-09-21. Primary institutions preferred. Summaries below are operator paraphrases, not platform exports or verbatim full-source archives. Source pages may change; critical2025 evidence already retained in earlier packages. Hashes of this package evidence are in its submission manifest.
+
+| ID | Primary source | Supported fact / limit |
+|---|---|---|
+| W1D-S01 | [Treasury TIPS](https://www.treasurydirect.gov/marketable-securities/tips/) |5/10/30-year issuance, adjusted principal/coupons, original-principal maturity floor; no early-sale/purchase-price guarantee inferred |
+| W1D-S02 | [Treasury bills](https://www.treasurydirect.gov/marketable-securities/treasury-bills/) | Nominal face at maturity; four-to52-week terms; sale before maturity possible, price not guaranteed |
+| W1D-S03 | [Fed, Tips from TIPS,2019](https://www.federalreserve.gov/econres/notes/feds-notes/tips-from-tips-update-and-discussions-20190521.html) | Model decomposition includes liquidity premium;2008–09 surge; estimates are not risk-free pricing |
+| W1D-S04 | [Fed, Treasury/FX March2020 liquidity,2020](https://www.federalreserve.gov/econres/notes/feds-notes/what-do-quoted-spreads-tell-us-about-machine-trading-market-stress-march-2020-20200925.html) | Selling pressure/dealer inventory constraints; quote quality not universal depth |
+| W1D-S05 | [TMPG Treasury repo risk management](https://www.newyorkfed.org/TMPG/Treasury-Repo-Risk-Management) | Counterparty risk and prudent haircut discussion; industry practice not PPU legal approval |
+| W1D-S06 | [FDIC deposit insurance](https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance) | Standard250,000 USD per depositor, insured bank, ownership category. Search retrieval verified; direct page fetch errored. PPU eligibility/categories not established |
+| W1D-S07 | [Treasury uses index contingency,26Nov2025](https://home.treasury.gov/news/press-releases/sb0324) | Actual Treasury fallback event; PPU adopts none. Earlier WP1A/WP1B evidence remains governing |
+| W1D-S08 | [Federal Reserve History, Great Inflation](https://www.federalreservehistory.org/essays/great-inflation) | Historical inflation/tightening regime; no actual pre1997 TIPS performance |
+| W1D-S09 | [BIS tokenisation stability summary,2025](https://www.bis.org/publications/fsi-summary-financial-stability-implications-tokenisation-executive-summary) | Token/reference-asset liquidity mismatch and operational/legal dependencies |
+| W1D-S10 | [Fed TIPS curve](https://www.federalreserve.gov/data/tips-yield-curve-and-inflation-compensation.htm) | Estimated real curve data, with revisions; future Phase2 source candidate, not an executable bid |
+| W1D-S11 | [NY Fed tri-party reform](https://www.newyorkfed.org/banking/tpr_infr_reform) | Intraday credit, interconnections, fire-sale risk; not proof PPU can join a facility |
+
+SRC019: [direct user instructions](../../evidence/gate1c-approval-wp1d-authorization.txt). States WP1C0.1 APPROVED WITH CONDITIONS and authorizes WP1D only. It references Gate1C conditions without a complete separate primary-review text. Preserve all enumerated conditions and prior dependencies; do not invent an independently retrieved review or hash-signed approval. Any additional disposition text must be reconciled when supplied.
+
+
+===== research/wp1d/calculate_scenarios.py =====
+"""Bounded WP1D comparative diagnostics, not Phase 2 backtesting."""
+from reserve_model import *
+from pathlib import Path
+import json
+def dec(x):return round(float(x),6)
+structures={'A_cash_bills':(20,80,0),'B_mixed':(20,40,40),'C_liquidity':(40,40,20),'D_TIPS_heavy':(10,20,70)}
+# All units USD millions; A0=120, L0=100 solely common comparison scale.
+# Gross total return factors supplied, inclusive of all assumed carry/index accrual.
+scenarios={
+ '1970s_inflation_analogue':('.15','1.03','1.05','1.15'),
+ 'rapid_disinflation':('.02','1.02','1.03','1.02'),
+ 'Volcker_tightening_analogue':('.10','1.02','.97','.98'),
+ 'deflation':('-.10','1.00','1.01','.90'),
+ 'COVID_liquidity_analogue':('0','1','.99','.92'),
+ '2008_liquidity_analogue':('-.02','1','1.01','.85'),
+ 'inflation_and_liquidity':('.15','1','.97','.90'),
+ 'Treasury_dysfunction':('.03','1','.95','.85'),
+ 'index_impaired_assets_inflate':('0','1','1.02','1.10'),
+ 'reserve_impairment_index_normal':('.03','.75','.99','.90')}
+rows=[]
+for name,weights in structures.items():
+ for scenario,(i,c,b,t) in scenarios.items():
+    A=sum(F(w)*F(f) for w,f in zip(weights,(c,b,t)))*F('1.2')
+    indexed=100*(1+F(i)); fixed_mix=80*(1+F(i))+20
+    rows.append(dict(structure=name,scenario=scenario,assets=dec(A),indexed_liability=dec(indexed),fixed_mix_liability=dec(fixed_mix),indexed_buffer=dec(A-indexed),fixed_mix_buffer=dec(A-fixed_mix)))
+duration=[]
+for years in ['.5','2','5','10']:
+ for shock in ['-.05','-.03','-.01','.01','.03','.05']:
+    ratio=zero_coupon_ratio(years,'.02',F('.02')+F(shock))
+    duration.append(dict(years=years,shock=shock,exact_zero_coupon_change_pct=dec((ratio-1)*100)))
+alternatives=[]
+for asset,shock in [('gold','-.25'),('Bitcoin','-.70'),('commodities','-.40'),('energy','-.60'),('equities','-.50'),('corporate_credit','-.20'),('tokenized_RWA_wrapper','-.30')]:
+    # Replace 6 of 120 in a zero-return bill position. No positive hedge assumed.
+    alternatives.append(dict(asset=asset,addition_pct=5,adverse_return=shock,incremental_loss=dec(-6*F(shock)),liquidation_delay='UNKNOWN; no immediate credit'))
+run_curve=[]
+for d in ['0','.02','.10','.20']:
+ for demand in [0,20,40,60,80,100]:
+    x=run_sale(20,100,demand,d)
+    run_curve.append(dict(demand=demand,discount=d,**{k:dec(v) for k,v in x.items()},remaining_face=100-dec(x['paid'])))
+out={'assumptions':'Synthetic analogues, not observed historical returns, fitted distributions or portfolio recommendations. Display rounded only; core uses exact fractions. Common 120/100 scale is not a recommended ratio.','structures':structures,'scenarios':scenarios,'comparisons':rows,'duration':duration,'alternative_tail_counterexamples':alternatives,'cumulative_run_curve':run_curve,'negative_real_carry_assets_after_10y':dec(120*F('.98')**10)}
+Path(__file__).with_name('scenario-results.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
+print('Generated',len(rows),'portfolio cases,',len(duration),'rate sensitivities,',len(alternatives),'alternative counterexamples')
+
+
+===== research/wp1d/reserve_model.py =====
+"""WP1D exact synthetic stress diagnostics; not pricing/eligibility certification.
+
+Inputs are explicitly assumed facts. No live feeds, trading, minting, or legal rules.
+"""
+from dataclasses import dataclass
+from fractions import Fraction as F
+
+def exact(x):
+    if isinstance(x, (float, bool)):
+        raise ValueError('binary float/bool not accepted')
+    return F(x)
+
+def nonnegative(x):
+    x = exact(x)
+    if x < 0: raise ValueError('negative quantity')
+    return x
+
+def fraction(x):
+    x = nonnegative(x)
+    if x > 1: raise ValueError('fraction outside [0,1]')
+    return x
+
+def liability(units, target, fixed):
+    fixed = nonnegative(fixed)
+    units = nonnegative(units)
+    if target is None: return None
+    target = exact(target)
+    if target <= 0: raise ValueError('nonpositive target')
+    return units * target + fixed
+
+def zero_coupon_ratio(years, old_yield, new_yield):
+    """Exact semiannual zero-coupon ratio; not a coupon TIPS or floor valuation.
+
+    Maturity is held fixed to isolate instantaneous rate repricing.
+    """
+    periods = nonnegative(years) * 2
+    if periods.denominator != 1: raise ValueError('half-year grid required')
+    y0, y1 = exact(old_yield), exact(new_yield)
+    if min(y0,y1) <= -2: raise ValueError('invalid discount base')
+    return ((1+y0/2)/(1+y1/2)) ** int(periods)
+
+@dataclass(frozen=True)
+class Asset:
+    asset_id: str
+    market_usd: object
+    accessible_after_hours: object = 0
+    encumbered_usd: object = 0
+    shock_factor: object = 1
+    sale_discount: object = 0
+    authenticated: bool = True
+    ownership_verified: bool = True
+    stale: bool = False
+
+def reserve_view(assets, horizon_hours, known_prior_claims=0, inventory_complete=True):
+    """Distinct market, stress-realizable and horizon values. Never sum them.
+
+    Encumbered USD is a disjoint market-value portion, removed before shocks.
+    known_prior_claims must exclude claims already allocated to that portion.
+    Caller cannot establish legal precedence via this diagnostic.
+    """
+    horizon = nonnegative(horizon_hours)
+    prior = nonnegative(known_prior_claims)
+    seen=set(); inventory=F(0); eligible=F(0); stressed=F(0); liquid=F(0); exceptions=[]
+    for a in assets:
+        if not a.asset_id or a.asset_id in seen: raise ValueError('duplicate/missing asset identity')
+        seen.add(a.asset_id)
+        m,e=nonnegative(a.market_usd),nonnegative(a.encumbered_usd)
+        delay=nonnegative(a.accessible_after_hours)
+        factor=nonnegative(a.shock_factor); discount=fraction(a.sale_discount)
+        if e > m: raise ValueError('encumbrance exceeds market value')
+        inventory += m
+        if not a.authenticated or not a.ownership_verified or a.stale:
+            exceptions.append(a.asset_id); continue
+        free=m-e
+        eligible += free
+        value=free*factor*(1-discount)
+        stressed += value
+        if delay <= horizon: liquid += value
+    return dict(inventory_market=inventory,eligible_market=eligible,
+                stressed_realizable=stressed,horizon_available=liquid,
+                conditional_net_stress=stressed-prior,
+                complete=inventory_complete and not exceptions,exceptions=exceptions)
+
+def adequacy(view, ppu_liability, other_liabilities=0, benchmark='NORMAL'):
+    if benchmark not in ('NORMAL','TEMPORARY_CARRY','BENCHMARK_IMPAIRED'):
+        raise ValueError('unknown benchmark state')
+    other=nonnegative(other_liabilities)
+    if ppu_liability is None:
+        return dict(status='LIABILITY_UNDETERMINED',ratio=None,buffer=None,production_activation=False)
+    L=nonnegative(ppu_liability)
+    return dict(status='CONDITIONAL_REFERENCE_ONLY' if view['complete'] else 'INVENTORY_UNDETERMINED',
+                ratio=view['eligible_market']/L if L else None,
+                buffer=view['eligible_market']-L-other,
+                benchmark=benchmark, production_activation=False)
+
+def liquidity_gap(available, outflows, operating=0):
+    return nonnegative(available)-nonnegative(outflows)-nonnegative(operating)
+
+def repo_default_value(receivable, collateral_market, gap_loss, liquidation_cost):
+    """Conditional collateral-only recovery; excess collateral not a second asset.
+
+    No separate unsecured deficiency recovery, repo interest, margin calls or netting.
+    """
+    r,c=nonnegative(receivable),nonnegative(collateral_market)
+    return min(r,c*(1-fraction(gap_loss))*(1-fraction(liquidation_cost)))
+
+def run_sale(cash, security_mark, payout, discount):
+    """One aggregate synthetic sale then final payout; no priority or queue choice.
+
+    Returns unsatisfied demand, sold mark and irreversible loss. Does not reduce
+    any legal claim merely because available assets fail to meet demand.
+    """
+    c,s,p=map(nonnegative,(cash,security_mark,payout)); d=fraction(discount)
+    need=max(F(0),p-c)
+    sold=min(s,need/(1-d)) if d<1 else F(0)
+    proceeds=sold*(1-d)
+    paid=min(p,c+proceeds)
+    return dict(paid=paid,unpaid=p-paid,sold_mark=sold,sale_loss=sold-proceeds,
+                residual_assets=c+proceeds-paid+s-sold)
+
+
+===== research/wp1d/scenario-results.json =====
+{
+  "assumptions": "Synthetic analogues, not observed historical returns, fitted distributions or portfolio recommendations. Display rounded only; core uses exact fractions. Common 120/100 scale is not a recommended ratio.",
+  "structures": {
+    "A_cash_bills": [
+      20,
+      80,
+      0
+    ],
+    "B_mixed": [
+      20,
+      40,
+      40
+    ],
+    "C_liquidity": [
+      40,
+      40,
+      20
+    ],
+    "D_TIPS_heavy": [
+      10,
+      20,
+      70
+    ]
+  },
+  "scenarios": {
+    "1970s_inflation_analogue": [
+      ".15",
+      "1.03",
+      "1.05",
+      "1.15"
+    ],
+    "rapid_disinflation": [
+      ".02",
+      "1.02",
+      "1.03",
+      "1.02"
+    ],
+    "Volcker_tightening_analogue": [
+      ".10",
+      "1.02",
+      ".97",
+      ".98"
+    ],
+    "deflation": [
+      "-.10",
+      "1.00",
+      "1.01",
+      ".90"
+    ],
+    "COVID_liquidity_analogue": [
+      "0",
+      "1",
+      ".99",
+      ".92"
+    ],
+    "2008_liquidity_analogue": [
+      "-.02",
+      "1",
+      "1.01",
+      ".85"
+    ],
+    "inflation_and_liquidity": [
+      ".15",
+      "1",
+      ".97",
+      ".90"
+    ],
+    "Treasury_dysfunction": [
+      ".03",
+      "1",
+      ".95",
+      ".85"
+    ],
+    "index_impaired_assets_inflate": [
+      "0",
+      "1",
+      "1.02",
+      "1.10"
+    ],
+    "reserve_impairment_index_normal": [
+      ".03",
+      ".75",
+      ".99",
+      ".90"
+    ]
+  },
+  "comparisons": [
+    {
+      "structure": "A_cash_bills",
+      "scenario": "1970s_inflation_analogue",
+      "assets": 125.52,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 10.52,
+      "fixed_mix_buffer": 13.52
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "rapid_disinflation",
+      "assets": 123.36,
+      "indexed_liability": 102.0,
+      "fixed_mix_liability": 101.6,
+      "indexed_buffer": 21.36,
+      "fixed_mix_buffer": 21.76
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "Volcker_tightening_analogue",
+      "assets": 117.6,
+      "indexed_liability": 110.0,
+      "fixed_mix_liability": 108.0,
+      "indexed_buffer": 7.6,
+      "fixed_mix_buffer": 9.6
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "deflation",
+      "assets": 120.96,
+      "indexed_liability": 90.0,
+      "fixed_mix_liability": 92.0,
+      "indexed_buffer": 30.96,
+      "fixed_mix_buffer": 28.96
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "COVID_liquidity_analogue",
+      "assets": 119.04,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 19.04,
+      "fixed_mix_buffer": 19.04
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "2008_liquidity_analogue",
+      "assets": 120.96,
+      "indexed_liability": 98.0,
+      "fixed_mix_liability": 98.4,
+      "indexed_buffer": 22.96,
+      "fixed_mix_buffer": 22.56
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "inflation_and_liquidity",
+      "assets": 117.12,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 2.12,
+      "fixed_mix_buffer": 5.12
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "Treasury_dysfunction",
+      "assets": 115.2,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 12.2,
+      "fixed_mix_buffer": 12.8
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "index_impaired_assets_inflate",
+      "assets": 121.92,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 21.92,
+      "fixed_mix_buffer": 21.92
+    },
+    {
+      "structure": "A_cash_bills",
+      "scenario": "reserve_impairment_index_normal",
+      "assets": 113.04,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 10.04,
+      "fixed_mix_buffer": 10.64
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "1970s_inflation_analogue",
+      "assets": 130.32,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 15.32,
+      "fixed_mix_buffer": 18.32
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "rapid_disinflation",
+      "assets": 122.88,
+      "indexed_liability": 102.0,
+      "fixed_mix_liability": 101.6,
+      "indexed_buffer": 20.88,
+      "fixed_mix_buffer": 21.28
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "Volcker_tightening_analogue",
+      "assets": 118.08,
+      "indexed_liability": 110.0,
+      "fixed_mix_liability": 108.0,
+      "indexed_buffer": 8.08,
+      "fixed_mix_buffer": 10.08
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "deflation",
+      "assets": 115.68,
+      "indexed_liability": 90.0,
+      "fixed_mix_liability": 92.0,
+      "indexed_buffer": 25.68,
+      "fixed_mix_buffer": 23.68
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "COVID_liquidity_analogue",
+      "assets": 115.68,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 15.68,
+      "fixed_mix_buffer": 15.68
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "2008_liquidity_analogue",
+      "assets": 113.28,
+      "indexed_liability": 98.0,
+      "fixed_mix_liability": 98.4,
+      "indexed_buffer": 15.28,
+      "fixed_mix_buffer": 14.88
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "inflation_and_liquidity",
+      "assets": 113.76,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": -1.24,
+      "fixed_mix_buffer": 1.76
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "Treasury_dysfunction",
+      "assets": 110.4,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 7.4,
+      "fixed_mix_buffer": 8.0
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "index_impaired_assets_inflate",
+      "assets": 125.76,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 25.76,
+      "fixed_mix_buffer": 25.76
+    },
+    {
+      "structure": "B_mixed",
+      "scenario": "reserve_impairment_index_normal",
+      "assets": 108.72,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 5.72,
+      "fixed_mix_buffer": 6.32
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "1970s_inflation_analogue",
+      "assets": 127.44,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 12.44,
+      "fixed_mix_buffer": 15.44
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "rapid_disinflation",
+      "assets": 122.88,
+      "indexed_liability": 102.0,
+      "fixed_mix_liability": 101.6,
+      "indexed_buffer": 20.88,
+      "fixed_mix_buffer": 21.28
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "Volcker_tightening_analogue",
+      "assets": 119.04,
+      "indexed_liability": 110.0,
+      "fixed_mix_liability": 108.0,
+      "indexed_buffer": 9.04,
+      "fixed_mix_buffer": 11.04
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "deflation",
+      "assets": 118.08,
+      "indexed_liability": 90.0,
+      "fixed_mix_liability": 92.0,
+      "indexed_buffer": 28.08,
+      "fixed_mix_buffer": 26.08
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "COVID_liquidity_analogue",
+      "assets": 117.6,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 17.6,
+      "fixed_mix_buffer": 17.6
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "2008_liquidity_analogue",
+      "assets": 116.88,
+      "indexed_liability": 98.0,
+      "fixed_mix_liability": 98.4,
+      "indexed_buffer": 18.88,
+      "fixed_mix_buffer": 18.48
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "inflation_and_liquidity",
+      "assets": 116.16,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 1.16,
+      "fixed_mix_buffer": 4.16
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "Treasury_dysfunction",
+      "assets": 114.0,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 11.0,
+      "fixed_mix_buffer": 11.6
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "index_impaired_assets_inflate",
+      "assets": 123.36,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 23.36,
+      "fixed_mix_buffer": 23.36
+    },
+    {
+      "structure": "C_liquidity",
+      "scenario": "reserve_impairment_index_normal",
+      "assets": 105.12,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 2.12,
+      "fixed_mix_buffer": 2.72
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "1970s_inflation_analogue",
+      "assets": 134.16,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": 19.16,
+      "fixed_mix_buffer": 22.16
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "rapid_disinflation",
+      "assets": 122.64,
+      "indexed_liability": 102.0,
+      "fixed_mix_liability": 101.6,
+      "indexed_buffer": 20.64,
+      "fixed_mix_buffer": 21.04
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "Volcker_tightening_analogue",
+      "assets": 117.84,
+      "indexed_liability": 110.0,
+      "fixed_mix_liability": 108.0,
+      "indexed_buffer": 7.84,
+      "fixed_mix_buffer": 9.84
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "deflation",
+      "assets": 111.84,
+      "indexed_liability": 90.0,
+      "fixed_mix_liability": 92.0,
+      "indexed_buffer": 21.84,
+      "fixed_mix_buffer": 19.84
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "COVID_liquidity_analogue",
+      "assets": 113.04,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 13.04,
+      "fixed_mix_buffer": 13.04
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "2008_liquidity_analogue",
+      "assets": 107.64,
+      "indexed_liability": 98.0,
+      "fixed_mix_liability": 98.4,
+      "indexed_buffer": 9.64,
+      "fixed_mix_buffer": 9.24
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "inflation_and_liquidity",
+      "assets": 110.88,
+      "indexed_liability": 115.0,
+      "fixed_mix_liability": 112.0,
+      "indexed_buffer": -4.12,
+      "fixed_mix_buffer": -1.12
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "Treasury_dysfunction",
+      "assets": 106.2,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 3.2,
+      "fixed_mix_buffer": 3.8
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "index_impaired_assets_inflate",
+      "assets": 128.88,
+      "indexed_liability": 100.0,
+      "fixed_mix_liability": 100.0,
+      "indexed_buffer": 28.88,
+      "fixed_mix_buffer": 28.88
+    },
+    {
+      "structure": "D_TIPS_heavy",
+      "scenario": "reserve_impairment_index_normal",
+      "assets": 108.36,
+      "indexed_liability": 103.0,
+      "fixed_mix_liability": 102.4,
+      "indexed_buffer": 5.36,
+      "fixed_mix_buffer": 5.96
+    }
+  ],
+  "duration": [
+    {
+      "years": ".5",
+      "shock": "-.05",
+      "exact_zero_coupon_change_pct": 2.538071
+    },
+    {
+      "years": ".5",
+      "shock": "-.03",
+      "exact_zero_coupon_change_pct": 1.507538
+    },
+    {
+      "years": ".5",
+      "shock": "-.01",
+      "exact_zero_coupon_change_pct": 0.497512
+    },
+    {
+      "years": ".5",
+      "shock": ".01",
+      "exact_zero_coupon_change_pct": -0.492611
+    },
+    {
+      "years": ".5",
+      "shock": ".03",
+      "exact_zero_coupon_change_pct": -1.463415
+    },
+    {
+      "years": ".5",
+      "shock": ".05",
+      "exact_zero_coupon_change_pct": -2.415459
+    },
+    {
+      "years": "2",
+      "shock": "-.05",
+      "exact_zero_coupon_change_pct": 10.545374
+    },
+    {
+      "years": "2",
+      "shock": "-.03",
+      "exact_zero_coupon_change_pct": 6.167887
+    },
+    {
+      "years": "2",
+      "shock": "-.01",
+      "exact_zero_coupon_change_pct": 2.00495
+    },
+    {
+      "years": "2",
+      "shock": ".01",
+      "exact_zero_coupon_change_pct": -1.955931
+    },
+    {
+      "years": "2",
+      "shock": ".03",
+      "exact_zero_coupon_change_pct": -5.726413
+    },
+    {
+      "years": "2",
+      "shock": ".05",
+      "exact_zero_coupon_change_pct": -9.317372
+    },
+    {
+      "years": "5",
+      "shock": "-.05",
+      "exact_zero_coupon_change_pct": 28.484705
+    },
+    {
+      "years": "5",
+      "shock": "-.03",
+      "exact_zero_coupon_change_pct": 16.140296
+    },
+    {
+      "years": "5",
+      "shock": "-.01",
+      "exact_zero_coupon_change_pct": 5.087998
+    },
+    {
+      "years": "5",
+      "shock": ".01",
+      "exact_zero_coupon_change_pct": -4.818331
+    },
+    {
+      "years": "5",
+      "shock": ".03",
+      "exact_zero_coupon_change_pct": -13.707096
+    },
+    {
+      "years": "5",
+      "shock": ".05",
+      "exact_zero_coupon_change_pct": -21.691259
+    },
+    {
+      "years": "10",
+      "shock": "-.05",
+      "exact_zero_coupon_change_pct": 65.083195
+    },
+    {
+      "years": "10",
+      "shock": "-.03",
+      "exact_zero_coupon_change_pct": 34.885685
+    },
+    {
+      "years": "10",
+      "shock": "-.01",
+      "exact_zero_coupon_change_pct": 10.434874
+    },
+    {
+      "years": "10",
+      "shock": ".01",
+      "exact_zero_coupon_change_pct": -9.404499
+    },
+    {
+      "years": "10",
+      "shock": ".03",
+      "exact_zero_coupon_change_pct": -25.535347
+    },
+    {
+      "years": "10",
+      "shock": ".05",
+      "exact_zero_coupon_change_pct": -38.677411
+    }
+  ],
+  "alternative_tail_counterexamples": [
+    {
+      "asset": "gold",
+      "addition_pct": 5,
+      "adverse_return": "-.25",
+      "incremental_loss": 1.5,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "Bitcoin",
+      "addition_pct": 5,
+      "adverse_return": "-.70",
+      "incremental_loss": 4.2,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "commodities",
+      "addition_pct": 5,
+      "adverse_return": "-.40",
+      "incremental_loss": 2.4,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "energy",
+      "addition_pct": 5,
+      "adverse_return": "-.60",
+      "incremental_loss": 3.6,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "equities",
+      "addition_pct": 5,
+      "adverse_return": "-.50",
+      "incremental_loss": 3.0,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "corporate_credit",
+      "addition_pct": 5,
+      "adverse_return": "-.20",
+      "incremental_loss": 1.2,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    },
+    {
+      "asset": "tokenized_RWA_wrapper",
+      "addition_pct": 5,
+      "adverse_return": "-.30",
+      "incremental_loss": 1.8,
+      "liquidation_delay": "UNKNOWN; no immediate credit"
+    }
+  ]
+}
+
+
+===== research/wp1d/test_reserve_model.py =====
+"""Independent expected values, boundary and invariant diagnostics."""
+from reserve_model import *
+from pathlib import Path
+import json
+checks=[]; failed=[]
+def check(name,condition):
+    checks.append(name)
+    if not condition: failed.append(name)
+def rejects(name,fn):
+    try: fn()
+    except (ValueError,TypeError,ZeroDivisionError): check(name,True)
+    else: check(name,False)
+
+check('liability dimensions',liability(80,'1.20',22)==118)
+check('indexed versus fixed inflation',liability(100,'1.20',0)-liability(80,'1.20',20)==4)
+check('fixed queue deflation burden',liability(80,'.9',20)==92)
+check('missing target not zero',liability(80,None,20) is None)
+for t in ['0','-1']:
+    rejects('invalid target '+t,lambda:liability(1,t,0))
+check('18 digit target exact',liability(3,'1.123456789012345678',0)==F('3.370370367037037034'))
+check('one year discount manual',zero_coupon_ratio(1,0,'.1')==F(400,441))
+check('zero time ratio',zero_coupon_ratio(0,0,'.5')==1)
+check('negative yield permitted',zero_coupon_ratio(1,0,'-.01')>1)
+for years in ['.5',1,2,5,10]:
+    check('no yield change '+str(years),zero_coupon_ratio(years,'.02','.02')==1)
+    check('positive rate shock loss '+str(years),zero_coupon_ratio(years,'.02','.05')<1)
+    check('negative rate shock gain '+str(years),zero_coupon_ratio(years,'.02','-.01')>1)
+for y in ['.01','.03','.05']:
+    check('duration loss monotone '+y,zero_coupon_ratio(1,0,y)>zero_coupon_ratio(2,0,y)>zero_coupon_ratio(5,0,y)>zero_coupon_ratio(10,0,y))
+rejects('invalid discount base',lambda:zero_coupon_ratio(1,0,-2))
+rejects('off grid maturity',lambda:zero_coupon_ratio('.1',0,1))
+for bad in [-1,True,0.1]:
+    rejects('invalid monetary input '+str(bad),lambda:liability(bad,1,0))
+
+a=[Asset('cash',20),Asset('bill',40,24,0,'.99','.01'),Asset('tips',60,48,0,'.9','.05')]
+v=reserve_view(a,24)
+check('gross market 120',v['eligible_market']==120)
+check('stress value no double loss',v['stressed_realizable']==F('110.504'))
+check('liquidity deadline includes bill excludes TIPS',v['horizon_available']==F('59.204'))
+check('before deadline excludes bill',reserve_view(a,'23.999')['horizon_available']==20)
+check('after deadline includes TIPS',reserve_view(a,48)['horizon_available']==F('110.504'))
+check('buffer not second asset',adequacy(v,100)['buffer']==20)
+check('other liabilities counted',adequacy(v,100,5)['buffer']==15)
+check('zero liability ratio undefined',adequacy(v,0)['ratio'] is None)
+check('negative buffer retained',adequacy(v,130)['buffer']==-10)
+check('missing liability fail closed',adequacy(v,None)['status']=='LIABILITY_UNDETERMINED')
+check('incomplete inventory not coverage proof',adequacy(reserve_view(a,24,inventory_complete=False),100)['status']=='INVENTORY_UNDETERMINED')
+for status in ['NORMAL','TEMPORARY_CARRY','BENCHMARK_IMPAIRED']:
+    x=adequacy(v,100,benchmark=status)
+    check('same face '+status,x['buffer']==20)
+    check('never activates '+status,x['production_activation'] is False)
+rejects('invalid benchmark state',lambda:adequacy(v,100,benchmark='FALLBACK'))
+for field in ['authenticated','ownership_verified','stale']:
+    kw={field: field=='stale'}
+    x=reserve_view([Asset('x',100,**kw)],0)
+    check(field+' exclusion',x['eligible_market']==0 and x['exceptions']==['x'] and not x['complete'])
+check('partial encumbrance then shock',reserve_view([Asset('x',100,0,30,'.8')],0)['stressed_realizable']==56)
+check('all encumbered',reserve_view([Asset('x',100,0,100)],0)['eligible_market']==0)
+check('separate prior claim negative not floored',reserve_view([Asset('x',10)],0,20)['conditional_net_stress']==-10)
+rejects('duplicate identifier',lambda:reserve_view([Asset('x',1),Asset('x',1)],0))
+rejects('missing identifier',lambda:reserve_view([Asset('',1)],0))
+for kw in [dict(encumbered_usd=101),dict(sale_discount='1.1'),dict(shock_factor=-1),dict(accessible_after_hours=-1)]:
+    rejects('bad asset '+str(kw),lambda:reserve_view([Asset('x',100,**kw)],0))
+check('snapshot replay idempotent',reserve_view(a,24)==reserve_view(a,24))
+check('order invariant',reserve_view(a,24)==reserve_view(list(reversed(a)),24))
+check('new stale state excludes',reserve_view([Asset('x',100,stale=True)],0)['eligible_market']==0)
+check('restored authenticated state includes',reserve_view([Asset('x',100)],0)['eligible_market']==100)
+check('liquidity gap explicit',liquidity_gap(20,30,2)==-12)
+check('repo collateral not double asset',repo_default_value(100,102,0,0)==100)
+check('repo loss despite margin',repo_default_value(100,102,'.05','.01')==F('95.931'))
+check('repo total loss',repo_default_value(100,102,1,0)==0)
+for d in [0,'.02','.2',1]:
+    x=run_sale(20,100,80,d)
+    check('run assets conservation '+str(d),x['residual_assets']+x['paid']+x['sale_loss']==120)
+    check('run obligation split '+str(d),x['paid']+x['unpaid']==80)
+    check('no negative residual '+str(d),x['residual_assets']>=0)
+check('run numeric sold',run_sale(20,100,80,'.2')['sold_mark']==75)
+check('run numeric loss',run_sale(20,100,80,'.2')['sale_loss']==15)
+check('unpayable demand retained',run_sale(20,100,130,'.2')['unpaid']==30)
+check('cash only no forced sale',run_sale(20,100,10,'.5')['sale_loss']==0)
+for inflation in ['-.9','-.1','0','.1','2']:
+    check('symmetric indexed extreme '+inflation,liability(100,1+F(inflation),0)==100*(1+F(inflation)))
+check('fixed claims cannot shrink with target',liability(0,'.1',100)==100)
+
+report={'passed':len(checks)-len(failed),'failed':failed,'checks':checks,
+        'scope':'Exact synthetic balance-sheet, pricing sensitivity and liquidity checks; no production, economic, legal, solvency, oracle or independent audit certification'}
+Path(__file__).with_name('validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'passed':report['passed'],'failed':failed}))
+raise SystemExit(bool(failed))
+
+
+===== research/wp1d/validation.json =====
+{
+  "passed": 93,
+  "failed": [],
+  "checks": [
+    "liability dimensions",
+    "indexed versus fixed inflation",
+    "fixed queue deflation burden",
+    "missing target not zero",
+    "invalid target 0",
+    "invalid target -1",
+    "18 digit target exact",
+    "one year discount manual",
+    "zero time ratio",
+    "negative yield permitted",
+    "no yield change .5",
+    "positive rate shock loss .5",
+    "negative rate shock gain .5",
+    "no yield change 1",
+    "positive rate shock loss 1",
+    "negative rate shock gain 1",
+    "no yield change 2",
+    "positive rate shock loss 2",
+    "negative rate shock gain 2",
+    "no yield change 5",
+    "positive rate shock loss 5",
+    "negative rate shock gain 5",
+    "no yield change 10",
+    "positive rate shock loss 10",
+    "negative rate shock gain 10",
+    "duration loss monotone .01",
+    "duration loss monotone .03",
+    "duration loss monotone .05",
+    "invalid discount base",
+    "off grid maturity",
+    "invalid monetary input -1",
+    "invalid monetary input True",
+    "invalid monetary input 0.1",
+    "gross market 120",
+    "stress value no double loss",
+    "liquidity deadline includes bill excludes TIPS",
+    "before deadline excludes bill",
+    "after deadline includes TIPS",
+    "buffer not second asset",
+    "other liabilities counted",
+    "zero liability ratio undefined",
+    "negative buffer retained",
+    "missing liability fail closed",
+    "incomplete inventory not coverage proof",
+    "same face NORMAL",
+    "never activates NORMAL",
+    "same face TEMPORARY_CARRY",
+    "never activates TEMPORARY_CARRY",
+    "same face BENCHMARK_IMPAIRED",
+    "never activates BENCHMARK_IMPAIRED",
+    "invalid benchmark state",
+    "authenticated exclusion",
+    "ownership_verified exclusion",
+    "stale exclusion",
+    "partial encumbrance then shock",
+    "all encumbered",
+    "separate prior claim negative not floored",
+    "duplicate identifier",
+    "missing identifier",
+    "bad asset {'encumbered_usd': 101}",
+    "bad asset {'sale_discount': '1.1'}",
+    "bad asset {'shock_factor': -1}",
+    "bad asset {'accessible_after_hours': -1}",
+    "snapshot replay idempotent",
+    "order invariant",
+    "new stale state excludes",
+    "restored authenticated state includes",
+    "liquidity gap explicit",
+    "repo collateral not double asset",
+    "repo loss despite margin",
+    "repo total loss",
+    "run assets conservation 0",
+    "run obligation split 0",
+    "no negative residual 0",
+    "run assets conservation .02",
+    "run obligation split .02",
+    "no negative residual .02",
+    "run assets conservation .2",
+    "run obligation split .2",
+    "no negative residual .2",
+    "run assets conservation 1",
+    "run obligation split 1",
+    "no negative residual 1",
+    "run numeric sold",
+    "run numeric loss",
+    "unpayable demand retained",
+    "cash only no forced sale",
+    "symmetric indexed extreme -.9",
+    "symmetric indexed extreme -.1",
+    "symmetric indexed extreme 0",
+    "symmetric indexed extreme .1",
+    "symmetric indexed extreme 2",
+    "fixed claims cannot shrink with target"
+  ],
+  "scope": "Exact synthetic balance-sheet, pricing sensitivity and liquidity checks; no production, economic, legal, solvency, oracle or independent audit certification"
+}

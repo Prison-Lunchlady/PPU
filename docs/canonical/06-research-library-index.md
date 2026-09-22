@@ -1,4 +1,13 @@
 # Research Library Index
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Record revision 0.2 • 2026-09-19 America/Chicago
 
 ## Evidence registry
@@ -73,3 +82,8 @@ W1B-S17–S20 add primary BEA/BLS evidence for fallback scope and shared depende
 **W1C-S03:** [IFRS 9 overview](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/), contractual recognition reference. No specific electronic-payment derecognition exception applied. Actual recognition, discharge and legal ranking remain later professional/architecture dependencies.
 [WP1C model](../../research/wp1c/01-liability-model.md) and [operator adversarial review](../../research/wp1c/02-worked-examples-and-adversarial-review.md) separate assumptions, examples, recommendations and unresolved evidence. No external independent endorsement claimed.
 
+
+## WP1D sources and authority
+**SRC019** — [user-supplied Gate1C disposition, current conditions and WP1D-only authorization](../../evidence/gate1c-approval-wp1d-authorization.txt),2026-09-21. Original instruction text retained; references additional Gate1C conditions without a separate complete primary-review transcript. Not a platform export. No unknown condition invented or waived.
+
+**W1D-S01–S11** — [primary-source registry](../../research/wp1d/11-sources.md), Treasury product/contingency facts, Federal Reserve liquidity/history, TMPG repo, FDIC insurance and BIS tokenisation. Operator paraphrases identified; scenario returns synthetic, not source observations. [Claude records](../../reviews/gate1d/claude-reconciliation.md) are AI opinion and reasoned operator dispositions, not primary authority. Exact prompts/bundles and hashes preserved in Gate1D files/manifest.

@@ -33,3 +33,9 @@ Recorded SRC017 REVISION REQUIRED without approving Gate 1B. Added three-policy/
 ## 2026-09-21 — Gate 1B conditional approval and WP1C submission
 Recorded SRC018; WP1B 0.3 accepted for development within explicit conditions, retaining 220 model/policy checks without certification claims. Q021–Q024 and Treasury/institutional dependencies remain OPEN; Q023 production-activation blocker. Created scoped Liability Model, exact synthetic ledger, worked examples and adversarial review; 58 accounting checks. D015 accepted process decision; D016 pending Gate 1C; R027/Q025 OPEN. No later architecture selected; Gate 1C awaiting review; WP1D unauthorized.
 
+
+
+## 2026-09-21 — WP1D revision0.1 submission
+Recorded SRC019 Gate1C conditional approval/WP1D-only authorization; preserved scope and provenance uncertainty for additional primary conditions. Completed reserve research, eligibility/segmentation, duration/liquidity, basis, haircuts, custody, adversarial and alternative comparisons; all numerical limits remain hypotheses. Added exact synthetic diagnostics and Claude staged reviews with material-finding dispositions. D017 accepted process/D018 pending research; R028–R031 and Q026–Q028 OPEN. Updated current canonical handoffs while preserving prior manifests/history and unchanged roadmap/draft source. Gate1D awaiting primary review; WP1E unauthorized. No capital/transaction/legal/production architecture selected.
+
+Final WP1D review iterations corrected excluded-collateral debt credit, evidence defaults, maturity-versus-sale channels, full-demand expense funding and signed alternative/repo comparisons. Final validation:139+20 WP1D assertions;220 WP1B+58 WP1C unchanged. Three Claude reviews completed; fresh final-core review unavailable after repeated busy responses and automatic attempt5. Exact lossless submitted core preserved, no final Claude review claimed. Gate1D remains awaiting primary review.

@@ -1,4 +1,13 @@
 # Review Gate Register
+
+## Current controlling handoff — SRC019, 2026-09-21
+Gate 0, Gate 1A and Gate 1B retain APPROVED WITH CONDITIONS. **Gate 1C: APPROVED WITH CONDITIONS; WP1C revision 0.1 accepted for continued development**, as reported directly by Brad in [SRC019](../../evidence/gate1c-approval-wp1d-authorization.txt). This is not a separately retrieved primary-review transcript. Conditions explicitly provided are preserved; no missing condition is invented or waived.
+
+**WP1D — Reserve Architecture: COMPLETE FOR REVIEW. Gate 1D: AWAITING REVIEW / NOT APPROVED. Next authorized Work Package: NONE. WP1E and all later packages NOT AUTHORIZED.** Earlier dated handoffs below are history where superseded by this explicit disposition. [Gate 1D submission](../../reviews/gate1d/Gate-1D-submission.md).
+
+Q021/Q022/Q023/Q024/Q025 remain OPEN; **Q023 is a production-activation blocker**. Treasury contingency-methodology conflict and institutional dependence remain OPEN. No fallback benchmark or holder true-up adopted. No selected capital instrument, compensation, optimal ratio, mint/redemption/AP design, legal entity/priority, production custodian or blockchain. Draft constitution remains unratified except explicitly approved decisions. WP1D numerical reserves/limits remain hypotheses pending review and calibration.
+
+
 Record revision 0.3 • 2026-09-19 America/Chicago
 
 Brad and the primary PPU architecture conversation review under [roadmap v0.1](../roadmap/07-development-roadmap.md). Brad's explicit approval is required for progression; neither operator nor Claude can self-approve.
@@ -81,3 +90,10 @@ Only WP1C was authorized and is now complete for review. Stop at Gate 1C; no WP1
 ## Gate1C — Liability Model checkpoint
 
 Status: **AWAITING REVIEW / NOT APPROVED**. WP1C COMPLETE FOR REVIEW. [Submission](../../reviews/gate1c/Gate-1C-submission.md) and [model](../../research/wp1c/01-liability-model.md). Primary must assess economic-state completeness, queue denomination alternatives, no-double-count/discharge invariants, priority versus legal enforceability, and all retained dependencies. No WP1D authorization. Q023 remains an OPEN production-activation blocker. Approval of Gate 1C must not be inferred from model tests or this report.
+
+
+## Controlling Gate1C disposition — SRC019
+Status: **APPROVED WITH CONDITIONS**. WP1C revision0.1 accepted for continued development, as directly reported by Brad. D016 bounded economic framework accepted, never a queue architecture, legal priority or completeness certification. Q025 OPEN; Q023 production-activation blocker and all enumerated conditions remain. No independent human review beyond user-reported primary disposition is claimed.
+
+## Gate1D — Reserve Architecture checkpoint
+Status: **AWAITING REVIEW / NOT APPROVED**. WP1D COMPLETE FOR REVIEW. [Submission](../../reviews/gate1d/Gate-1D-submission.md). Next authorized package NONE. WP1E and all later packages NOT AUTHORIZED. Brad and primary PPU review alone control disposition; Claude/internal checks do not approve. Phase Gate1 NOT REACHED.

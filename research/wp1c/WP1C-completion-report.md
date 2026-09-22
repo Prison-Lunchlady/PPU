@@ -1,5 +1,8 @@
 # WP1C Completion Report
 
+**Current disposition (SRC019): WP1C revision0.1 APPROVED WITH CONDITIONS for continued development.** [User authority](../../evidence/gate1c-approval-wp1d-authorization.txt). Original submission text below is historical. No legal/transaction/claim-replacement facts are certified; Q023/Q025 remain OPEN. WP1D-only authority is now complete for review, not approval of any later package.
+
+
 2026-09-21 • **COMPLETE FOR REVIEW; Gate 1C AWAITING REVIEW / NOT APPROVED. WP1D NOT AUTHORIZED.**
 
 Produced the [PPU Liability Model](01-liability-model.md) required by roadmap WP1C. Its economic claim partition gives:

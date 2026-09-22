@@ -1,6 +1,6 @@
 """Offline integrity, navigation, privacy-pattern and scope checks for the import."""
 from pathlib import Path
-import hashlib, json, re, sys, zipfile
+import hashlib, json, re, sys, zipfile, gzip, base64
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,10 +18,21 @@ for item in provenance['files']:
     check(p.is_file(), 'Missing: '+item['repository_path'])
     if p.is_file() and item['repository_path'] not in amended:
         check(digest(p.read_bytes()) == item['repository_sha256'], 'Unchanged import hash: '+item['repository_path'])
-current=json.loads((ROOT/'reviews/gate1c/submission-manifest.json').read_text(encoding='utf-8'))
+current=json.loads((ROOT/'reviews/gate1d/submission-manifest.json').read_text(encoding='utf-8'))
 for item in current['files']:
     p=ROOT/item['path']
     check(p.is_file() and digest(p.read_bytes())==item['sha256'], 'Current submission hash: '+item['path'])
+review_core=json.loads((ROOT/'reviews/gate1d/stage4-lossless-core.json').read_text(encoding='utf-8'))
+for item in review_core['files']:
+    decoded=gzip.decompress(base64.b64decode(item['gzip_base64']))
+    check(digest(decoded)==item['sha256'],'Lossless submitted byte hash: '+item['path'])
+    now=(ROOT/item['path']).read_bytes()
+    # Only post-review administrative disclosure/findings may be prepended/appended to
+    # these two records. Material research/model files must remain byte-exact.
+    append_only=item['path'] in ('reviews/gate1d/Gate-1D-submission.md','reviews/gate1d/claude-reconciliation.md')
+    check(now==decoded or (append_only and (now.startswith(decoded) or now.endswith(decoded))), 'Current submitted core or administrative review metadata: '+item['path'])
+authority=json.loads((ROOT/'evidence/gate1c-wp1d-source-provenance.json').read_text(encoding='utf-8'))
+check(digest((ROOT/'evidence/gate1c-approval-wp1d-authorization.txt').read_bytes())==authority['repository_sha256'],'SRC019 source provenance hash')
 for name in ['07-development-roadmap.md', 'evidence/PPU_full_recovered_source.txt']:
     item = next(x for x in provenance['files'] if x['source_path']==name)
     check(item['original_sha256']==digest((ROOT/item['repository_path']).read_bytes()), 'Verbatim source: '+name)
@@ -44,10 +55,11 @@ state=(ROOT/'docs/canonical/01-protocol-state.md').read_text(encoding='utf-8-sig
 gates=(ROOT/'docs/canonical/10-review-gate-register.md').read_text(encoding='utf-8-sig')
 check('**Review Gate 0:** APPROVED WITH CONDITIONS' in state, 'Gate 0 state')
 check('**Review Gate 1A:** APPROVED WITH CONDITIONS' in state, 'Gate 1A state')
-check('**Current package:** WP1C — Liability Model' in state and 'COMPLETE FOR REVIEW' in state, 'WP1C state')
+check('**Current package:** WP1D — Reserve Architecture' in state and 'COMPLETE FOR REVIEW' in state, 'WP1D state')
 check('Status: **APPROVED WITH CONDITIONS** under SRC018' in gates and '## Gate1B' in gates, 'Gate 1B approved with conditions')
-check('Status: **AWAITING REVIEW / NOT APPROVED**. WP1C' in gates and '## Gate1C' in gates, 'Gate 1C review pending')
-check('WP1D NOT AUTHORIZED' in state, 'Successor authorization')
+check('## Controlling Gate1C disposition — SRC019' in gates and '**Review Gate 1C:** APPROVED WITH CONDITIONS' in state, 'Gate 1C approved with conditions')
+check('Status: **AWAITING REVIEW / NOT APPROVED**. WP1D' in gates and '## Gate1D' in gates, 'Gate 1D review pending')
+check('WP1E NOT AUTHORIZED' in state, 'Successor authorization')
 standard='PPU v0.1 targets U.S. urban consumer-price-indexed purchasing power using CPI-U, U.S. City Average, All Items, Not Seasonally Adjusted (CUUR0000SA0).'
 for path in ['README.md','docs/canonical/01-protocol-state.md','docs/canonical/02-decision-register.md','docs/canonical/10-review-gate-register.md','evidence/gate1a-approval-2026-09-21.txt']:
     check(standard in (ROOT/path).read_text(encoding='utf-8'), 'Exact approved wording: '+path)
@@ -66,9 +78,13 @@ for dimension in ['Inflation and deflation','Transacting holders','Liability unc
     check('| '+dimension+' |' in policy,'Three-alternative matrix: '+dimension)
 check('BENCHMARK_IMPAIRED' in policy and 'PERSISTENT_UNRESOLVED' in policy and 'STRUCTURAL_CONFIRMED' in policy,'Explicit separate impairment causes')
 check('activation blocker' in policy,'Structural remedy remains activation blocker')
-check('SRC018' in state,'Current approval and WP1C authority')
+check('SRC019' in state,'Current approval and WP1D authority')
 liability=json.loads((ROOT/'research/wp1c/liability-validation.json').read_text(encoding='utf-8'))
 check(liability['passed']==58 and not liability['failed'],'58 WP1C accounting checks')
+reserve=json.loads((ROOT/'research/wp1d/validation.json').read_text(encoding='utf-8'))
+check(reserve['passed']==139 and not reserve['failed'],'139 WP1D diagnostic assertions')
+scenarios=json.loads((ROOT/'research/wp1d/scenario-validation.json').read_text(encoding='utf-8'))
+check(scenarios['passed']==20 and not scenarios['failed'],'20 WP1D reproduction and scenario assertions')
 check('production-activation blocker' in state and 'Q-023' in state,'Structural remedy remains open activation blocker')
 check('not a formal platform export' in state, 'SRC003 provenance')
 check(not list(ROOT.glob('LICENSE*')), 'No license added')
@@ -101,7 +117,7 @@ for p in ROOT.rglob('*'):
         with zipfile.ZipFile(p) as z:
             for n in z.namelist():scan(name+'!'+n,z.read(n))
     else:scan(name,p.read_bytes())
-report={'scope':'Gate 1B conditional approval and WP1C research submission; no production certification or independent economic validation','checks':checks,'wp1b_model_policy_checks':220,'wp1c_accounting_checks':58,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'REVISION 0.3 ACCEPTED FOR CONTINUED DEVELOPMENT','gate1b':'APPROVED WITH CONDITIONS','wp1c':'COMPLETE FOR REVIEW','gate1c':'AWAITING REVIEW / NOT APPROVED','wp1d':'NOT AUTHORIZED','Q023':'OPEN; PRODUCTION-ACTIVATION BLOCKER','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
+report={'scope':'Gate 1C conditional approval and WP1D research submission; final Claude review unavailable; no production certification or independent economic validation','checks':checks,'wp1b_model_policy_checks':220,'wp1c_accounting_checks':58,'wp1d_diagnostic_assertions':139,'wp1d_reproduction_scenario_assertions':20,'local_markdown_links_checked':link_count,'files_and_archive_entries_scanned':scanned,'status':'PASS' if not errors else 'FAIL','errors':errors,'gate0':'APPROVED WITH CONDITIONS','wp1a':'COMPLETE','gate1a':'APPROVED WITH CONDITIONS','wp1b':'REVISION 0.3 ACCEPTED FOR CONTINUED DEVELOPMENT','gate1b':'APPROVED WITH CONDITIONS','wp1c':'REVISION 0.1 ACCEPTED WITH CONDITIONS','gate1c':'APPROVED WITH CONDITIONS','wp1d':'COMPLETE FOR REVIEW','gate1d':'AWAITING REVIEW / NOT APPROVED','wp1e':'NOT AUTHORIZED','Q023':'OPEN; PRODUCTION-ACTIVATION BLOCKER','privacy_scan_limit':'Pattern scan plus PDF text/metadata extraction; not proof against every possible secret format. Historical manifests apply to original bytes; current submission manifest applies to current maintained files.'}
 (ROOT/'reviews/repository-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(report,indent=2))
 sys.exit(bool(errors))

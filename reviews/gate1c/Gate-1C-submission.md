@@ -1,5 +1,8 @@
 # Gate 1C submission
 
+**Current disposition (SRC019): WP1C revision0.1 APPROVED WITH CONDITIONS for continued development.** [User authority](../../evidence/gate1c-approval-wp1d-authorization.txt). Original submission text below is historical. No legal/transaction/claim-replacement facts are certified; Q023/Q025 remain OPEN. WP1D-only authority is now complete for review, not approval of any later package.
+
+
 **AWAITING REVIEW / NOT APPROVED. WP1C COMPLETE FOR REVIEW. WP1D and later packages NOT AUTHORIZED.**
 
 Read [Liability Model](../../research/wp1c/01-liability-model.md), [examples and adversarial review](../../research/wp1c/02-worked-examples-and-adversarial-review.md), [completion report](../../research/wp1c/WP1C-completion-report.md), [test results](../../research/wp1c/liability-validation.json) and [current manifest](submission-manifest.json).
