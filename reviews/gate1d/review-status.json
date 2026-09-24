@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-23",
   "model_ui_label": "Opus 5 High",
   "stage1": "COMPLETED:15 findings",
   "stage2": "COMPLETED:18 findings",
@@ -9,10 +9,13 @@
     "Claude is busy right now. Try again in a moment.",
     "Taking longer than usual. Trying again shortly (attempt 5)"
   ],
-  "disposition": "Stopped repeated unavailable request; no substantive final review returned. Final core locally tested only.",
+  "disposition": "Three earlier Claude review stages were reconciled; no final corrected-core Claude endorsement is claimed. Primary Gate 1D review completed under SRC020 and accepted the candidate reserve framework for continued development with conditions.",
   "final_submitted_files": 35,
   "operator_decoded_hashes_verified": 35,
   "claude_final_hashes_verified": null,
   "external_human_review": false,
-  "gate": "AWAITING REVIEW / NOT APPROVED"
+  "primary_review": "reviews/gate1d/primary-review-2026-09-23.md",
+  "gate": "APPROVED WITH CONDITIONS",
+  "wp1d": "COMPLETE",
+  "next_authorized_package": "WP1E — Capital Structure"
 }
