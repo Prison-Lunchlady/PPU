@@ -4,7 +4,14 @@ Record date: 2026-09-23 America/Chicago
 Controlling authority: **SRC020 — Standing Daily Development Authorization**
 Primary review: [Gate 1D review](../../reviews/gate1d/primary-review-2026-09-23.md)
 
-This file is the current status override for dated handoff headers elsewhere in `docs/canonical/` until those records are reconciled by the next bounded work-package update. Historical content in those records remains evidence; where a dated status header conflicts with this file, this file controls current package/gate authority only.
+This file is the current status override for dated handoff headers elsewhere in `docs/canonical/` until those records are reconciled by the next bounded work-package update. Historical content in those records remains evidence; where a dated status header conflicts with this file or the linked addenda, the newer handoff/addendum controls current package/gate authority only.
+
+Current addenda:
+
+- [D019 Gate 1D decision](02a-gate1d-decision-addendum.md)
+- [SRC020 research-library entry](06a-src020-research-library-addendum.md)
+- [Work-package status](09a-work-package-status-addendum.md)
+- [Gate 1D status](10a-gate1d-status-addendum.md)
 
 ## Current status
 
