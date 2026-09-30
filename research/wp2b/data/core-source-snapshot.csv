@@ -1,0 +1,11 @@
+series_key,date,value,unit,source_id,status
+cpi_u_nsa,1970-12-01,39.8,index_1982_1984_equals_100,CUUR0000SA0,verified_anchor
+cpi_u_nsa,1974-12-01,51.9,index_1982_1984_equals_100,CUUR0000SA0,verified_anchor
+cpi_u_nsa,1979-12-01,76.7,index_1982_1984_equals_100,CUUR0000SA0,verified_anchor
+cpi_u_nsa,1980-12-01,86.3,index_1982_1984_equals_100,CUUR0000SA0,verified_anchor
+cpi_u_nsa,1982-12-01,97.6,index_1982_1984_equals_100,CUUR0000SA0,verified_anchor
+treasury_10y_nominal,2026-08-01,4.68,percent_per_year,RIFLGFCY10_N.M,verified_anchor
+tips_10y_real_yield,2026-08-01,2.40,percent_per_year,RIFLGFCY10_XII_N.M,verified_anchor
+effective_federal_funds_rate,2026-08-01,3.63,percent_per_year,RIFSPFF_N.M,verified_anchor
+nfci,2026-09-25,-0.548,index,NFCI,metadata_anchor_not_bundled_series
+wti_cushing,2026-08-01,83.90,dollars_per_barrel,EIA_WTI_monthly,metadata_anchor_not_bundled_series
