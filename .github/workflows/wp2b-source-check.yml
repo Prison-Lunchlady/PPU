@@ -1,0 +1,15 @@
+name: WP2B Source Check
+on:
+  push:
+    branches:
+      - work/wp2b-2026-09-30
+  workflow_dispatch:
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/wp2b_fetch.py
