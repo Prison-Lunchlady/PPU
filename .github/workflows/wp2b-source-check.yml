@@ -1,15 +1,32 @@
-name: WP2B Source Check
+name: WP2B Static Source Remediation
+
 on:
   push:
     branches:
-      - work/wp2b-2026-09-30
+      - work/wp2b-remediation-2026-10-01
   workflow_dispatch:
+
 jobs:
-  source-check:
+  acquire-and-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python tools/wp2b_fetch.py
+      - name: Acquire authoritative static source data
+        run: python tools/wp2b_fetch.py
+      - name: Verify required outputs
+        run: |
+          test -s research/wp2b/data/core-observations.csv
+          test -s research/wp2b/data/source-hashes.json
+          test -s reviews/wp2b/validation.json
+          test -s reviews/wp2b/WP2B-acquisition-validation.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wp2b-remediation-output
+          path: |
+            research/wp2b/data/core-observations.csv
+            research/wp2b/data/source-hashes.json
+            reviews/wp2b/validation.json
+            reviews/wp2b/WP2B-acquisition-validation.md
