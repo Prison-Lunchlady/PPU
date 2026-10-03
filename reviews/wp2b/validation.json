@@ -1,0 +1,183 @@
+{
+  "global_checks": {
+    "all_coverage_guards_pass": true,
+    "all_fabricated_rows_zero": true,
+    "all_series_nonempty": true,
+    "normalized_panel_sha256": "dd728aa4ca1592dda6aa48389046b3fd47bad4181aede69cb8160f81f2d60ba0",
+    "row_count": 92286,
+    "series_count": 8,
+    "unique_series_date": true,
+    "vintage_label": "current_published"
+  },
+  "limitations": [
+    "CPI is current-published, not a complete first-release-vintage archive.",
+    "Yields are not bond total returns.",
+    "No unavailable historical TIPS or SOFR observations are backfilled.",
+    "License-unclear alternative market histories are not vendored."
+  ],
+  "passed": true,
+  "retrieval_path": "fred_graph_csv_date_bounded_chunks",
+  "retrieved_utc": "2026-10-03T13:58:38+00:00",
+  "series": {
+    "CPIAUCNS": {
+      "ascending_dates": true,
+      "chunk_count": 23,
+      "coverage_passed": true,
+      "end": "2026-08-01",
+      "expected_start_on_or_before": "1913-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 75,
+      "minimum_rows": 1300,
+      "rows": 1363,
+      "source_missing_markers_excluded": 1,
+      "staleness_days": 63,
+      "start": "1913-01-01",
+      "unique_dates": true
+    },
+    "DFF": {
+      "ascending_dates": true,
+      "chunk_count": 15,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "1954-08-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 15000,
+      "rows": 26391,
+      "source_missing_markers_excluded": 0,
+      "staleness_days": 2,
+      "start": "1954-07-01",
+      "unique_dates": true
+    },
+    "DFII10": {
+      "ascending_dates": true,
+      "chunk_count": 5,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "2003-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 4000,
+      "rows": 5942,
+      "source_missing_markers_excluded": 250,
+      "staleness_days": 2,
+      "start": "2003-01-02",
+      "unique_dates": true
+    },
+    "DFII5": {
+      "ascending_dates": true,
+      "chunk_count": 5,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "2003-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 4000,
+      "rows": 5942,
+      "source_missing_markers_excluded": 250,
+      "staleness_days": 2,
+      "start": "2003-01-02",
+      "unique_dates": true
+    },
+    "DGS10": {
+      "ascending_dates": true,
+      "chunk_count": 13,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "1962-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 12000,
+      "rows": 16173,
+      "source_missing_markers_excluded": 711,
+      "staleness_days": 2,
+      "start": "1962-01-02",
+      "unique_dates": true
+    },
+    "DGS5": {
+      "ascending_dates": true,
+      "chunk_count": 13,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "1962-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 12000,
+      "rows": 16173,
+      "source_missing_markers_excluded": 711,
+      "staleness_days": 2,
+      "start": "1962-01-02",
+      "unique_dates": true
+    },
+    "DTB3": {
+      "ascending_dates": true,
+      "chunk_count": 15,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "1954-02-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 12000,
+      "rows": 18179,
+      "source_missing_markers_excluded": 787,
+      "staleness_days": 2,
+      "start": "1954-01-04",
+      "unique_dates": true
+    },
+    "SOFR": {
+      "ascending_dates": true,
+      "chunk_count": 2,
+      "coverage_passed": true,
+      "end": "2026-10-01",
+      "expected_start_on_or_before": "2018-05-01",
+      "fabricated_rows": 0,
+      "guards": {
+        "end_date_staleness_guard": true,
+        "minimum_rows_guard": true,
+        "start_date_guard": true
+      },
+      "max_stale_days": 14,
+      "minimum_rows": 1500,
+      "rows": 2123,
+      "source_missing_markers_excluded": 95,
+      "staleness_days": 2,
+      "start": "2018-04-03",
+      "unique_dates": true
+    }
+  }
+}
