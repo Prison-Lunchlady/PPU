@@ -1,4 +1,4 @@
-name: WP2B Static Source Remediation
+name: WP2B Full-History Remediation
 
 on:
   push:
@@ -9,22 +9,31 @@ on:
 jobs:
   acquire-and-validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Acquire authoritative static source data
-        run: python tools/wp2b_fetch.py
+      - name: Acquire authoritative full-history chunks and validate coverage
+        run: python tools/wp2b_fetch_v2.py
       - name: Verify required outputs
         run: |
           test -s research/wp2b/data/core-observations.csv
           test -s research/wp2b/data/source-hashes.json
           test -s reviews/wp2b/validation.json
           test -s reviews/wp2b/WP2B-acquisition-validation.md
+          python - <<'PY'
+          import json
+          v=json.load(open("reviews/wp2b/validation.json"))
+          assert v["passed"] is True
+          assert v["global_checks"]["all_coverage_guards_pass"] is True
+          assert v["global_checks"]["all_fabricated_rows_zero"] is True
+          print(v["global_checks"])
+          PY
       - uses: actions/upload-artifact@v4
         with:
-          name: wp2b-remediation-output
+          name: wp2b-full-history-output
           path: |
             research/wp2b/data/core-observations.csv
             research/wp2b/data/source-hashes.json
