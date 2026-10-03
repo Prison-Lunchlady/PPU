@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Acquire authoritative full-history chunks and validate coverage
-        run: python tools/wp2b_fetch_v2.py
+        run: python tools/wp2b_fetch_v3.py
       - name: Verify required outputs
         run: |
           test -s research/wp2b/data/core-observations.csv
@@ -29,6 +29,7 @@ jobs:
           assert v["passed"] is True
           assert v["global_checks"]["all_coverage_guards_pass"] is True
           assert v["global_checks"]["all_fabricated_rows_zero"] is True
+          assert "DCOILWTICO" not in v["series"]
           print(v["global_checks"])
           PY
       - uses: actions/upload-artifact@v4
