@@ -1,0 +1,1087 @@
+{
+  "normalized_panel_sha256": "dd728aa4ca1592dda6aa48389046b3fd47bad4181aede69cb8160f81f2d60ba0",
+  "retrieved_utc": "2026-10-03T13:58:38+00:00",
+  "series": {
+    "CPIAUCNS": {
+      "chunks": [
+        {
+          "chunk_end": "1917-12-31",
+          "chunk_start": "1913-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1913-01-01&coed=1917-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1092,
+          "payload_sha256": "7e621fa56ef1268a8b429705e1b9343f8d61efc5fc1fc0bc9b022d1de39251e0",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1913-01-01&coed=1917-12-31"
+        },
+        {
+          "chunk_end": "1922-12-31",
+          "chunk_start": "1918-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1918-01-01&coed=1922-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "2efe42394b148c19f1f84afbfac986f3b436b635d4e8ecf35f697d4f0b4ef64b",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1918-01-01&coed=1922-12-31"
+        },
+        {
+          "chunk_end": "1927-12-31",
+          "chunk_start": "1923-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1923-01-01&coed=1927-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "c0945a3883869c8d0a93e67b8354bb361c04767667f9fe1f54c0cec4dbca7d6d",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1923-01-01&coed=1927-12-31"
+        },
+        {
+          "chunk_end": "1932-12-31",
+          "chunk_start": "1928-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1928-01-01&coed=1932-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "8b365e3ef78f97a6b2dee5bdca6939b7fcb8bc18d5c25e7e08beb95e001bbd9c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1928-01-01&coed=1932-12-31"
+        },
+        {
+          "chunk_end": "1937-12-31",
+          "chunk_start": "1933-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1933-01-01&coed=1937-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "fd71f6e850ac2ee79fa9dda3ebe714f7cefd6a1aebd413af49d86d24a704d4f0",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1933-01-01&coed=1937-12-31"
+        },
+        {
+          "chunk_end": "1942-12-31",
+          "chunk_start": "1938-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1938-01-01&coed=1942-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "33fc725c7202d5f15a4107e1f670e056555c87c7dfc0775fdfb981afb4a61f0c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1938-01-01&coed=1942-12-31"
+        },
+        {
+          "chunk_end": "1947-12-31",
+          "chunk_start": "1943-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1943-01-01&coed=1947-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "8109ad8f7c276e5b3c15993d52e53a3fd156a0fef20f508a7734464168e1706f",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1943-01-01&coed=1947-12-31"
+        },
+        {
+          "chunk_end": "1952-12-31",
+          "chunk_start": "1948-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1948-01-01&coed=1952-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "841a7764fa8ce4b543c5cd9f8ccd30cdbde444fb17b62591b5f7c388b5cf26e1",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1948-01-01&coed=1952-12-31"
+        },
+        {
+          "chunk_end": "1957-12-31",
+          "chunk_start": "1953-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1953-01-01&coed=1957-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "a4654e02b2855492b2e5f2c36c6bef10fee3aafe9a5a779e18cea585ca99f191",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1953-01-01&coed=1957-12-31"
+        },
+        {
+          "chunk_end": "1962-12-31",
+          "chunk_start": "1958-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1958-01-01&coed=1962-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "e8ab3d3df57a6c10a2d6dd9a5aa2416eda7952c2d6bfc0a0da8a9ab43ce951c1",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1958-01-01&coed=1962-12-31"
+        },
+        {
+          "chunk_end": "1967-12-31",
+          "chunk_start": "1963-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1963-01-01&coed=1967-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "0ab4de19b509a01e1370ce18f5701b789bc57d91e808faccd076f3730cd53f7a",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1963-01-01&coed=1967-12-31"
+        },
+        {
+          "chunk_end": "1972-12-31",
+          "chunk_start": "1968-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1968-01-01&coed=1972-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "5157a4daca352aef4d32610bc253ceae0bc0fb122ab54660aafe40d28c420ac0",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1968-01-01&coed=1972-12-31"
+        },
+        {
+          "chunk_end": "1977-12-31",
+          "chunk_start": "1973-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1973-01-01&coed=1977-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "9252a91c8859769f8fd1e70d6cd1168f02f00f3ba8fdef625f398b0f0052ded3",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1973-01-01&coed=1977-12-31"
+        },
+        {
+          "chunk_end": "1982-12-31",
+          "chunk_start": "1978-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1978-01-01&coed=1982-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1106,
+          "payload_sha256": "175256f0345b3f1952f72af1a40334442b3d4dbbe0c857e49154975b80ea679e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1978-01-01&coed=1982-12-31"
+        },
+        {
+          "chunk_end": "1987-12-31",
+          "chunk_start": "1983-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1983-01-01&coed=1987-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1159,
+          "payload_sha256": "858d5ce2ccb9a9649d9e121feacf8c66a33710337b360efdd7d20b32b56f48bf",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1983-01-01&coed=1987-12-31"
+        },
+        {
+          "chunk_end": "1992-12-31",
+          "chunk_start": "1988-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1988-01-01&coed=1992-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "4a512ef69fc31b1939698a3faaeb01ae4ccba15cfe20fc69d45081fc60e9d53f",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1988-01-01&coed=1992-12-31"
+        },
+        {
+          "chunk_end": "1997-12-31",
+          "chunk_start": "1993-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1993-01-01&coed=1997-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "92d67557eb68080eed6ce9b93c6fb5baf2568d85186ddde5e640ac39fbf0bb4f",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1993-01-01&coed=1997-12-31"
+        },
+        {
+          "chunk_end": "2002-12-31",
+          "chunk_start": "1998-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1998-01-01&coed=2002-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "fbc3d1f11cee71924b0900c99237407d711a994286bcda2d5c28b7cc3cf52b89",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=1998-01-01&coed=2002-12-31"
+        },
+        {
+          "chunk_end": "2007-12-31",
+          "chunk_start": "2003-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2003-01-01&coed=2007-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "88aa9fc789e0397fcdabfbb23a0ce58b308cbd1e0370241772d851c5987bc54a",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2003-01-01&coed=2007-12-31"
+        },
+        {
+          "chunk_end": "2012-12-31",
+          "chunk_start": "2008-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2008-01-01&coed=2012-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "6698d1f506be0c26f2fc71e902bd1f65b9592eb65e00039254dee42c182833ad",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2008-01-01&coed=2012-12-31"
+        },
+        {
+          "chunk_end": "2017-12-31",
+          "chunk_start": "2013-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2013-01-01&coed=2017-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "08835c5d2ac9c2b07da72ecf54df8cd36a5c8d45b5008db31cfe6653fb26e771",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2013-01-01&coed=2017-12-31"
+        },
+        {
+          "chunk_end": "2022-12-31",
+          "chunk_start": "2018-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2018-01-01&coed=2022-12-31",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 60,
+          "payload_bytes": 1166,
+          "payload_sha256": "c6f0f7e7d0e89e9b79290dd609d165d61a9a5543d0cbf585424ce55095c35841",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2018-01-01&coed=2022-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2023-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2023-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 1,
+          "numeric_rows": 43,
+          "payload_bytes": 855,
+          "payload_sha256": "45f15626da3e38b97bfece531f5fe8017f81ad03d5766bdf75e908b4a4d05261",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCNS&cosd=2023-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "BLS",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "cpi_u_nsa",
+      "vintage_status": "current_published"
+    },
+    "DFF": {
+      "chunks": [
+        {
+          "chunk_end": "1959-06-30",
+          "chunk_start": "1954-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1954-07-01&coed=1959-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29237,
+          "payload_sha256": "dbba0b370c1480837c33283390938b0f4ddcb05c95f5b2a747d36bc6275e17a8",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1954-07-01&coed=1959-06-30"
+        },
+        {
+          "chunk_end": "1964-06-30",
+          "chunk_start": "1959-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1959-07-01&coed=1964-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1827,
+          "payload_bytes": 29253,
+          "payload_sha256": "59678f08960ab1d62b60e3b075c81daf3d6b261e8c861ab180154502b3181773",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1959-07-01&coed=1964-06-30"
+        },
+        {
+          "chunk_end": "1969-06-30",
+          "chunk_start": "1964-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1964-07-01&coed=1969-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29240,
+          "payload_sha256": "a63ada3c5837bf250d8e2a3d36fe09b83f7f91ae14aab48423c77435366fed9f",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1964-07-01&coed=1969-06-30"
+        },
+        {
+          "chunk_end": "1974-06-30",
+          "chunk_start": "1969-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1969-07-01&coed=1974-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29459,
+          "payload_sha256": "7832843e1da96b4cceaf21315f7d620de5011a43a121d248828232386c4f5895",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1969-07-01&coed=1974-06-30"
+        },
+        {
+          "chunk_end": "1979-06-30",
+          "chunk_start": "1974-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1974-07-01&coed=1979-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29512,
+          "payload_sha256": "a9ccbc785f4924a31090809c7460bef4858eb0d1290e30be268490ab1e654e42",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1974-07-01&coed=1979-06-30"
+        },
+        {
+          "chunk_end": "1984-06-30",
+          "chunk_start": "1979-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1979-07-01&coed=1984-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1827,
+          "payload_bytes": 30445,
+          "payload_sha256": "f8d0c60ebcee1b938125b330fe73b54d703f06a4605e959c34ef54d96224fb3e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1979-07-01&coed=1984-06-30"
+        },
+        {
+          "chunk_end": "1989-06-30",
+          "chunk_start": "1984-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1984-07-01&coed=1989-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29358,
+          "payload_sha256": "02ef724453f29382977534af8bda8ed1191b1dbbb6592867332af5dc94995264",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1984-07-01&coed=1989-06-30"
+        },
+        {
+          "chunk_end": "1994-06-30",
+          "chunk_start": "1989-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1989-07-01&coed=1994-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29238,
+          "payload_sha256": "f2524f5091e8d8fdf8e7b1fca549a0fa6c2f074362e58801d30799414cad0d95",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1989-07-01&coed=1994-06-30"
+        },
+        {
+          "chunk_end": "1999-06-30",
+          "chunk_start": "1994-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1994-07-01&coed=1999-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29237,
+          "payload_sha256": "11b11e175d9b0433b824499df41d103da35f964b01e4ad8f51232fc6ce7f4d54",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1994-07-01&coed=1999-06-30"
+        },
+        {
+          "chunk_end": "2004-06-30",
+          "chunk_start": "1999-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1999-07-01&coed=2004-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1827,
+          "payload_bytes": 29253,
+          "payload_sha256": "e86cad323ab92505dcedab799ef5ee1daff916b643d5bb9729250dbec4e666c6",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=1999-07-01&coed=2004-06-30"
+        },
+        {
+          "chunk_end": "2009-06-30",
+          "chunk_start": "2004-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2004-07-01&coed=2009-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29237,
+          "payload_sha256": "72dead3a30ec0312ecaa9a5fd068510a67c25e8e57472425f7155f1e59396394",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2004-07-01&coed=2009-06-30"
+        },
+        {
+          "chunk_end": "2014-06-30",
+          "chunk_start": "2009-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2009-07-01&coed=2014-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29237,
+          "payload_sha256": "01d492e8377ad33229497c13804b6836fca50bf9201f45e2884161889a8d6940",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2009-07-01&coed=2014-06-30"
+        },
+        {
+          "chunk_end": "2019-06-30",
+          "chunk_start": "2014-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2014-07-01&coed=2019-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1826,
+          "payload_bytes": 29237,
+          "payload_sha256": "99d8ff7503cdc382628410f2b36bf164567f0825ee734bc88102eaa8153e9ab9",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2014-07-01&coed=2019-06-30"
+        },
+        {
+          "chunk_end": "2024-06-30",
+          "chunk_start": "2019-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2019-07-01&coed=2024-06-30",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 1827,
+          "payload_bytes": 29253,
+          "payload_sha256": "756d1fc6701a330b1fa5bec25fd9a2c3727f18163db8e76bbcf46710229c1513",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2019-07-01&coed=2024-06-30"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2024-07-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2024-07-01&coed=2026-10-03",
+          "missing_markers_excluded": 0,
+          "numeric_rows": 823,
+          "payload_bytes": 13189,
+          "payload_sha256": "2a2f85451a20dcc4f046aca9cdf6df1f5682319b86c2c0cca4b604a48a131a19",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF&cosd=2024-07-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board / New York Fed",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "effective_federal_funds_rate",
+      "vintage_status": "current_published"
+    },
+    "DFII10": {
+      "chunks": [
+        {
+          "chunk_end": "2007-12-31",
+          "chunk_start": "2003-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2003-01-01&coed=2007-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 20664,
+          "payload_sha256": "fea2c7465834344d54fb55117ceb6b9aedb37eeeb44eda1e5bb11c6af0dd0ce3",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2003-01-01&coed=2007-12-31"
+        },
+        {
+          "chunk_end": "2012-12-31",
+          "chunk_start": "2008-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2008-01-01&coed=2012-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1252,
+          "payload_bytes": 20955,
+          "payload_sha256": "80b4a7784c8be7e8e9b01c8d166754bac50671e42468347a9f8a0c89539708fb",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2008-01-01&coed=2012-12-31"
+        },
+        {
+          "chunk_end": "2017-12-31",
+          "chunk_start": "2013-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2013-01-01&coed=2017-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 20778,
+          "payload_sha256": "3c8f4fdcb98b1dc895fb5c6ea55bbf4792ad6c6faefba0e976db179963efc465",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2013-01-01&coed=2017-12-31"
+        },
+        {
+          "chunk_end": "2022-12-31",
+          "chunk_start": "2018-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2018-01-01&coed=2022-12-31",
+          "missing_markers_excluded": 54,
+          "numeric_rows": 1250,
+          "payload_bytes": 21238,
+          "payload_sha256": "1ad614227ae7876297b6db7a4c9c6b4ab94b721eba494ba454431877d0ed567b",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2018-01-01&coed=2022-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2023-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2023-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 40,
+          "numeric_rows": 938,
+          "payload_bytes": 15512,
+          "payload_sha256": "55851c4fc50912b45fa5c20a64c447e6ee9b4241b61044583c9103ceac045537",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII10&cosd=2023-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "tips_10y_real_yield",
+      "vintage_status": "current_published"
+    },
+    "DFII5": {
+      "chunks": [
+        {
+          "chunk_end": "2007-12-31",
+          "chunk_start": "2003-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2003-01-01&coed=2007-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 20663,
+          "payload_sha256": "2d56ced58db5c2032b84d166cec4cc425e6decb1e7580a4b67125e4a77b5f904",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2003-01-01&coed=2007-12-31"
+        },
+        {
+          "chunk_end": "2012-12-31",
+          "chunk_start": "2008-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2008-01-01&coed=2012-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1252,
+          "payload_bytes": 21186,
+          "payload_sha256": "1f2f5dd25866df3458c14f700700cd736b1b7a7f405896188f08e51c644d69e5",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2008-01-01&coed=2012-12-31"
+        },
+        {
+          "chunk_end": "2017-12-31",
+          "chunk_start": "2013-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2013-01-01&coed=2017-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 21309,
+          "payload_sha256": "70ac9aa9a217fc8f9e34bcc4d96b9d8a7cec4a56c591b3cf5a9717a1db6cf63e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2013-01-01&coed=2017-12-31"
+        },
+        {
+          "chunk_end": "2022-12-31",
+          "chunk_start": "2018-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2018-01-01&coed=2022-12-31",
+          "missing_markers_excluded": 54,
+          "numeric_rows": 1250,
+          "payload_bytes": 21277,
+          "payload_sha256": "b729ede076d96b9afc746f84fd1c72a41a2ded2507cbea7aef8bc618a6f915fe",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2018-01-01&coed=2022-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2023-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2023-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 40,
+          "numeric_rows": 938,
+          "payload_bytes": 15511,
+          "payload_sha256": "dabddc3105c3c726a91c38c2d8995e6dc9b1a7d833ad000236bf67b0fd3be41c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFII5&cosd=2023-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "tips_5y_real_yield",
+      "vintage_status": "current_published"
+    },
+    "DGS10": {
+      "chunks": [
+        {
+          "chunk_end": "1966-12-31",
+          "chunk_start": "1962-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1962-01-01&coed=1966-12-31",
+          "missing_markers_excluded": 57,
+          "numeric_rows": 1247,
+          "payload_bytes": 20659,
+          "payload_sha256": "d6e6cada9bd7233bc46b7000f0bbc7c6e4950afca92181eb95beb782d70efaeb",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1962-01-01&coed=1966-12-31"
+        },
+        {
+          "chunk_end": "1971-12-31",
+          "chunk_start": "1967-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1967-01-01&coed=1971-12-31",
+          "missing_markers_excluded": 58,
+          "numeric_rows": 1246,
+          "payload_bytes": 20655,
+          "payload_sha256": "3812e36dc488a6ed4eb1e7c6ce80ebbff36932507cbe92befe57028b0377d7b5",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1967-01-01&coed=1971-12-31"
+        },
+        {
+          "chunk_end": "1976-12-31",
+          "chunk_start": "1972-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1972-01-01&coed=1976-12-31",
+          "missing_markers_excluded": 59,
+          "numeric_rows": 1246,
+          "payload_bytes": 20667,
+          "payload_sha256": "b63429d3d1f9b4852b466579602ccdcbe7259177ce3dfbd7d53e7793a4bc8ba2",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1972-01-01&coed=1976-12-31"
+        },
+        {
+          "chunk_end": "1981-12-31",
+          "chunk_start": "1977-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1977-01-01&coed=1981-12-31",
+          "missing_markers_excluded": 60,
+          "numeric_rows": 1244,
+          "payload_bytes": 21182,
+          "payload_sha256": "932bdb3deb932018ec27f37521993589f5eed89e260a5b31c7032b6fbfced39b",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1977-01-01&coed=1981-12-31"
+        },
+        {
+          "chunk_end": "1986-12-31",
+          "chunk_start": "1982-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1982-01-01&coed=1986-12-31",
+          "missing_markers_excluded": 57,
+          "numeric_rows": 1246,
+          "payload_bytes": 21592,
+          "payload_sha256": "fdeb24f7ed89bc578c9a4fe1e86cd0e8f936d95b287222d726a37169043adab1",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1982-01-01&coed=1986-12-31"
+        },
+        {
+          "chunk_end": "1991-12-31",
+          "chunk_start": "1987-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1987-01-01&coed=1991-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20663,
+          "payload_sha256": "c1d0f08816055da24d860a2f563152929c4c1ed55eddd109ac97e0c7163fe20d",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1987-01-01&coed=1991-12-31"
+        },
+        {
+          "chunk_end": "1996-12-31",
+          "chunk_start": "1992-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1992-01-01&coed=1996-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1252,
+          "payload_bytes": 20679,
+          "payload_sha256": "c32ee7ab9737932f11b33a3e965adf8d029e8bcba319e710b04ac875a05e6842",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1992-01-01&coed=1996-12-31"
+        },
+        {
+          "chunk_end": "2001-12-31",
+          "chunk_start": "1997-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1997-01-01&coed=2001-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20659,
+          "payload_sha256": "3b27ced29dff816d43f1cec04a8da92374e7ce668f323b80f99149367180ff18",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=1997-01-01&coed=2001-12-31"
+        },
+        {
+          "chunk_end": "2006-12-31",
+          "chunk_start": "2002-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2002-01-01&coed=2006-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20659,
+          "payload_sha256": "e7557076cae440b4226f8a0d88a6ead9fdb629b4650d0a0e6e53e8d3d13327a6",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2002-01-01&coed=2006-12-31"
+        },
+        {
+          "chunk_end": "2011-12-31",
+          "chunk_start": "2007-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2007-01-01&coed=2011-12-31",
+          "missing_markers_excluded": 51,
+          "numeric_rows": 1253,
+          "payload_bytes": 20683,
+          "payload_sha256": "2f37a180422e8073c1cc0a5e2ddf425448ebad7b43fe29f951aaeb51c3ded5c7",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2007-01-01&coed=2011-12-31"
+        },
+        {
+          "chunk_end": "2016-12-31",
+          "chunk_start": "2012-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2012-01-01&coed=2016-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20675,
+          "payload_sha256": "801d64496bede2e8f8ebc21c83ec74249797452662809b55f3b404266a2ca57b",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2012-01-01&coed=2016-12-31"
+        },
+        {
+          "chunk_end": "2021-12-31",
+          "chunk_start": "2017-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2017-01-01&coed=2021-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20675,
+          "payload_sha256": "5d36de07f296cecec7c597504a090d35d64aeb306b94e56bda552b0118d490d7",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2017-01-01&coed=2021-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2022-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2022-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1187,
+          "payload_bytes": 19639,
+          "payload_sha256": "a7c525f969dc1c52fe255e8af1646ebbb12702cf03a7c77ae1f0bae8f8c16963",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=2022-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "treasury_10y_nominal",
+      "vintage_status": "current_published"
+    },
+    "DGS5": {
+      "chunks": [
+        {
+          "chunk_end": "1966-12-31",
+          "chunk_start": "1962-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1962-01-01&coed=1966-12-31",
+          "missing_markers_excluded": 57,
+          "numeric_rows": 1247,
+          "payload_bytes": 20658,
+          "payload_sha256": "03114dbbeaf700f006745e9ac0fd1b48a0cfe327b7f91bfbd8ef33a531222c5e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1962-01-01&coed=1966-12-31"
+        },
+        {
+          "chunk_end": "1971-12-31",
+          "chunk_start": "1967-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1967-01-01&coed=1971-12-31",
+          "missing_markers_excluded": 58,
+          "numeric_rows": 1246,
+          "payload_bytes": 20654,
+          "payload_sha256": "0a85a7ece735bc59b1f8a5365960707bc3b6c98f770852611a3e852c51dbfd11",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1967-01-01&coed=1971-12-31"
+        },
+        {
+          "chunk_end": "1976-12-31",
+          "chunk_start": "1972-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1972-01-01&coed=1976-12-31",
+          "missing_markers_excluded": 59,
+          "numeric_rows": 1246,
+          "payload_bytes": 20666,
+          "payload_sha256": "c39f6ab20a007b8173d58f052f1d8d3d332641f715cfa42783a6de50e16ed650",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1972-01-01&coed=1976-12-31"
+        },
+        {
+          "chunk_end": "1981-12-31",
+          "chunk_start": "1977-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1977-01-01&coed=1981-12-31",
+          "missing_markers_excluded": 60,
+          "numeric_rows": 1244,
+          "payload_bytes": 21144,
+          "payload_sha256": "1e9c0f9ff06a83866ea763cb437c4d09743a86cf656f1631e1002650f84c1252",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1977-01-01&coed=1981-12-31"
+        },
+        {
+          "chunk_end": "1986-12-31",
+          "chunk_start": "1982-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1982-01-01&coed=1986-12-31",
+          "missing_markers_excluded": 57,
+          "numeric_rows": 1246,
+          "payload_bytes": 21459,
+          "payload_sha256": "f1cd91e1c1cc2127ea82d1b0010aa0125bc49ef5bcb484d2dc2a22992d145820",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1982-01-01&coed=1986-12-31"
+        },
+        {
+          "chunk_end": "1991-12-31",
+          "chunk_start": "1987-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1987-01-01&coed=1991-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20658,
+          "payload_sha256": "b2ee97a6edd4c895b2e1a51d1a804798b5585db8c7477c0f3a363e4ba9ed2268",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1987-01-01&coed=1991-12-31"
+        },
+        {
+          "chunk_end": "1996-12-31",
+          "chunk_start": "1992-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1992-01-01&coed=1996-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1252,
+          "payload_bytes": 20678,
+          "payload_sha256": "7e4e16dbc10bc2e71275aa185378bb97e87f78e09535b39f9333982790e37684",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1992-01-01&coed=1996-12-31"
+        },
+        {
+          "chunk_end": "2001-12-31",
+          "chunk_start": "1997-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1997-01-01&coed=2001-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20658,
+          "payload_sha256": "c773fee9e8686d89aea0634993a2f36c7ed42e629d1c856fc59b320da8d40844",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=1997-01-01&coed=2001-12-31"
+        },
+        {
+          "chunk_end": "2006-12-31",
+          "chunk_start": "2002-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2002-01-01&coed=2006-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20658,
+          "payload_sha256": "c1bb280ba64304e6365efd8c1ae3ac2e4298653b59d44bc2988207d1ff6e6b64",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2002-01-01&coed=2006-12-31"
+        },
+        {
+          "chunk_end": "2011-12-31",
+          "chunk_start": "2007-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2007-01-01&coed=2011-12-31",
+          "missing_markers_excluded": 51,
+          "numeric_rows": 1253,
+          "payload_bytes": 20682,
+          "payload_sha256": "0ffdd3ca79ac11abb2b6efc8acc92368532d161eb38f3a78c0b8bc635c321a4c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2007-01-01&coed=2011-12-31"
+        },
+        {
+          "chunk_end": "2016-12-31",
+          "chunk_start": "2012-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2012-01-01&coed=2016-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20674,
+          "payload_sha256": "cac3074ede1601f4e59b7fef2e3d4029817b0dc578fad1e3c9c7bb96c7a06154",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2012-01-01&coed=2016-12-31"
+        },
+        {
+          "chunk_end": "2021-12-31",
+          "chunk_start": "2017-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2017-01-01&coed=2021-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20674,
+          "payload_sha256": "03fab1fa643fe108518acf716714dd2bd272194971d0b5dc5296bd861a8c3121",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2017-01-01&coed=2021-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2022-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2022-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1187,
+          "payload_bytes": 19638,
+          "payload_sha256": "e39c667ab74e79a2b04134c3bedb6fc20692f5d3e18c5ed94663403ff9ffea2c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS5&cosd=2022-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "treasury_5y_nominal",
+      "vintage_status": "current_published"
+    },
+    "DTB3": {
+      "chunks": [
+        {
+          "chunk_end": "1958-12-31",
+          "chunk_start": "1954-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1954-01-01&coed=1958-12-31",
+          "missing_markers_excluded": 47,
+          "numeric_rows": 1256,
+          "payload_bytes": 20682,
+          "payload_sha256": "370ccb480fc68ed2291574fd64d4c91099eb3b9ce8880b51cb017413153a7679",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1954-01-01&coed=1958-12-31"
+        },
+        {
+          "chunk_end": "1963-12-31",
+          "chunk_start": "1959-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1959-01-01&coed=1963-12-31",
+          "missing_markers_excluded": 56,
+          "numeric_rows": 1247,
+          "payload_bytes": 20646,
+          "payload_sha256": "b9368caac94bbfa6d5d917a520d4a21b243eafd1f03a1e1d3ade8593cfd06d03",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1959-01-01&coed=1963-12-31"
+        },
+        {
+          "chunk_end": "1968-12-31",
+          "chunk_start": "1964-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1964-01-01&coed=1968-12-31",
+          "missing_markers_excluded": 55,
+          "numeric_rows": 1249,
+          "payload_bytes": 20666,
+          "payload_sha256": "eff256301ae78a7bfabb06cb92237bb68b85fd5cce9070ad61515400cfae6053",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1964-01-01&coed=1968-12-31"
+        },
+        {
+          "chunk_end": "1973-12-31",
+          "chunk_start": "1969-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1969-01-01&coed=1973-12-31",
+          "missing_markers_excluded": 58,
+          "numeric_rows": 1245,
+          "payload_bytes": 20638,
+          "payload_sha256": "6ae2922a1e101f4063c523e270a3c13753f85062fc80348c60dbe9e597337213",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1969-01-01&coed=1973-12-31"
+        },
+        {
+          "chunk_end": "1978-12-31",
+          "chunk_start": "1974-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1974-01-01&coed=1978-12-31",
+          "missing_markers_excluded": 58,
+          "numeric_rows": 1245,
+          "payload_bytes": 20638,
+          "payload_sha256": "13fbd4aab888eb35702b4786762b85f99144197939f05533960eaccc469f622d",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1974-01-01&coed=1978-12-31"
+        },
+        {
+          "chunk_end": "1983-12-31",
+          "chunk_start": "1979-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1979-01-01&coed=1983-12-31",
+          "missing_markers_excluded": 58,
+          "numeric_rows": 1246,
+          "payload_bytes": 21292,
+          "payload_sha256": "7e2866d38ff54838fe5988ff289a7ccec6a16507bcab542c4f5fc9afe973e330",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1979-01-01&coed=1983-12-31"
+        },
+        {
+          "chunk_end": "1988-12-31",
+          "chunk_start": "1984-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1984-01-01&coed=1988-12-31",
+          "missing_markers_excluded": 57,
+          "numeric_rows": 1247,
+          "payload_bytes": 20731,
+          "payload_sha256": "4e874e8668ebf01acb39d346baa05a05eb2057716a40c06eca658bc7b7a6039a",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1984-01-01&coed=1988-12-31"
+        },
+        {
+          "chunk_end": "1993-12-31",
+          "chunk_start": "1989-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1989-01-01&coed=1993-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20674,
+          "payload_sha256": "afa6fffc1936aabfcb622c5f4f16c5ef0a33e6d916f393ac4aafc6d7aeef257c",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1989-01-01&coed=1993-12-31"
+        },
+        {
+          "chunk_end": "1998-12-31",
+          "chunk_start": "1994-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1994-01-01&coed=1998-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1251,
+          "payload_bytes": 20674,
+          "payload_sha256": "8ecce119164f2611c118be27b4652110cc6c18cd9d34cdd4581a6c7e60828b0e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1994-01-01&coed=1998-12-31"
+        },
+        {
+          "chunk_end": "2003-12-31",
+          "chunk_start": "1999-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1999-01-01&coed=2003-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20658,
+          "payload_sha256": "7b916f6a71180aa5d40ef203523403661b3b2469b3842c322ad642ae0c047f65",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=1999-01-01&coed=2003-12-31"
+        },
+        {
+          "chunk_end": "2008-12-31",
+          "chunk_start": "2004-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2004-01-01&coed=2008-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1252,
+          "payload_bytes": 20678,
+          "payload_sha256": "b08789ad3a552e7ccbb0584d973b9505680108d001a51589cdbad29978ddd933",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2004-01-01&coed=2008-12-31"
+        },
+        {
+          "chunk_end": "2013-12-31",
+          "chunk_start": "2009-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2009-01-01&coed=2013-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 20662,
+          "payload_sha256": "54809cfdf68f5b163b68f653a50e6ace6604c28ec11e0eb1c8a6c2220af58d37",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2009-01-01&coed=2013-12-31"
+        },
+        {
+          "chunk_end": "2018-12-31",
+          "chunk_start": "2014-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2014-01-01&coed=2018-12-31",
+          "missing_markers_excluded": 53,
+          "numeric_rows": 1250,
+          "payload_bytes": 20664,
+          "payload_sha256": "873535382e6383888b0f9114ece3eb411a4057d24b59123a32df099aced096a5",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2014-01-01&coed=2018-12-31"
+        },
+        {
+          "chunk_end": "2023-12-31",
+          "chunk_start": "2019-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2019-01-01&coed=2023-12-31",
+          "missing_markers_excluded": 52,
+          "numeric_rows": 1251,
+          "payload_bytes": 20664,
+          "payload_sha256": "f004db15adc7e7c74153fb821fae429314d0f73a076b4270a3d2eee581ddc306",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2019-01-01&coed=2023-12-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2024-01-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2024-01-01&coed=2026-10-03",
+          "missing_markers_excluded": 30,
+          "numeric_rows": 688,
+          "payload_bytes": 11390,
+          "payload_sha256": "b8d0f4d19060eab3975a2ee876b148b20c325a1982a980bede73d60bf66b556e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTB3&cosd=2024-01-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "Federal Reserve Board",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "treasury_3m_discount",
+      "vintage_status": "current_published"
+    },
+    "SOFR": {
+      "chunks": [
+        {
+          "chunk_end": "2023-03-31",
+          "chunk_start": "2018-04-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR&cosd=2018-04-01&coed=2023-03-31",
+          "missing_markers_excluded": 55,
+          "numeric_rows": 1249,
+          "payload_bytes": 20666,
+          "payload_sha256": "b5f652686d3c07448378037ecd35399df0b96819763513f2129169e15838ce92",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR&cosd=2018-04-01&coed=2023-03-31"
+        },
+        {
+          "chunk_end": "2026-10-03",
+          "chunk_start": "2023-04-01",
+          "content_type": "application/csv",
+          "final_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR&cosd=2023-04-01&coed=2026-10-03",
+          "missing_markers_excluded": 40,
+          "numeric_rows": 874,
+          "payload_bytes": 14486,
+          "payload_sha256": "3e7e1af45706152a2558ba9b832dcee2ea33cc05214c8b8de2fa5235c105926e",
+          "requested_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SOFR&cosd=2023-04-01&coed=2026-10-03"
+        }
+      ],
+      "distributor": "Federal Reserve Bank of St. Louis (FRED)",
+      "originating_agency": "New York Fed",
+      "retrieval_method": "date_bounded_fred_graph_csv",
+      "retrieved_utc": "2026-10-03T13:58:38+00:00",
+      "series_key": "sofr",
+      "vintage_status": "current_published"
+    }
+  }
+}
